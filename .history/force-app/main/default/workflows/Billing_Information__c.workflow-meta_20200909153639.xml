@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>AP_Reject_Request</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>AP Reject Request</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>AP_Update_Approval_Status</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>AP Update Approval Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>AP_Update_Approval_Status2</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Sent to TIG SDM</literalValue>
+        <name>AP Update Approval Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>AR_Manager_rejection</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rejected by AR Manager</literalValue>
+        <name>AR Manager rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reject_by_Executive</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rejected by AR Executive/ AR Sr. Executive</literalValue>
+        <name>Reject by Executive</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_AR_Exe_AR_SR_Exe</fullName>
+        <description>Update to &quot;Draft&quot;</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rejected by AR Executive/ AR Sr. Executive</literalValue>
+        <name>Rejected by AR Exe/AR SR Exe</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_AR_Executive_AR_Sr_Executi</fullName>
+        <description>Approval Status update when request rejected by AR Executive.</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rejected by AR Executive/ AR Sr. Executive</literalValue>
+        <name>Rejected by AR Executive/ AR Sr. Executi</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_AR_Head</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rejected by AR Head</literalValue>
+        <name>Rejected by AR Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_AR_Manager</fullName>
+        <description>Request reject by AR Manager.</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rejected by AR Manager</literalValue>
+        <name>Rejected by AR Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_Client_SDM</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rejected by Client SDM</literalValue>
+        <name>Rejected by Client SDM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Send_to_AR_Manager</fullName>
+        <description>On Approve, Request send to AR Manager.</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Sent to AR Manager</literalValue>
+        <name>Send to AR Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sent_to_AR_Executive</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Sent to AR Executive/ AR Sr. Executive</literalValue>
+        <name>Sent to AR Executive</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sent_to_AR_Head</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Sent to AR Head</literalValue>
+        <name>Sent to AR Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_in_Progress</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>In Progress</literalValue>
+        <name>Set Status in Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_App_Status</fullName>
+        <description>Update approval status to Sent to AR Manager</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Sent to AR Manager</literalValue>
+        <name>Update App Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_App_Status_to_Sent_to_Client_SDM</fullName>
+        <description>Update Approval Status to &quot;Sent to Client SDM&quot;</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Sent to Client SDM</literalValue>
+        <name>Update App Status to Sent to Client SDM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Comment_Check</fullName>
+        <field>Approval_Comment_Check__c</field>
+        <literalValue>Required</literalValue>
+        <name>Update Approval Comment Check</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status</fullName>
+        <description>update to &quot;Sent to AR Executive/ AR Sr. Executive&quot;</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Sent to AR Executive/ AR Sr. Executive</literalValue>
+        <name>Update Approval Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status1</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Sent to AR Manager</literalValue>
+        <name>Update Approval Status1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status2</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Send to TIG SDM</literalValue>
+        <name>Update Approval Status2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_1</fullName>
+        <description>Update to &quot;Sent to AR Manager&quot;</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Sent to AR Manager</literalValue>
+        <name>Update Approval Status 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status_to_Sent_to_AR_Exe</fullName>
+        <description>Update approval status to &quot;Sent to AR Executive/ AR Sr Executive</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Sent to AR Executive/ AR Sr. Executive</literalValue>
+        <name>Update Approval Status to Sent to AR Exe</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approved_by_AR_Manager_Checkbox</fullName>
+        <description>Update field &quot;Approved by AR Manager&quot; Checkbox</description>
+        <field>Approved_by_AR_Manager__c</field>
+        <literalValue>1</literalValue>
+        <name>Update &quot;Approved by AR Manager&quot; Checkbox</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Billing_Approved</fullName>
+        <description>Once the record is approved by Client SDM then the Billing Approval Status will be updated with the value of Billing Approved.</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Billing Approved</literalValue>
+        <name>Update Billing Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Billing_Status</fullName>
+        <field>Billing_Status__c</field>
+        <literalValue>Completed</literalValue>
+        <name>Update Billing Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Billing_Status1</fullName>
+        <description>Update Billing Status to &quot;In Progress&quot; once the record is submitted for approval</description>
+        <field>Billing_Status__c</field>
+        <literalValue>In Progress</literalValue>
+        <name>Update Billing Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Billing_Status_to_Draft</fullName>
+        <description>Update the value of Billing status to &quot;Draft&quot;</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Draft</literalValue>
+        <name>Update Billing Status to &quot;Draft&quot;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Billing_Status_to_Rework</fullName>
+        <description>Update Billing Status with the value of &quot;Rework&quot;</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rework</literalValue>
+        <name>Update Billing Status to Rework</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Billing_Status_with_Rework</fullName>
+        <description>Update Billing Status with the value of &quot;Rework&quot;</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rework</literalValue>
+        <name>Update Billing Status with &quot;Rework&quot;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Record_Type_Value</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Vendor</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update Record Type Value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_toRework</fullName>
+        <description>Billing Status value will be updated as rework</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rework</literalValue>
+        <name>Update to Rework</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_to_Rework</fullName>
+        <description>Update Billing Status with the value of &quot;Rework&quot;</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rework</literalValue>
+        <name>Update Status to  Rework</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_to_Sent_to_AR_Manager</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Sent to AR Manager</literalValue>
+        <name>Update Status to &quot;Sent to AR Manager&quot;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Sent to AR Executive/ AR Sr. Executive</literalValue>
+        <name>Update status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_to_Requested</fullName>
+        <description>Updating field &quot;Approval Comment Check&quot; to &quot;Requested&quot;</description>
+        <field>Approval_Comment_Check__c</field>
+        <literalValue>Requested</literalValue>
+        <name>Update to Requested</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_to_Requested_V_1</fullName>
+        <field>Approval_Comment_Check__c</field>
+        <literalValue>Requested</literalValue>
+        <name>Update to Requested V.1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_to_Required</fullName>
+        <description>Updating the field &quot;Approval Comment Check&quot; to Requested</description>
+        <field>Approval_Comment_Check__c</field>
+        <literalValue>Required</literalValue>
+        <name>Update to Required</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_to_Rework</fullName>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Rework</literalValue>
+        <name>Update to Rework</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+</Workflow>
