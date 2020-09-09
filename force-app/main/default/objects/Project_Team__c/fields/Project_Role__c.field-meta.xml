@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Role__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the role of this user.</inlineHelpText>
+    <label>Project Role</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Project Executive</fullName>
+                <default>false</default>
+                <label>Project Executive</label>
+            </value>
+            <value>
+                <fullName>Service Desk Agent</fullName>
+                <default>false</default>
+                <label>Service Desk Agent</label>
+            </value>
+            <value>
+                <fullName>Sr. Project Executive</fullName>
+                <default>false</default>
+                <label>Sr. Project Executive</label>
+            </value>
+            <value>
+                <fullName>Service Delivery Executive</fullName>
+                <default>false</default>
+                <label>Service Delivery Executive</label>
+            </value>
+            <value>
+                <fullName>Project Manager</fullName>
+                <default>false</default>
+                <label>Project Manager</label>
+            </value>
+            <value>
+                <fullName>SDM</fullName>
+                <default>false</default>
+                <label>SDM</label>
+            </value>
+            <value>
+                <fullName>Project Management Head</fullName>
+                <default>false</default>
+                <label>Project Management Head</label>
+            </value>
+            <value>
+                <fullName>Regional Head Service Delivery</fullName>
+                <default>false</default>
+                <label>Regional Head Service Delivery</label>
+            </value>
+            <value>
+                <fullName>Global delivery Director</fullName>
+                <default>false</default>
+                <label>Global delivery Director</label>
+            </value>
+            <value>
+                <fullName>Global OPS Head</fullName>
+                <default>false</default>
+                <label>Global OPS Head</label>
+            </value>
+            <value>
+                <fullName>Resource may have Engineers(Contractor-Dispatch, Contractor-FTE, FTE)</fullName>
+                <default>false</default>
+                <label>Resource may have Engineers(Contractor-Dispatch, Contractor-FTE, FTE)</label>
+            </value>
+            <value>
+                <fullName>Service Desk Lead</fullName>
+                <default>false</default>
+                <label>Service Desk Lead</label>
+            </value>
+            <value>
+                <fullName>Service Desk Manager</fullName>
+                <default>false</default>
+                <label>Service Desk Manager</label>
+            </value>
+            <value>
+                <fullName>Service Delivery Manager</fullName>
+                <default>false</default>
+                <label>Service Delivery Manager</label>
+            </value>
+            <value>
+                <fullName>Account Manager</fullName>
+                <default>false</default>
+                <label>Account Manager</label>
+            </value>
+            <value>
+                <fullName>Account Director</fullName>
+                <default>false</default>
+                <label>Account Director</label>
+            </value>
+            <value>
+                <fullName>Client SDM</fullName>
+                <default>false</default>
+                <label>Client SDM</label>
+            </value>
+            <value>
+                <fullName>TIG SDM</fullName>
+                <default>false</default>
+                <label>TIG SDM</label>
+            </value>
+            <value>
+                <fullName>RDH</fullName>
+                <default>false</default>
+                <label>RDH</label>
+            </value>
+            <value>
+                <fullName>Sales Executive</fullName>
+                <default>false</default>
+                <label>Sales Executive</label>
+            </value>
+            <value>
+                <fullName>Pre-Sales Team</fullName>
+                <default>false</default>
+                <label>Pre-Sales Team</label>
+            </value>
+            <value>
+                <fullName>Sales Team</fullName>
+                <default>false</default>
+                <label>Sales Team</label>
+            </value>
+            <value>
+                <fullName>AR Execuive</fullName>
+                <default>false</default>
+                <label>AR Execuive</label>
+            </value>
+            <value>
+                <fullName>AR Sr. Executive</fullName>
+                <default>false</default>
+                <label>AR Sr. Executive</label>
+            </value>
+            <value>
+                <fullName>AR Manager</fullName>
+                <default>false</default>
+                <label>AR Manager</label>
+            </value>
+            <value>
+                <fullName>AR Head</fullName>
+                <default>false</default>
+                <label>AR Head</label>
+            </value>
+            <value>
+                <fullName>AP Executive</fullName>
+                <default>false</default>
+                <label>AP Executive</label>
+            </value>
+            <value>
+                <fullName>AP Sr. Executive</fullName>
+                <default>false</default>
+                <label>AP Sr. Executive</label>
+            </value>
+            <value>
+                <fullName>AP Manager</fullName>
+                <default>false</default>
+                <label>AP Manager</label>
+            </value>
+            <value>
+                <fullName>AP Head</fullName>
+                <default>false</default>
+                <label>AP Head</label>
+            </value>
+            <value>
+                <fullName>COO</fullName>
+                <default>false</default>
+                <label>COO</label>
+            </value>
+            <value>
+                <fullName>CFO</fullName>
+                <default>false</default>
+                <label>CFO</label>
+            </value>
+            <value>
+                <fullName>CEO</fullName>
+                <default>false</default>
+                <label>CEO</label>
+            </value>
+            <value>
+                <fullName>System Admin</fullName>
+                <default>false</default>
+                <label>System Admin</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>adhoc</type>
+            </approver>
+        </assignedApprover>
+        <label>Finance Executive Approval</label>
+        <name>Finance_Executive_Approval</name>
+    </approvalStep>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>1 OR 2 OR 3 OR 4 OR 5</booleanFilter>
+        <criteriaItems>
+            <field>Invoice__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Finance Executive</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Invoice__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Ar. Exe</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Invoice__c.Status__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Invoice__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Rejected by Finance Manager</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Invoice__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Rejected by Finance Executive</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Finance Executive Approval</label>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

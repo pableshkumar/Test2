@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action will fire flow on clicking the button. and  will update the Billing Status to &quot;Sent to Client SDM&quot; that will further call approval process</description>
+    <flowDefinition>Send_to_AR_Head</flowDefinition>
+    <label>Send to AR Head</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

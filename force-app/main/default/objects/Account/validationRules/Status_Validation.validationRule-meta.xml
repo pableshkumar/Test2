@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Validation</fullName>
+    <active>true</active>
+    <description>User can&apos;t change Status manually if the values are &quot;Sent for Approval&quot;, &quot;Active&quot;</description>
+    <errorConditionFormula>OR(
+ISPICKVAL(Status__c,&apos;Sent for Approval&apos;),
+ISPICKVAL(Status__c,&apos;Active&apos;),
+ISPICKVAL(Status__c,&apos;DeActivation Pending&apos;),
+ISPICKVAL(Status__c,&apos;Inactive&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>User can&apos;t change Status to &quot;Sent for Approval&quot; or &quot;Active&quot;  or &quot;DeActivation Pending&quot; or &quot;Inactive&quot; manually</errorMessage>
+</ValidationRule>

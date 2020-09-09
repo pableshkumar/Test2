@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_IT_Billing_Entity__c</fullName>
+    <externalId>false</externalId>
+    <label>Total IT Billing Entity</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Total IT Consult LLP</fullName>
+                <default>false</default>
+                <label>Total IT Consult LLP</label>
+            </value>
+            <value>
+                <fullName>Total IT Consult Pty ltd</fullName>
+                <default>false</default>
+                <label>Total IT Consult Pty ltd</label>
+            </value>
+            <value>
+                <fullName>TIC Netherlands B.V.</fullName>
+                <default>false</default>
+                <label>TIC Netherlands B.V.</label>
+            </value>
+            <value>
+                <fullName>Total IT Global UK Limited</fullName>
+                <default>false</default>
+                <label>Total IT Global UK Limited</label>
+            </value>
+            <value>
+                <fullName>Total IT Global Sdn Bhd</fullName>
+                <default>false</default>
+                <label>Total IT Global Sdn Bhd</label>
+            </value>
+            <value>
+                <fullName>Total IT Consult Pte Ltd</fullName>
+                <default>false</default>
+                <label>Total IT Consult Pte Ltd</label>
+            </value>
+            <value>
+                <fullName>Total IT Global Pte Ltd</fullName>
+                <default>false</default>
+                <label>Total IT Global Pte Ltd</label>
+            </value>
+            <value>
+                <fullName>Total IT Global NZ Ltd</fullName>
+                <default>false</default>
+                <label>Total IT Global NZ Ltd</label>
+            </value>
+            <value>
+                <fullName>Total IT Global HK Ltd</fullName>
+                <default>false</default>
+                <label>Total IT Global HK Ltd</label>
+            </value>
+            <value>
+                <fullName>Total IT Global KK,Japan</fullName>
+                <default>false</default>
+                <label>Total IT Global KK,Japan</label>
+            </value>
+            <value>
+                <fullName>TIGM Global Computer Systems Services</fullName>
+                <default>false</default>
+                <label>TIGM Global Computer Systems Services</label>
+            </value>
+            <value>
+                <fullName>Total IT Global Inc.</fullName>
+                <default>false</default>
+                <label>Total IT Global Inc.</label>
+            </value>
+            <value>
+                <fullName>Total IT Consult DK ApS</fullName>
+                <default>false</default>
+                <label>Total IT Consult DK ApS</label>
+            </value>
+            <value>
+                <fullName>Total IT Global Finland OY</fullName>
+                <default>false</default>
+                <label>Total IT Global Finland OY</label>
+            </value>
+            <value>
+                <fullName>TOTAL IT GLOBAL POLAND Sp. z o .o</fullName>
+                <default>false</default>
+                <label>TOTAL IT GLOBAL POLAND Sp. z o .o</label>
+            </value>
+            <value>
+                <fullName>Total IT Global France</fullName>
+                <default>false</default>
+                <label>Total IT Global France</label>
+            </value>
+            <value>
+                <fullName>Total IT Global Company Limited</fullName>
+                <default>false</default>
+                <label>Total IT Global Company Limited</label>
+            </value>
+            <value>
+                <fullName>Total IT Germany GMBH</fullName>
+                <default>false</default>
+                <label>Total IT Germany GMBH</label>
+            </value>
+            <value>
+                <fullName>Total IT Norway AS</fullName>
+                <default>false</default>
+                <label>Total IT Norway AS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

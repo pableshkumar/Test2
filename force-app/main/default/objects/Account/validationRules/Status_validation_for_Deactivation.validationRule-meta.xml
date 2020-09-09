@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_validation_for_Deactivation</fullName>
+    <active>true</active>
+    <description>Status value can be set as &quot;Request for DeActivation&quot; on if the prior value is &quot;Active&quot;</description>
+    <errorConditionFormula>AND(
+ISCHANGED(Status__c),
+ISPICKVAL(Status__c,&apos;Request for DeActivation&apos;),
+NOT(ISPICKVAL(PRIORVALUE(Status__c),&apos;Active&apos;))
+)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Status can be updated as &quot;Request for DeActivation&quot; only if the prior value of Status is Active</errorMessage>
+</ValidationRule>

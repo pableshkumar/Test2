@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Approval_Status__c</fullName>
+    <description>will hold status of the approval</description>
+    <externalId>false</externalId>
+    <label>Billing Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Upload Raw  Data</fullName>
+                <default>true</default>
+                <label>Upload Raw  Data</label>
+            </value>
+            <value>
+                <fullName>Sent to SDM</fullName>
+                <default>false</default>
+                <label>Sent to SDM</label>
+            </value>
+            <value>
+                <fullName>Draft</fullName>
+                <default>false</default>
+                <label>Draft</label>
+            </value>
+            <value>
+                <fullName>Rework</fullName>
+                <default>false</default>
+                <label>Rework</label>
+            </value>
+            <value>
+                <fullName>Sent to AR Executive/ AR Sr. Executive</fullName>
+                <default>false</default>
+                <label>Sent to AR Executive/ AR Sr. Executive</label>
+            </value>
+            <value>
+                <fullName>Sent to AR Manager</fullName>
+                <default>false</default>
+                <label>Sent to AR Manager</label>
+            </value>
+            <value>
+                <fullName>Sent to AR Head</fullName>
+                <default>false</default>
+                <label>Sent to AR Head</label>
+            </value>
+            <value>
+                <fullName>Sent to Client SDM</fullName>
+                <default>false</default>
+                <label>Sent to Client SDM</label>
+            </value>
+            <value>
+                <fullName>Sent to TIG SDM</fullName>
+                <default>false</default>
+                <label>Sent to TIG SDM</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Billing Approved</fullName>
+                <default>false</default>
+                <label>Billing Approved</label>
+            </value>
+            <value>
+                <fullName>Rejected by AR Executive/ AR Sr. Executive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rejected by AR Executive/ AR Sr. Executive</label>
+            </value>
+            <value>
+                <fullName>Rejected by AR Head</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rejected by AR Head</label>
+            </value>
+            <value>
+                <fullName>Rejected by AR Manager</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rejected by AR Manager</label>
+            </value>
+            <value>
+                <fullName>Rejected by Client SDM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rejected by Client SDM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Dispute_Amount</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF( ISPICKVAL(Status__c, &apos;Disputed&apos;) &amp;&amp; ISBLANK(Disputed_Amount__c),true,false)</errorConditionFormula>
+    <errorMessage>Please enter disputed amount before rejection</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bank_Account_Number_Clabe_CCI__c</fullName>
+    <description>Bank Account Number / Clabe # for Mexico / CCI # for Peru</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Bank Account Number / Clabe # for Mexico / CCI # for Peru</inlineHelpText>
+    <label>Bank Account Number / Clabe / CCI</label>
+    <length>100</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

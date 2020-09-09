@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AP_Executive_Sr_AP_Executive_Invoice</fullName>
+    <filterScope>Queue</filterScope>
+    <label>AP Executive/Sr. AP Executive</label>
+    <queue>AP_Executive_Sr_AP_Executive</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

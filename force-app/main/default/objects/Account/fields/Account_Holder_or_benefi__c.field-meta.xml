@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Holder_or_benefi__c</fullName>
+    <description>Name of the organization as  appearing in Bank Account - Account holder (or) Beneficiary Name</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Name of the organization as  appearing in Bank Account - Account holder (or) Beneficiary Name</inlineHelpText>
+    <label>Bank Account Holder or Beneficiery Name</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

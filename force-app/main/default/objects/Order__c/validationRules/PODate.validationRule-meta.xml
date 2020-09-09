@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PODate</fullName>
+    <active>true</active>
+    <description>PO start date is less than PO end date.</description>
+    <errorConditionFormula>NOT( PO_Start_Date__c &lt;  PO_End_Date__c )</errorConditionFormula>
+    <errorMessage>PO start date should be less than PO end date.</errorMessage>
+</ValidationRule>

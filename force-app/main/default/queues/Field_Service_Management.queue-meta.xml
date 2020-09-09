@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Field Service Management</name>
+    <queueMembers>
+        <roles>
+            <role>Field_Service_Executive</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Invoice__c</sobjectType>
+    </queueSobject>
+</Queue>

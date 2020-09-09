@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer</fullName>
+    <active>true</active>
+    <label>Customer</label>
+    <picklistValues>
+        <picklist>Approval_Comment_Check__c</picklist>
+        <values>
+            <fullName>Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Required</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Billing_Approval_Status__c</picklist>
+        <values>
+            <fullName>Billing Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Rework</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to AR Executive%2F AR Sr%2E Executive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to AR Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to AR Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Client SDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to SDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upload Raw  Data</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Billing_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

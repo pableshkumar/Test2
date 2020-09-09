@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TIG_Entity_Code__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>will hold TIG 3 digits code</description>
+    <externalId>false</externalId>
+    <label>TIG Entity Code</label>
+    <length>3</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

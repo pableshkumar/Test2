@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Add_Primary_External_SDM_Error_Message</fullName>
+        <categories>Billing Approval Messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add Primary External SDM Error Message</shortDescription>
+        <value>Please add primary external SDM in Project Team</value>
+    </labels>
+    <labels>
+        <fullName>Add_Primary_Internal_SDM_Error_Message</fullName>
+        <categories>Billing Approval Messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add Primary Internal SDM Error Message</shortDescription>
+        <value>Please add primary internal SDM in Project Team</value>
+    </labels>
+    <labels>
+        <fullName>Dispute_Amount_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Dispute Amount Error</shortDescription>
+        <value>Please enter disputed amount before rejection.</value>
+    </labels>
+    <labels>
+        <fullName>Submit_to_AR_Head_or_Client_SDM</fullName>
+        <categories>Billing Approval Messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submit to &quot;AR Head&quot; or &quot;Client SDM</shortDescription>
+        <value>Please Submit to &quot;AR Head&quot; or &quot;Client SDM</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>creator</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>AR_Executive</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>AR_SR_Executive</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>00N2x000006bi2p</field>
+        <field>Billing_Information__c</field>
+        <field>Due_Date__c</field>
+        <field>Invoice_Date__c</field>
+        <field>Invoice_Number__c</field>
+        <field>Invoice_Sent_Received_Date__c</field>
+        <field>Invoice_Type__c</field>
+        <field>Stage__c</field>
+        <field>Status__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Finance_Executive</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Send to Finance Executive</label>
+        <name>Send_to_Finance_Executive</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Finance_Manager</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Invoice__c.Status__c</field>
+                <operation>equals</operation>
+                <value>Send to Finance Manager</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>ApproveRecord</ifCriteriaNotMet>
+        <label>Send to Finance Manager</label>
+        <name>Send_to_Finance_Manager</name>
+        <rejectBehavior>
+            <type>BackToPrevious</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Client</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Invoice__c.Status__c</field>
+                <operation>equals</operation>
+                <value>Send to Finance Manager,Client</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>Send to Client</label>
+        <name>Send_to_Client</name>
+        <rejectBehavior>
+            <type>BackToPrevious</type>
+        </rejectBehavior>
+    </approvalStep>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Invoice__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Validate Invoice</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Invoice__c.RecordType</field>
+            <operation>equals</operation>
+            <value>Sales Invoice</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>AR Process Flow</label>
+    <processOrder>5</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

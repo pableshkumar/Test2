@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Invoice</fullName>
+    <active>true</active>
+    <label>Sales Invoice</label>
+    <picklistValues>
+        <picklist>Invoice_Type__c</picklist>
+        <values>
+            <fullName>Billiable Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non Billiable Invoice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Paid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Invoice Ready to be Sent to Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review and Update Taxation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent To Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Validate Invoice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Update Invoice status from Draft to Check SOW &amp; PO</description>
+    <interviewLabel>Update Invoice Status {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Invoice Status</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <description>Update Invoice sStatus</description>
+        <name>Update_Invoice_Status</name>
+        <label>Update Invoice Status</label>
+        <locationX>135</locationX>
+        <locationY>277</locationY>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Draft</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Check SOW &amp; PO</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Invoice__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Update_Invoice_Status</targetReference>
+        </connector>
+    </start>
+    <status>Obsolete</status>
+</Flow>
