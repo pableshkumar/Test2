@@ -7,10 +7,6 @@
             <role>AP_Executive</role>
             <role>AP_SR_Executive</role>
         </roles>
-        <users>
-            <user>ar.executive1@totalit.com</user>
-            <user>madhuri.kartik@manras.totalit</user>
-        </users>
     </queueMembers>
     <queueSobject>
         <sobjectType>Billing_Information_Line_Item__c</sobjectType>

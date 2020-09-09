@@ -478,6 +478,10 @@
 		<name>StaticResource</name>
 	</types>
 	<types>
+		<members>*</members>
+		<name>Profile</name>
+	</types>
+	<types>
 		<members>Account.Update_Status_Field_as_Draft</members>
 		<members>Account.Update_Status_as_Active</members>
 		<members>Account.Update_Status_as_Active_on_rejection</members>

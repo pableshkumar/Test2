@@ -112,7 +112,6 @@
         </action>
     </initialSubmissionActions>
     <label>AP Approval Flow</label>
-    <processOrder>1</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

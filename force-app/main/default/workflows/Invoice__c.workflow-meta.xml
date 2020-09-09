@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Stage_Accepted</fullName>
+        <field>Stage__c</field>
+        <literalValue>Accepted</literalValue>
+        <name>Stage: Accepted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Draft</fullName>
+        <field>Stage__c</field>
+        <literalValue>Draft</literalValue>
+        <name>Stage: Draft</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_On_Hold</fullName>
+        <field>Stage__c</field>
+        <literalValue>On Hold</literalValue>
+        <name>Stage: On Hold</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Rejected</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Stage: Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Sent_to_client</fullName>
+        <field>Stage__c</field>
+        <literalValue>Sent to Client</literalValue>
+        <name>Stage: Sent to client</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Submitted</fullName>
+        <field>Stage__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Stage: Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Approved</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Status: Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Check_SOW_PO</fullName>
+        <field>Status__c</field>
+        <literalValue>Check SOW &amp; PO</literalValue>
+        <name>Status: Check SOW &amp; PO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Dispute</fullName>
+        <field>Status__c</field>
+        <literalValue>Disputed</literalValue>
+        <name>Status: Dispute</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Escalate</fullName>
+        <field>Status__c</field>
+        <literalValue>Escalated</literalValue>
+        <name>Status: Escalate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Exceptional_Approval_Required</fullName>
+        <field>Status__c</field>
+        <literalValue>Exception Approval Needed</literalValue>
+        <name>Status: Exceptional Approval Required</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_None</fullName>
+        <field>Status__c</field>
+        <name>Status: None</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Ready_to_be_Sent_to_Client</fullName>
+        <field>Status__c</field>
+        <literalValue>Invoice Ready to be Sent to Client</literalValue>
+        <name>Status: Ready to be Sent to Client</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Reject_Invoice</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status: Reject Invoice</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Review_and_Update_Taxation</fullName>
+        <field>Status__c</field>
+        <literalValue>Review and Update Taxation</literalValue>
+        <name>Status: Review and Update Taxation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Validate_Invoice</fullName>
+        <field>Status__c</field>
+        <literalValue>Validate Invoice</literalValue>
+        <name>Status: Validate Invoice</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+</Workflow>

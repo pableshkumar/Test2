@@ -29,7 +29,6 @@
         </action>
     </initialSubmissionActions>
     <label>Escalate Billing Information</label>
-    <processOrder>7</processOrder>
     <recordEditability>AdminOnly</recordEditability>
     <showApprovalHistory>false</showApprovalHistory>
 </ApprovalProcess>

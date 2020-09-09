@@ -134,7 +134,6 @@
         </action>
     </initialSubmissionActions>
     <label>Purchase Invoice Flow</label>
-    <processOrder>2</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

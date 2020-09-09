@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_Status_Field_as_Draft</fullName>
+        <description>If rejected update Status as &quot;Draft&quot;</description>
+        <field>Status__c</field>
+        <literalValue>Draft</literalValue>
+        <name>Update Status Field as Draft</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_as_Active</fullName>
+        <description>If record is approved then update the status as Active automatically</description>
+        <field>Status__c</field>
+        <literalValue>Active</literalValue>
+        <name>Update Status as Active</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_as_Active_on_rejection</fullName>
+        <field>Status__c</field>
+        <literalValue>Active</literalValue>
+        <name>Update Status as &quot;Active&quot; on rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_as_DeActivation_Pending</fullName>
+        <field>Status__c</field>
+        <literalValue>DeActivation Pending</literalValue>
+        <name>Update Status as DeActivation Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_as_Draft</fullName>
+        <description>Update Status Field as Draft if rejected</description>
+        <field>Status__c</field>
+        <literalValue>Draft</literalValue>
+        <name>Update Status as Draft</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_as_Sent_for_Approval</fullName>
+        <description>Once record is sent for approval, update the Status as &quot;Sent for Approval&quot;</description>
+        <field>Status__c</field>
+        <literalValue>Sent for Approval</literalValue>
+        <name>Update Status as &quot;Sent for Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_field</fullName>
+        <description>If approved then update Status as Active</description>
+        <field>Status__c</field>
+        <literalValue>Active</literalValue>
+        <name>Update Status field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_as_InActive</fullName>
+        <description>Status will be updated as InActive once approved automatically</description>
+        <field>Status__c</field>
+        <literalValue>Inactive</literalValue>
+        <name>Update status as &quot;InActive&quot;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+</Workflow>

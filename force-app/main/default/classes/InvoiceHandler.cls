@@ -211,9 +211,7 @@ public class InvoiceHandler {
             	//invoice.addError('Please enter disputed amount before rejection.');
                 invoice.addError(System.Label.Dispute_Amount_Error);
         	}
-        }
-        
-        
+        }    
 	}
     @future
     public static void sendToTIGSDMOnDispute(String inv){

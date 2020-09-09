@@ -62,7 +62,6 @@
         </action>
     </initialSubmissionActions>
     <label>AP Approval Process</label>
-    <processOrder>6</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

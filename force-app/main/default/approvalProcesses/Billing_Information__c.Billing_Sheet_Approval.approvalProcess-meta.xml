@@ -48,7 +48,6 @@
         </action>
     </initialSubmissionActions>
     <label>Billing Sheet Approval</label>
-    <processOrder>1</processOrder>
     <recordEditability>AdminOnly</recordEditability>
     <showApprovalHistory>false</showApprovalHistory>
 </ApprovalProcess>
