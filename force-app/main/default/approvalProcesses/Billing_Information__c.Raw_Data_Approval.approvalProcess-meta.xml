@@ -5,7 +5,7 @@
     <allowedSubmitters>
         <type>owner</type>
     </allowedSubmitters>
-    <allowedSubmitters>
+    <!--<allowedSubmitters>
         <submitter>ar.executive1@totalit.com</submitter>
         <type>user</type>
     </allowedSubmitters>
@@ -100,7 +100,7 @@
     <allowedSubmitters>
         <submitter>vineet.kumar@manras.com.totalit</submitter>
         <type>user</type>
-    </allowedSubmitters>
+    </allowedSubmitters>-->
     <approvalPageFields>
         <field>Name</field>
         <field>Project__c</field>

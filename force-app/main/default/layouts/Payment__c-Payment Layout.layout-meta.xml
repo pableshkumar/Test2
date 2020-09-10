@@ -168,7 +168,7 @@
         <fields>NAME</fields>
         <fields>Amount__c</fields>
         <fields>Invoice__c.NAME</fields>
-        <fields>Invoice__c</fields>
+        <!--<fields>Invoice__c</fields>-->
         <fields>CURRENCY_ISO_CODE</fields>
         <relatedList>Invoice_Payment__c.Payment__c</relatedList>
     </relatedLists>

@@ -1,7 +1,7 @@
 public class ApprovalService {
     
     
-    @InvocableMethod
+    /*@InvocableMethod
 	public static void escalateToTIGDelivery(List<ID> invIds){
         List<Invoice__c> unattendetInvoice = [Select ID, status__c from Invoice__c WHERE id =: invIds[0]];
         
@@ -23,7 +23,7 @@ public class ApprovalService {
             service.approveApprovalRecord(invIds, 'Auto Approve');
         }       
      
-     }
+     }*/
     
     public void rejectApprovalRecord(List<ID> invIds, string comment){
          //Class used for Approving Record

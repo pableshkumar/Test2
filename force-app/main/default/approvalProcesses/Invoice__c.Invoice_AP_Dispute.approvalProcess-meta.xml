@@ -24,7 +24,7 @@
     <approvalPageFields>
         <field>Name</field>
         <field>Owner</field>
-        <field>00N2x000006bi2p</field>
+        <field></field>
         <field>Billing_Information__c</field>
         <field>CreatedBy</field>
         <field>CurrencyIsoCode</field>
@@ -34,11 +34,11 @@
         <field>Invoice_Number__c</field>
         <field>Invoice_Sent_Received_Date__c</field>
         <field>Invoice_Series__c</field>
-        <field>00N9D000002dOMb</field>
+        <!--<field>00N9D000002dOMb</field>-->
         <field>Invoice_Type__c</field>
-        <field>00N9D000002ePmy</field>
+        <!--<field>00N9D000002ePmy</field>-->
         <field>LastModifiedBy</field>
-        <field>00N9D000002dE5l</field>
+        <!--<field>00N9D000002dE5l</field>-->
         <field>Payment_Terms__c</field>
         <field>Project__c</field>
         <field>Purchase_Order__c</field>
@@ -46,10 +46,10 @@
         <field>Service_Month__c</field>
         <field>Settlement_Date__c</field>
         <field>Status__c</field>
-        <field>00N2x000006bi34</field>
-        <field>00N9D000002dE5g</field>
+        <!--<field>00N2x000006bi34</field>-->
+        <!--<field>00N9D000002dE5g</field>-->
         <field>TIG_Entity__c</field>
-        <field>00N2x000006bi27</field>
+        <!--<field>00N2x000006bi27</field>-->
     </approvalPageFields>
     <approvalStep>
         <allowDelegate>false</allowDelegate>

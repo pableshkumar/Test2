@@ -5,7 +5,7 @@
     <allowedSubmitters>
         <type>owner</type>
     </allowedSubmitters>
-    <allowedSubmitters>
+    <!--<allowedSubmitters>
         <submitter>ar.executive1@totalit.com</submitter>
         <type>user</type>
     </allowedSubmitters>
@@ -60,7 +60,7 @@
     <allowedSubmitters>
         <submitter>vineet.kumar@manras.com.totalit</submitter>
         <type>user</type>
-    </allowedSubmitters>
+    </allowedSubmitters>-->
     <approvalPageFields>
         <field>Name</field>
         <field>Owner</field>
@@ -83,7 +83,7 @@
         <name>AR_Manager_Approval</name>
     </approvalStep>
     <description>will be fired once status updated as &quot;AR Manager&quot;</description>
-    <emailTemplate>Billing_Approval_Email_Templates/AR_Manager_Approval_Notification</emailTemplate>
+    <emailTemplate></emailTemplate>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
         <criteriaItems>
@@ -105,10 +105,10 @@
     </finalApprovalActions>
     <finalApprovalRecordLock>false</finalApprovalRecordLock>
     <finalRejectionActions>
-        <action>
+        <!--<action>
             <name>Rejection_email_on_AR_Manager_rejection</name>
             <type>Alert</type>
-        </action>
+        </action>-->
         <action>
             <name>Update_Status_to_Rework</name>
             <type>FieldUpdate</type>

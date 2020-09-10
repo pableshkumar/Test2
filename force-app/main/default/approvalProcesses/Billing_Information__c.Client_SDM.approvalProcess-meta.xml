@@ -5,7 +5,7 @@
     <allowedSubmitters>
         <type>owner</type>
     </allowedSubmitters>
-    <allowedSubmitters>
+    <!--<allowedSubmitters>
         <submitter>ar.executive1@totalit.com</submitter>
         <type>user</type>
     </allowedSubmitters>
@@ -60,7 +60,7 @@
     <allowedSubmitters>
         <submitter>vineet.kumar@manras.com.totalit</submitter>
         <type>user</type>
-    </allowedSubmitters>
+    </allowedSubmitters>-->
     <approvalPageFields>
         <field>Name</field>
         <field>Owner</field>
@@ -93,7 +93,7 @@
         </rejectionActions>
     </approvalStep>
     <description>Will be fired once APproval Status is updated with the value &quot;Sent to Client SDM&quot;</description>
-    <emailTemplate>Billing_Approval_Email_Templates/Client_SDM_Approval_Notification</emailTemplate>
+    <emailTemplate></emailTemplate>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
         <criteriaItems>
@@ -109,10 +109,10 @@
     </entryCriteria>
     <finalApprovalRecordLock>false</finalApprovalRecordLock>
     <finalRejectionActions>
-        <action>
+       <!-- <action>
             <name>Rejection_email_upon_Client_SDM_rejection</name>
             <type>Alert</type>
-        </action>
+        </action>-->
         <action>
             <name>Update_Billing_Status_with_Rework</name>
             <type>FieldUpdate</type>

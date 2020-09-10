@@ -179,7 +179,7 @@
         <operation>Literal</operation>
         <protected>false</protected>
     </fieldUpdates>
-    <fieldUpdates>
+    <!--<fieldUpdates>
         <fullName>Update_Approval_Status2</fullName>
         <field>Billing_Approval_Status__c</field>
         <literalValue>Send to TIG SDM</literalValue>
@@ -187,7 +187,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
-    </fieldUpdates>
+    </fieldUpdates>-->
     <fieldUpdates>
         <fullName>Update_Approval_Status_1</fullName>
         <description>Update to &quot;Sent to AR Manager&quot;</description>

@@ -268,7 +268,7 @@
                     <name>parentFieldApiName</name>
                     <value>Invoice__c.Id</value>
                 </componentInstanceProperties>
-                <componentInstanceProperties>
+               <componentInstanceProperties>
                     <name>relatedListApiName</name>
                     <value>AttachedContentNotes</value>
                 </componentInstanceProperties>
