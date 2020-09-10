@@ -403,8 +403,8 @@
         <field>Account.ZIP_Postal_Code_Bank__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
-    
+
+
     <fieldPermissions>
         <editable>true</editable>
         <field>Billing_Information_Line_Item__c.Acknowledge_Date_Time__c</field>
@@ -820,7 +820,7 @@
         <field>Billing_Row_Data__c.Work_Start__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.AccountId</field>
@@ -931,7 +931,7 @@
         <field>Contact.Title</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+
     <fieldPermissions>
         <editable>true</editable>
         <field>Invoice_Line_Item__c.Amount__c</field>
@@ -1097,7 +1097,7 @@
         <field>Invoice__c.Total_Tax__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+
     <fieldPermissions>
         <editable>true</editable>
         <field>Order__c.Bill_to_Address__c</field>
@@ -1168,7 +1168,7 @@
         <field>Payment__c.Reference_No__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+
     <fieldPermissions>
         <editable>false</editable>
         <field>Project_Services__c.Active_Service__c</field>
@@ -1634,7 +1634,7 @@
         <field>Project__c.Type_of_Project__c</field>
         <readable>false</readable>
     </fieldPermissions>
-    
+
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
@@ -2123,28 +2123,12 @@
         <tab>standard-Product2</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
-   <!-- <tabVisibilities>
-        <tab>standard-ProfileSkill</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>-->
-    <tabVisibilities>
-        <tab>standard-Quote</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Recommendation</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Scorecard</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-SocialPersona</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-SocialPost</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
