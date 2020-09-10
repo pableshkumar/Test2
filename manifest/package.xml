@@ -333,7 +333,6 @@
 		<members>Project__c.Total_IT_Billing_Entity__c</members>
 		<members>Project__c.Type_of_Project__c</members>
 		<members>TIG_Entity__c.TIG_Entity_Code__c</members>
-		<members>User.test_hierarchy__c</members>
 		<members>sf_GsPilotV1__In_App_Checklist_Settings__c.sf_GsPilotV1__ProfileKey__c</members>
 		<members>sf_GsPilotV1__In_App_Checklist_Settings__c.sf_GsPilotV1__Sales_Cloud_In_App_Page__c</members>
 		<name>CustomField</name>

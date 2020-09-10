@@ -1673,12 +1673,6 @@
         <field>Project__c.Type_of_Project__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>User.test_hierarchy__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
     <loginIpRanges>
         <endAddress>255.255.255.255</endAddress>
         <startAddress>0.0.0.0</startAddress>
