@@ -6,6 +6,10 @@ public class InvoiceHandler {
                 //invoice.addError('Please enter disputed amount before rejection.');
                 invoice.addError(System.Label.Dispute_Amount_Error);
             }
+            else if(invoice.Number_of_Invoice_Line_Items__c == 0){
+                //invoice.addError('Please enter disputed amount before rejection.');
+                invoice.addError('Please add line items to the invoice before proceeding.');
+            }
         }    
     }
 

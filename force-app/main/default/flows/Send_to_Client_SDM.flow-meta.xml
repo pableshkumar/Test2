@@ -1,28 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <decisions>
-        <description>Check error message if it contains &quot;Please add primary external SDM in Project Team&quot;</description>
-        <name>Check_error_message</name>
-        <label>Check error message</label>
-        <locationX>48</locationX>
-        <locationY>304</locationY>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>External_SDM_Error</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Flow.FaultMessage</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>Please add primary external SDM in Project Team</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>FaultScreen</targetReference>
-            </connector>
-            <label>External SDM Error</label>
-        </rules>
-    </decisions>
     <description>This flow will update the Billing Status with the of &quot;Sent to Client SDM&quot;</description>
     <interviewLabel>Send to Client SDM {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Send to Client SDM</label>
@@ -48,7 +25,7 @@
             <targetReference>Sent_to_Client_SDM</targetReference>
         </connector>
         <faultConnector>
-            <targetReference>Check_error_message</targetReference>
+            <targetReference>FaultScreen</targetReference>
         </faultConnector>
         <filters>
             <field>Id</field>
@@ -68,14 +45,14 @@
     <screens>
         <name>FaultScreen</name>
         <label>FaultScreen</label>
-        <locationX>64</locationX>
-        <locationY>414</locationY>
+        <locationX>75</locationX>
+        <locationY>515</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <fields>
             <name>FaultMessage</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(234, 32, 32);&quot;&gt;Please add primary external SDM in Project Team&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
