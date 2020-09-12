@@ -666,6 +666,52 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
     </actionCalls>
     <actionCalls>
         <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Escalate_to_AR_Head_After_Billing_Approved</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myWaitEvent_myWait_myRule_12_event_1_SA1</name>
+        <label>Escalate to AR Head</label>
+        <locationX>1200</locationX>
+        <locationY>200</locationY>
+        <actionName>Billing_Information__c.Escalate_to_AR_Head_After_Billing_Approved</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>myWaitEvent_myWait_myRule_12_event_1_SA2</targetReference>
+        </connector>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Notify_to_AR_Executives_and_AR_Manager_about_Approved_Billing_Escalation</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myWaitEvent_myWait_myRule_12_event_1_SA2</name>
+        <label>Notify to AR Executives and AR Manager about Approved Billing Escalation</label>
+        <locationX>1200</locationX>
+        <locationY>300</locationY>
+        <actionName>Billing_Information__c.Notify_to_AR_Executives_and_AR_Manager_about_Approved_Billing_Escalation</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>myWaitEvent_myWait_myRule_12_event_1_postWaitExecutionAssignment</targetReference>
+        </connector>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
             <name>customNotifTypeName</name>
             <value>
                 <stringValue>Billing_Notifications</stringValue>
@@ -1197,6 +1243,22 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
         </connector>
     </assignments>
     <assignments>
+        <name>myWaitEvent_myWait_myRule_12_event_1_postWaitExecutionAssignment</name>
+        <label>myWaitEvent_myWait_myRule_12_event_1_postWaitExecutionAssignment</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>myWaitEvent_myWait_myRule_12_event_1_postActionExecutionVariable</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>myWait_myRule_12</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>myWaitEvent_myWait_myRule_1_event_0_postWaitExecutionAssignment</name>
         <label>myWaitEvent_myWait_myRule_1_event_0_postWaitExecutionAssignment</label>
         <locationX>0</locationX>
@@ -1665,6 +1727,31 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
                 <targetReference>myWaitEvent_myWait_myRule_12_event_0_SA1</targetReference>
             </connector>
             <label>myPostWaitRule_myWaitEvent_myWait_myRule_12_event_0</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myPostWaitDecision_myWaitEvent_myWait_myRule_12_event_1</name>
+        <label>myPostWaitDecision_myWaitEvent_myWait_myRule_12_event_1</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myWaitEvent_myWait_myRule_12_event_1_postWaitExecutionAssignment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myPostWaitRule_myWaitEvent_myWait_myRule_12_event_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_current.LastModifiedDate</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myWaitEvent_myWait_myRule_12_event_1_SA1</targetReference>
+            </connector>
+            <label>myPostWaitRule_myWaitEvent_myWait_myRule_12_event_1</label>
         </rules>
     </decisions>
     <decisions>
@@ -2289,13 +2376,13 @@ TEXT([Billing_Information__c].Billing_Start_Date__c) + &apos;-&apos; + TEXT([Bil
 TEXT([Billing_Information__c].Project__r.Billing_Frequency__c) </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_5730772966</name>
+        <name>formula_2_myRule_1_A1_6956875972</name>
         <dataType>String</dataType>
         <expression>&apos;B-&apos; + {!myVariable_current.Project__r.Name} + &apos;-&apos; +  
 TEXT({!myVariable_current.Billing_Start_Date__c}) + &apos;-&apos; + TEXT({!myVariable_current.Billing_End_Date__c})    + &apos;-&apos; +
 TEXT({!myVariable_current.Project__r.Billing_Frequency__c})</expression>
     </formulas>
-    <interviewLabel>Billing_Information-11_InterviewLabel</interviewLabel>
+    <interviewLabel>Billing_Information-12_InterviewLabel</interviewLabel>
     <label>Billing Information</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -2400,7 +2487,7 @@ TEXT({!myVariable_current.Project__r.Billing_Frequency__c})</expression>
             </processMetadataValues>
             <field>Name</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_5730772966</elementReference>
+                <elementReference>formula_2_myRule_1_A1_6956875972</elementReference>
             </value>
         </inputAssignments>
         <object>Billing_Information__c</object>
@@ -2488,6 +2575,16 @@ TEXT({!myVariable_current.Project__r.Billing_Frequency__c})</expression>
     </variables>
     <variables>
         <name>myWaitEvent_myWait_myRule_12_event_0_postActionExecutionVariable</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>myWaitEvent_myWait_myRule_12_event_1_postActionExecutionVariable</name>
         <dataType>Boolean</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -2704,6 +2801,58 @@ TEXT({!myVariable_current.Project__r.Billing_Frequency__c})</expression>
                 </value>
             </inputParameters>
             <label>myWaitEvent_myWait_myRule_12_event_0</label>
+        </waitEvents>
+        <waitEvents>
+            <processMetadataValues>
+                <name>inputParameterType</name>
+                <value>
+                    <stringValue>referenced</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>myWaitEvent_myWait_myRule_12_event_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>myWaitEvent_myWait_myRule_12_event_1_postActionExecutionVariable</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myPostWaitDecision_myWaitEvent_myWait_myRule_12_event_1</targetReference>
+            </connector>
+            <eventType>DateRefAlarmEvent</eventType>
+            <inputParameters>
+                <name>TimeTableColumnEnumOrId</name>
+                <value>
+                    <stringValue>Billing_Information__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>EntityObjectId</name>
+                <value>
+                    <elementReference>myVariable_current.Id</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>TimeOffsetUnit</name>
+                <value>
+                    <stringValue>Hours</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>TimeOffset</name>
+                <value>
+                    <numberValue>48.0</numberValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>TimeFieldColumnEnumOrId</name>
+                <value>
+                    <stringValue>LastModifiedDate</stringValue>
+                </value>
+            </inputParameters>
+            <label>myWaitEvent_myWait_myRule_12_event_1</label>
         </waitEvents>
     </waits>
     <waits>

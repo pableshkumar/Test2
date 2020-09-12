@@ -21,11 +21,28 @@
         <field>Billing_Information__c</field>
         <field>Due_Date__c</field>
         <field>Invoice_Date__c</field>
-        <field>00N1y000004ADkB</field>
         <field>Invoice_Sent_Received_Date__c</field>
         <field>Invoice_Type__c</field>
         <field>Stage__c</field>
         <field>Status__c</field>
+        <field>Amount__c</field>
+        <field>Amount_Recieved_Paid__c</field>
+        <field>CreatedBy</field>
+        <field>CurrencyIsoCode</field>
+        <field>Customer__c</field>
+        <field>Disputed_Amount__c</field>
+        <field>LastModifiedBy</field>
+        <field>Number_of_Invoice_Line_Items__c</field>
+        <field>Outstanding_Amount__c</field>
+        <field>Payment_Terms__c</field>
+        <field>Project__c</field>
+        <field>Purchase_Order__c</field>
+        <field>RecordType</field>
+        <field>Service_Month__c</field>
+        <field>Settlement_Date__c</field>
+        <field>TIG_Entity__c</field>
+        <field>Total_Amount__c</field>
+        <field>Total_Tax__c</field>
     </approvalPageFields>
     <approvalStep>
         <allowDelegate>false</allowDelegate>
