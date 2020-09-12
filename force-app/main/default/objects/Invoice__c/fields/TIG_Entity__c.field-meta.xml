@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>TIG_Entity__c</fullName>
     <externalId>false</externalId>
-    <formula>TEXT(Project__r.Total_IT_Billing_Entity__c)</formula>
+    <formula>Project__r.TIG_Entity_Name__r.Name</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>TIG Entity</label>
     <required>false</required>

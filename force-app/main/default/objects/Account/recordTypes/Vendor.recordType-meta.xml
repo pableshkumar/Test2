@@ -5,7 +5,7 @@
     <label>Vendor</label>
     <picklistValues>
         <picklist>AccountSource</picklist>
-        <values>
+        <!--<values>
             <fullName>Advertisement</fullName>
             <default>false</default>
         </values>
@@ -40,7 +40,7 @@
         <values>
             <fullName>Word of Mouth</fullName>
             <default>false</default>
-        </values>
+        </values>-->
     </picklistValues>
     <picklistValues>
         <picklist>Bank_Account_Country_Code__c</picklist>
@@ -1282,7 +1282,7 @@
     </picklistValues>
     <picklistValues>
         <picklist>Type</picklist>
-        <values>
+        <!--<values>
             <fullName>Analyst</fullName>
             <default>false</default>
         </values>
@@ -1321,6 +1321,6 @@
         <values>
             <fullName>Reseller</fullName>
             <default>false</default>
-        </values>
+        </values>-->
     </picklistValues>
 </RecordType>

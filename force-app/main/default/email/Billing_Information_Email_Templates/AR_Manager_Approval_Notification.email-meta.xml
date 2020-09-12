@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>AR Manager Approval Email Template for Billing</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>AR Manager Approval Notification</name>
+    <style>none</style>
+    <subject>Billing Approval Email</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

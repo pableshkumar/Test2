@@ -3,7 +3,9 @@
 	"edition": "Developer",
 	"features": [
 		"MultiCurrency",
-		"AuthorApex"
+		"AuthorApex",
+		"Communities",
+		"ContactsToMultipleAccounts"
 	],
 	"settings": {
 		"lightningExperienceSettings": {
@@ -19,6 +21,9 @@
 		},
 		"communitiesSettings": {
 			"enableNetworksEnabled": true
+		},
+		"enhancedNotesSettings": {
+			"enableEnhancedNotes": true
 		}
 	}
 }

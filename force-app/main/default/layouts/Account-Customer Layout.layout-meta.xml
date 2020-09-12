@@ -71,6 +71,10 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
+                <behavior>Required</behavior>
+                <field>Customer_Code__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>NumberOfEmployees</field>
             </layoutItems>
@@ -148,16 +152,6 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>AccountHierarchy</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>0</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Edit</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>1</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>LogACall</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>2</sortOrder>
@@ -197,6 +191,16 @@
             <actionType>StandardButton</actionType>
             <sortOrder>9</sortOrder>
         </platformActionListItems>
+        <platformActionListItems>
+            <actionName>AccountHierarchy</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Edit</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>1</sortOrder>
+        </platformActionListItems>
     </platformActionList>
     <quickActionList>
         <quickActionListItems>
@@ -227,17 +231,15 @@
     <relatedContent>
         <relatedContentItems>
             <layoutItem>
-                <component>wits:newsPanel</component>
-            </layoutItem>
-        </relatedContentItems>
-        <relatedContentItems>
-            <layoutItem>
                 <component>runtime_sales_social:socialPanel</component>
             </layoutItem>
         </relatedContentItems>
     </relatedContent>
     <relatedLists>
+        <excludeButtons>MassAddToCampaign</excludeButtons>
+        <excludeButtons>Merge</excludeButtons>
         <fields>CONTACT.FULL_NAME</fields>
+        <fields>CONTACT.TITLE</fields>
         <fields>CONTACT.EMAIL</fields>
         <fields>CONTACT.PHONE1</fields>
         <fields>ACCCONRELATION.ROLES</fields>
@@ -259,13 +261,17 @@
         <fields>PO_Start_Date__c</fields>
         <fields>PO_End_Date__c</fields>
         <fields>PO_Amount__c</fields>
-        <fields>PO_Amount_Balance__c</fields>
+        <fields>PO_Balance__c</fields>
         <relatedList>Order__c.Customer__c</relatedList>
     </relatedLists>
     <relatedLists>
         <excludeButtons>MassChangeOwner</excludeButtons>
-        <fields>Invoice_Number__c</fields>
+        <fields>NAME</fields>
         <fields>Invoice_Date__c</fields>
+        <fields>Amount__c</fields>
+        <fields>Total_Tax__c</fields>
+        <fields>Total_Amount__c</fields>
+        <fields>RECORDTYPE</fields>
         <relatedList>Invoice__c.Customer__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -283,7 +289,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h2x000000xmCT</masterLabel>
+        <masterLabel>00h1y000000mwrH</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

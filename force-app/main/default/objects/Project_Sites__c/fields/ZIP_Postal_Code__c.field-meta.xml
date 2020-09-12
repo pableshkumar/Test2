@@ -3,11 +3,10 @@
     <fullName>ZIP_Postal_Code__c</fullName>
     <externalId>false</externalId>
     <label>ZIP/ Postal Code</label>
-    <precision>18</precision>
+    <length>100</length>
     <required>true</required>
-    <scale>0</scale>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>Number</type>
+    <type>Text</type>
     <unique>false</unique>
 </CustomField>

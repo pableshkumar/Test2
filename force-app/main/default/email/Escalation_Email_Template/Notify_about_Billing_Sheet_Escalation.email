@@ -1,0 +1,12 @@
+Hi Team,
+
+This is to notify you that Required time-frame has been completed and due to insufficient actions case has been escalated.
+
+Please find the record details below.
+Billing Number : {!Billing_Information__c.Name}
+Project : {!Billing_Information__c.Project__c}
+Customer : {!Billing_Information__c.Customer__c}
+Total Amount : {!Billing_Information__c.Total_Amount__c}
+
+Record link is given below.
+{!Billing_Information__c.Link}

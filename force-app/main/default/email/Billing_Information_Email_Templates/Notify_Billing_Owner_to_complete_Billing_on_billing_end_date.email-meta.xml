@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>If billing is not completed by billing end date then notifying Billing Owner through this templateIf billing is not completed by billing end date then notifying sdm through this template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Notify Billing Owner to complete Billing (on billing end date)</name>
+    <style>none</style>
+    <subject>Complete Billing for Project : {!Billing_Information__c.Project__c}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
