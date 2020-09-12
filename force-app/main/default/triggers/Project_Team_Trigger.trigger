@@ -12,6 +12,8 @@ trigger Project_Team_Trigger on Project_Team__c (before insert , after Insert , 
         Project_Team_Trigger_Handler.updatePrimaryProjectTeamMember(Trigger.New,Trigger.OldMap);
     }
 
-    shareito.ShareITInit shareInit = new shareito.ShareITInit(shareito.ShareITType.FULL);
-    shareInit.processSharing();
+    if(Trigger.isAfter){
+        shareito.ShareITInit shareInit = new shareito.ShareITInit(shareito.ShareITType.FULL);
+        shareInit.processSharing();
+    }
 }

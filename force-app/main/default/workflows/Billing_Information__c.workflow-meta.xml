@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
+        <fullName>Escalate_to_AR_Head_After_Billing_Approved</fullName>
+        <description>Escalate to AR Head After Billing Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AR_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Send_Escalation_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Escalate_to_AR_Manager_After_Billing_Approved</fullName>
+        <description>Escalate to AR Manager After Billing Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AR_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AR_SR_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Send_Escalation_Email</template>
+    </alerts>
+    <alerts>
         <fullName>Notify_Billing_Owner_to_complete_Billing_2_days_before_billing_end_date</fullName>
         <description>Notify Billing Owner to complete Billing (2 days before billing end date)</description>
         <protected>false</protected>
@@ -21,6 +47,44 @@
         <template>Billing_Information_Email_Templates/Notify_Billing_Owner_to_complete_Billing_on_billing_end_date</template>
     </alerts>
     <alerts>
+        <fullName>Notify_about_Escalation_to_AR_Executive_Sr_AR_Executive</fullName>
+        <description>Notify about Escalation to AR Executive/Sr. AR Executive</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AR_SR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Notify_about_Billing_Sheet_Escalation</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_about_Escalation_to_AR_Executive_Sr_AR_Executive_AR_Manager</fullName>
+        <description>Notify about Escalation to AR Executive/Sr. AR Executive &amp; AR Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AR_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AR_SR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AR_SR_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Notify_about_Billing_Sheet_Escalation</template>
+    </alerts>
+    <alerts>
         <fullName>Notify_billing_owner_for_the_AR_Head_rejection</fullName>
         <description>Notify billing owner for the AR Head rejection</description>
         <protected>false</protected>
@@ -39,6 +103,70 @@
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>Billing_Information_Email_Templates/AR_Manager_Approval_Rejection_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_to_AR_Executives_and_AR_Manager_about_Approved_Billing_Escalation</fullName>
+        <description>Notify to AR Executives and AR Manager about Approved Billing Escalation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AR_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AR_SR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AR_SR_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Notify_about_Billing_Sheet_Escalation</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Escalation_Email_to_AR_Executive_Sr_AR_Executive</fullName>
+        <description>Notify about Escalation to AR Executive/Sr. AR Executive</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AR_SR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Notify_about_Billing_Sheet_Escalation</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Escalation_Email_to_AR_Head</fullName>
+        <description>Send Escalation Email to AR Head</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AR_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Send_Escalation_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Escalation_Email_to_AR_Manager</fullName>
+        <description>Send Escalation Email to AR Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AR_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AR_SR_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Send_Escalation_Email</template>
     </alerts>
     <alerts>
         <fullName>Send_email_to_sdm_on_rejection_by_AR_Executive_SR_Ar_Executive</fullName>

@@ -18,12 +18,10 @@
     </allowedSubmitters>
     <approvalPageFields>
         <field>Name</field>
-        <field>Owner</field>
-        <field></field>
         <field>Billing_Information__c</field>
         <field>Due_Date__c</field>
         <field>Invoice_Date__c</field>
-        <field>Invoice_Number__c</field>
+        <field>00N1y000004ADkB</field>
         <field>Invoice_Sent_Received_Date__c</field>
         <field>Invoice_Type__c</field>
         <field>Stage__c</field>
@@ -124,6 +122,7 @@
         </action>
     </initialSubmissionActions>
     <label>Invoice AR</label>
+    <processOrder>5</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>false</showApprovalHistory>
 </ApprovalProcess>

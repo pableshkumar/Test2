@@ -15,8 +15,6 @@
     </allowedSubmitters>
     <approvalPageFields>
         <field>Name</field>
-        <field>Owner</field>
-        <field></field>
         <field>Status__c</field>
         <field>Billing_Information__c</field>
         <field>CreatedBy</field>
@@ -24,24 +22,18 @@
         <field>Customer__c</field>
         <field>Due_Date__c</field>
         <field>Invoice_Date__c</field>
-        <field>Invoice_Number__c</field>
+        <field>00N1y000004ADkB</field>
         <field>Invoice_Sent_Received_Date__c</field>
-        <field>Invoice_Series__c</field>
-        <!--<field>00N9D000002dOMb</field>-->
+        <field>00N1y000004ADkD</field>
         <field>Invoice_Type__c</field>
-        <!--<field>00N9D000002ePmy</field>-->
         <field>LastModifiedBy</field>
-        <!--<field>00N9D000002dE5l</field>-->
         <field>Payment_Terms__c</field>
         <field>Project__c</field>
         <field>Purchase_Order__c</field>
         <field>RecordType</field>
         <field>Service_Month__c</field>
         <field>Settlement_Date__c</field>
-        <!--<field>00N2x000006bi34</field>-->
-        <!--<field>00N9D000002dE5g</field>-->
         <field>TIG_Entity__c</field>
-        <!--<field>00N2x000006bi27</field>-->
     </approvalPageFields>
     <approvalStep>
         <allowDelegate>false</allowDelegate>
@@ -141,6 +133,7 @@
     <finalApprovalRecordLock>true</finalApprovalRecordLock>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <label>Invoice AP Executive</label>
+    <processOrder>1</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

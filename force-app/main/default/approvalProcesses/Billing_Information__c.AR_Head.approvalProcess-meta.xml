@@ -21,8 +21,11 @@
         <field>Name</field>
         <field>Owner</field>
         <field>Billing_Start_Date__c</field>
-        <field>00N1y000004ADjB</field>
-        <field>CreatedBy</field>
+        <field>Billing_End_Date__c</field>
+        <field>Billing_Approval_Status__c</field>
+        <field>Description__c</field>
+        <field>Project__c</field>
+        <field>Total_Amount__c</field>
         <field>CurrencyIsoCode</field>
     </approvalPageFields>
     <approvalStep>
