@@ -23,6 +23,9 @@
         <connector>
             <targetReference>Sent_to_AR_Head</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>errscrn</targetReference>
+        </faultConnector>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
@@ -38,6 +41,22 @@
         </inputAssignments>
         <object>Billing_Information__c</object>
     </recordUpdates>
+    <screens>
+        <name>errscrn</name>
+        <label>errscrn</label>
+        <locationX>507</locationX>
+        <locationY>413</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>error</name>
+            <fieldText>&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
     <screens>
         <name>Sent_to_AR_Head</name>
         <label>Sent to AR Head</label>

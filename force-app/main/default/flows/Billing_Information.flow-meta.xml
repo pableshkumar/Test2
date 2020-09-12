@@ -368,8 +368,7 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
         <inputParameters>
             <name>title</name>
             <value>
-                <stringValue>{!myVariable_current.LastModifiedBy.FirstName} {!myVariable_current.LastModifiedBy.LastName} is requesting approval for billing information
-</stringValue>
+                <stringValue>{!myVariable_current.LastModifiedBy.FirstName} {!myVariable_current.LastModifiedBy.LastName} is requesting approval for billing information</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -653,6 +652,29 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
         <locationX>1200</locationX>
         <locationY>200</locationY>
         <actionName>Billing_Information__c.Escalate_to_AR_Manager_After_Billing_Approved</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>myWaitEvent_myWait_myRule_12_event_0_SA2</targetReference>
+        </connector>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Notify_to_AR_Executives_and_AR_Manager_about_Approved_Billing_Escalation</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myWaitEvent_myWait_myRule_12_event_0_SA2</name>
+        <label>Send Notification to AR Executive/Sr. AR Executive</label>
+        <locationX>1200</locationX>
+        <locationY>300</locationY>
+        <actionName>Billing_Information__c.Notify_to_AR_Executives_and_AR_Manager_about_Approved_Billing_Escalation</actionName>
         <actionType>emailAlert</actionType>
         <connector>
             <targetReference>myWaitEvent_myWait_myRule_12_event_0_postWaitExecutionAssignment</targetReference>
@@ -1059,7 +1081,7 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
             <assignToReference>myCollection_myRule_10_A1recipientIds</assignToReference>
             <operator>Add</operator>
             <value>
-                <stringValue>00G1y000001ODM0EAO</stringValue>
+                <stringValue>00G1y000001OFr2EAG</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -1075,7 +1097,7 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
             <assignToReference>myCollection_myRule_12_A1recipientIds</assignToReference>
             <operator>Add</operator>
             <value>
-                <stringValue>00G1y000001ODM0EAO</stringValue>
+                <stringValue>00G1y000001OFr2EAG</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -1107,7 +1129,7 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
             <assignToReference>myCollection_myRule_4_A1recipientIds</assignToReference>
             <operator>Add</operator>
             <value>
-                <stringValue>00G1y000001ODM0EAO</stringValue>
+                <stringValue>00G1y000001OFr2EAG</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -1123,7 +1145,7 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
             <assignToReference>myCollection_myRule_6_A1recipientIds</assignToReference>
             <operator>Add</operator>
             <value>
-                <stringValue>00G1y000001ODM2EAO</stringValue>
+                <stringValue>00G1y000001OFr4EAG</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -1139,7 +1161,7 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
             <assignToReference>myCollection_myRule_8_A1recipientIds</assignToReference>
             <operator>Add</operator>
             <value>
-                <stringValue>00G1y000001ODM1EAO</stringValue>
+                <stringValue>00G1y000001OFr3EAG</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -2376,13 +2398,13 @@ TEXT([Billing_Information__c].Billing_Start_Date__c) + &apos;-&apos; + TEXT([Bil
 TEXT([Billing_Information__c].Project__r.Billing_Frequency__c) </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_6956875972</name>
+        <name>formula_2_myRule_1_A1_3008050816</name>
         <dataType>String</dataType>
         <expression>&apos;B-&apos; + {!myVariable_current.Project__r.Name} + &apos;-&apos; +  
 TEXT({!myVariable_current.Billing_Start_Date__c}) + &apos;-&apos; + TEXT({!myVariable_current.Billing_End_Date__c})    + &apos;-&apos; +
 TEXT({!myVariable_current.Project__r.Billing_Frequency__c})</expression>
     </formulas>
-    <interviewLabel>Billing_Information-12_InterviewLabel</interviewLabel>
+    <interviewLabel>Billing_Information-3_InterviewLabel</interviewLabel>
     <label>Billing Information</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -2487,13 +2509,13 @@ TEXT({!myVariable_current.Project__r.Billing_Frequency__c})</expression>
             </processMetadataValues>
             <field>Name</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_6956875972</elementReference>
+                <elementReference>formula_2_myRule_1_A1_3008050816</elementReference>
             </value>
         </inputAssignments>
         <object>Billing_Information__c</object>
     </recordUpdates>
     <startElementReference>myPreWaitDecision_myWait_myRule_12</startElementReference>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>cancelWaits</name>
         <dataType>String</dataType>
