@@ -5,13 +5,19 @@
             "default": true,
             "package": "TotalIT",
             "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT"
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "ShareIT-O"
+                }
+            ]
         }
     ],
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "49.0",
     "packageAliases": {
-        "TotalIT": "0Ho2x000000PBc2CAG"
+        "TotalIT": "0Ho2x000000PBc2CAG",
+        "ShareIT-O": "04t2v0000076AfeAAE"
     }
 }
