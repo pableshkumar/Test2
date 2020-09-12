@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
     <active>true</active>
-    <allowRecall>true</allowRecall>
+    <allowRecall>false</allowRecall>
     <allowedSubmitters>
         <type>owner</type>
     </allowedSubmitters>
@@ -10,12 +10,19 @@
         <type>role</type>
     </allowedSubmitters>
     <allowedSubmitters>
+        <submitter>AP_Head</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>AP_Manager</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
         <submitter>AP_SR_Executive</submitter>
         <type>role</type>
     </allowedSubmitters>
     <approvalPageFields>
         <field>Name</field>
-        <field>Status__c</field>
         <field>Billing_Information__c</field>
         <field>CreatedBy</field>
         <field>CurrencyIsoCode</field>
@@ -31,6 +38,7 @@
         <field>RecordType</field>
         <field>Service_Month__c</field>
         <field>Settlement_Date__c</field>
+        <field>Status__c</field>
         <field>TIG_Entity__c</field>
         <field>Amount__c</field>
         <field>Amount_Recieved_Paid__c</field>
@@ -51,70 +59,20 @@
         </approvalActions>
         <assignedApprover>
             <approver>
-                <name>AP_Executive_Sr_AP_Executive</name>
-                <type>queue</type>
+                <type>adhoc</type>
             </approver>
-            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
-        <entryCriteria>
-            <criteriaItems>
-                <field>Invoice__c.Status__c</field>
-                <operation>equals</operation>
-                <value>Check SOW &amp; PO</value>
-            </criteriaItems>
-        </entryCriteria>
-        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
-        <label>Check SOW &amp; PO</label>
-        <name>Check_SOW_PO</name>
+        <label>Dispute Resolution With SDM</label>
+        <name>Dispute_Resolution_With_SDM</name>
         <rejectionActions>
             <action>
-                <name>Stage_Rejected</name>
-                <type>FieldUpdate</type>
-            </action>
-            <action>
-                <name>Status_Reject_Invoice</name>
-                <type>FieldUpdate</type>
-            </action>
-        </rejectionActions>
-    </approvalStep>
-    <approvalStep>
-        <allowDelegate>false</allowDelegate>
-        <approvalActions>
-            <action>
-                <name>Stage_Accepted</name>
-                <type>FieldUpdate</type>
-            </action>
-            <action>
-                <name>Status_Approved</name>
-                <type>FieldUpdate</type>
-            </action>
-        </approvalActions>
-        <assignedApprover>
-            <approver>
-                <name>AP_Executive_Sr_AP_Executive</name>
-                <type>queue</type>
-            </approver>
-            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
-        </assignedApprover>
-        <label>Validate Invoice</label>
-        <name>Validate_Invoice</name>
-        <rejectBehavior>
-            <type>RejectRequest</type>
-        </rejectBehavior>
-        <rejectionActions>
-            <action>
-                <name>Stage_On_Hold</name>
-                <type>FieldUpdate</type>
-            </action>
-            <action>
-                <name>Status_Dispute</name>
+                <name>Status_Escalate</name>
                 <type>FieldUpdate</type>
             </action>
         </rejectionActions>
     </approvalStep>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
-        <booleanFilter>1 AND (2 OR 3) AND 4</booleanFilter>
         <criteriaItems>
             <field>Invoice__c.RecordType</field>
             <operation>equals</operation>
@@ -123,23 +81,13 @@
         <criteriaItems>
             <field>Invoice__c.Status__c</field>
             <operation>equals</operation>
-            <value>Check SOW &amp; PO</value>
-        </criteriaItems>
-        <criteriaItems>
-            <field>Invoice__c.Status__c</field>
-            <operation>equals</operation>
-            <value>Validate Invoice</value>
-        </criteriaItems>
-        <criteriaItems>
-            <field>Invoice__c.Stage__c</field>
-            <operation>equals</operation>
-            <value>Submitted,On Hold,Rejected</value>
+            <value>Disputed</value>
         </criteriaItems>
     </entryCriteria>
     <finalApprovalRecordLock>true</finalApprovalRecordLock>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
-    <label>Invoice AP Executive</label>
-    <processOrder>1</processOrder>
+    <label>Invoice AP Dispute</label>
+    <processOrder>2</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

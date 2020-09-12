@@ -9,18 +9,9 @@
         </roles>
     </queueMembers>
     <queueSobject>
-        <sobjectType>Billing_Information_Line_Item__c</sobjectType>
-    </queueSobject>
-    <queueSobject>
         <sobjectType>Billing_Information__c</sobjectType>
     </queueSobject>
     <queueSobject>
-        <sobjectType>Billing_Row_Data__c</sobjectType>
-    </queueSobject>
-    <queueSobject>
-        <sobjectType>Invoice__c</sobjectType>
-    </queueSobject>
-    <queueSobject>
-        <sobjectType>Project__c</sobjectType>
+        <sobjectType>Order</sobjectType>
     </queueSobject>
 </Queue>
