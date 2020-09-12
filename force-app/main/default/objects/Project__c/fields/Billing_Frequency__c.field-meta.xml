@@ -29,7 +29,7 @@
             </value>
             <value>
                 <fullName>Monthly</fullName>
-                <default>false</default>
+                <default>true</default>
                 <label>Monthly</label>
             </value>
             <value>

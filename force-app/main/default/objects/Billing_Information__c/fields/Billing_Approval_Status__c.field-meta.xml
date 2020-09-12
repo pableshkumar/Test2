@@ -5,6 +5,7 @@
     <externalId>false</externalId>
     <label>Billing Status</label>
     <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
@@ -12,16 +13,6 @@
         <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
-            <value>
-                <fullName>Upload Raw  Data</fullName>
-                <default>true</default>
-                <label>Upload Raw  Data</label>
-            </value>
-            <value>
-                <fullName>Sent to SDM</fullName>
-                <default>false</default>
-                <label>Sent to SDM</label>
-            </value>
             <value>
                 <fullName>Draft</fullName>
                 <default>false</default>
@@ -53,48 +44,14 @@
                 <label>Sent to Client SDM</label>
             </value>
             <value>
-                <fullName>Sent to TIG SDM</fullName>
+                <fullName>Partially Approved</fullName>
                 <default>false</default>
-                <label>Sent to TIG SDM</label>
-            </value>
-            <value>
-                <fullName>Approved</fullName>
-                <default>false</default>
-                <label>Approved</label>
-            </value>
-            <value>
-                <fullName>Rejected</fullName>
-                <default>false</default>
-                <label>Rejected</label>
+                <label>Partially Approved</label>
             </value>
             <value>
                 <fullName>Billing Approved</fullName>
                 <default>false</default>
                 <label>Billing Approved</label>
-            </value>
-            <value>
-                <fullName>Rejected by AR Executive/ AR Sr. Executive</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Rejected by AR Executive/ AR Sr. Executive</label>
-            </value>
-            <value>
-                <fullName>Rejected by AR Head</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Rejected by AR Head</label>
-            </value>
-            <value>
-                <fullName>Rejected by AR Manager</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Rejected by AR Manager</label>
-            </value>
-            <value>
-                <fullName>Rejected by Client SDM</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Rejected by Client SDM</label>
             </value>
         </valueSetDefinition>
     </valueSet>

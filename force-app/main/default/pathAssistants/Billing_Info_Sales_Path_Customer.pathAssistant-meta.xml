@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
-    <active>true</active>
-    <entityName>Billing_Information__c</entityName>
-    <fieldName>Billing_Approval_Status__c</fieldName>
-    <masterLabel>Billing Info Sales Path (Customer)</masterLabel>
-    <recordTypeName>Customer</recordTypeName>
-</PathAssistant>

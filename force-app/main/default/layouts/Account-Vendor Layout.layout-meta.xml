@@ -348,11 +348,11 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Order__c.Vendor__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>Invoice_Number__c</fields>
         <fields>Invoice_Date__c</fields>
+        <fields>Amount__c</fields>
+        <fields>Total_Tax__c</fields>
+        <fields>Total_Amount__c</fields>
+        <fields>RECORDTYPE</fields>
         <relatedList>Invoice__c.Customer__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -372,7 +372,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hN0000001kWb4</masterLabel>
+        <masterLabel>00h1y000000mwrI</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

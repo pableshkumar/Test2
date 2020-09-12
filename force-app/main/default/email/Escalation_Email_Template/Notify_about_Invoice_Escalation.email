@@ -1,0 +1,13 @@
+Hi Team,
+
+This is to notify you that required time-frame has been completed and due to insufficient actions case has been escalated
+
+Please find the record details below.
+Invoice Number : {!Invoice__c.Invoice_Number__c}
+Project : {!Invoice__c.Project__c}
+Purchase Order : {!Invoice__c.Purchase_Order__c}
+Customer : {!Invoice__c.Customer__c}
+
+
+Record link is given below.
+{!Invoice__c.Link}

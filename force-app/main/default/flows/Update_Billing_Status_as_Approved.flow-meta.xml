@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Update Billing Status as Approved {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Billing Status as Approved</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>Update_status_as_Partially_Approved</name>
+        <label>Update status as Partially Approved</label>
+        <locationX>232</locationX>
+        <locationY>244</locationY>
+        <connector>
+            <targetReference>Update_Billing_Info</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Billing_Approval_Status__c</field>
+            <value>
+                <stringValue>Billing Approved</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Billing_Information__c</object>
+    </recordUpdates>
+    <screens>
+        <name>Update_Billing_Info</name>
+        <label>Update Billing Info</label>
+        <locationX>525</locationX>
+        <locationY>267</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Success</name>
+            <fieldText>&lt;p&gt;Billing information is Approved&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Update_status_as_Partially_Approved</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

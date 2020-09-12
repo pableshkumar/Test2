@@ -5,6 +5,7 @@
     <queueMembers>
         <roles>
             <role>AR_Manager</role>
+            <role>AR_SR_Manager</role>
         </roles>
     </queueMembers>
     <queueSobject>
