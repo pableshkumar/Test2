@@ -3,7 +3,7 @@
     <description>Giving additional permissions to AP Head (Account Payables)</description>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Head.AP_Permissionset</label>
-    <objectPermissions>
+    <!--<objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>true</allowEdit>
@@ -11,7 +11,7 @@
         <modifyAllRecords>false</modifyAllRecords>
         <object>Invoice_Line_Item__c</object>
         <viewAllRecords>false</viewAllRecords>
-    </objectPermissions>
+    </objectPermissions>-->
     <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>

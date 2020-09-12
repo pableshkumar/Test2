@@ -269,14 +269,14 @@
         <fields>OPPORTUNITY.CLOSE_DATE</fields>
         <relatedList>RelatedOpportunityList</relatedList>
     </relatedLists>
-    <relatedLists>
+    <!--<relatedLists>
         <fields>ACCOUNT.NAME</fields>
         <fields>ACCCONRELATION.IS_DIRECT</fields>
         <fields>ACCCONRELATION.ROLES</fields>
         <fields>ACCOUNT.ACCOUNT_NUMBER</fields>
         <fields>ACCOUNT.CURRENCY_ISO_CODE</fields>
         <relatedList>RelatedContactAccountRelationList</relatedList>
-    </relatedLists>
+    </relatedLists>-->
     <relatedLists>
         <relatedList>RelatedFileList</relatedList>
     </relatedLists>

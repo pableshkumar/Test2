@@ -5,95 +5,20 @@
     <allowedSubmitters>
         <type>owner</type>
     </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>ar.executive1@totalit.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>ar.head1@totalit.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>ar.manager1@totalit.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>arexecutive2@totalit.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>arhead2@totalit.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>armanager2@totalit.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>madhuri.kartik@manras.totalit</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>manisha.jha-8qgh@force.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>project.manager1@totalit.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>sdm.user1@totalit.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>sdmuser@totalit.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>srarexecutive1@totalit.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>vineet.kumar@manras.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>vineet.kumar@manras.com.totalit</submitter>
-        <type>user</type>
-    </allowedSubmitters>
     <approvalPageFields>
         <field>Name</field>
         <field>Owner</field>
-        <field>Billing_Status__c</field>
-        <field>CreatedBy</field>
-        <field>CurrencyIsoCode</field>
-        <field>Customer__c</field>
-        <field>Description__c</field>
     </approvalPageFields>
     <approvalStep>
         <allowDelegate>false</allowDelegate>
-        <approvalActions>
-            <action>
-                <name>Update_Billing_Approved</name>
-                <type>FieldUpdate</type>
-            </action>
-        </approvalActions>
         <assignedApprover>
             <approver>
                 <type>adhoc</type>
             </approver>
         </assignedApprover>
-        <label>Client SDM Approval</label>
-        <name>Client_SDM_Approval</name>
-        <rejectionActions>
-            <action>
-                <name>Update_Approval_Comment_Check</name>
-                <type>FieldUpdate</type>
-            </action>
-        </rejectionActions>
+        <label>Sent to Client SDM for Approval</label>
+        <name>Sent_to_Client_SDM_for_Approval</name>
     </approvalStep>
-    <description>Will be fired once APproval Status is updated with the value &quot;Sent to Client SDM&quot;</description>
-    <emailTemplate>Billing_Approval_Email_Templates/Client_SDM_Approval_Notification</emailTemplate>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
         <criteriaItems>
@@ -101,25 +26,17 @@
             <operation>equals</operation>
             <value>Sent to Client SDM</value>
         </criteriaItems>
-        <criteriaItems>
-            <field>Billing_Information__c.Account_Type__c</field>
-            <operation>equals</operation>
-            <value>Customer</value>
-        </criteriaItems>
     </entryCriteria>
-    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
     <finalRejectionActions>
         <action>
-            <name>Rejection_email_upon_Client_SDM_rejection</name>
-            <type>Alert</type>
-        </action>
-        <action>
-            <name>Update_Billing_Status_with_Rework</name>
+            <name>Billing_Status_Rework</name>
             <type>FieldUpdate</type>
         </action>
     </finalRejectionActions>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <label>Client SDM</label>
+    <processOrder>4</processOrder>
     <recordEditability>AdminOnly</recordEditability>
-    <showApprovalHistory>false</showApprovalHistory>
+    <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

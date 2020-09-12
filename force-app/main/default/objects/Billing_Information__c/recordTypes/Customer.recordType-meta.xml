@@ -15,21 +15,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Approval_Status__c</picklist>
-        <values>
-            <fullName>Completed</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>In Progress</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Not Started</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Billing_Approval_Status__c</picklist>
         <values>
             <fullName>Billing Approved</fullName>
@@ -38,6 +23,10 @@
         <values>
             <fullName>Draft</fullName>
             <default>true</default>
+        </values>
+        <values>
+            <fullName>Partially Approved</fullName>
+            <default>false</default>
         </values>
         <values>
             <fullName>Rework</fullName>
@@ -57,33 +46,6 @@
         </values>
         <values>
             <fullName>Sent to Client SDM</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Sent to SDM</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Upload Raw  Data</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Billing_Status__c</picklist>
-        <values>
-            <fullName>Completed</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Draft</fullName>
-            <default>true</default>
-        </values>
-        <values>
-            <fullName>In Progress</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>On Hold</fullName>
             <default>false</default>
         </values>
     </picklistValues>

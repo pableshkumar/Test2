@@ -1,0 +1,14 @@
+Hi Team
+
+Billing is approved- Generate the invoice.
+
+Please find the record details below.
+
+Project : {!Billing_Information__c.Project__c}
+Customer : {!Billing_Information__c.Customer__c}
+Total Amount : {!Billing_Information__c.Total_Amount__c}
+Billing Status: {!Billing_Information__c.Billing_Approval_Status__c}
+
+
+The Record link is given below.
+{!Billing_Information__c.Link}

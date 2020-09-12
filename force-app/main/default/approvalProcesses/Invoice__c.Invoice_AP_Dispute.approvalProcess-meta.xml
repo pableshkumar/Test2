@@ -23,22 +23,15 @@
     </allowedSubmitters>
     <approvalPageFields>
         <field>Name</field>
-        <field>Owner</field>
-        <field>00N2x000006bi2p</field>
         <field>Billing_Information__c</field>
         <field>CreatedBy</field>
         <field>CurrencyIsoCode</field>
         <field>Customer__c</field>
         <field>Due_Date__c</field>
         <field>Invoice_Date__c</field>
-        <field>Invoice_Number__c</field>
         <field>Invoice_Sent_Received_Date__c</field>
-        <field>Invoice_Series__c</field>
-        <field>00N9D000002dOMb</field>
         <field>Invoice_Type__c</field>
-        <field>00N9D000002ePmy</field>
         <field>LastModifiedBy</field>
-        <field>00N9D000002dE5l</field>
         <field>Payment_Terms__c</field>
         <field>Project__c</field>
         <field>Purchase_Order__c</field>
@@ -46,10 +39,15 @@
         <field>Service_Month__c</field>
         <field>Settlement_Date__c</field>
         <field>Status__c</field>
-        <field>00N2x000006bi34</field>
-        <field>00N9D000002dE5g</field>
         <field>TIG_Entity__c</field>
-        <field>00N2x000006bi27</field>
+        <field>Amount__c</field>
+        <field>Amount_Recieved_Paid__c</field>
+        <field>Disputed_Amount__c</field>
+        <field>Number_of_Invoice_Line_Items__c</field>
+        <field>Outstanding_Amount__c</field>
+        <field>Stage__c</field>
+        <field>Total_Amount__c</field>
+        <field>Total_Tax__c</field>
     </approvalPageFields>
     <approvalStep>
         <allowDelegate>false</allowDelegate>
@@ -89,6 +87,7 @@
     <finalApprovalRecordLock>true</finalApprovalRecordLock>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <label>Invoice AP Dispute</label>
+    <processOrder>2</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>
