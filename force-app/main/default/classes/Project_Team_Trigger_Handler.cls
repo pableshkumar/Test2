@@ -5,7 +5,8 @@
 *Developer Name
 ******************************************************/
 public class Project_Team_Trigger_Handler {
-    Public static void updatePrimaryProjectTeamMember(List<Project_Team__c>  ptRecords, Map<Id,Project_Team__c> projOldMap)
+    
+    public static void updatePrimaryProjectTeamMember(List<Project_Team__c>  ptRecords, Map<Id,Project_Team__c> projOldMap)
     {
         if(ptRecords.size()>0 && projOldMap==NULL)
         {
@@ -26,7 +27,7 @@ public class Project_Team_Trigger_Handler {
         }
     }
     //common logic to update  primary project team member at project role 
-    Public static void primaryLogic(List<Project_Team__c>  ptRecords)
+    public static void primaryLogic(List<Project_Team__c>  ptRecords)
     {
         Set<Id> projectIds = new Set<Id>();   // add project ids
         Set<Id> teamIds = new Set<Id>();      // add project team record ids

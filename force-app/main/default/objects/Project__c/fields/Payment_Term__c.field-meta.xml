@@ -18,7 +18,7 @@
             </value>
             <value>
                 <fullName>NET30</fullName>
-                <default>false</default>
+                <default>true</default>
                 <label>NET30</label>
             </value>
             <value>

@@ -162,10 +162,9 @@
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <label>Order</label>
     <nameField>
-        <displayFormat>O-{0000}</displayFormat>
-        <label>Order Name</label>
+        <label>PO Number</label>
         <trackHistory>false</trackHistory>
-        <type>AutoNumber</type>
+        <type>Text</type>
     </nameField>
     <pluralLabel>Orders</pluralLabel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>

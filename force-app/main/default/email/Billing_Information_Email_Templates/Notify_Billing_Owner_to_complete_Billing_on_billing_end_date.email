@@ -1,0 +1,5 @@
+Hi {!Billing_Information__c.OwnerFullName}
+
+The billing is pending for the project: {!Billing_Information__c.Project__c}. Billing will be ending today only so please take the neccessary action for the same.
+
+Detail link: {!Billing_Information__c.Link}
