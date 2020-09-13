@@ -6,10 +6,10 @@
 # such as to install dependencies and set environment variables
 #
 trigger:
-- master
+- DEV
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'macos-latest'
 
 steps:
 - task: sfpwowerscript-installsfdx-task@5
