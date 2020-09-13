@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Vendor__c</fullName>
+    <fullName>Customer_Project__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <label>Vendor</label>
+    <label>Customer Project</label>
     <lookupFilter>
         <active>true</active>
         <filterItems>
-            <field>Account.RecordType.Name</field>
+            <field>Project__c.RecordTypeId</field>
             <operation>equals</operation>
-            <value>Vendor</value>
+            <value>Customer</value>
         </filterItems>
         <isOptional>false</isOptional>
     </lookupFilter>
-    <referenceTo>Account</referenceTo>
-    <relationshipLabel>Orders (Vendor)</relationshipLabel>
-    <relationshipName>Orders</relationshipName>
+    <referenceTo>Project__c</referenceTo>
+    <relationshipLabel>Vendor Projects</relationshipLabel>
+    <relationshipName>Customer_Project</relationshipName>
     <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Lookup</type>

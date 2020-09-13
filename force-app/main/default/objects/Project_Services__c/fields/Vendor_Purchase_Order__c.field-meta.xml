@@ -12,9 +12,14 @@
             <value>Purchase Order</value>
         </filterItems>
         <filterItems>
-            <field>$Source.Project__c</field>
+            <field>$Source.Vendor_Project__c</field>
             <operation>equals</operation>
             <valueField>Order__c.Project__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Order__c.Customer_Purchase_Order__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Purchase_Order__c</valueField>
         </filterItems>
         <isOptional>false</isOptional>
     </lookupFilter>

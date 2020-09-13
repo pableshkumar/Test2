@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Customer_Purchase_Order_is_Relevan</fullName>
+    <active>true</active>
+    <errorConditionFormula>Customer_Purchase_Order__r.Project__c !=  Project__r.Customer_Project__c</errorConditionFormula>
+    <errorMessage>Please choose Order corresponding to the Customer Project selected</errorMessage>
+</ValidationRule>
