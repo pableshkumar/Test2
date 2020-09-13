@@ -5,10 +5,23 @@
 # Run these commands before executing any build jobs,
 # such as to install dependencies and set environment variables
 #
-name: $(Date:yyyyMMdd)$(Rev:.r)
-variables:
-  var1: value1
-jobs:
-- job: One
-  steps:
-  - script: echo First step!
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: sfpwowerscript-installsfdx-task@5
+  displayName: Install SFDX
+
+- task: sfpwowerscript-authenticateorg-task@7
+  displayName: Authenticate with DevHub
+  inputs:
+    method: JWT
+    jwt_key_file: server.key
+    username: $(SalesforceUsername)
+    alias: DevHub
+    isdevhub: true
+    clientid: $(SalesforceClientId)
+    isTelemetryEnabled: true
