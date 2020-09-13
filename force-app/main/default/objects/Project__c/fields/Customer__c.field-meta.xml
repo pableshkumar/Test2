@@ -3,7 +3,7 @@
     <fullName>Customer__c</fullName>
     <deleteConstraint>Restrict</deleteConstraint>
     <externalId>false</externalId>
-    <label>Customer</label>
+    <label>Customer/Vendor</label>
     <lookupFilter>
         <active>true</active>
         <filterItems>
