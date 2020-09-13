@@ -29,7 +29,7 @@ public class InvoiceHandler {
                 Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
                 req1.setComments('Dispute Resolution');
                 req1.setObjectId(invoice.id);
-                req1.setNextApproverIds(new List<Id>{roleMap.get(invoice.Project__c)});  
+                req1.setNextApproverIds(new List<Id>{roleMap.get(invoice.Customer_Project__c)});  
                 Approval.ProcessResult result = Approval.process(req1);
             }
             else if(invoice.Status__c == 'Validate Invoice' || invoice.Status__c == 'Escalated' || invoice.Status__c == 'Exception Approval Needed'){

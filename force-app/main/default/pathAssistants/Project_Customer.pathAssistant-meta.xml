@@ -3,6 +3,6 @@
     <active>true</active>
     <entityName>Project__c</entityName>
     <fieldName>Project_Status__c</fieldName>
-    <masterLabel>Project</masterLabel>
-    <recordTypeName>__MASTER__</recordTypeName>
+    <masterLabel>Project Customer</masterLabel>
+    <recordTypeName>Customer</recordTypeName>
 </PathAssistant>

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Vendor__c</fullName>
+    <fullName>Customer_Purchase_Order__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <label>Vendor</label>
+    <label>Customer Purchase Order</label>
     <lookupFilter>
         <active>true</active>
         <filterItems>
-            <field>Account.RecordType.Name</field>
+            <field>Order__c.RecordTypeId</field>
             <operation>equals</operation>
-            <value>Vendor</value>
+            <value>Sales Order</value>
         </filterItems>
         <isOptional>false</isOptional>
     </lookupFilter>
-    <referenceTo>Account</referenceTo>
-    <relationshipLabel>Orders (Vendor)</relationshipLabel>
+    <referenceTo>Order__c</referenceTo>
+    <relationshipLabel>Vendor Orders</relationshipLabel>
     <relationshipName>Orders</relationshipName>
     <required>false</required>
     <trackHistory>false</trackHistory>

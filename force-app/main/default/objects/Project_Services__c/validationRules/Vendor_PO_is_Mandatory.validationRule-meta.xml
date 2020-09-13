@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor_PO_is_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISBLANK(Vendor__c)) &amp;&amp;  ISBLANK(Vendor_Purchase_Order__c)</errorConditionFormula>
+    <errorDisplayField>Vendor_Purchase_Order__c</errorDisplayField>
+    <errorMessage>Vendor PO is mandatory if Vendor is selected</errorMessage>
+</ValidationRule>
