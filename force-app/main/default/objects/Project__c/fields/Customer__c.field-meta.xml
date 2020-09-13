@@ -31,7 +31,7 @@
     </lookupFilter>
     <referenceTo>Account</referenceTo>
     <relationshipLabel>Projects</relationshipLabel>
-    <relationshipName>Projects</relationshipName>
+    <relationshipName>Projects12</relationshipName>
     <required>true</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
