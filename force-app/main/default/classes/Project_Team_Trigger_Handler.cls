@@ -1,6 +1,6 @@
 /******************************************************
 *Class Name
-*Description : This is a batch class. Purpose of this class is to get the billing created automatically.
+*Description : 
 *Date
 *Developer Name
 ******************************************************/
@@ -95,30 +95,55 @@ public class Project_Team_Trigger_Handler {
     {
         Set<Id> projectIds = new Set<Id>();   // add project ids
         Set<Id> teamIds = new Set<Id>();      // add project team record ids
-        Map<Id,Project__c>  projectWithTeam;
+        Set<String> teamRoles = new Set<String>();
+        Map<Id,Map<String,Map<String,List<Project_Team__c>>>> projteamMap=new Map<Id,Map<String,Map<String,List<Project_Team__c>>>>();
+        // Map<Id,Project__c>  projectWithTeam;
+        List<Project_Team__c> teamList;
         for(Project_Team__c pt:ptRecords)
         {
-            if(pt.RecordType.Name=='Internal' && pt.Primary__c==FALSE && pt.Project_Role__c=='SDM')
+            if(pt.Primary__c==FALSE)
             {
                 projectIds.add(pt.Project__c);
+                teamRoles.add(pt.Project__c);
             }
             
-            projectWithTeam=new Map<Id,Project__c>([Select id, (SELECT RecordType.Name,Primary__c,Project_Role__c from Project_Teams__r WHERE RecordType.Name='Internal' AND Project_Role__c='SDM' ) FROM Project__c]);
+            teamList=[SELECT RecordType.Name,Primary__c,Project_Role__c,Project__c from Project_Team__c WHERE Project_Role__c IN :teamRoles AND Project__c in:projectIds];
         }
         
-        if(projectWithTeam.size()>0 && ptRecords.size()>0)
-           {
-        for(Project_Team__c pt:ptRecords)
-        {
-            if(projectWithTeam.get(pt.Project__c)!=NULL)
+        for(Project_Team__c pt:teamList){
+            if(!projteamMap.containsKey(pt.Project__c))
             {
-            if(projectWithTeam.get(pt.Project__c).Project_Teams__r.size()==0)
+                projteamMap.put(pt.Project__c,new Map<String,Map<String,List<Project_Team__c>>>().put(pt.RecordType.Name,new Map<String,List<pt.Project_Team__c>>().put(pt.project_role__c,new List<Project_Team__c>(){pt})));
+            }
+            else if(projteamMap.containsKey(pt.Project__c))
             {
-                pt.Primary__c=TRUE;
-            }
-            }
+              Map<String,Map<String,List<Project_team__c>>>  map1=projteamMap.get(pt.Project__c);
+               if(!map1.containsKey(pt.RecordType.Name))
+                 {
+                  map1.put(pt.RecordType.Name,new Map<String,List<Project_team__c>>().put(pt.project_role__c,new List<project_Team>(){pt}));
+                  projteamMap.get(pt.Project__c).put(map1);
+                 }
+               else if(map1.containsKey(pt.RecordType.Name))
+                 {
+                   Map<String,List<Project_Team__c>> Map2=map1.get(pt.RecordType.Name);
+                    if(!map2.containsKey(pt.Project_Role__c))
+                       {
+                        Map<String,List<Project_Team__c>> map3=new Map<String,List<Project_Team__c>>();
+                         map3.put(pt.Project_Role__c,new List<Project_Team__c>(){pt});
+                           projteamMap.get(pt.Project__c).get(pt.RecordType.Name).put(pt.Project_Role__c,new List<project_Team__c>(){pt});
+                         
+                         }
+                     else if(map2.containsKey(pt.Project_Role__c))
+                        {
+                           List<Project_Team__c>  ptTeam= map2.get(pt.Project_Role__c);
+                           ptTeam.add(pt);
+                         //map2.put(pt.Project_Role__c,ptTeam);
+                           projteamMap.get(pt.Project__c).get(pt.RecordType.Name).put(pt.Project_Role__c,ptTeam);
+                            
+                         }
+                  }
+             }
         }
-           }
         
     }
 }
