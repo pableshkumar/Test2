@@ -1,6 +1,6 @@
 /******************************************************
 *Class Name
-*Description : 
+*Description : This is a batch class. Purpose of this class is to get the billing created automatically.
 *Date
 *Developer Name
 ******************************************************/
@@ -10,10 +10,11 @@ public class Project_Team_Trigger_Handler {
     {
         if(ptRecords.size()>0 && projOldMap==NULL)
         {
-            primaryLogic(ptRecords);
+            updatePrimaryMember(ptRecords);
         }
         else if(ptRecords.size()>0 && projOldMap.size()>0 )
         {
+            System.debug('on update only');
             List<Project_Team__c> teamList=new List<Project_Team__c>();
             for(Project_Team__c pt:ptRecords)
             {
@@ -23,20 +24,21 @@ public class Project_Team_Trigger_Handler {
                 }
             }
             if(ptRecords.size()>0)
-                primaryLogic(teamList);
+                updatePrimaryMember(teamList);
         }
     }
-    //common logic to update  primary project team member at project role 
-    public static void primaryLogic(List<Project_Team__c>  ptRecords)
+    //common logic to update  primary project team member at project record type + project role level
+    //if the new primary user is added then the existing primary will be unchecked at project record type + project role level
+    public static void updatePrimaryMember(List<Project_Team__c>  ptRecords)
     {
         Set<Id> projectIds = new Set<Id>();   // add project ids
         Set<Id> teamIds = new Set<Id>();      // add project team record ids
-        Set<String> TeamProjectRoles = new Set<String>();      // add project team record ids
-        Set<String> projectTeamRecordType = new Set<String>();      // add project team record ids
+        Set<String> TeamProjectRoles = new Set<String>();      // add project team roles
+        Set<String> projectTeamRecordType = new Set<String>();      // add project team record types
         
         for(Project_Team__c pt:ptRecords)
         {
-            If(pt.Primary__c==TRUE)
+            If(pt.Primary__c==TRUE)   // collect only the records which are getting updated as true
             {
                 projectIds.add(pt.Project__c);
                 teamIds.add(pt.id);
@@ -90,60 +92,85 @@ public class Project_Team_Trigger_Handler {
         }
     }
     
-    //mmethod will make first Internal SDM as primary by default regardless of user selection/not selection of primary
-    public static void firstDefaulPrimarytInternalSDM(List<Project_Team__c>  ptRecords)
+    //method contains the logic to make first project team user as primary by default regardless of user selection/not selection of primary at project team and project role level
+    public static void firstDefaultPrimary(List<Project_Team__c>  ptRecords)
     {
         Set<Id> projectIds = new Set<Id>();   // add project ids
         Set<Id> teamIds = new Set<Id>();      // add project team record ids
-        Set<String> teamRoles = new Set<String>();
-        Map<Id,Map<String,Map<String,List<Project_Team__c>>>> projteamMap=new Map<Id,Map<String,Map<String,List<Project_Team__c>>>>();
-        // Map<Id,Project__c>  projectWithTeam;
+        Set<String> teamRoles = new Set<String>();  //will hold project team roles
+        Map<Id,Map<Id,Set<String>>> projteamMap=new Map<Id,Map<Id,Set<String>>>();  // will hold project team data fetch from org
         List<Project_Team__c> teamList;
+        System.debug('ptRecords :'+ptRecords);
         for(Project_Team__c pt:ptRecords)
         {
-            if(pt.Primary__c==FALSE)
+            if(pt.Primary__c==FALSE)  // collect new record with the primary as false n do processing on them
             {
                 projectIds.add(pt.Project__c);
-                teamRoles.add(pt.Project__c);
+                teamRoles.add(pt.Project_Role__c);
             }
             
-            teamList=[SELECT RecordType.Name,Primary__c,Project_Role__c,Project__c from Project_Team__c WHERE Project_Role__c IN :teamRoles AND Project__c in:projectIds];
         }
-        
-        for(Project_Team__c pt:teamList){
-            if(!projteamMap.containsKey(pt.Project__c))
-            {
-                projteamMap.put(pt.Project__c,new Map<String,Map<String,List<Project_Team__c>>>().put(pt.RecordType.Name,new Map<String,List<pt.Project_Team__c>>().put(pt.project_role__c,new List<Project_Team__c>(){pt})));
+        teamList=[SELECT RecordTypeId,Primary__c,Project_Role__c,Project__c from Project_Team__c WHERE Project_Role__c IN :teamRoles AND Project__c in:projectIds];
+        system.debug('teamList :'+ teamList);
+        if(teamList.size()>0)
+        {
+            for(Project_Team__c pt:teamList){
+                if(!projteamMap.containsKey(pt.Project__c))
+                {
+                    Map<Id,Set<String>> subMap=new Map<Id, Set<String>>();
+                    subMap.put(pt.RecordTypeId, new Set<String>{pt.Project_Role__c});
+                     projteamMap.put(pt.Project__c,subMap);
+                }
+                else if(projteamMap.containsKey(pt.Project__c))
+                {
+                    if(projteamMap.get(pt.Project__c).containsKey(pt.RecordTypeId))
+                    {
+                        Set<String> roles=projteamMap.get(pt.Project__c).get(pt.RecordTypeId);
+                        roles.add(pt.Project_Role__c);
+                        Map<Id,Set<String>> subMap=projteamMap.get(pt.Project__c);
+                        subMap.put(pt.RecordTypeId,roles);
+                        projteamMap.put(pt.Project__c,subMap);
+                    }
+                    else if(!projteamMap.get(pt.Project__c).containsKey(pt.RecordTypeId))
+                    {
+                        Set<String> roles=new Set<String>{pt.Project_Role__c};
+                            Map<Id,Set<String>> subMap=projteamMap.get(pt.Project__c);
+                        subMap.put(pt.RecordTypeId,roles);
+                        projteamMap.put(pt.Project__c,subMap);
+                    }
+                    
+                }
             }
-            else if(projteamMap.containsKey(pt.Project__c))
+            
+            for(Project_Team__c pt: ptRecords)
             {
-              Map<String,Map<String,List<Project_team__c>>>  map1=projteamMap.get(pt.Project__c);
-               if(!map1.containsKey(pt.RecordType.Name))
-                 {
-                  map1.put(pt.RecordType.Name,new Map<String,List<Project_team__c>>().put(pt.project_role__c,new List<project_Team>(){pt}));
-                  projteamMap.get(pt.Project__c).put(map1);
-                 }
-               else if(map1.containsKey(pt.RecordType.Name))
-                 {
-                   Map<String,List<Project_Team__c>> Map2=map1.get(pt.RecordType.Name);
-                    if(!map2.containsKey(pt.Project_Role__c))
-                       {
-                        Map<String,List<Project_Team__c>> map3=new Map<String,List<Project_Team__c>>();
-                         map3.put(pt.Project_Role__c,new List<Project_Team__c>(){pt});
-                           projteamMap.get(pt.Project__c).get(pt.RecordType.Name).put(pt.Project_Role__c,new List<project_Team__c>(){pt});
-                         
-                         }
-                     else if(map2.containsKey(pt.Project_Role__c))
+                if(!projteamMap.containsKey(pt.Project__c))
+                {
+                    pt.Primary__c=true;
+                }
+                else if(projteamMap.containsKey(pt.Project__c))
+                {
+                    if(!projteamMap.get(pt.Project__c).containsKey(pt.RecordTypeId))
+                    {
+                        pt.Primary__c=true;
+                    }
+                    else if(projteamMap.get(pt.Project__c).containsKey(pt.RecordTypeId))
+                    {
+                        if(!projteamMap.get(pt.Project__c).get(pt.RecordTypeId).contains(pt.Project_Role__c))
                         {
-                           List<Project_Team__c>  ptTeam= map2.get(pt.Project_Role__c);
-                           ptTeam.add(pt);
-                         //map2.put(pt.Project_Role__c,ptTeam);
-                           projteamMap.get(pt.Project__c).get(pt.RecordType.Name).put(pt.Project_Role__c,ptTeam);
-                            
-                         }
-                  }
-             }
+                            pt.Primary__c=true;
+                        }
+                        
+                        
+                    }
+                }
+            } 
+        }else if(teamList.size()==0)
+        {
+            for(Project_Team__c pt:ptRecords)
+            {
+                pt.Primary__c=true;
+            }
         }
-        
     }
 }
