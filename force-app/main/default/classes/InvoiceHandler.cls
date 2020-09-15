@@ -16,10 +16,14 @@ public class InvoiceHandler {
     @future
     public static void sendToTIGSDMOnDispute(String inv){
         List<Invoice__c> invList =   (List<Invoice__c>)System.JSON.deserialize(inv, List<Invoice__c>.class);
-        List<String> roles = new List<String>{'Client SDM', 'SDM','TIG SDM', 'RDH', 'Account Manager'};
+        //List<String> roles = new List<String>{'Client SDM', 'SDM','TIG SDM', 'RDH', 'Account Manager'};
         Map<String, String> roleMap = new Map<String, String>();
+        List<String> projs = new List<String>();
+        for(Invoice__c invoice: invList){
+            projs.add(invoice.Customer_Project__c);
+        }
 
-        for(Project_Team__C currentTeams : [SELECT ID, User__c,Project__c, user__r.email, Project_Role__c, RecordType.Name FROM Project_Team__c WHERE Project_Role__c IN: roles AND Primary__c = TRUE AND RecordType.Name = 'Internal']){
+        for(Project_Team__C currentTeams : [SELECT ID, User__c,Project__c, user__r.email, Project_Role__c, RecordType.Name FROM Project_Team__c WHERE Project_Role__c = 'SDM'AND Project__c IN:projs AND Primary__c = TRUE AND RecordType.Name = 'Internal']){
             roleMap.put(currentTeams.Project__c, currentTeams.user__c );
         }
         for(Invoice__c invoice: invList){
