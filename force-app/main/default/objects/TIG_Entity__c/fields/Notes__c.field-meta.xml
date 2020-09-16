@@ -3,7 +3,7 @@
     <fullName>Notes__c</fullName>
     <externalId>false</externalId>
     <label>Notes</label>
-    <required>true</required>
+    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>TextArea</type>
 </CustomField>
