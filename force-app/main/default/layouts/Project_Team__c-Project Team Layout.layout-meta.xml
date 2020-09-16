@@ -17,7 +17,7 @@
                 <field>Project__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>User__c</field>
             </layoutItems>
             <layoutItems>
@@ -64,6 +64,11 @@
     </layoutSections>
     <platformActionList>
         <actionListContext>Record</actionListContext>
+        <platformActionListItems>
+            <actionName>NewTask</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
         <platformActionListItems>
             <actionName>NewEvent</actionName>
             <actionType>QuickAction</actionType>
@@ -114,11 +119,6 @@
             <actionType>QuickAction</actionType>
             <sortOrder>10</sortOrder>
         </platformActionListItems>
-        <platformActionListItems>
-            <actionName>NewTask</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>0</sortOrder>
-        </platformActionListItems>
     </platformActionList>
     <relatedLists>
         <fields>TASK.SUBJECT</fields>
@@ -148,7 +148,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h9D000000kIPW</masterLabel>
+        <masterLabel>00h6D000001JY2u</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
