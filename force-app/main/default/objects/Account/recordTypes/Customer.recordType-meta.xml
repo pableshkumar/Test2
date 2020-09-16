@@ -5,42 +5,26 @@
     <label>Customer</label>
     <picklistValues>
         <picklist>AccountSource</picklist>
-        <!--<values>
-            <fullName>Advertisement</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Employee Referral</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>External Referral</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>In Store</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>On Site</fullName>
-            <default>false</default>
-        </values>
         <values>
             <fullName>Other</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Social</fullName>
+            <fullName>Partner Referral</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Trade Show</fullName>
+            <fullName>Phone Inquiry</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Word of Mouth</fullName>
+            <fullName>Purchased List</fullName>
             <default>false</default>
-        </values>-->
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Bank_Account_Country_Code__c</picklist>
@@ -1144,6 +1128,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Insurance</fullName>
             <default>false</default>
         </values>
@@ -1258,24 +1246,20 @@
     </picklistValues>
     <picklistValues>
         <picklist>Type</picklist>
-        <!--<values>
-            <fullName>Analyst</fullName>
+        <values>
+            <fullName>Channel Partner %2F Reseller</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Competitor</fullName>
+            <fullName>Customer - Channel</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Customer</fullName>
+            <fullName>Customer - Direct</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Integrator</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Investor</fullName>
+            <fullName>Installation Partner</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1283,20 +1267,12 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Partner</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Press</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Prospect</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Reseller</fullName>
+            <fullName>Technology Partner</fullName>
             <default>false</default>
-        </values>-->
+        </values>
     </picklistValues>
 </RecordType>

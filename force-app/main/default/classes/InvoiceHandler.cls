@@ -76,7 +76,7 @@ public class InvoiceHandler {
             {
                 String series='INV';
                 series=series+inv.Project__r.TIG_Entity_Name__r.TIG_Entity_Code__c;
-                series=series+inv.Project__r.Customer__r.Customer_Code__c;
+                series=series+(inv.Project__r.Customer__r.Customer_Code__c).toUppercase();
                 String monthDigits=Date.Today().Month()<10?'0'+Date.Today().Month():String.valueOf(Date.Today().Month());
                 series=series+monthDigits;
                 series=series+string.valueof(Date.Today().year()).right(2);
