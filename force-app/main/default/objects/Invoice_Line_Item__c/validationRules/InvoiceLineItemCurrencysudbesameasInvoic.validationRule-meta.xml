@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InvoiceLineItemCurrencysudbesameasInvoic</fullName>
+    <active>true</active>
+    <description>Invoice Line Item currency should be the same as the Invoice.</description>
+    <errorConditionFormula>Text(CurrencyIsoCode) != Text(Invoice__r.CurrencyIsoCode)</errorConditionFormula>
+    <errorMessage>Please ensure if Invoice Line Item Currency is the same as the Invoice Currency</errorMessage>
+</ValidationRule>
