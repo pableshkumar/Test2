@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notify to Finance Executive once Invoice is rejected by Finance Manager</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Notify to Finance Executive once Invoice is rejected by Finance Manager</name>
+    <style>none</style>
+    <subject>Invoice rejected by Finance Manager: {!Invoice__c.LastModifiedBy}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
