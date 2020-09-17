@@ -3,7 +3,7 @@ public class Automated_Billing_Batch_Test {
     
     @TestSetup
     public static void testDataCreation()
-    {// test
+    {
         Account acc= Test_Data_Factory.createAccount('Customer');
         insert acc;
         Contact con=Test_Data_Factory.createContact();

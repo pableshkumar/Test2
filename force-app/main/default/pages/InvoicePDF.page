@@ -1,4 +1,4 @@
-<apex:page sidebar="false" renderAs="" StandardController="Invoice__c" extensions="Invoice">
+<apex:page sidebar="false" renderAs="" StandardController="Invoice__c" extensions="InvoicePDFController">
   <table style="border-collapse:collapse; font-size: 14px; width: 100%; font-family: 'Open Sans', sans-serif;">
     <tbody><tr>
     <td></td>

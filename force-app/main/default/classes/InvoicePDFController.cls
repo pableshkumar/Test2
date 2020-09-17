@@ -1,4 +1,4 @@
-public with sharing class Invoice {
+public with sharing class InvoicePDFController{
 
     public Invoice__c invoiceDetails{get; set;}
     public Invoice_Line_Item__c invoiceLineDetails{get; set;}
@@ -7,7 +7,7 @@ public with sharing class Invoice {
     public string purchaseMonth{get; set;}
     public string projectService{get;set;}
     
-    public Invoice(ApexPages.StandardController controller) {
+    public InvoicePDFController(ApexPages.StandardController controller) {
         string net='';
         Date dateCreated;
         Id id = apexpages.currentpage().getparameters().get('id');

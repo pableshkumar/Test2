@@ -3,7 +3,7 @@
     <height>250</height>
     <label>Generate Invoice</label>
     <optionsCreateFeedItem>false</optionsCreateFeedItem>
-    <page>TaxInvoice</page>
+    <page>InvoicePDF</page>
     <type>VisualforcePage</type>
     <width>-100</width>
 </QuickAction>
