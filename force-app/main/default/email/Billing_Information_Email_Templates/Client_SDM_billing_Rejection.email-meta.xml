@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
     <available>true</available>
-    <description>This email template is used in Billing Information Approval.</description>
+    <description>Notification template used for the billing rejection by Client SDM</description>
     <encodingKey>ISO-8859-1</encodingKey>
-    <name>AR Manager Approval Rejection Email</name>
+    <name>Client SDM billing Rejection</name>
     <style>none</style>
-    <subject>Billing Rejected by AR Manager: {!Billing_Information__c.LastModifiedBy}</subject>
+    <subject>Billing Rejected by Client SDM: {!Billing_Information__c.LastModifiedBy}</subject>
     <type>text</type>
     <uiType>Aloha</uiType>
 </EmailTemplate>

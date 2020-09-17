@@ -47,6 +47,52 @@
         <template>Billing_Information_Email_Templates/Notify_Billing_Owner_to_complete_Billing_on_billing_end_date</template>
     </alerts>
     <alerts>
+        <fullName>Notify_SDM_and_AR_Executive_Sr_Executive_once_Billing_is_approved_by_Client_SDM</fullName>
+        <description>Notify SDM and AR Executive/Sr. Executive once Billing is approved by Client SDM</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>AR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AR_SR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Billing_Information_Email_Templates/Billing_is_approved_Generate_the_invoice</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_TIG_SDM_Regional_Delivery_Head_once_Billing_is_approved_by_AR_Head_and_su</fullName>
+        <description>Notify TIG SDM, Regional Delivery Head once Billing is approved by AR Head and submitted to Client SDM fro further approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional_Service_Delivery_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Billing_Information_Email_Templates/Notify_Users_once_Billing_is_approved_by_AR_Head</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_TIG_SDM_Regional_Delivery_Head_once_Billing_is_approved_by_AR_Manager_and</fullName>
+        <description>Notify TIG SDM, Regional Delivery Head once Billing is approved by AR Manager and submitted to AR Head for further approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional_Service_Delivery_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Billing_Information_Email_Templates/Notify_Users_once_Billing_is_approved_by_AR_Manager</template>
+    </alerts>
+    <alerts>
         <fullName>Notify_about_Escalation_to_AR_Executive_Sr_AR_Executive</fullName>
         <description>Notify about Escalation to AR Executive/Sr. AR Executive</description>
         <protected>false</protected>
@@ -93,6 +139,16 @@
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>Billing_Information_Email_Templates/AR_Head_Approval_Rejection_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_billing_owner_for_the_billing_rejection_by_Client_SDM</fullName>
+        <description>Notify billing owner for the billing rejection by Client SDM</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Billing_Information_Email_Templates/Client_SDM_billing_Rejection</template>
     </alerts>
     <alerts>
         <fullName>Notify_billing_owner_for_the_rejection</fullName>
@@ -232,6 +288,16 @@
         <operation>Literal</operation>
         <protected>false</protected>
         <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_to_Billing_Approved</fullName>
+        <description>Once billing is approved by client sdm, update the status to Billing Approved</description>
+        <field>Billing_Approval_Status__c</field>
+        <literalValue>Billing Approved</literalValue>
+        <name>Update status to Billing Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Update_to_Required</fullName>

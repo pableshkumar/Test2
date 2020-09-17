@@ -1,0 +1,3 @@
+Hi Team,
+
+Invoice is rejected by Finance Executive: {!Invoice__c.LastModifiedBy}
