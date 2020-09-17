@@ -50,8 +50,11 @@
     <recordCreates>
         <name>Create_Invoice_Payment</name>
         <label>Create Invoice Payment</label>
-        <locationX>222</locationX>
-        <locationY>491</locationY>
+        <locationX>186</locationX>
+        <locationY>468</locationY>
+        <faultConnector>
+            <targetReference>errro</targetReference>
+        </faultConnector>
         <inputAssignments>
             <field>Amount__c</field>
             <value>
@@ -87,6 +90,9 @@
         <connector>
             <targetReference>Create_Invoice_Payment</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>errro</targetReference>
+        </faultConnector>
         <inputAssignments>
             <field>Account__c</field>
             <value>
@@ -179,6 +185,22 @@
         <object>RecordType</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <screens>
+        <name>errro</name>
+        <label>errro</label>
+        <locationX>412</locationX>
+        <locationY>642</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>erorr</name>
+            <fieldText>&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
     <screens>
         <name>Record_Payment</name>
         <label>Record Payment</label>
