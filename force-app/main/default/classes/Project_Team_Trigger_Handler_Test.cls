@@ -39,7 +39,7 @@ public class Project_Team_Trigger_Handler_Test {
     public static TestMethod void testFirstDefaulPrimarytInternalSDM()
     {
         List<Project_Team__c> teamList=[Select RecordTypeId,RecordType.Name,User__c,Project_Role__c,Project__c, Primary__c FROM Project_Team__c];
-        Project_Team_Trigger_Handler.firstDefaulPrimarytInternalSDM(teamList);
+        Project_Team_Trigger_Handler.firstDefaultPrimary(teamList);
     }
     
     public static TestMethod void testUpdatePrimaryProjectTeamMember()

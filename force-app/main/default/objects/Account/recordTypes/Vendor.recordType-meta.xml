@@ -9,22 +9,6 @@
             <fullName>Other</fullName>
             <default>false</default>
         </values>
-        <values>
-            <fullName>Partner Referral</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Phone Inquiry</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Purchased List</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Web</fullName>
-            <default>false</default>
-        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Bank_Account_Country_Code__c</picklist>
@@ -1270,10 +1254,6 @@
     </picklistValues>
     <picklistValues>
         <picklist>Type</picklist>
-        <values>
-            <fullName>Channel Partner %2F Reseller</fullName>
-            <default>false</default>
-        </values>
         <values>
             <fullName>Customer - Channel</fullName>
             <default>false</default>
