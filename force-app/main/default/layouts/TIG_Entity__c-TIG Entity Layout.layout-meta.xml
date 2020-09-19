@@ -108,7 +108,7 @@
         <label>Other Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Readonly</behavior>
                 <field>Swift__c</field>
             </layoutItems>
             <layoutItems>
@@ -118,7 +118,7 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Readonly</behavior>
                 <field>BSB__c</field>
             </layoutItems>
             <layoutItems>
@@ -126,7 +126,7 @@
                 <field>Email_Address_for_Remittance__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Readonly</behavior>
                 <field>Notes__c</field>
             </layoutItems>
         </layoutColumns>
