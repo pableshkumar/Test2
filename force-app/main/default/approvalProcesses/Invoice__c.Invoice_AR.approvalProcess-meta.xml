@@ -76,10 +76,6 @@
         <allowDelegate>false</allowDelegate>
         <approvalActions>
             <action>
-                <name>Notify_Finance_Manager_for_the_Invoice_approval_request</name>
-                <type>Alert</type>
-            </action>
-            <action>
                 <name>Status_Ready_to_be_Sent_to_Client</name>
                 <type>FieldUpdate</type>
             </action>
@@ -96,20 +92,10 @@
         <rejectBehavior>
             <type>BackToPrevious</type>
         </rejectBehavior>
-        <rejectionActions>
-            <action>
-                <name>Notify_to_AR_Executive_AR_SR_Executives_if_the_Invoice_is_Rejected_by_Finance_Ex</name>
-                <type>Alert</type>
-            </action>
-        </rejectionActions>
     </approvalStep>
     <approvalStep>
         <allowDelegate>false</allowDelegate>
         <approvalActions>
-            <action>
-                <name>Notify_TIG_SDM_RDH_Account_Manager_once_Invoice_is_approved_by_Finance_Manager</name>
-                <type>Alert</type>
-            </action>
             <action>
                 <name>Stage_Sent_to_client</name>
                 <type>FieldUpdate</type>
@@ -131,12 +117,6 @@
         <rejectBehavior>
             <type>BackToPrevious</type>
         </rejectBehavior>
-        <rejectionActions>
-            <action>
-                <name>Notify_to_Finance_Executive_if_the_Invoice_is_Rejected_by_Finance_Manager</name>
-                <type>Alert</type>
-            </action>
-        </rejectionActions>
     </approvalStep>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
