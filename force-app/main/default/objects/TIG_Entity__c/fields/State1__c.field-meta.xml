@@ -11,14 +11,6 @@
         <restricted>true</restricted>
         <valueSetName>State</valueSetName>
         <valueSettings>
-            <controllingFieldValue>Afghanistan</controllingFieldValue>
-            <valueName>AGRIGENTO</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Afghanistan</controllingFieldValue>
-            <valueName>Aguascalientes</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>American Samoa</controllingFieldValue>
             <valueName>American Samoa</valueName>
         </valueSettings>
