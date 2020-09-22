@@ -171,6 +171,6 @@
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <searchLayouts />
-    <sharingModel>ControlledByParent</sharingModel>
-    <visibility>Private</visibility>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>
