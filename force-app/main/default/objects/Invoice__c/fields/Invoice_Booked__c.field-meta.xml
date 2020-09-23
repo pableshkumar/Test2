@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Booked__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is checked by Finance Team manually when purchase invoice is Approved by AP Executive.</description>
+    <externalId>false</externalId>
+    <label>Invoice Booked</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
