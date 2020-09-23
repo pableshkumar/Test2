@@ -189,6 +189,16 @@
         <senderType>CurrentUser</senderType>
         <template>Escalation_Email_Template/Notify_about_Invoice_Escalation</template>
     </alerts>
+    <alerts>
+        <fullName>Send_Email_Notification_to_Vendor_for_accept_Invoice</fullName>
+        <description>Send Email Notification to Vendor for accept Invoice</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Invoice_Approval_Templates/Notify_to_Vendor_for_accept_invoice</template>
+    </alerts>
     <fieldUpdates>
         <fullName>Stage_Accepted</fullName>
         <field>Stage__c</field>
