@@ -9,56 +9,55 @@ public class Automated_Billing_Batch_Test {
         Contact con=Test_Data_Factory.createContact();
         insert con;
         
-        Project__c projOneTime=Test_Data_Factory.createProject('One Time');
+        Project__c projOneTime=Test_Data_Factory.createProject('One Time','Customer');
         projOneTime.Customer__c=acc.id;
         projOneTime.End_Customer__c=acc.id;
-        projOneTime.Billing_Frequency__c='One Time';
+        projOneTime.Last_Billing_Date__c=Date.Today().addDays(-1);
         insert projOneTime;
         
-        Project__c projWeekly=Test_Data_Factory.createProject('Weekly');
+        Project__c projWeekly=Test_Data_Factory.createProject('Weekly','Customer');
         projWeekly.Customer__c=acc.id;
         projWeekly.End_Customer__c=acc.id;
-        projWeekly.Billing_Frequency__c='Weekly';
         insert projWeekly;
         
-        Project__c projBiWeekly=Test_Data_Factory.createProject('Bi-Weekly');
+        Project__c projBiWeekly=Test_Data_Factory.createProject('Bi-Weekly','Customer');
         projBiWeekly.Customer__c=acc.id;
         projBiWeekly.End_Customer__c=acc.id;
-        projBiWeekly.Billing_Frequency__c='Bi-Weekly';
         insert projBiWeekly;
         
-        Project__c projMonthly=Test_Data_Factory.createProject('Monthly');
+        Project__c projMonthly=Test_Data_Factory.createProject('Monthly','Customer');
         projMonthly.Customer__c=acc.id;
         projMonthly.End_Customer__c=acc.id;
-        projMonthly.Billing_Frequency__c='Monthly';
         insert projMonthly; 
-            
-        Project__c projQuarterly=Test_Data_Factory.createProject('Quarterly');
+        
+        Project__c projQuarterly=Test_Data_Factory.createProject('Quarterly','Customer');
         projQuarterly.Customer__c=acc.id;
         projQuarterly.End_Customer__c=acc.id;
-        projQuarterly.Billing_Frequency__c='Quarterly';
         insert projQuarterly; 
         
-        Project__c projHalfYearly=Test_Data_Factory.createProject('Half-Yearly');
+        Project__c projHalfYearly=Test_Data_Factory.createProject('Half-Yearly','Customer');
         projHalfYearly.Customer__c=acc.id;
         projHalfYearly.End_Customer__c=acc.id;
-        projHalfYearly.Billing_Frequency__c='Half-Yearly';
         insert projHalfYearly;
         
-        Project__c projYearly=Test_Data_Factory.createProject('Yearly');
+        Project__c projYearly=Test_Data_Factory.createProject('Yearly','Customer');
         projYearly.Customer__c=acc.id;
         projYearly.End_Customer__c=acc.id;
-        projYearly.Billing_Frequency__c='Yearly';
         insert projYearly;
         
         Project_Team__c pt=Test_Data_Factory.createProjectTeam('Internal',False);
         pt.Project__c=projOneTime.Id;
         insert pt;
     }
-
+    
     public static TestMethod void testAutomated_Billing_Batch()
     {
-        Database.executeBatch(new Automated_Billing_Batch(), 20);
-       // Project_Trigger_Handler.createAutomatedBillingInfo([SELECT Name,Project_Start_Date__c,Project_End_Date__c,Payment_Term__c,Billing_Frequency__c from Project__c]);
+        Automated_Billing_Batch ABB = New Automated_Billing_Batch();
+        
+        Database.QueryLocator ql = ABB.start(null);
+        ABB.execute(null,[select Billing_Frequency__c, Project_Start_Date__c, Project_End_Date__c,Last_Billing_Date__c from Project__c]);
+        ABB.Finish(null);
+        
+        ABB.execute(null);
     }
 }

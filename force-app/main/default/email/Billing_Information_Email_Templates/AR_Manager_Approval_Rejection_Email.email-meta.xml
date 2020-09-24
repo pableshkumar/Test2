@@ -5,7 +5,7 @@
     <encodingKey>ISO-8859-1</encodingKey>
     <name>AR Manager Approval Rejection Email</name>
     <style>none</style>
-    <subject>AR Manager Billing Approval Rejection</subject>
+    <subject>Billing Rejected by AR Manager: {!Billing_Information__c.LastModifiedBy}</subject>
     <type>text</type>
     <uiType>Aloha</uiType>
 </EmailTemplate>

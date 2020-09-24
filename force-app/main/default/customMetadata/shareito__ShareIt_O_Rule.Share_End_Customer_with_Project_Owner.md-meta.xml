@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Share End Customer with Project Owner</label>
+    <protected>false</protected>
+    <values>
+        <field>shareito__Access_Level__c</field>
+        <value xsi:type="xsd:string">Read</value>
+    </values>
+    <values>
+        <field>shareito__Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>shareito__Inherit_From_Object__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>shareito__Inherit_From_Relation__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>shareito__Object__c</field>
+        <value xsi:type="xsd:string">Account</value>
+    </values>
+    <values>
+        <field>shareito__Related_By_Field__c</field>
+        <value xsi:type="xsd:string">End_Customer__c</value>
+    </values>
+    <values>
+        <field>shareito__Related_From_Object__c</field>
+        <value xsi:type="xsd:string">Project__c</value>
+    </values>
+    <values>
+        <field>shareito__Related_Share_To__c</field>
+        <value xsi:type="xsd:string">OwnerId</value>
+    </values>
+    <values>
+        <field>shareito__Rule_Type__c</field>
+        <value xsi:type="xsd:string">Relation Based</value>
+    </values>
+    <values>
+        <field>shareito__Share_To_Field__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>shareito__Share_with__c</field>
+        <value xsi:type="xsd:string">Users</value>
+    </values>
+</CustomMetadata>

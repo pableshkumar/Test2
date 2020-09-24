@@ -12,6 +12,6 @@
         <sobjectType>Billing_Information__c</sobjectType>
     </queueSobject>
     <queueSobject>
-        <sobjectType>Order</sobjectType>
+        <sobjectType>Project__c</sobjectType>
     </queueSobject>
 </Queue>
