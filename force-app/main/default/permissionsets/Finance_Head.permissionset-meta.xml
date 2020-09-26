@@ -37,7 +37,6 @@
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Finance Head</label>
-    <license>Salesforce Platform</license>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
