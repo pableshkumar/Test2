@@ -39,15 +39,15 @@
                 <behavior>Readonly</behavior>
                 <field>Due_Date__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>VP_Reference__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>TIG_Entity__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>TIG_Entity_Bank_Information__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -216,6 +216,21 @@
             <sortOrder>10</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
+            <actionName>FeedItem.ContentNote</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>12</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Invoice__c.Generate_Invoice</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>13</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Invoice__c.Record_Payment</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>14</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>Edit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>11</sortOrder>
@@ -270,6 +285,7 @@
         <fields>Payment__c.NAME</fields>
         <fields>CURRENCY_ISO_CODE</fields>
         <fields>Amount__c</fields>
+        <fields>Payment__c.CUST_RECORDTYPE</fields>
         <relatedList>Invoice_Payment__c.Invoice__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -281,7 +297,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h1y000000nAk1</masterLabel>
+        <masterLabel>00h6D000001Kfb1</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

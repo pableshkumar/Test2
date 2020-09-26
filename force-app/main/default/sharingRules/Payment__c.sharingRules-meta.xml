@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Share_payment_with_AP_Head_Role</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Payments with record type Payable are being shared with AP mHeadRole</description>
+        <label>Share payment with AP Head Role</label>
+        <sharedTo>
+            <role>AP_Head</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Payable</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_payment_with_AP_Manager_Role</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Payments with record type Payable are being shared with AP Manager Role</description>
+        <label>Share payment with AP Manager Role</label>
+        <sharedTo>
+            <role>AP_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Payable</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

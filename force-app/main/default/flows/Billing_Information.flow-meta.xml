@@ -2273,7 +2273,7 @@ TEXT({!myVariable_current.Project__r.Billing_Frequency__c})</expression>
         <object>Billing_Information__c</object>
     </recordUpdates>
     <startElementReference>myPreWaitDecision_myWait_myRule_4</startElementReference>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>cancelWaits</name>
         <dataType>String</dataType>
