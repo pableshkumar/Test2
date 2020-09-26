@@ -4,9 +4,9 @@
 		<members>*</members>
 		<name>Profile</name>
 	</types>
-	<types>
+<!--	<types>
 		<members>*</members>
 		<name>ApprovalProcess</name>
-	</types>
+	</types>  -->
 	<version>49.0</version>
 </Package>

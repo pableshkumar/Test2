@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>TIGEntityBankInformation_Lookup_Validate</fullName>
-    <active>true</active>
-    <description>Selected TIG Entity Bank Information should be related to TIG Entity selected at project level</description>
-    <errorConditionFormula>TIG_Entity_Bank_Information__r.TIG_Entity__c != Project__r.TIG_Entity_Name__c</errorConditionFormula>
-    <errorDisplayField>TIG_Entity_Bank_Information__c</errorDisplayField>
-    <errorMessage>Please select correct TIG Entity Bank Information that is associated to TIG Entity selected at project level.</errorMessage>
-</ValidationRule>
