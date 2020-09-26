@@ -47,10 +47,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>TIG_Entity_Bank_Information__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
                 <field>Project__c</field>
             </layoutItems>
             <layoutItems>
@@ -214,16 +210,6 @@
             <actionName>PrintableView</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>10</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>FeedItem.ContentNote</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>12</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Invoice__c.Generate_Invoice</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>13</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>Invoice__c.Record_Payment</actionName>

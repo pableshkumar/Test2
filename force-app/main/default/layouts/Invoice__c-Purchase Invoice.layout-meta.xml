@@ -43,10 +43,6 @@
                 <behavior>Edit</behavior>
                 <field>Invoice_Booked__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>VP_Reference__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

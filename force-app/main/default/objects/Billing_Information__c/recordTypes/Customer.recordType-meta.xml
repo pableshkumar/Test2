@@ -49,23 +49,4 @@
             <default>false</default>
         </values>
     </picklistValues>
-    <picklistValues>
-        <picklist>Billing_Status__c</picklist>
-        <values>
-            <fullName>Completed</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Draft</fullName>
-            <default>true</default>
-        </values>
-        <values>
-            <fullName>In Progress</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>On Hold</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
 </RecordType>
