@@ -67,10 +67,6 @@ public class Test_Data_Factory {
         TIG_Entity__c tigEntity=new TIG_Entity__c();
         tigEntity.Name='TIG India LLC';
         tigEntity.TIG_Entity_Code__c='TIL';
-        tigEntity.Bank_Name__c='PNB';
-        tigEntity.Bank_Account_Number__c='20385798654854';
-        tigEntity.Account_Name__c='TotalITIndia';
-        tigEntity.BSB__c='BSB';
         tigEntity.Email_Address_for_Remittance__c='tig@gmail.com';
         tigEntity.Email_for_Contact__c='tig@gmail.com';
         // tigEntity.Last_Generated_Invoice_Number__c
@@ -80,7 +76,6 @@ public class Test_Data_Factory {
         tigEntity.City__c='Banaras';
         tigEntity.State1__c='Delhi';
         tigEntity.Country1__c='India';
-        tigEntity.Swift__c='swt';
         tigEntity.Tax_Code__c='secret';
         tigEntity.Tax_Name__c='confidential';
         return tigEntity;

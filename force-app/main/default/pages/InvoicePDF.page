@@ -193,28 +193,28 @@
             </tr>
             <tr style="text-align: left;vertical-align: top;margin-top:10px;;">
                 <td style="padding-top: 15px;">Name of the Bank :
-                    <apex:outputField value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Bank_Name__c}" />
+               <!--     <apex:outputField value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Bank_Name__c}" />  -->
                 </td>
 
             </tr>
             <tr style="text-align: left;vertical-align: top;">
                 <td>Account name:
-                    <apex:outputField value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Account_Name__c}" />
+              <!--      <apex:outputField value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Account_Name__c}" />  -->
                 </td>
             </tr>
             <tr style="text-align: left;vertical-align: top;">
                 <td>SWIFT:
-                    <apex:outputField value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Swift__c}" />
+                 <!--   <apex:outputField value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Swift__c}" />  -->
                 </td>
             </tr>
             <tr style="text-align: left;vertical-align: top;">
                 <td>BSB:
-                    <apex:outputField value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.BSB__c}" />
+                 <!--   <apex:outputField value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.BSB__c}" />  -->
                 </td>
             </tr>
             <tr style="text-align: left;vertical-align: top;">
                 <td>Bank Account Number:
-                    <apex:outputField value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Bank_Account_Number__c}" />
+                <!--    <apex:outputField value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Bank_Account_Number__c}" />   -->
                 </td>
             </tr>
         </tbody>
