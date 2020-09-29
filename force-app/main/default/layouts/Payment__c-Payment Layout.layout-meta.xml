@@ -32,7 +32,8 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <emptySpace>true</emptySpace>
+                <behavior>Edit</behavior>
+                <field>CurrencyIsoCode</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -165,11 +166,9 @@
         <relatedList>RelatedHistoryList</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>NAME</fields>
-        <fields>Amount__c</fields>
         <fields>Invoice__c.NAME</fields>
-        <!--<fields>Invoice__c</fields>-->
         <fields>CURRENCY_ISO_CODE</fields>
+        <fields>Amount__c</fields>
         <relatedList>Invoice_Payment__c.Payment__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
@@ -178,7 +177,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h2x000000xnBU</masterLabel>
+        <masterLabel>00h6D000001BYjG</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
