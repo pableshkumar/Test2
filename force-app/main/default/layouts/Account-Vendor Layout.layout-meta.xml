@@ -92,7 +92,7 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Customer Bank Information</label>
+        <label>Vendor Bank Information</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -133,10 +133,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Partner_Expense_Type__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Bank_Name_Where_Account_Maintained__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -347,6 +343,23 @@
         <relatedList>RelatedAccountContactRelationList</relatedList>
     </relatedLists>
     <relatedLists>
+        <excludeButtons>MassChangeOwner</excludeButtons>
+        <fields>NAME</fields>
+        <fields>Project_Start_Date__c</fields>
+        <fields>Project_End_Date__c</fields>
+        <fields>Project_Status__c</fields>
+        <fields>Billing_Frequency__c</fields>
+        <relatedList>Project__c.Customer__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>ORDERS.ORDER_NUMBER</fields>
+        <fields>ORDERS.STATUS</fields>
+        <fields>ORDERS.EFFECTIVE_DATE</fields>
+        <fields>CONTRACT.CONTRACT_NUMBER</fields>
+        <fields>ORDERS.TOTAL_AMOUNT</fields>
+        <relatedList>RelatedOrderList</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>NAME</fields>
         <fields>Invoice_Date__c</fields>
         <fields>Amount__c</fields>
@@ -372,7 +385,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h1y000000mwrI</masterLabel>
+        <masterLabel>00h6D000001Kfaz</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

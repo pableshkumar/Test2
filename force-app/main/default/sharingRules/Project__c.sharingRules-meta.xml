@@ -1,14 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
-    <sharingOwnerRules>
-        <fullName>Account_Receivables</fullName>
+    <sharingCriteriaRules>
+        <fullName>AR_Customer</fullName>
         <accessLevel>Edit</accessLevel>
-        <label>Account Receivables</label>
+        <label>AR - Customer</label>
         <sharedTo>
-            <roleAndSubordinatesInternal>AR_Head</roleAndSubordinatesInternal>
+            <roleAndSubordinates>AR_Head</roleAndSubordinates>
         </sharedTo>
-        <sharedFrom>
-            <allInternalUsers/>
-        </sharedFrom>
-    </sharingOwnerRules>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Payables_Customer</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Account Payables - Customer</label>
+        <sharedTo>
+            <roleAndSubordinates>AP_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Account_Payables_Vendor</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Account Payables - Vendor</label>
+        <sharedTo>
+            <roleAndSubordinates>AP_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Vendor</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Field_Service</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Field Service</label>
+        <sharedTo>
+            <roleAndSubordinates>Field_Service_Management_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer,Vendor</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Finance</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Finance</label>
+        <sharedTo>
+            <roleAndSubordinates>Finance_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Vendor</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Finance_Customer</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Finance - Customer</label>
+        <sharedTo>
+            <roleAndSubordinates>Finance_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_projects_with_Finance_Head</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Projects with record type Customer are being shared with Finance Head Role with Read/Write</description>
+        <label>Share projects with Finance Head</label>
+        <sharedTo>
+            <role>Finance_Head</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_projects_with_Finance_Manager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Projects with record type Customer are being shared with Finance Manager Role with Read/Write</description>
+        <label>Share projects with Finance Manager</label>
+        <sharedTo>
+            <role>Finance_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
 </SharingRules>

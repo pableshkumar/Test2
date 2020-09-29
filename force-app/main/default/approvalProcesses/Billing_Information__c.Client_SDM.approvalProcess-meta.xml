@@ -3,7 +3,12 @@
     <active>true</active>
     <allowRecall>false</allowRecall>
     <allowedSubmitters>
-        <type>owner</type>
+        <submitter>AR_Head</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>AR_Manager</submitter>
+        <type>role</type>
     </allowedSubmitters>
     <approvalPageFields>
         <field>Name</field>
@@ -36,7 +41,7 @@
     </finalRejectionActions>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <label>Client SDM</label>
-    <processOrder>4</processOrder>
+    <processOrder>3</processOrder>
     <recordEditability>AdminOnly</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

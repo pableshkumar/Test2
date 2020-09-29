@@ -33,10 +33,16 @@
                         <valueListItems>
                             <value>Submit</value>
                             <visibilityRule>
+                                <booleanFilter>1 AND 2</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.RecordType.Name}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>Sales Invoice</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Stage__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Draft</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
@@ -58,6 +64,22 @@
                                     <leftValue>{!Record.Outstanding_Amount__c}</leftValue>
                                     <operator>GT</operator>
                                     <rightValue>0</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Invoice__c.Generate_Invoice</value>
+                            <visibilityRule>
+                                <booleanFilter>1 AND 2</booleanFilter>
+                                <criteria>
+                                    <leftValue>{!Record.RecordType.Name}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Sales Invoice</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Stage__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Sent to Client</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>

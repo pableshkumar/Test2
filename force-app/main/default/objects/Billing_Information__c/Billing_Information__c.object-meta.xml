@@ -170,7 +170,7 @@
     <pluralLabel>Billing Information</pluralLabel>
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
-    <searchLayouts/>
+    <searchLayouts />
     <sharingModel>Private</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

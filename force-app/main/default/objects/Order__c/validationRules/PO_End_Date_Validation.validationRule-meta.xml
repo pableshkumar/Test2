@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PO_End_Date_Validation</fullName>
+    <active>true</active>
+    <description>PO End Date should be either same as Project end date or less than Project end date</description>
+    <errorConditionFormula>PO_End_Date__c &gt; Project__r.Project_End_Date__c</errorConditionFormula>
+    <errorMessage>PO End Date should be either same as Project end date or less than Project end date</errorMessage>
+</ValidationRule>

@@ -67,6 +67,32 @@
         <template>Escalation_Email_Template/Send_Invoice_Escalation_Email</template>
     </alerts>
     <alerts>
+        <fullName>Notify_Finance_Manager_for_the_Invoice_approval_request</fullName>
+        <description>Notify Finance Manager for the Invoice approval request</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Invoice_Approval_Templates/Notify_Finance_Manager_for_the_Invoice_approval_request</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_TIG_SDM_RDH_Account_Manager_once_Invoice_is_approved_by_Finance_Manager</fullName>
+        <description>Notify TIG SDM,RDH,Account Manager once Invoice is approved by Finance Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AP_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional_Service_Delivery_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Invoice_Approval_Templates/Notify_TIG_SDM_RDH_Account_Manager_once_Invoice_is_approved_by_Finance_Manager</template>
+    </alerts>
+    <alerts>
         <fullName>Notify_to_AP_Executive_about_Invoice_Escalation</fullName>
         <description>Notify to AP Executive about Invoice Escalation</description>
         <protected>false</protected>
@@ -101,6 +127,21 @@
         <template>Escalation_Email_Template/Notify_about_Invoice_Escalation</template>
     </alerts>
     <alerts>
+        <fullName>Notify_to_AR_Executive_AR_SR_Executives_if_the_Invoice_is_Rejected_by_Finance_Ex</fullName>
+        <description>Notify to AR Executive/ AR SR Executives if the Invoice is Rejected  by Finance Executive</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AR_SR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Invoice_Approval_Templates/Notify_to_AR_Executive_AR_Sr_Executive_once_Invoice_is_rejected_by_Finance_Exec</template>
+    </alerts>
+    <alerts>
         <fullName>Notify_to_Finance_Executive_Finance_Manager_about_AR_Invoice_Escalation</fullName>
         <description>Notify to Finance Executive &amp; Finance Manager about AR Invoice Escalation</description>
         <protected>false</protected>
@@ -127,6 +168,17 @@
         <template>Escalation_Email_Template/Send_Invoice_Escalation_Email</template>
     </alerts>
     <alerts>
+        <fullName>Notify_to_Finance_Executive_if_the_Invoice_is_Rejected_by_Finance_Manager</fullName>
+        <description>Notify to Finance Executive if the Invoice is Rejected by Finance Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Invoice_Approval_Templates/Notify_to_Finance_Executive_once_Invoice_is_rejected_by_Finance_Manager</template>
+    </alerts>
+    <alerts>
         <fullName>Notify_to_Regional_Service_Delivery_Head_about_Invoice_Escalation</fullName>
         <description>Notify to Regional Service Delivery Head about Invoice Escalation</description>
         <protected>false</protected>
@@ -136,6 +188,16 @@
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>Escalation_Email_Template/Notify_about_Invoice_Escalation</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_Notification_to_Vendor_for_accept_Invoice</fullName>
+        <description>Send Email Notification to Vendor for accept Invoice</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Invoice_Approval_Templates/Notify_to_Vendor_for_accept_invoice</template>
     </alerts>
     <fieldUpdates>
         <fullName>Stage_Accepted</fullName>

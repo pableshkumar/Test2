@@ -77,7 +77,7 @@
     <finalApprovalRecordLock>true</finalApprovalRecordLock>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <label>Invoice AP Exceptional Approval</label>
-    <processOrder>4</processOrder>
+    <processOrder>3</processOrder>
     <recordEditability>AdminOnly</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

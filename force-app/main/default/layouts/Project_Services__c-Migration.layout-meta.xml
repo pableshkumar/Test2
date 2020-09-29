@@ -39,7 +39,7 @@
                 <field>Service_Start_Date__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Category__c</field>
             </layoutItems>
         </layoutColumns>
@@ -49,7 +49,7 @@
                 <field>Service_End_Date__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Skill_Level__c</field>
             </layoutItems>
         </layoutColumns>
@@ -166,13 +166,13 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Vendor_Standby_Fees__c</field>
+                <field>Vendor_Purchase_Order__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Vendor_Purchase_Order__c</field>
+                <field>Vendor_Project__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -183,6 +183,9 @@
         <editHeading>true</editHeading>
         <label>Vendor Pricing Details</label>
         <layoutColumns>
+            <layoutItems>
+                <emptySpace>true</emptySpace>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Vendor_Half_Day__c</field>
@@ -209,6 +212,10 @@
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Vendor_Standby_Fees__c</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Vendor_Half_Day_OOH__c</field>
@@ -256,7 +263,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h9D000000lh7f</masterLabel>
+        <masterLabel>00h6D000001BYjV</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

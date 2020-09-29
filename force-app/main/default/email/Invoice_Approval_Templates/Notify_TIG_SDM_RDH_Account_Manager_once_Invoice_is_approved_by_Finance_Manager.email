@@ -1,0 +1,3 @@
+Hi Team,
+
+Invoice is approved by Finance Manager: {!Invoice__c.LastModifiedBy}

@@ -4,7 +4,6 @@
 	"features": [
 		"MultiCurrency",
 		"AuthorApex",
-		"Communities",
 		"ContactsToMultipleAccounts"
 	],
 	"settings": {
@@ -18,9 +17,6 @@
 		},
 		"mobileSettings": {
 			"enableS1EncryptedStoragePref2": false
-		},
-		"communitiesSettings": {
-			"enableNetworksEnabled": true
 		},
 		"enhancedNotesSettings": {
 			"enableEnhancedNotes": true
