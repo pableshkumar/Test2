@@ -132,11 +132,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.Bank_Name_Where_Account_Maintained__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Account.Bank_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>

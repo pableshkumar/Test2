@@ -33,10 +33,16 @@
                         <valueListItems>
                             <value>Submit</value>
                             <visibilityRule>
+                                <booleanFilter>1 AND 2</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.RecordType.Name}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>Sales Invoice</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Stage__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Draft</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>

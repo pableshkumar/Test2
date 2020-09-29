@@ -136,10 +136,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Bank_Name_Where_Account_Maintained__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Benen_Bank_Account_Type__c</field>
             </layoutItems>
         </layoutColumns>
