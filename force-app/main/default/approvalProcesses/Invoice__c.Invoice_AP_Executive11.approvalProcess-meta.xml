@@ -10,6 +10,14 @@
         <type>role</type>
     </allowedSubmitters>
     <allowedSubmitters>
+        <submitter>AP_Head</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>AP_Manager</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
         <submitter>AP_SR_Executive</submitter>
         <type>role</type>
     </allowedSubmitters>
