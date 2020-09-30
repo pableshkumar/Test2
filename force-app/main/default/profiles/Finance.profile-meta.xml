@@ -155,7 +155,7 @@
         <field>Account.Branch_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
-   
+  
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Company_Group__c</field>
@@ -172,7 +172,7 @@
         <field>Account.Description</field>
         <readable>true</readable>
     </fieldPermissions>
-   
+    
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Fax</field>
@@ -203,7 +203,7 @@
         <field>Account.MICR_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
-   
+    
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.NumberOfEmployees</field>
@@ -214,7 +214,7 @@
         <field>Account.Onboarding_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+   
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Ownership</field>
@@ -487,7 +487,7 @@
         <field>Contact.Birthdate</field>
         <readable>true</readable>
     </fieldPermissions>
-   
+    
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Department</field>
@@ -763,7 +763,11 @@
         <field>Invoice__c.Service_Month__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Invoice__c.Service_Year__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>Invoice__c.Settlement_Date__c</field>
@@ -1807,7 +1811,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Payment__c.Payable</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>

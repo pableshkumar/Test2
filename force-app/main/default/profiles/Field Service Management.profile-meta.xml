@@ -166,13 +166,13 @@
         <field>Account.Customer_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
-   
+    
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Description</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+  
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Fax</field>
@@ -204,7 +204,6 @@
         <readable>true</readable>
     </fieldPermissions>
     
-    
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.NumberOfEmployees</field>
@@ -215,7 +214,7 @@
         <field>Account.Onboarding_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Ownership</field>
@@ -301,7 +300,7 @@
         <field>Account.Trade_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+   
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Transit_Number__c</field>
@@ -488,7 +487,7 @@
         <field>Contact.Birthdate</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+   
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Department</field>
@@ -762,6 +761,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Invoice__c.Service_Month__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Invoice__c.Service_Year__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
