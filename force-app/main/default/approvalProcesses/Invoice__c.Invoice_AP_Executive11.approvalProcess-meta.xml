@@ -144,7 +144,7 @@
             <value>Submitted,On Hold,Rejected</value>
         </criteriaItems>
     </entryCriteria>
-    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <label>Invoice AP Executive</label>
     <processOrder>4</processOrder>

@@ -15,7 +15,7 @@
     </sharingCriteriaRules>
     <sharingCriteriaRules>
         <fullName>Account_Payables_Customer</fullName>
-        <accessLevel>Read</accessLevel>
+        <accessLevel>Edit</accessLevel>
         <label>Account Payables - Customer</label>
         <sharedTo>
             <roleAndSubordinates>AP_Head</roleAndSubordinates>
