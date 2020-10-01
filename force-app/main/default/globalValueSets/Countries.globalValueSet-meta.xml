@@ -446,9 +446,9 @@
         <label>Guatemala</label>
     </customValue>
     <customValue>
-        <fullName>Guinea Bissau</fullName>
+        <fullName>Guinea-Bissau</fullName>
         <default>false</default>
-        <label>Guinea Bissau</label>
+        <label>Guinea-Bissau</label>
     </customValue>
     <customValue>
         <fullName>Guyana</fullName>
