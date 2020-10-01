@@ -28,4 +28,18 @@
             <value>Payable</value>
         </criteriaItems>
     </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_payment_with_SDM</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Payments with record type Receivable are being shared with SDM</description>
+        <label>Share payment with SDM</label>
+        <sharedTo>
+            <roleAndSubordinates>SDM</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Receivable</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
 </SharingRules>
