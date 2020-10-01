@@ -1920,7 +1920,7 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Payment__c</tab>
-        <visibility>Hidden</visibility>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Project_Services__c</tab>
