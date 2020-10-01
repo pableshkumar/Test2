@@ -14,7 +14,7 @@ global class Automated_Billing_Batch implements  Schedulable,Database.Batchable<
         Date lastBillingDate=Date.Today().addDays(-1);
         Date projectEndDate= Date.Today();  
         
-        String query='SELECT Project_Start_Date__c, Project_End_Date__c,Billing_Frequency__c,Last_Billing_Date__c FROM Project__c WHERE Last_Billing_Date__c=:lastBillingDate AND Project_End_Date__c>=:projectEndDate';
+        String query='SELECT Project_Start_Date__c, Project_End_Date__c,Billing_Frequency__c,Last_Billing_Date__c, RecordType.Name FROM Project__c WHERE Last_Billing_Date__c=:lastBillingDate AND Project_End_Date__c>=:projectEndDate AND RecordType.Name=\'Customer\'';
         return Database.getQueryLocator(query);
     }
     global void execute(Database.BatchableContext bc, List<Project__c> projList){

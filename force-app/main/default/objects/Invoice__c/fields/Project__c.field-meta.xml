@@ -4,6 +4,15 @@
     <deleteConstraint>Restrict</deleteConstraint>
     <externalId>false</externalId>
     <label>Project</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.Customer__c</field>
+            <operation>equals</operation>
+            <valueField>Project__c.Customer__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
     <referenceTo>Project__c</referenceTo>
     <relationshipLabel>Invoices</relationshipLabel>
     <relationshipName>Invoices</relationshipName>
