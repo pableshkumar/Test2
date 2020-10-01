@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InvoiceDateShouldbeGreaterThanPO_StartD</fullName>
+    <active>true</active>
+    <description>Invoice date should be greater than PO Start date</description>
+    <errorConditionFormula>Invoice_Date__c &lt; Purchase_Order__r.PO_Start_Date__c</errorConditionFormula>
+    <errorDisplayField>Invoice_Date__c</errorDisplayField>
+    <errorMessage>Invoice date should be greater than PO Start date</errorMessage>
+</ValidationRule>

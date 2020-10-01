@@ -99,7 +99,7 @@ Customer : {!myVariable_current.Customer__r.Name}
             <processMetadataValues>
                 <name>objectType</name>
                 <value>
-                    <stringValue />
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -212,7 +212,7 @@ Customer : {!myVariable_current.Customer__r.Name}</stringValue>
             <processMetadataValues>
                 <name>objectType</name>
                 <value>
-                    <stringValue />
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -326,7 +326,7 @@ Customer : {!myVariable_current.Customer__r.Name}
             <processMetadataValues>
                 <name>objectType</name>
                 <value>
-                    <stringValue />
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -463,7 +463,7 @@ Customer : {!myVariable_current.Customer__r.Name}
             <processMetadataValues>
                 <name>objectType</name>
                 <value>
-                    <stringValue />
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -982,10 +982,10 @@ Customer : {!myVariable_current.Customer__r.Name}
                         <stringValue>Picklist</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.Status__c</leftValueReference>
+                <leftValueReference>myVariable_current.Stage__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Sent To Client</stringValue>
+                    <stringValue>Sent to Client</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -2861,10 +2861,10 @@ Customer : {!myVariable_current.Customer__r.Name}
                         <stringValue>Picklist</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_old.Status__c</leftValueReference>
+                <leftValueReference>myVariable_old.Stage__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Sent To Client</stringValue>
+                    <stringValue>Sent to Client</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -3216,11 +3216,11 @@ Customer : {!myVariable_current.Customer__r.Name}
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_3692036083</name>
+        <name>formula_2_myRule_1_A1_6364753628</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
-    <interviewLabel>Invoice-3_InterviewLabel</interviewLabel>
+    <interviewLabel>Invoice-2_InterviewLabel</interviewLabel>
     <label>Invoice</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -3311,7 +3311,7 @@ Customer : {!myVariable_current.Customer__r.Name}
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue />
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -3391,7 +3391,7 @@ Customer : {!myVariable_current.Customer__r.Name}
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue />
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -3402,7 +3402,7 @@ Customer : {!myVariable_current.Customer__r.Name}
             </processMetadataValues>
             <field>Invoice_Sent_Received_Date__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_3692036083</elementReference>
+                <elementReference>formula_2_myRule_1_A1_6364753628</elementReference>
             </value>
         </inputAssignments>
         <object>Invoice__c</object>

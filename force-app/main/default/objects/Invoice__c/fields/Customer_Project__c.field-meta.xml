@@ -4,6 +4,15 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
     <label>Customer Project</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Project__c.RecordType.Name</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
     <referenceTo>Project__c</referenceTo>
     <relationshipLabel>Vendor Invoices</relationshipLabel>
     <relationshipName>Invoices1</relationshipName>
