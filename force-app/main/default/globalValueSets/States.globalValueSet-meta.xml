@@ -1331,9 +1331,9 @@
         <label>Chieti</label>
     </customValue>
     <customValue>
-        <fullName>Carbonia-Iglesias</fullName>
+        <fullName>Carbonia Iglesias</fullName>
         <default>false</default>
-        <label>Carbonia-Iglesias</label>
+        <label>Carbonia Iglesias</label>
     </customValue>
     <customValue>
         <fullName>Caltanissetta</fullName>
@@ -1376,9 +1376,9 @@
         <label>Enna</label>
     </customValue>
     <customValue>
-        <fullName>Forlì-Cesena</fullName>
+        <fullName>Forlì Cesena</fullName>
         <default>false</default>
-        <label>Forlì-Cesena</label>
+        <label>Forlì Cesena</label>
     </customValue>
     <customValue>
         <fullName>Ferrara</fullName>
@@ -1531,9 +1531,9 @@
         <label>Oristano</label>
     </customValue>
     <customValue>
-        <fullName>Olbia-Tempio</fullName>
+        <fullName>Olbia Tempio</fullName>
         <default>false</default>
-        <label>Olbia-Tempio</label>
+        <label>Olbia Tempio</label>
     </customValue>
     <customValue>
         <fullName>Palermo</fullName>
@@ -1726,9 +1726,9 @@
         <label>Varese</label>
     </customValue>
     <customValue>
-        <fullName>Verbano-Cusio-Ossola</fullName>
+        <fullName>Verbano Cusio Ossola</fullName>
         <default>false</default>
-        <label>Verbano-Cusio-Ossola</label>
+        <label>Verbano Cusio Ossola</label>
     </customValue>
     <customValue>
         <fullName>Vercelli</fullName>
@@ -2446,9 +2446,9 @@
         <label>Tokelau</label>
     </customValue>
     <customValue>
-        <fullName>Timor-Leste</fullName>
+        <fullName>Timor Leste</fullName>
         <default>false</default>
-        <label>Timor-Leste</label>
+        <label>Timor Leste</label>
     </customValue>
     <customValue>
         <fullName>Turkmenistan</fullName>

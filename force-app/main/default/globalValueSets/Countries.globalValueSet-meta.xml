@@ -446,9 +446,9 @@
         <label>Guatemala</label>
     </customValue>
     <customValue>
-        <fullName>Guinea-Bissau</fullName>
+        <fullName>Guinea Bissau</fullName>
         <default>false</default>
-        <label>Guinea-Bissau</label>
+        <label>Guinea Bissau</label>
     </customValue>
     <customValue>
         <fullName>Guyana</fullName>
@@ -1061,9 +1061,9 @@
         <label>Tokelau</label>
     </customValue>
     <customValue>
-        <fullName>Timor-Leste</fullName>
+        <fullName>Timor Leste</fullName>
         <default>false</default>
-        <label>Timor-Leste</label>
+        <label>Timor Leste</label>
     </customValue>
     <customValue>
         <fullName>Turkmenistan</fullName>
