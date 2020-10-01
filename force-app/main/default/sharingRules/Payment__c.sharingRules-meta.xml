@@ -41,5 +41,10 @@
             <operation>equals</operation>
             <value>Receivable</value>
         </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Payable</value>
+        </criteriaItems>
     </sharingCriteriaRules>
 </SharingRules>
