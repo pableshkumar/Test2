@@ -65,10 +65,7 @@
                 <behavior>Required</behavior>
                 <field>Customer_Project__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Billing_Information__c</field>
-            </layoutItems>
+           
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Invoice_Type__c</field>
