@@ -9,7 +9,7 @@
     <valueSet>
         <controllingField>Country1__c</controllingField>
         <restricted>true</restricted>
-        <valueSetName>State</valueSetName>
+        <valueSetName>States</valueSetName>
         <valueSettings>
             <controllingFieldValue>Andorra</controllingFieldValue>
             <valueName>Andorra</valueName>
