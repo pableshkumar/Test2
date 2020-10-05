@@ -79,6 +79,19 @@
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>
+        <fullName>Project_Management_Head</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Project Management Head</label>
+        <sharedTo>
+            <roleAndSubordinates>Project_Management_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer,Vendor</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
         <fullName>Share_projects_with_Finance_Head</fullName>
         <accessLevel>Edit</accessLevel>
         <description>Projects with record type Customer are being shared with Finance Head Role with Read/Write</description>

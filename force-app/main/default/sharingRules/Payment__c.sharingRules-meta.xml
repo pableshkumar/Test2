@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
     <sharingCriteriaRules>
+        <fullName>AR_Head</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing rule on payments for role and subordinates AR Head - Read Write only for Receivable Record Type</description>
+        <label>AR Head</label>
+        <sharedTo>
+            <roleAndSubordinates>AR_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Receivable</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Finance_Head</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing rule on payments for role and subordinates Finance Head - Read Write</description>
+        <label>Finance Head</label>
+        <sharedTo>
+            <roleAndSubordinates>Finance_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Payable,Receivable</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+
+        <fullName>Field_Service_Management_Head</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing rule for Payment, filter by Record Type Payable, read/write to FSM Head role and subordinates</description>
+        <label>Field Service Management Head</label>
+        <sharedTo>
+            <roleAndSubordinates>Field_Service_Management_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Payable</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+
         <fullName>Share_payment_with_AP_Head_Role</fullName>
         <accessLevel>Edit</accessLevel>
         <description>Payments with record type Payable are being shared with AP mHeadRole</description>

@@ -1061,9 +1061,9 @@
         <label>Tokelau</label>
     </customValue>
     <customValue>
-        <fullName>Timor-Leste</fullName>
+        <fullName>Timor Leste</fullName>
         <default>false</default>
-        <label>Timor-Leste</label>
+        <label>Timor Leste</label>
     </customValue>
     <customValue>
         <fullName>Turkmenistan</fullName>
@@ -1195,6 +1195,6 @@
         <default>false</default>
         <label>Zimbabwe</label>
     </customValue>
-    <masterLabel>Country</masterLabel>
+    <masterLabel>Countries</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>
