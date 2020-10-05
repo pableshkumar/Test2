@@ -49,21 +49,10 @@
                         <valueListItems>
                             <value>Invoice__c.Record_Payment</value>
                             <visibilityRule>
-                                <booleanFilter>(1 OR 2) AND 3</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.Stage__c}</leftValue>
                                     <operator>EQUAL</operator>
-                                    <rightValue>Accepted</rightValue>
-                                </criteria>
-                                <criteria>
-                                    <leftValue>{!Record.Stage__c}</leftValue>
-                                    <operator>EQUAL</operator>
-                                    <rightValue>Sent to Client</rightValue>
-                                </criteria>
-                                <criteria>
-                                    <leftValue>{!Record.Outstanding_Amount__c}</leftValue>
-                                    <operator>GT</operator>
-                                    <rightValue>0</rightValue>
+                                    <rightValue>In Current Payment Batch</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
@@ -80,6 +69,16 @@
                                     <leftValue>{!Record.Stage__c}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>Sent to Client</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Invoice__c.Consider_In_Current_Batch</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.Stage__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Accepted</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
