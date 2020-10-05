@@ -203,6 +203,13 @@
                 <elementReference>recordId</elementReference>
             </value>
         </filters>
+        <filters>
+            <field>Outstanding_Amount__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </filters>
         <inputAssignments>
             <field>Stage__c</field>
             <value>
@@ -230,8 +237,8 @@
     <screens>
         <name>Record_Payment</name>
         <label>Record Payment</label>
-        <locationX>703</locationX>
-        <locationY>187</locationY>
+        <locationX>835</locationX>
+        <locationY>151</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
