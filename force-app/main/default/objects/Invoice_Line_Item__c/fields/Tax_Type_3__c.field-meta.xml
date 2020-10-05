@@ -15,6 +15,16 @@
                 <default>false</default>
                 <label>VAT</label>
             </value>
+            <value>
+                <fullName>GST</fullName>
+                <default>false</default>
+                <label>GST</label>
+            </value>
+            <value>
+                <fullName>SST</fullName>
+                <default>false</default>
+                <label>SST</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
