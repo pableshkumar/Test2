@@ -42,14 +42,14 @@
                 <label>Accepted</label>
             </value>
             <value>
-                <fullName>Paid</fullName>
-                <default>false</default>
-                <label>Paid</label>
-            </value>
-            <value>
                 <fullName>In Current Payment Batch</fullName>
                 <default>false</default>
                 <label>In Current Payment Batch</label>
+            </value>
+            <value>
+                <fullName>Paid</fullName>
+                <default>false</default>
+                <label>Paid</label>
             </value>
         </valueSetDefinition>
     </valueSet>

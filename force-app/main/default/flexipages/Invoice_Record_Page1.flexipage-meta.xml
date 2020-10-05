@@ -49,10 +49,21 @@
                         <valueListItems>
                             <value>Invoice__c.Record_Payment</value>
                             <visibilityRule>
+                                <booleanFilter>(1 OR 2) AND 3</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.Stage__c}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>In Current Payment Batch</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Stage__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Sent to Client</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Outstanding_Amount__c}</leftValue>
+                                    <operator>GT</operator>
+                                    <rightValue>0</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
