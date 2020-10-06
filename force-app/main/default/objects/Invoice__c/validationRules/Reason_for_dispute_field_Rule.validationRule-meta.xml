@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Reason_for_dispute_field_Rule</fullName>
-    <active>true</active>
-    <errorConditionFormula>AND(RecordType.Name ==&apos;Purchase Invoice&apos;, TEXT(Stage__c) ==&apos;Rejected&apos;,TEXT(Reason_For_Dispute__c)==&apos;&apos;)</errorConditionFormula>
-    <errorDisplayField>Reason_For_Dispute__c</errorDisplayField>
-    <errorMessage>Please enter Reason For Dispute before rejection</errorMessage>
-</ValidationRule>
