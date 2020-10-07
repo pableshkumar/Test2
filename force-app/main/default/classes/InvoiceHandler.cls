@@ -5,6 +5,8 @@ public class InvoiceHandler {
             if(invoice.Status__c == 'Disputed' && invoice.Disputed_Amount__c == null ){
                 //invoice.addError('Please enter disputed amount before rejection.');
                 invoice.addError(System.Label.Dispute_Amount_Error);
+            }else if(invoice.Status__c == 'Disputed' && (invoice.Reason_For_Dispute__c == null ||  invoice.Reason_For_Dispute__c == '')){  
+                invoice.addError('Please enter reason for dispute before rejection.');
             }
             else if(invoice.Number_of_Invoice_Line_Items__c == 0 && invoice.Stage__c != 'Draft'){
                 //invoice.addError('Please enter disputed amount before rejection.');

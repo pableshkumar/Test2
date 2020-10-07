@@ -155,7 +155,7 @@
         <field>Account.Branch_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+  
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Company_Group__c</field>
@@ -166,7 +166,7 @@
         <field>Account.Customer_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
-   
+    
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Description</field>
@@ -790,6 +790,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Invoice__c.Reason_for_Late_Submission__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Invoice__c.Remarks__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -961,6 +966,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Order__c.Ship_to_Address__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order__c.Total_Billed_Value__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1484,8 +1494,18 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Project__c.Total_Billed_Value__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Project__c.Total_IT_Billing_Entity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Project__c.Total_Project_Value__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1965,7 +1985,7 @@
         <enabled>true</enabled>
         <name>AddDirectMessageMembers</name>
     </userPermissions>
-   
+    
     <userPermissions>
         <enabled>true</enabled>
         <name>ApexRestServices</name>
@@ -2079,7 +2099,7 @@
         <enabled>true</enabled>
         <name>SelectFilesFromSalesforce</name>
     </userPermissions>
-  
+    
     <userPermissions>
         <enabled>true</enabled>
         <name>ShowCompanyNameAsUserBadge</name>
