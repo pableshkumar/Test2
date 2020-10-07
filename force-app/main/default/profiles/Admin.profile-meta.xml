@@ -161,7 +161,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Account.CleanStatus</field>
+        <field></field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -176,7 +176,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Account.DandbCompanyId</field>
+        <field></field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -186,7 +186,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Account.DunsNumber</field>
+        <field></field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -221,12 +221,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Account.NaicsCode</field>
+        <field></field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Account.NaicsDesc</field>
+        <field></field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -241,7 +241,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.OperatingHoursId</field>
+        <field></field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -331,7 +331,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Account.Tradestyle</field>
+        <field></field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -356,7 +356,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Account.YearStarted</field>
+        <field></field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -531,7 +531,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Contact.CleanStatus</field>
+        <field></field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2065,11 +2065,11 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>AllowUniversalSearch</name>
+        <name></name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>AllowViewKnowledge</name>
+        <name></name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -2237,7 +2237,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>EditKnowledge</name>
+        <name></name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -2285,7 +2285,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>EnableCommunityAppLauncher</name>
+        <name></name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -2297,7 +2297,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>FieldServiceAccess</name>
+        <name></name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -2429,11 +2429,11 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ManageKnowledge</name>
+        <name></name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ManageKnowledgeImportExport</name>
+        <name></name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -2493,7 +2493,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ManageSearchPromotionRules</name>
+        <name></name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -2577,7 +2577,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>SendExternalEmailAvailable</name>
+        <name></name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -2585,7 +2585,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ShareInternalArticles</name>
+        <name></name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -2669,7 +2669,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ViewDataLeakageEvents</name>
+        <name></name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -2693,7 +2693,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ViewPlatformEvents</name>
+        <name></name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -2717,6 +2717,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>WorkCalibrationUser</name>
+        <name></name>
     </userPermissions>
 </Profile>
