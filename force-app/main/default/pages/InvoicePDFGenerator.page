@@ -1,4 +1,4 @@
-<apex:page sidebar="false" renderAs="" StandardController="Invoice__c" extensions="InvoicePDFController" showQuickActionVfHeader="false">
+<apex:page sidebar="false" renderAs="pdf" StandardController="Invoice__c" extensions="InvoicePDFController" showQuickActionVfHeader="false">
     <apex:pageMessages id="pbm"/>
     <apex:outputPanel rendered="{!Mainflag}">       
         <head>
@@ -177,7 +177,7 @@
         
     </apex:outputPanel>
     <apex:form >
-        <div style="float:right;">
+        <div>
             <div class="button" style="float:left; margin-right:50px">
                 <apex:outputLink value="/apex/InvoicePDFSave?id={!id}" target="_blank">
                     Save
