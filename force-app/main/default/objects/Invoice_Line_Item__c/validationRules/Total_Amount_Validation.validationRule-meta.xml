@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Amount_Validation</fullName>
+    <active>true</active>
+    <description>Validation to not able to edit total amount on invoice line item after invoice is accepted or sent to client</description>
+    <errorConditionFormula>AND(
+OR( 
+ISPICKVAL(Invoice__r.Stage__c ,&apos;Sent to Client&apos;), 
+ISPICKVAL(Invoice__r.Stage__c ,&apos;Accepted&apos;)
+),
+
+ISCHANGED(Total_Amount__c)
+)</errorConditionFormula>
+    <errorMessage>Total Amount can&apos;t be updated since Invoice has reached to &quot;Sent to Client&quot; or &quot;Accepted&quot; stage.</errorMessage>
+</ValidationRule>

@@ -50,8 +50,8 @@
     <recordCreates>
         <name>Create_Invoice_Payment</name>
         <label>Create Invoice Payment</label>
-        <locationX>186</locationX>
-        <locationY>468</locationY>
+        <locationX>161</locationX>
+        <locationY>345</locationY>
         <connector>
             <targetReference>Update_Invoice_Stage</targetReference>
         </connector>
@@ -88,8 +88,8 @@
     <recordCreates>
         <name>Create_Payment</name>
         <label>Create Payment</label>
-        <locationX>407</locationX>
-        <locationY>423</locationY>
+        <locationX>428</locationX>
+        <locationY>385</locationY>
         <connector>
             <targetReference>Create_Invoice_Payment</targetReference>
         </connector>
@@ -203,6 +203,13 @@
                 <elementReference>recordId</elementReference>
             </value>
         </filters>
+        <filters>
+            <field>Outstanding_Amount__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </filters>
         <inputAssignments>
             <field>Stage__c</field>
             <value>
@@ -230,8 +237,8 @@
     <screens>
         <name>Record_Payment</name>
         <label>Record Payment</label>
-        <locationX>703</locationX>
-        <locationY>187</locationY>
+        <locationX>835</locationX>
+        <locationY>151</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -257,7 +264,7 @@
         </fields>
         <fields>
             <name>Amount</name>
-            <dataType>Currency</dataType>
+            <dataType>Number</dataType>
             <defaultValue>
                 <elementReference>Get_Invoice.Outstanding_Amount__c</elementReference>
             </defaultValue>
@@ -266,7 +273,7 @@
             <isRequired>true</isRequired>
             <scale>2</scale>
             <validationRule>
-                <errorMessage>&lt;p&gt;Excess amount entered.&lt;/p&gt;</errorMessage>
+                <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Excess amount entered.&lt;/span&gt;&lt;/p&gt;</errorMessage>
                 <formulaExpression>{!outstandingAmount} - {!Amount} &gt;= 0</formulaExpression>
             </validationRule>
         </fields>
