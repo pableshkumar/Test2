@@ -42,4 +42,17 @@
             <value>Customer</value>
         </criteriaItems>
     </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_with_Project_Management_Head</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share with Project Management Head</label>
+        <sharedTo>
+            <roleAndSubordinates>Project_Management_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
 </SharingRules>
