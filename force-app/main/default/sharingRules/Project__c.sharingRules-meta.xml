@@ -119,4 +119,17 @@
             <value>Customer</value>
         </criteriaItems>
     </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_with_Finance_Executive</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with Finance Executive</label>
+        <sharedTo>
+            <roleAndSubordinates>Finance_Executive</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer,Vendor</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
 </SharingRules>

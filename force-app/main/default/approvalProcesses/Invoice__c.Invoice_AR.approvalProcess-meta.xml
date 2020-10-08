@@ -45,7 +45,7 @@
         <field>Total_Tax__c</field>
     </approvalPageFields>
     <approvalStep>
-        <allowDelegate>false</allowDelegate>
+        <allowDelegate>true</allowDelegate>
         <approvalActions>
             <action>
                 <name>Status_None</name>
@@ -73,7 +73,7 @@
         </rejectionActions>
     </approvalStep>
     <approvalStep>
-        <allowDelegate>false</allowDelegate>
+        <allowDelegate>true</allowDelegate>
         <approvalActions>
             <action>
                 <name>Status_Ready_to_be_Sent_to_Client</name>
@@ -94,7 +94,7 @@
         </rejectBehavior>
     </approvalStep>
     <approvalStep>
-        <allowDelegate>false</allowDelegate>
+        <allowDelegate>true</allowDelegate>
         <approvalActions>
             <action>
                 <name>Stage_Sent_to_client</name>

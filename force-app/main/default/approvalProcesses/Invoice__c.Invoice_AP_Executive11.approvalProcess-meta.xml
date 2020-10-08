@@ -50,7 +50,7 @@
         <field>Total_Tax__c</field>
     </approvalPageFields>
     <approvalStep>
-        <allowDelegate>false</allowDelegate>
+        <allowDelegate>true</allowDelegate>
         <approvalActions>
             <action>
                 <name>Status_Validate_Invoice</name>
@@ -86,7 +86,7 @@
         </rejectionActions>
     </approvalStep>
     <approvalStep>
-        <allowDelegate>false</allowDelegate>
+        <allowDelegate>true</allowDelegate>
         <approvalActions>
             <action>
                 <name>Stage_Accepted</name>

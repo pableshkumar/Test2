@@ -25,6 +25,21 @@
                 <default>false</default>
                 <label>SST</label>
             </value>
+            <value>
+                <fullName>SGST</fullName>
+                <default>false</default>
+                <label>SGST</label>
+            </value>
+            <value>
+                <fullName>CGST</fullName>
+                <default>false</default>
+                <label>CGST</label>
+            </value>
+            <value>
+                <fullName>IGST</fullName>
+                <default>false</default>
+                <label>IGST</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
