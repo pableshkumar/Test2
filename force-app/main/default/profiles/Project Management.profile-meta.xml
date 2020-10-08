@@ -1823,7 +1823,7 @@
     <recordTypeVisibilities>
         <default>true</default>
         <recordType>Billing_Information__c.Customer</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
