@@ -18,32 +18,39 @@ public class InvoiceHandler {
     @future
     public static void sendToTIGSDMOnDispute(String inv){
         List<Invoice__c> invList =   (List<Invoice__c>)System.JSON.deserialize(inv, List<Invoice__c>.class);
-        //List<String> roles = new List<String>{'Client SDM', 'SDM','TIG SDM', 'RDH', 'Account Manager'};
         Map<String, String> roleMap = new Map<String, String>();
         List<String> projs = new List<String>();
+        set<Id> recordIds =new set<Id>();
         for(Invoice__c invoice: invList){
             projs.add(invoice.Customer_Project__c);
+            recordIds.add(invoice.Id);
         }
-
         for(Project_Team__C currentTeams : [SELECT ID, User__c,Project__c, user__r.email, Project_Role__c, RecordType.Name FROM Project_Team__c WHERE Project_Role__c = 'SDM'AND Project__c IN:projs AND Primary__c = TRUE AND RecordType.Name = 'Internal']){
             roleMap.put(currentTeams.Project__c, currentTeams.user__c );
         }
-        for(Invoice__c invoice: invList){
-            //Invoice__c oldInvoice = (Invoice__c)Trigger.oldMap.get(invoice.Id);
-            //if(invoice.Status__c == 'Disputed' && invoice.Stage__c == 'On Hold' && oldInvoice.Status__c != invoice.Status__c){
-            if(invoice.Status__c == 'Disputed' && invoice.Stage__c == 'On Hold'){
-                Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
-                req1.setComments('Dispute Resolution');
-                req1.setObjectId(invoice.id);
-                req1.setNextApproverIds(new List<Id>{roleMap.get(invoice.Customer_Project__c)});  
-                Approval.ProcessResult result = Approval.process(req1);
+        //Added New Code_08_10_2020
+        set<Id> existingApprovalsSet = new set<Id>();
+        list<ProcessInstance> existingApprovals = [SELECT Id, TargetObjectId FROM ProcessInstance WHERE TargetObjectId IN :recordIds AND Status = 'Pending'];
+        if(existingApprovals.size() != 0){
+            for(ProcessInstance e : existingApprovals){
+                existingApprovalsSet.add(e.TargetObjectId);
             }
-            else if(invoice.Status__c == 'Validate Invoice' || invoice.Status__c == 'Escalated' || invoice.Status__c == 'Exception Approval Needed'){
-                Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
-
-                req1.setObjectId(invoice.id);
-
-                Approval.ProcessResult result = Approval.process(req1);
+        }
+        //End Here
+        for(Invoice__c invoice: invList){
+            if(!existingApprovalsSet.contains(invoice.id)){
+                if(invoice.Status__c == 'Disputed' && invoice.Stage__c == 'On Hold'){
+                    Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
+                    req1.setComments('Dispute Resolution');
+                    req1.setObjectId(invoice.id);
+                    req1.setNextApproverIds(new List<Id>{roleMap.get(invoice.Customer_Project__c)});  
+                    Approval.ProcessResult result = Approval.process(req1);
+                }
+                else if(invoice.Status__c == 'Validate Invoice' || invoice.Status__c == 'Escalated' || invoice.Status__c == 'Exception Approval Needed'){
+                    Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
+                    req1.setObjectId(invoice.id);
+                    Approval.ProcessResult result = Approval.process(req1);
+                }
             }
         }
         
