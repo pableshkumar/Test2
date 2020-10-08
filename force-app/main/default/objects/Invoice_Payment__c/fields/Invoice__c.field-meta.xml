@@ -14,7 +14,7 @@
         <filterItems>
             <field>$Profile.Name</field>
             <operation>equals</operation>
-            <value>Acccount Payables, Finance</value>
+            <value>Acccount Payables, Finance, System Administrator</value>
         </filterItems>
         <filterItems>
             <field>Invoice__c.RecordTypeId</field>
@@ -24,7 +24,7 @@
         <filterItems>
             <field>$Profile.Name</field>
             <operation>equals</operation>
-            <value>Account Receivables, Finance</value>
+            <value>Account Receivables, Finance, System Administrator</value>
         </filterItems>
         <filterItems>
             <field>Invoice__c.RecordTypeId</field>
