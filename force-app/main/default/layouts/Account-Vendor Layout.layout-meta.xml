@@ -112,10 +112,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Bank_Code__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Bank_Account_Country_Code__c</field>
             </layoutItems>
             <layoutItems>
@@ -125,10 +121,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Bank_ID__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Bank_Account_Name__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

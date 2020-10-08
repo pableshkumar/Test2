@@ -102,27 +102,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.Bank_Account_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Account.Bank_Account_Number_Clabe_CCI__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Bank_Branch__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Account.Bank_Code__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Account.Bank_Details__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -172,7 +157,7 @@
         <field>Account.Description</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+   
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Fax</field>
@@ -321,7 +306,7 @@
         <field>Account.Website</field>
         <readable>true</readable>
     </fieldPermissions>
-   
+    
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.ZIP_Postal_Code_Bank__c</field>
@@ -2234,7 +2219,7 @@
         <enabled>true</enabled>
         <name>ExportReport</name>
     </userPermissions>
-    
+   
     <userPermissions>
         <enabled>true</enabled>
         <name>GiveRecognitionBadge</name>
@@ -2363,7 +2348,7 @@
         <enabled>true</enabled>
         <name>ManageIpAddresses</name>
     </userPermissions>
-   
+    
     <userPermissions>
         <enabled>true</enabled>
         <name>ManageLeads</name>
@@ -2506,7 +2491,7 @@
         <enabled>true</enabled>
         <name>SendSitRequests</name>
     </userPermissions>
-    
+   
     <userPermissions>
         <enabled>true</enabled>
         <name>ShowCompanyNameAsUserBadge</name>
