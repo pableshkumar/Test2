@@ -132,4 +132,17 @@
             <value>Customer,Vendor</value>
         </criteriaItems>
     </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_with_Service_Delivery</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share_with_Service_Delivery</label>
+        <sharedTo>
+            <roleAndSubordinates>SDM</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Vendor</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
 </SharingRules>
