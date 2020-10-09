@@ -81,6 +81,13 @@ public class Test_Data_Factory {
         return tigEntity;
         
     }    
+    public static TIG_Entity_Bank_Information__c createTIGEntityBankInfo(){
+        TIG_Entity_Bank_Information__c tigEntityBankInfo =new TIG_Entity_Bank_Information__c();
+        tigEntityBankInfo.Name = 'TIG India LLC';
+        tigEntityBankInfo.Bank_Name__c = 'SBI';
+        tigEntityBankInfo.Bank_Account_Number__c = 'SBI124578';
+        return tigEntityBankInfo;
+    }
     public static Order__c createOrder(String recordTypeName)
     {
         Order__c ord=new Order__C();
@@ -89,6 +96,7 @@ public class Test_Data_Factory {
         ord.PO_Start_Date__c=system.today();
         ord.PO_End_Date__c=system.today()+1;
         ord.PO_Amount__c=100;
+        ord.Tax_Included__c = 'Yes';
         ord.RecordTypeId=Schema.SObjectType.Order__c.getRecordTypeInfosByName().get(recordTypeName).getRecordTypeId();
         return ord;
     }

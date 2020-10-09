@@ -16,6 +16,10 @@ public class InvoiceHandler_Test {
         TIG_Entity__c tigEntity=Test_Data_Factory.createTIGEntity();
         insert tigEntity;
         
+        TIG_Entity_Bank_Information__c TIGEntityBankInfo =Test_Data_Factory.createTIGEntityBankInfo();
+        TIGEntityBankInfo.TIG_Entity__c = tigEntity.id;
+        insert TIGEntityBankInfo;
+        
         Project__c projOneTimeCustomer=Test_Data_Factory.createProject('One Time','Customer');
         projOneTimeCustomer.Customer__c=Customer.id;
         projOneTimeCustomer.End_Customer__c=Customer.id;
@@ -77,6 +81,7 @@ public class InvoiceHandler_Test {
         salesInvoice.Customer__c=Customer.id;
         salesInvoice.Project__c=projOneTimeCustomer.id;
         salesInvoice.Purchase_Order__c=salesOrder.id;
+        salesInvoice.TIG_Entity_Bank_Information__c = TIGEntityBankInfo.Id;
         insert salesInvoice;
         
         Invoice__c purchaseInvoice=Test_Data_Factory.createInvoice('Purchase Invoice');
@@ -97,6 +102,7 @@ public class InvoiceHandler_Test {
         inv1.Customer__c=Customer.id;
         inv1.Project__c=projOneTimeCustomer.id;
         inv1.Purchase_Order__c=salesOrder.id;
+        inv1.TIG_Entity_Bank_Information__c = TIGEntityBankInfo.Id;
         insert inv1;  
         
         
@@ -117,8 +123,10 @@ public class InvoiceHandler_Test {
             inv.Disputed_Amount__c=5;
             inv.Status__c='Disputed';
             inv.Stage__c='On Hold';
+            inv.Reason_For_Dispute__c =  'Dispute in client billing';
             update inv;
             inv.Disputed_Amount__c=null;
+            inv.Reason_For_Dispute__c =  'Dispute in client billing';
             update inv;
         }Catch(Exception ex)
         {
