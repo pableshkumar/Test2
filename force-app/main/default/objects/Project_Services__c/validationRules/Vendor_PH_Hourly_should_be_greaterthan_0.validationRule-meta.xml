@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor_PH_Hourly_should_be_greaterthan_0</fullName>
+    <active>true</active>
+    <description>Vendor PH Hourly should be greater than zero</description>
+    <errorConditionFormula>Vendor_PH_Hourly__c &lt;=0</errorConditionFormula>
+    <errorDisplayField>Vendor_PH_Hourly__c</errorDisplayField>
+    <errorMessage>Vendor PH Hourly should be greater than zero</errorMessage>
+</ValidationRule>

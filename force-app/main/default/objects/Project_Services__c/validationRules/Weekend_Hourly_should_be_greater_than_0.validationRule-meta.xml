@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Weekend_Hourly_should_be_greater_than_0</fullName>
+    <active>true</active>
+    <description>Weekend Hourly should be greater than zero</description>
+    <errorConditionFormula>Weekend_Hourly__c &lt;=0</errorConditionFormula>
+    <errorDisplayField>Weekend_Hourly__c</errorDisplayField>
+    <errorMessage>Weekend Hourly should be greater than zero</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VendorTMRateinhrsshouldbegreaterthan0</fullName>
+    <active>true</active>
+    <description>Vendor T &amp; M Rate (in hrs) should be greater than zero</description>
+    <errorConditionFormula>Vendor_T_M_Rate_in_hrs__c &lt;=0</errorConditionFormula>
+    <errorDisplayField>Vendor_T_M_Rate_in_hrs__c</errorDisplayField>
+    <errorMessage>Vendor T &amp; M Rate (in hrs) should be greater than zero</errorMessage>
+</ValidationRule>
