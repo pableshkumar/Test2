@@ -285,7 +285,7 @@
         <field>Account.Trade_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
-   
+    
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Transit_Number__c</field>
@@ -1191,6 +1191,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Project_Services__c.Skill_Level__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Project_Services__c.Sourced_By__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

@@ -1195,6 +1195,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Project_Services__c.Sourced_By__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Project_Services__c.Standby_Fees__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2047,7 +2052,7 @@
         <enabled>true</enabled>
         <name>EmailSingle</name>
     </userPermissions>
-   
+    
     <userPermissions>
         <enabled>true</enabled>
         <name>EnableNotifications</name>
@@ -2084,7 +2089,7 @@
         <enabled>true</enabled>
         <name>SelectFilesFromSalesforce</name>
     </userPermissions>
-   
+    
     <userPermissions>
         <enabled>true</enabled>
         <name>ShowCompanyNameAsUserBadge</name>
