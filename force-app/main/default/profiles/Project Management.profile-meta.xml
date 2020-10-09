@@ -1195,6 +1195,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Project_Services__c.Sourced_By__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Project_Services__c.Standby_Fees__c</field>
         <readable>true</readable>
     </fieldPermissions>
