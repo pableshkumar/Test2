@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PH_Half_Day_should_be_greater_than_zero</fullName>
+    <active>true</active>
+    <description>PH Half Day should be greater than zero</description>
+    <errorConditionFormula>PH_Half_Day__c &lt;=0</errorConditionFormula>
+    <errorDisplayField>PH_Half_Day__c</errorDisplayField>
+    <errorMessage>PH Half Day should be greater than zero</errorMessage>
+</ValidationRule>

@@ -48,7 +48,7 @@ public with sharing class InvoicePDFController{
         }
         catch(exception e){
             // ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR,'Please add the Invoice Line Item'));
-            ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.Error, 'Please add the Invoice Line Item'));
+            ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.Error, Label.Invoice_Line_Item_Error_Message));
         }
         
     }

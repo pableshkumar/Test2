@@ -1,4 +1,4 @@
-<apex:page sidebar="false" renderAs="" StandardController="Invoice__c" extensions="InvoicePDFController" showQuickActionVfHeader="false">
+<apex:page sidebar="false" showheader="false" renderAs="" StandardController="Invoice__c" extensions="InvoicePDFController" showQuickActionVfHeader="false">
     <apex:pageMessages id="pbm"/>
     <apex:outputPanel rendered="{!Mainflag}">       
         <head>
@@ -62,8 +62,8 @@
                     <th style="width:40%;text-align:left">Description </th>
                     <th style="width:15%;text-align:right">Quantity</th>
                     <th style="width:15%;text-align:right">Unit Price</th>
-                    <th style="width:15%;text-align:right">Tax</th>
-                    <th style="width:15%;text-align:right;">Amount {!invoiceDetails.Purchase_Order__r.CurrencyIsoCode}</th>
+                    <th style="width:15%;text-align:right">Tax (%)</th>
+                    <th style="width:15%;text-align:right;">Amount ({!invoiceDetails.Purchase_Order__r.CurrencyIsoCode})</th>
                 </tr>
                 <apex:repeat value="{!invoiceLineDetails}" var="inv">
                     <tr><td colspan="5" style="width:100%"><hr/></td> </tr>
@@ -77,7 +77,7 @@
                             <br/>
                         </td>
                         <td style="text-align:right">{!inv.Amount__c}</td>
-                        <td style="text-align:right">{!inv.Tax_Type_1__c}&nbsp;<apex:outputText value="{0, number, integer}"><apex:param value="{!inv.Tax_1__c}" /></apex:outputText>{!inv.Tax_Type_2__c}&nbsp;<apex:outputText value="{0, number, integer}"><apex:param value="{!inv.Tax_2__c}" /></apex:outputText>{!inv.Tax_Type_3__c}&nbsp;<apex:outputText value="{0, number, integer}"><apex:param value="{!inv.Tax_3__c}" /></apex:outputText>%</td>
+                        <td style="text-align:right"><apex:outputPanel rendered="{!If(inv.Tax_1__c!=NULL,true,false)}">{!inv.Tax_Type_1__c}&nbsp;<apex:outputText value="{0, number, integer}"><apex:param value="{!inv.Tax_1__c}" /></apex:outputText>%</apex:outputPanel><apex:outputPanel rendered="{!If(inv.Tax_2__c!=NULL,true,false)}"><br/>&nbsp;{!inv.Tax_Type_2__c}&nbsp;<apex:outputText value="{0, number, integer}"><apex:param value="{!inv.Tax_2__c}" /></apex:outputText>%</apex:outputPanel><apex:outputPanel rendered="{!If(inv.Tax_3__c!=NULL,true,false)}"><br/>{!inv.Tax_Type_3__c}&nbsp;<apex:outputText value="{0, number, integer}"><apex:param value="{!inv.Tax_3__c}" /></apex:outputText>%</apex:outputPanel></td>
                         <td style="text-align:right">{!inv.Amount__c}</td>
                         
                     </tr>
@@ -120,7 +120,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td style="text-align: right;font-weight:bold;border-top: 1px solid #000;"><div style="font-size: 12px">TOTAL {!invoiceDetails.Purchase_Order__r.CurrencyIsoCode}</div></td>
+                    <td style="text-align: right;font-weight:bold;border-top: 1px solid #000;"><div style="font-size: 12px">TOTAL ({!invoiceDetails.Purchase_Order__r.CurrencyIsoCode})</div></td>
                     <td  style="text-align: right;font-weight:bold;border-top: 1px solid #000;">{!invoiceDetails.Total_Amount__c}</td>
                 </tr>
             </tbody>
@@ -176,18 +176,4 @@
         
         
     </apex:outputPanel>
-    <apex:form >
-        <div style="float:right;">
-            <div class="button" style="float:left; margin-right:50px">
-                <apex:outputLink value="/apex/InvoicePDFSave?id={!id}" target="_blank">
-                    Save
-                </apex:outputLink> 
-            </div>
-            <div class="button" style="float:left;">
-                <apex:outputLink value="/apex/InvoicePDFSaveandDownload?id={!id}" target="_blank">
-                    Save And Download
-                </apex:outputLink>
-            </div>
-        </div>       
-    </apex:form> 
 </apex:page>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VendorPerDeviceRateshouldbegreaterthan0</fullName>
+    <active>true</active>
+    <description>Vendor Per Device Rate should be greater than zero</description>
+    <errorConditionFormula>Vendor_Per_Device_Rate__c &lt;=0</errorConditionFormula>
+    <errorDisplayField>Vendor_Per_Device_Rate__c</errorDisplayField>
+    <errorMessage>Vendor Per Device Rate should be greater than zero</errorMessage>
+</ValidationRule>

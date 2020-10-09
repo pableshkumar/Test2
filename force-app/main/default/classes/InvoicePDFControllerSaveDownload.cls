@@ -41,8 +41,5 @@ public class InvoicePDFControllerSaveDownload{
         conDocLink.ContentDocumentId = conDoc;  //ContentDocumentId Id from ContentVersion
         conDocLink.shareType = 'V';
         insert conDocLink;
-    }
-    
-  
-    
+    }    
 }

@@ -176,18 +176,4 @@
         
         
     </apex:outputPanel>
-    <apex:form >
-        <div>
-            <div class="button" style="float:left; margin-right:50px">
-                <apex:outputLink value="/apex/InvoicePDFSave?id={!id}" target="_blank">
-                    Save
-                </apex:outputLink> 
-            </div>
-            <div class="button" style="float:left;">
-                <apex:outputLink value="/apex/InvoicePDFSaveandDownload?id={!id}" target="_blank">
-                    Save And Download
-                </apex:outputLink>
-            </div>
-        </div>       
-    </apex:form> 
 </apex:page>
