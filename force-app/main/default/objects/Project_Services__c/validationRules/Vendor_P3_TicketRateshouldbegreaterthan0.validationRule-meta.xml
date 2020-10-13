@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor_P3_TicketRateshouldbegreaterthan0</fullName>
+    <active>true</active>
+    <description>Vendor P3 Ticket Rate should be greater than zero</description>
+    <errorConditionFormula>Vendor_P3_Ticket_Rate__c &lt;=0</errorConditionFormula>
+    <errorMessage>Vendor P3 Ticket Rate should be greater than zero</errorMessage>
+</ValidationRule>

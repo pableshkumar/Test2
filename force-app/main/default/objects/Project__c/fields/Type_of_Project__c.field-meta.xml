@@ -17,6 +17,16 @@
                 <default>false</default>
                 <label>None</label>
             </value>
+            <value>
+                <fullName>Workspace infrastructure</fullName>
+                <default>false</default>
+                <label>Workspace infrastructure</label>
+            </value>
+            <value>
+                <fullName>Enterprise Infrastructure</fullName>
+                <default>false</default>
+                <label>Enterprise Infrastructure</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

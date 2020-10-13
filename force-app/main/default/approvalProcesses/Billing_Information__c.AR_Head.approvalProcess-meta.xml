@@ -29,7 +29,7 @@
         <field>CurrencyIsoCode</field>
     </approvalPageFields>
     <approvalStep>
-        <allowDelegate>false</allowDelegate>
+        <allowDelegate>true</allowDelegate>
         <assignedApprover>
             <approver>
                 <name>AR_Head</name>

@@ -1,0 +1,19 @@
+<apex:page id="MainPage"
+           showHeader="false" 
+           action="{!SaveFile}"
+           controller="InvoicePDFControllerSaveDownload"
+           cache="true">
+    <!-- <apex:include pageName="InvoicePDFGenerator"/>-->
+    
+    <body onload="myFunction()">
+        <script>
+        function myFunction() {                                   
+            var rid = "{!$CurrentPage.parameters.id}";                                          
+            window.close();   
+            
+            
+        }
+        </script>
+    </body>
+    
+</apex:page>

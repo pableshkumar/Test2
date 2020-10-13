@@ -1,0 +1,179 @@
+<apex:page sidebar="false" renderAs="pdf" StandardController="Invoice__c" extensions="InvoicePDFController" showQuickActionVfHeader="false">
+    <apex:pageMessages id="pbm"/>
+    <apex:outputPanel rendered="{!Mainflag}">       
+        <head>
+            <style>
+                .button {
+                background-color:#00FF00;
+                font-weight:bold;
+                color:#E56717;
+                padding: 10px 22px;
+                // position: fixed;
+                
+                }
+                
+                
+            </style>
+        </head>
+        
+        <br/>
+        <div>
+            <div > <apex:image style="margin-left:75%;" url="{!$Resource.Logo}" /></div>
+            <div style="font-size: 28px;margin-Top:50px;margin-left:10px;font-family: 'Open Sans', sans-serif">TAX INVOICE</div><br/>
+            <div style="font-size: 14px;margin-left:10px;font-family: 'Open Sans', sans-serif;word-wrap: break-word;Width:20%;float:left">
+                <apex:outputText value="{!invoiceDetails.TIG_Entity__c}" /><br/>
+                <apex:outputField value="{!invoiceDetails.Purchase_Order__r.Bill_to_Address__c}" />
+            </div>
+            <div style="font-size: 12px;font-family: 'Open Sans', sans-serif;float:left;margin-left:30%;margin-top:-20px;">
+                <b>Invoice Date</b><br/>
+                <apex:outputField value="{!invoiceDetails.Invoice_Date__c}" label="Invoice Date" /><br/><br/>
+                <b>Invoice Number</b><br/>
+                <apex:outputField value="{!invoiceDetails.Name}" label="Invoice Number" /><br/><br/>
+                <b>Reference</b><br/>
+                PO NO. <apex:outputField value="{!invoiceDetails.Purchase_Order__r.Name}" label="PO NO." /><br/><br/>
+                <b>{!invoiceDetails.Project__r.TIG_Entity_Name__r.Tax_Name__c}</b><br/>
+                <td>{!invoiceDetails.Project__r.TIG_Entity_Name__r.Tax_Code__c}</td><br/>
+            </div>
+            <div style="font-size: 14px;font-family: 'Open Sans', sans-serif;float:left;margin-left:75%;margin-top:-150px;">
+                <apex:outputtext style="font-size: 14px;" value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Name}" /><br/>
+                <apex:outputtext style="font-size: 12px;" value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Street_Address__c}" /><br/>
+                <apex:outputtext style="font-size: 12px;" value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.City__c}" /> &nbsp;<br/>
+                <apex:outputtext style="font-size: 12px;" value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.State1__c}" />&nbsp;<br/>
+                <apex:outputtext style="font-size: 12px;" value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Zip_Postal_Code__c}" /><br/>
+                <apex:outputtext style="font-size: 12px;" value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Country1__c}" /><br/>
+                
+            </div>
+        </div><br/><br/><br/><br/><br/><br/><br/>
+        <apex:outputPanel rendered="{!if( invoiceDetails.Project__r.TIG_Entity_Name__r.Country1__c=='India',true,false)}">
+            <div style="font-size: 14px;font-family: 'Open Sans', sans-serif;float:left;margin-top:5px;line-height: 15px;text-transform: uppercase">
+                <p><b> LUT/Bond No.: {!invoiceDetails.Project__r.TIG_Entity_Name__r.LUT_Bond_No__c}<br/>
+                    From:<apex:outputText value="{0,date,MM/dd/yy}">
+                    <apex:param value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Start_Date__c}" />
+                    </apex:outputText>  &nbsp;
+                    To:<apex:outputText value="{0,date,MM/dd/yy}">
+                    <apex:param value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.End_Date__c}" /> 
+                    </apex:outputText> </b></p>
+            </div> 
+        </apex:outputPanel>
+        
+        <table  cellpadding="2" style="font-size: 14px; border-collapse:collapse; width: 100%; font-family: 'Open Sans', sans-serif;margin-top:50px;">
+            <tbody >
+                <tr >
+                    <th style="width:40%;text-align:left">Description </th>
+                    <th style="width:15%;text-align:right">Quantity</th>
+                    <th style="width:15%;text-align:right">Unit Price</th>
+                    <th style="width:15%;text-align:right">Tax</th>
+                    <th style="width:15%;text-align:right;">Amount {!invoiceDetails.Purchase_Order__r.CurrencyIsoCode}</th>
+                </tr>
+                <apex:repeat value="{!invoiceLineDetails}" var="inv">
+                    <tr><td colspan="5" style="width:100%"><hr/></td> </tr>
+                    
+                    <tr >
+                        <td style="text-align:left">{!projectService}; {!invoiceDetails.Project__r.TIG_Entity_Name__r.Country1__c}; {!invoiceDetails.Service_Month__c}
+                            <apex:outputText >
+                                <apex:param value="{!invoiceDetails.Service_Month__c}" /> 
+                            </apex:outputText>  </td>
+                        <td style="text-align:right">1.00
+                            <br/>
+                        </td>
+                        <td style="text-align:right">{!inv.Amount__c}</td>
+                        <td style="text-align:right">{!inv.Tax_Type_1__c}&nbsp;<apex:outputText value="{0, number, integer}"><apex:param value="{!inv.Tax_1__c}" /></apex:outputText>{!inv.Tax_Type_2__c}&nbsp;<apex:outputText value="{0, number, integer}"><apex:param value="{!inv.Tax_2__c}" /></apex:outputText>{!inv.Tax_Type_3__c}&nbsp;<apex:outputText value="{0, number, integer}"><apex:param value="{!inv.Tax_3__c}" /></apex:outputText>%</td>
+                        <td style="text-align:right">{!inv.Amount__c}</td>
+                        
+                    </tr>
+                </apex:repeat>
+                <tr><td colspan="5" style="width:100%"><hr/></td> </tr>
+                <tr style="text-align:center; vertical-align: top;">
+                    <td style="text-align:left">Project Name: {!invoiceDetails.Project__r.Name}</td>
+                    <td style="text-align:center">&nbsp;</td>
+                    <td style="text-align:center">&nbsp;</td>
+                    <td style="text-align:center">&nbsp;</td>
+                    <td style="text-align:right">&nbsp;</td>
+                    
+                </tr>
+                <tr><td colspan="5" style="width:100%"><hr/></td> </tr>
+                <tr style="text-align:center; vertical-align: top;">
+                    <td ><div style="text-align:left;font-size: 12px;font-family: 'Open Sans', sans-serif;"> PAYMENT TERMS: PAYABLE WITHIN {!noOfDays} DAYS FROM INVOICE DATE</div></td>
+                    <td style="text-align:center"></td>
+                    <td style="text-align:center"></td>
+                    <td style="text-align:center"></td>
+                    <td style="text-align:right"></td>
+                    
+                </tr>
+                <tr><td colspan="5" style="width:100%"><hr/></td> </tr>
+                <tr style="text-align: left;vertical-align: top; ">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: right;">Sub-Total:</td>
+                    <td  style="text-align: right;">{!invoiceDetails.Amount__c}</td>
+                    
+                </tr>
+                <tr style="text-align: left;vertical-align: top;">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td  style="text-align: right;">TOTAL Tax <br/><br/></td>
+                    <td  style="text-align: right;">{!invoiceDetails.Total_Tax__c}</td>
+                </tr>
+                <tr style="text-align: left;vertical-align: top;">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: right;font-weight:bold;border-top: 1px solid #000;"><div style="font-size: 12px">TOTAL {!invoiceDetails.Purchase_Order__r.CurrencyIsoCode}</div></td>
+                    <td  style="text-align: right;font-weight:bold;border-top: 1px solid #000;">{!invoiceDetails.Total_Amount__c}</td>
+                </tr>
+            </tbody>
+        </table><br/><br/>
+        <table style="border-collapse:collapse; font-size: 14px; width: 100%; font-family: 'Open Sans', sans-serif;">
+            <tbody>
+                <tr style="text-align: left;vertical-align: top;">
+                    <td>
+                        <b style="font-size: 15px;">
+                            Due Date:
+                            <apex:outputField value="{!invoiceDetails.Due_Date__c}" />
+                        </b>
+                    </td>
+                </tr>
+                <tr style="text-align: left;vertical-align: top;">
+                    <td>If paying by EFT, details are:</td>
+                </tr>
+                <tr style="text-align: left;vertical-align: top;margin-top:10px;;">
+                    <td style="padding-top: 15px;">Name of the Bank :
+                        <apex:outputField value="{!invoiceDetails.TIG_Entity_Bank_Information__r.Bank_Name__c}" />
+                    </td>
+                    
+                </tr>
+                <tr style="text-align: left;vertical-align: top;">
+                    <td>Account name:
+                        <apex:outputField value="{!invoiceDetails.TIG_Entity_Bank_Information__r.Name}" />
+                    </td>
+                </tr>
+                <tr style="text-align: left;vertical-align: top;">
+                    <td>SWIFT:
+                        <apex:outputField value="{!invoiceDetails.TIG_Entity_Bank_Information__r.Swift__c}" />
+                    </td>
+                </tr>
+                <tr style="text-align: left;vertical-align: top;">
+                    <td>BSB:
+                        <apex:outputField value="{!invoiceDetails.TIG_Entity_Bank_Information__r.BSB__c}" />
+                    </td>
+                </tr>
+                <tr style="text-align: left;vertical-align: top;">
+                    <td>Bank Account Number:
+                        <apex:outputField value="{!invoiceDetails.TIG_Entity_Bank_Information__r.Bank_Account_Number__c}" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align:left;font-size: 14px; font-family: 'Open Sans', sans-serif; margin-top:15px;">
+            Please email remittance advice at email id-
+            <apex:outputField value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Email_Address_for_Remittance__c}" />
+        </p>
+        <div style="font-size: 14px;font-family: 'Open Sans', sans-serif;float:right;margin-Top:-65px;">
+            <b>Authorized signatory</b>
+        </div>
+        
+        
+    </apex:outputPanel>
+</apex:page>
