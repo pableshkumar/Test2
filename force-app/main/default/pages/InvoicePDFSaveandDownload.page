@@ -1,0 +1,6 @@
+<apex:page controller="InvoicePDFControllerSaveDownload" action="{!SaveFile}"
+           showHeader="false" 
+           cache="true"
+           contentType="application/x-pdf#Invoice.pdf">        
+    <apex:include pageName="InvoicePDFGenerator"/>        
+</apex:page>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PH_Hourly_should_be_greater_than_zero</fullName>
+    <active>true</active>
+    <description>PH Hourly should be greater than zero</description>
+    <errorConditionFormula>PH_Hourly__c &lt;=0</errorConditionFormula>
+    <errorDisplayField>PH_Hourly__c</errorDisplayField>
+    <errorMessage>PH Hourlyshould be greater than zero</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Day_Rate_OOH_should_be_greater_than_0</fullName>
+    <active>true</active>
+    <description>Day Rate (OOH) should be greater than zero</description>
+    <errorConditionFormula>Day_Rate_OOH__c &lt;=0</errorConditionFormula>
+    <errorDisplayField>Day_Rate_OOH__c</errorDisplayField>
+    <errorMessage>Day Rate (OOH) should be greater than zero</errorMessage>
+</ValidationRule>

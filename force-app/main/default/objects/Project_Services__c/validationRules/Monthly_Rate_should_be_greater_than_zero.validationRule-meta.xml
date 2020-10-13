@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monthly_Rate_should_be_greater_than_zero</fullName>
+    <active>true</active>
+    <description>Monthly_Rate_should be greater than zero</description>
+    <errorConditionFormula>Monthly_Rate__c &lt;=0</errorConditionFormula>
+    <errorDisplayField>Monthly_Rate__c</errorDisplayField>
+    <errorMessage>Monthly Rate should be greater than zero</errorMessage>
+</ValidationRule>

@@ -5,6 +5,7 @@
     <queueMembers>
         <roles>
             <role>Field_Service_Executive</role>
+            <role>Field_Service_Sr_Executive</role>
         </roles>
     </queueMembers>
     <queueSobject>

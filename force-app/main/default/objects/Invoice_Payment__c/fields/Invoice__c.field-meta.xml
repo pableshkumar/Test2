@@ -3,6 +3,36 @@
     <fullName>Invoice__c</fullName>
     <externalId>false</externalId>
     <label>Invoice</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 AND (2 AND 3) OR (4 AND 5)</booleanFilter>
+        <filterItems>
+            <field>Invoice__c.Outstanding_Amount__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </filterItems>
+        <filterItems>
+            <field>$Profile.Name</field>
+            <operation>equals</operation>
+            <value>Acccount Payables, Finance, System Administrator</value>
+        </filterItems>
+        <filterItems>
+            <field>Invoice__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Purchase Invoice</value>
+        </filterItems>
+        <filterItems>
+            <field>$Profile.Name</field>
+            <operation>equals</operation>
+            <value>Account Receivables, Finance, System Administrator</value>
+        </filterItems>
+        <filterItems>
+            <field>Invoice__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Sales Invoice</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
     <referenceTo>Invoice__c</referenceTo>
     <relationshipLabel>Invoice Payments</relationshipLabel>
     <relationshipName>Payment_Lines</relationshipName>

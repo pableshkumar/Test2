@@ -16,7 +16,7 @@
         <field>Total_Amount__c</field>
     </approvalPageFields>
     <approvalStep>
-        <allowDelegate>false</allowDelegate>
+        <allowDelegate>true</allowDelegate>
         <assignedApprover>
             <approver>
                 <name>AR_Executives_AR_Sr_Executives</name>

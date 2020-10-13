@@ -2,6 +2,6 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Invoice_Amount_Greater_than_PO_Balance</fullName>
     <active>true</active>
-    <errorConditionFormula>Purchase_Order__r.PO_Balance__c &lt; Total_Amount__c &amp;&amp; NOT( ISPICKVAL( Stage__c ,&apos;Draft&apos;))</errorConditionFormula>
+    <errorConditionFormula>Purchase_Order__r.PO_Balance__c &lt; Total_Amount__c &amp;&amp; NOT( ISPICKVAL( Stage__c ,&apos;Draft&apos;) || ISPICKVAL( Stage__c ,&apos;Accepted&apos;) || ISPICKVAL( Stage__c ,&apos;In Current Payment Batch&apos;) || ISPICKVAL( Stage__c ,&apos;Paid&apos;) )</errorConditionFormula>
     <errorMessage>PO Balance is running low, please select another PO for this invoice</errorMessage>
 </ValidationRule>

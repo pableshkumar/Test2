@@ -24,7 +24,13 @@ public with sharing class ProjectTriggerHandler {
                 else if(Proj.Billing_Frequency__c=='Weekly')
                 {
                     Billing_Information__c bi=new Billing_Information__c();
+                    if(Proj.Project_Start_Date__c.toStartofWeek()<System.today().toStartofWeek())
+                    {
+                    bi.Billing_Start_Date__c=System.today().toStartofWeek();
+                    }else
+                    {
                     bi.Billing_Start_Date__c=proj.Project_Start_Date__c;
+                    }
                     bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofWeek().addDays(6)>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofWeek().addDays(6);
                     bi.Project__c=proj.id;
                     bilRecords.add(bi);
@@ -36,7 +42,13 @@ public with sharing class ProjectTriggerHandler {
                 }
                 else if(Proj.Billing_Frequency__c=='Bi-Weekly'){
                     Billing_Information__c bi=new Billing_Information__c();
+                    if(Proj.Project_Start_Date__c.toStartofWeek()<System.today().toStartofWeek())
+                    {
+                    bi.Billing_Start_Date__c=System.today().toStartofWeek();
+                    }else
+                    {
                     bi.Billing_Start_Date__c=proj.Project_Start_Date__c;
+                    }
                     bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofWeek().addDays(13)>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofWeek().addDays(13);
                     bi.Project__c=proj.id;
                     bilRecords.add(bi);       
@@ -47,7 +59,13 @@ public with sharing class ProjectTriggerHandler {
                 }
                 else if(Proj.Billing_Frequency__c=='Monthly'){
                     Billing_Information__c bi=new Billing_Information__c();
+                    if(Proj.Project_Start_Date__c.Month()<System.today().Month())
+                    {
+                    bi.Billing_Start_Date__c=System.today().toStartOfMonth();
+                    }else
+                    {
                     bi.Billing_Start_Date__c=proj.Project_Start_Date__c;
+                    }          
                     bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofMonth().addDays(Date.daysInMonth(bi.Billing_Start_Date__c.year(), bi.Billing_Start_Date__c.month())-1)>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofMonth().addDays(Date.daysInMonth(bi.Billing_Start_Date__c.year(), bi.Billing_Start_Date__c.month())-1);
                     bi.Project__c=proj.id;
                     bilRecords.add(bi); 
@@ -58,7 +76,13 @@ public with sharing class ProjectTriggerHandler {
                 }
                 else if(Proj.Billing_Frequency__c=='Quarterly'){
                     Billing_Information__c bi=new Billing_Information__c();
+                    if(Proj.Project_Start_Date__c.Month()<System.today().Month())
+                    {
+                    bi.Billing_Start_Date__c=System.today().toStartOfMonth();
+                    }else
+                    {
                     bi.Billing_Start_Date__c=proj.Project_Start_Date__c;
+                    }  
                     bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofMonth().addMonths(3)-1>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofMonth().addMonths(3)-1;
                     bi.Project__c=proj.id;
                     bilRecords.add(bi);   
@@ -69,7 +93,13 @@ public with sharing class ProjectTriggerHandler {
                 }    
                 else if(Proj.Billing_Frequency__c=='Half-Yearly'){
                     Billing_Information__c bi=new Billing_Information__c();
+                    if(Proj.Project_Start_Date__c.Month()<System.today().Month())
+                    {
+                    bi.Billing_Start_Date__c=System.today().toStartOfMonth();
+                    }else
+                    {
                     bi.Billing_Start_Date__c=proj.Project_Start_Date__c;
+                    }  
                     bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofMonth().addMonths(6)-1>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofMonth().addMonths(6)-1;
                     bi.Project__c=proj.id;
                     bilRecords.add(bi); 
@@ -80,7 +110,13 @@ public with sharing class ProjectTriggerHandler {
                 }  
                 else if(Proj.Billing_Frequency__c=='Yearly'){
                     Billing_Information__c bi=new Billing_Information__c();
+                    if(Proj.Project_Start_Date__c.Month()<System.today().Month())
+                    {
+                    bi.Billing_Start_Date__c=System.today().toStartOfMonth();
+                    }else
+                    {
                     bi.Billing_Start_Date__c=proj.Project_Start_Date__c;
+                    }  
                     bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofMonth().addMonths(12)-1>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofMonth().addMonths(12)-1;
                     bi.Project__c=proj.id;
                     bilRecords.add(bi); 

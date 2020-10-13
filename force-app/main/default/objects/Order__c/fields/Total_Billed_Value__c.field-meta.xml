@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Billed_Value__c</fullName>
+    <description>This field is used on Project level.(there is a master detail relationship between invoice and order, so, it will be a cascade rollup, rollup total amount from invoice on order)</description>
+    <externalId>false</externalId>
+    <label>Total Billed Value</label>
+    <summarizedField>Invoice__c.Total_Amount__c</summarizedField>
+    <summaryForeignKey>Invoice__c.Purchase_Order__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>
