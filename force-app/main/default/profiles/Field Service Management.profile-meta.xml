@@ -146,6 +146,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Branch_Country__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Company_Group__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -283,7 +288,7 @@
         <editable>true</editable>
         <field>Account.Trade_Name__c</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions> 
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Transit_Number__c</field>

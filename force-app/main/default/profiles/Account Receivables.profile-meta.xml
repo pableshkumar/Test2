@@ -146,12 +146,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.Company_Group__c</field>
+        <field>Account.Branch_Country__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.Country__c</field>
+        <field>Account.Company_Group__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
