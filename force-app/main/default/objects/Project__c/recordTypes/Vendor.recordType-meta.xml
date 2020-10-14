@@ -197,10 +197,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>None</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Workspace infrastructure</fullName>
             <default>false</default>
         </values>

@@ -13,11 +13,6 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>None</fullName>
-                <default>false</default>
-                <label>None</label>
-            </value>
-            <value>
                 <fullName>Workspace infrastructure</fullName>
                 <default>false</default>
                 <label>Workspace infrastructure</label>
@@ -26,6 +21,12 @@
                 <fullName>Enterprise Infrastructure</fullName>
                 <default>false</default>
                 <label>Enterprise Infrastructure</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>None</label>
             </value>
         </valueSetDefinition>
     </valueSet>
