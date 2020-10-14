@@ -30,7 +30,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Country__c</field>
+                <field>Branch_Country__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
