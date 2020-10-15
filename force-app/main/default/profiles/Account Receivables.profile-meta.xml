@@ -1536,6 +1536,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>TIG_Entity__c.HSN_Code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>TIG_Entity__c.LUT_Bond_No__c</field>
         <readable>true</readable>
     </fieldPermissions>
