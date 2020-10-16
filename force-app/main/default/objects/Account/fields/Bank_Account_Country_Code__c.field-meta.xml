@@ -408,6 +408,11 @@
                 <label>GA</label>
             </value>
             <value>
+                <fullName>GB</fullName>
+                <default>false</default>
+                <label>GB</label>
+            </value>
+            <value>
                 <fullName>GD</fullName>
                 <default>false</default>
                 <label>GD</label>
