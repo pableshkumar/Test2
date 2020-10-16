@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branch_Country__c</fullName>
+    <description>Bank Branch Country</description>
+    <externalId>false</externalId>
+    <label>Branch Country</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Countries</valueSetName>
+    </valueSet>
+</CustomField>

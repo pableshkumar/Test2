@@ -44,7 +44,7 @@
     </sharingCriteriaRules>
     <sharingCriteriaRules>
         <fullName>Share_with_Project_Management_Head</fullName>
-        <accessLevel>Read</accessLevel>
+        <accessLevel>Edit</accessLevel>
         <label>Share with Project Management Head</label>
         <sharedTo>
             <roleAndSubordinates>Project_Management_Head</roleAndSubordinates>

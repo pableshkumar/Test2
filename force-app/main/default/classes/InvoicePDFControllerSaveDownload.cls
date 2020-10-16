@@ -4,7 +4,7 @@ public class InvoicePDFControllerSaveDownload{
     public InvoicePDFControllerSaveDownload(ApexPages.StandardController controller){
         // SaveFile();
     }
-        public InvoicePDFControllerSaveDownload(){
+    public InvoicePDFControllerSaveDownload(){
         // SaveFile();
     }
     
@@ -16,30 +16,41 @@ public class InvoicePDFControllerSaveDownload{
         
         PageReference ref = new PageReference('/apex/InvoicePDFGenerator?id=' + ids);
         
-        
-        ContentVersion cont = new ContentVersion();
-        
-        cont.Title = 'Invoice-'+ids;
-        cont.PathOnClient = 'file.pdf';
-        if(Test.isRunningTest()) { 
+        String pdfName='Invoice-'+ids;
+ List<ContentVersion> listversion = [select contentDocumentId, contentDocument.title from ContentVersion where ContentDocument.title = :pdfName];                                     
+    System.debug('listversion : ' + listversion);
+    ContentVersion fl = new ContentVersion();
+            fl.ContentLocation = 'S';
+            fl.PathOnClient = 'file.pdf';
+            fl.Origin = 'H';
+            fl.Title = 'Invoice-'+ids;
+			        if(Test.isRunningTest()) { 
             
-            cont.VersionData = blob.valueOf('Unit.Test');
+            fl.VersionData = blob.valueOf('Unit.Test');
+        }else{
+            fl.VersionData = ref.getContentAsPdf();
+			}
+        if (!listversion.isEmpty()){
+        fl.ContentDocumentId= listversion[0].ContentDocumentId;
         }
-        else{
-            cont.VersionData = ref.getContentAsPdf();
-        }
-        cont.Origin = 'H';
+   Savepoint sp = Database.setSavepoint();
+   try{
+           insert fl;
+        if(listversion.isEmpty()){
+
+        fl = [select ContentDocumentId from ContentVersion where id =: fl.Id];
+        ContentDocumentLink cl = new ContentDocumentLink(
+        LinkedEntityId = ids,
+        ContentDocumentId = fl.ContentDocumentId,
+        ShareType = 'I'
+        );
+        insert cl;   
+        }         
+     } catch(Exception e) {
+         Database.rollback(sp);
+        System.debug(e.getMessage());          
+        throw e;
+     }
         
-        insert cont;  
-        system.debug('>>>'+cont);  
-        
-        
-        Id conDoc = [SELECT ContentDocumentId FROM ContentVersion WHERE Id =:cont.Id].ContentDocumentId;
-        //create ContentDocumentLink  record 
-        ContentDocumentLink conDocLink = New ContentDocumentLink();
-        conDocLink.LinkedEntityId = ids; // Specify RECORD ID here i.e Any Object ID (Standard Object/Custom Object)
-        conDocLink.ContentDocumentId = conDoc;  //ContentDocumentId Id from ContentVersion
-        conDocLink.shareType = 'V';
-        insert conDocLink;
     }    
 }

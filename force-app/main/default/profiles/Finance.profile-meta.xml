@@ -146,6 +146,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Branch_Country__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Company_Group__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1527,6 +1532,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>TIG_Entity__c.End_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>TIG_Entity__c.HSN_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
