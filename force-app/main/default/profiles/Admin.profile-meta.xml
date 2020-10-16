@@ -595,11 +595,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Invoice_Line_Item__c.Amount__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>Invoice_Line_Item__c.City__c</field>
         <readable>true</readable>
