@@ -5,14 +5,14 @@
         </head>
         
         <br/>
-        <div>
+        <div style="overflow: hidden;">
             <div> <apex:image style="margin-left:70%;" url="{!$Resource.Logo}" width="50px" height="50px" /></div>
             <div style="font-size: 22px;margin-Top:50px;margin-left:10px;font-family: 'Open Sans', sans-serif">TAX INVOICE</div><br/>
-            <div style="font-size: 13px;margin-left:10px;font-family: 'Open Sans', sans-serif;word-wrap: break-word;Width:20%;float:left">
+            <div style="font-size: 13px;margin-left:10px;font-family: 'Open Sans', sans-serif;word-wrap: break-word;Width:30%;float:left">
                 <apex:outputText value="{!invoiceDetails.Customer__r.Name}" /><br/>
                 <apex:outputField value="{!invoiceDetails.Purchase_Order__r.Bill_to_Address__c}" />
             </div>
-            <div style="font-size: 12px;font-family: 'Open Sans', sans-serif;float:left;margin-left:30%;margin-top:-20px;">
+            <div style="font-size: 13px;font-family: 'Open Sans', sans-serif;float:left;margin-left:10%;">
                 <b>Invoice Date</b><br/>
                 <apex:outputField value="{!invoiceDetails.Invoice_Date__c}" label="Invoice Date" /><br/><br/>
                 <b>Invoice Number</b><br/>
@@ -22,7 +22,7 @@
                 <b>{!invoiceDetails.Project__r.TIG_Entity_Name__r.Tax_Name__c}</b><br/>
                 <td>{!invoiceDetails.Project__r.TIG_Entity_Name__r.Tax_Code__c}</td><br/>
             </div>
-            <div style="font-size: 13px;font-family: 'Open Sans', sans-serif;float:left;margin-left:75%;margin-top:-150px;">
+            <div style="font-size: 13px;font-family: 'Open Sans', sans-serif;margin-left:70%;">
                 <apex:outputtext style="font-size: 13px;" value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Name}" /><br/>
                 <apex:outputtext style="font-size: 12px;" value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Street_Address__c}" /><br/>
                 <apex:outputtext style="font-size: 12px;" value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.City__c}" /> &nbsp;<br/>
@@ -30,7 +30,7 @@
                 <apex:outputtext style="font-size: 12px;" value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Zip_Postal_Code__c}" /><br/>
                 <apex:outputtext style="font-size: 12px;" value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Country1__c}" /><br/>
             </div>
-        </div><br/><br/><br/><br/><br/><br/><br/>
+        </div><br/>
         <apex:outputPanel rendered="{!if( invoiceDetails.Project__r.TIG_Entity_Name__r.Country1__c=='India',true,false)}">
             <div style="font-size: 13px;font-family: 'Open Sans', sans-serif;float:left;margin-top:5px;line-height: 15px;text-transform: uppercase">
                 <p><b> LUT/Bond No.:</b> {!invoiceDetails.Project__r.TIG_Entity_Name__r.LUT_Bond_No__c}<br/>
@@ -40,8 +40,8 @@
                     <b>To:</b><apex:outputText value="{0,date,MM/dd/yy}">
                     <apex:param value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.End_Date__c}" /> 
                     </apex:outputText> </p>
-            </div> 
-        </apex:outputPanel><br/><br/>
+            </div> <br/><br/>
+        </apex:outputPanel>
         
         <table  cellpadding="2" style="font-size: 13px; border-collapse:collapse; width: 100%; font-family: 'Open Sans', sans-serif;margin-top:50px;">
             <tbody >
