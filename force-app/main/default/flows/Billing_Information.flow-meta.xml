@@ -2,177 +2,23 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <processMetadataValues>
-            <name>customNotifTypeName</name>
+            <name>ActionCallType</name>
             <value>
-                <stringValue>Billing_Notifications</stringValue>
+                <stringValue>flow</stringValue>
             </value>
         </processMetadataValues>
         <processMetadataValues>
-            <name>recipientCategory</name>
+            <name>flowSelection</name>
             <value>
-                <stringValue>queue</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientSelection</name>
-            <value>
-                <stringValue>AR_Executives_AR_Sr_Executives</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientType</name>
-            <value>
-                <stringValue>record</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myRule_10_A1</name>
-        <label>Notify AR Exe/SR AR Exe for partial approval</label>
-        <locationX>1000</locationX>
-        <locationY>200</locationY>
-        <actionName>customNotificationAction</actionName>
-        <actionType>customNotificationAction</actionType>
-        <inputParameters>
-            <name>customNotifTypeId</name>
-            <value>
-                <stringValue>000000000000000</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>customNotifTypeName</name>
-            <value>
-                <stringValue>Billing_Notifications</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>title</name>
-            <value>
-                <stringValue>{!myVariable_current.Name} has been approved partially.</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>body</name>
-            <value>
-                <stringValue>Project: {!myVariable_current.Project__r.Name} 
-Billing Start Date: {!myVariable_current.Billing_Start_Date__c}
-Billing End Date: {!myVariable_current.Billing_End_Date__c}
-
-Please take the necessary action.</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>targetId</name>
-            <value>
-                <stringValue>{!myVariable_current.Id}</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>recipientIds</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>maxOccurs</name>
-                <value>
-                    <numberValue>500.0</numberValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>objectType</name>
-                <value>
-                    <stringValue/>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <name>recipientIds</name>
-            <value>
-                <elementReference>myCollection_myRule_10_A1recipientIds</elementReference>
-            </value>
-        </inputParameters>
-    </actionCalls>
-    <actionCalls>
-        <processMetadataValues>
-            <name>customNotifTypeName</name>
-            <value>
-                <stringValue>Billing_Notifications</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientCategory</name>
-            <value>
-                <stringValue>queue</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientSelection</name>
-            <value>
-                <stringValue>AR_Executives_AR_Sr_Executives</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientType</name>
-            <value>
-                <stringValue>record</stringValue>
+                <stringValue>NotificationFlow</stringValue>
             </value>
         </processMetadataValues>
         <name>myRule_12_A1</name>
-        <label>Notify AR Executive</label>
+        <label>Approval Notification</label>
         <locationX>1200</locationX>
         <locationY>200</locationY>
-        <actionName>customNotificationAction</actionName>
-        <actionType>customNotificationAction</actionType>
-        <inputParameters>
-            <name>customNotifTypeId</name>
-            <value>
-                <stringValue>000000000000000</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>customNotifTypeName</name>
-            <value>
-                <stringValue>Billing_Notifications</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>title</name>
-            <value>
-                <stringValue>{!myVariable_current.Name} has been approved.</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>body</name>
-            <value>
-                <stringValue>Project: {!myVariable_current.Project__r.Name} 
-Billing Start Date: {!myVariable_current.Billing_Start_Date__c}
-Billing End Date: {!myVariable_current.Billing_End_Date__c}
-
-Please take the necessary action.</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>targetId</name>
-            <value>
-                <stringValue>{!myVariable_current.Id}</stringValue>
-            </value>
-        </inputParameters>
+        <actionName>NotificationFlow</actionName>
+        <actionType>flow</actionType>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -183,19 +29,19 @@ Please take the necessary action.</stringValue>
             <processMetadataValues>
                 <name>isRequired</name>
                 <value>
-                    <booleanValue>true</booleanValue>
+                    <booleanValue>false</booleanValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
-                    <stringValue>recipientIds</stringValue>
+                    <stringValue>CustomNotificationType</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
                 <name>maxOccurs</name>
                 <value>
-                    <numberValue>500.0</numberValue>
+                    <numberValue>1.0</numberValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -210,9 +56,763 @@ Please take the necessary action.</stringValue>
                     <stringValue>String</stringValue>
                 </value>
             </processMetadataValues>
-            <name>recipientIds</name>
+            <name>CustomNotificationType</name>
             <value>
-                <elementReference>myCollection_myRule_12_A1recipientIds</elementReference>
+                <stringValue>Billing_Notifications</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>RecipientType</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>RecipientType</name>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>TargetId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>TargetId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>RecipientName</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>RecipientName</name>
+            <value>
+                <stringValue>AR_Head</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>NotificationBody</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>NotificationBody</name>
+            <value>
+                <elementReference>formula_13_myRule_12_A1_0234714184</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>NotificationTitle</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>NotificationTitle</name>
+            <value>
+                <elementReference>formula_14_myRule_12_A1_1661882638</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>ActionCallType</name>
+            <value>
+                <stringValue>flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>NotificationFlow</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_16_A1</name>
+        <label>Notify AR Exe/SR AR Exe for partial approval</label>
+        <locationX>1600</locationX>
+        <locationY>200</locationY>
+        <actionName>NotificationFlow</actionName>
+        <actionType>flow</actionType>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>CustomNotificationType</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>CustomNotificationType</name>
+            <value>
+                <stringValue>Billing_Notifications</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>RecipientType</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>RecipientType</name>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>TargetId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>TargetId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>RecipientName</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>RecipientName</name>
+            <value>
+                <stringValue>AR_Executives_AR_Sr_Executives</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>NotificationBody</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>NotificationBody</name>
+            <value>
+                <elementReference>formula_17_myRule_16_A1_6691786777</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>NotificationTitle</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>NotificationTitle</name>
+            <value>
+                <elementReference>formula_18_myRule_16_A1_6886370288</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>ActionCallType</name>
+            <value>
+                <stringValue>flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>NotificationFlow</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_20_A1</name>
+        <label>Notify AR Executive</label>
+        <locationX>2000</locationX>
+        <locationY>200</locationY>
+        <actionName>NotificationFlow</actionName>
+        <actionType>flow</actionType>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>CustomNotificationType</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>CustomNotificationType</name>
+            <value>
+                <stringValue>Billing_Notifications</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>RecipientType</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>RecipientType</name>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>TargetId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>TargetId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>RecipientName</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>RecipientName</name>
+            <value>
+                <stringValue>AR_Executives_AR_Sr_Executives</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>NotificationBody</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>NotificationBody</name>
+            <value>
+                <elementReference>formula_21_myRule_20_A1_6718025828</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>NotificationTitle</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>NotificationTitle</name>
+            <value>
+                <elementReference>formula_22_myRule_20_A1_9551405807</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -226,7 +826,7 @@ Please take the necessary action.</stringValue>
         <processMetadataValues>
             <name>recipientCategory</name>
             <value>
-                <stringValue>user</stringValue>
+                <stringValue>owner</stringValue>
             </value>
         </processMetadataValues>
         <processMetadataValues>
@@ -235,9 +835,9 @@ Please take the necessary action.</stringValue>
                 <stringValue>reference</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_14_A1</name>
+        <name>myRule_24_A1</name>
         <label>Notify Billing Owner for the Rework</label>
-        <locationX>1400</locationX>
+        <locationX>2400</locationX>
         <locationY>200</locationY>
         <actionName>customNotificationAction</actionName>
         <actionType>customNotificationAction</actionType>
@@ -312,77 +912,33 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
             </processMetadataValues>
             <name>recipientIds</name>
             <value>
-                <elementReference>myCollection_myRule_14_A1recipientIds</elementReference>
+                <elementReference>myCollection_myRule_24_A1recipientIds</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
     <actionCalls>
         <processMetadataValues>
-            <name>customNotifTypeName</name>
+            <name>ActionCallType</name>
             <value>
-                <stringValue>Billing_Notifications</stringValue>
+                <stringValue>flow</stringValue>
             </value>
         </processMetadataValues>
         <processMetadataValues>
-            <name>recipientCategory</name>
+            <name>flowSelection</name>
             <value>
-                <stringValue>queue</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientSelection</name>
-            <value>
-                <stringValue>AR_Executives_AR_Sr_Executives</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientType</name>
-            <value>
-                <stringValue>record</stringValue>
+                <stringValue>NotificationFlow</stringValue>
             </value>
         </processMetadataValues>
         <name>myRule_4_A1</name>
         <label>Approval Notification</label>
         <locationX>400</locationX>
         <locationY>200</locationY>
-        <actionName>customNotificationAction</actionName>
-        <actionType>customNotificationAction</actionType>
+        <actionName>NotificationFlow</actionName>
+        <actionType>flow</actionType>
         <connector>
             <targetReference>myWait_myRule_4</targetReference>
         </connector>
         <inputParameters>
-            <name>customNotifTypeId</name>
-            <value>
-                <stringValue>000000000000000</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>customNotifTypeName</name>
-            <value>
-                <stringValue>Billing_Notifications</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>title</name>
-            <value>
-                <stringValue>{!myVariable_current.LastModifiedBy.FirstName} {!myVariable_current.LastModifiedBy.LastName} is requesting approval for billing information</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>body</name>
-            <value>
-                <stringValue>Project: {!myVariable_current.Project__r.Name} 
-Billing Start Date: {!myVariable_current.Billing_Start_Date__c}
-Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>targetId</name>
-            <value>
-                <stringValue>{!myVariable_current.Id}</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
                 <value>
@@ -392,19 +948,19 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
             <processMetadataValues>
                 <name>isRequired</name>
                 <value>
-                    <booleanValue>true</booleanValue>
+                    <booleanValue>false</booleanValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
-                    <stringValue>recipientIds</stringValue>
+                    <stringValue>CustomNotificationType</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
                 <name>maxOccurs</name>
                 <value>
-                    <numberValue>500.0</numberValue>
+                    <numberValue>1.0</numberValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -419,73 +975,9 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
                     <stringValue>String</stringValue>
                 </value>
             </processMetadataValues>
-            <name>recipientIds</name>
-            <value>
-                <elementReference>myCollection_myRule_4_A1recipientIds</elementReference>
-            </value>
-        </inputParameters>
-    </actionCalls>
-    <actionCalls>
-        <processMetadataValues>
-            <name>customNotifTypeName</name>
+            <name>CustomNotificationType</name>
             <value>
                 <stringValue>Billing_Notifications</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientCategory</name>
-            <value>
-                <stringValue>queue</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientSelection</name>
-            <value>
-                <stringValue>AR_Managers</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientType</name>
-            <value>
-                <stringValue>record</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myRule_6_A1</name>
-        <label>Approval Notification</label>
-        <locationX>600</locationX>
-        <locationY>200</locationY>
-        <actionName>customNotificationAction</actionName>
-        <actionType>customNotificationAction</actionType>
-        <inputParameters>
-            <name>customNotifTypeId</name>
-            <value>
-                <stringValue>000000000000000</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>customNotifTypeName</name>
-            <value>
-                <stringValue>Billing_Notifications</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>title</name>
-            <value>
-                <stringValue>{!myVariable_current.LastModifiedBy.FirstName} {!myVariable_current.LastModifiedBy.LastName} is requesting approval for billing information</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>body</name>
-            <value>
-                <stringValue>Project: {!myVariable_current.Project__r.Name} 
-Billing Start Date: {!myVariable_current.Billing_Start_Date__c}
-Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>targetId</name>
-            <value>
-                <stringValue>{!myVariable_current.Id}</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -498,19 +990,19 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
             <processMetadataValues>
                 <name>isRequired</name>
                 <value>
-                    <booleanValue>true</booleanValue>
+                    <booleanValue>false</booleanValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
-                    <stringValue>recipientIds</stringValue>
+                    <stringValue>RecipientType</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
                 <name>maxOccurs</name>
                 <value>
-                    <numberValue>500.0</numberValue>
+                    <numberValue>1.0</numberValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -525,75 +1017,199 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
                     <stringValue>String</stringValue>
                 </value>
             </processMetadataValues>
-            <name>recipientIds</name>
+            <name>RecipientType</name>
             <value>
-                <elementReference>myCollection_myRule_6_A1recipientIds</elementReference>
+                <stringValue>Queue</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>TargetId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>TargetId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>RecipientName</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>RecipientName</name>
+            <value>
+                <stringValue>AR_Executives_AR_Sr_Executives</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>NotificationBody</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>NotificationBody</name>
+            <value>
+                <elementReference>formula_5_myRule_4_A1_1090123362</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>NotificationTitle</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>NotificationTitle</name>
+            <value>
+                <elementReference>formula_6_myRule_4_A1_0457854500</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
     <actionCalls>
         <processMetadataValues>
-            <name>customNotifTypeName</name>
+            <name>ActionCallType</name>
             <value>
-                <stringValue>Billing_Notifications</stringValue>
+                <stringValue>flow</stringValue>
             </value>
         </processMetadataValues>
         <processMetadataValues>
-            <name>recipientCategory</name>
+            <name>flowSelection</name>
             <value>
-                <stringValue>queue</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientSelection</name>
-            <value>
-                <stringValue>AR_Head</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientType</name>
-            <value>
-                <stringValue>record</stringValue>
+                <stringValue>NotificationFlow</stringValue>
             </value>
         </processMetadataValues>
         <name>myRule_8_A1</name>
         <label>Approval Notification</label>
         <locationX>800</locationX>
         <locationY>200</locationY>
-        <actionName>customNotificationAction</actionName>
-        <actionType>customNotificationAction</actionType>
-        <inputParameters>
-            <name>customNotifTypeId</name>
-            <value>
-                <stringValue>000000000000000</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>customNotifTypeName</name>
-            <value>
-                <stringValue>Billing_Notifications</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>title</name>
-            <value>
-                <stringValue>{!myVariable_current.LastModifiedBy.FirstName} {!myVariable_current.LastModifiedBy.LastName} is requesting approval for billing information</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>body</name>
-            <value>
-                <stringValue>Project: {!myVariable_current.Project__r.Name} 
-Billing Start Date: {!myVariable_current.Billing_Start_Date__c}
-Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>targetId</name>
-            <value>
-                <stringValue>{!myVariable_current.Id}</stringValue>
-            </value>
-        </inputParameters>
+        <actionName>NotificationFlow</actionName>
+        <actionType>flow</actionType>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -604,19 +1220,19 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
             <processMetadataValues>
                 <name>isRequired</name>
                 <value>
-                    <booleanValue>true</booleanValue>
+                    <booleanValue>false</booleanValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
-                    <stringValue>recipientIds</stringValue>
+                    <stringValue>CustomNotificationType</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
                 <name>maxOccurs</name>
                 <value>
-                    <numberValue>500.0</numberValue>
+                    <numberValue>1.0</numberValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -631,9 +1247,219 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
                     <stringValue>String</stringValue>
                 </value>
             </processMetadataValues>
-            <name>recipientIds</name>
+            <name>CustomNotificationType</name>
             <value>
-                <elementReference>myCollection_myRule_8_A1recipientIds</elementReference>
+                <stringValue>Billing_Notifications</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>RecipientType</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>RecipientType</name>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>RecipientName</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>RecipientName</name>
+            <value>
+                <stringValue>AR_Managers</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>TargetId</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>TargetId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>NotificationBody</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>NotificationBody</name>
+            <value>
+                <elementReference>formula_9_myRule_8_A1_5807223410</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>NotificationTitle</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>NotificationTitle</name>
+            <value>
+                <elementReference>formula_10_myRule_8_A1_8307626971</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -978,99 +1804,19 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
         </inputParameters>
     </actionCalls>
     <assignments>
-        <name>myAssignment_myRule_10_A1</name>
-        <label>myAssignment_myRule_10_A1</label>
+        <name>myAssignment_myRule_24_A1</name>
+        <label>myAssignment_myRule_24_A1</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>myCollection_myRule_10_A1recipientIds</assignToReference>
+            <assignToReference>myCollection_myRule_24_A1recipientIds</assignToReference>
             <operator>Add</operator>
             <value>
-                <stringValue>00GN0000007HAXWMA4</stringValue>
+                <elementReference>myVariable_current.OwnerId</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>myRule_10_A1</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>myAssignment_myRule_12_A1</name>
-        <label>myAssignment_myRule_12_A1</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>myCollection_myRule_12_A1recipientIds</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>00GN0000007HAXWMA4</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>myRule_12_A1</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>myAssignment_myRule_14_A1</name>
-        <label>myAssignment_myRule_14_A1</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>myCollection_myRule_14_A1recipientIds</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>myVariable_current.Owner:User.Id</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>myRule_14_A1</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>myAssignment_myRule_4_A1</name>
-        <label>myAssignment_myRule_4_A1</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>myCollection_myRule_4_A1recipientIds</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>00GN0000007HAXWMA4</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>myRule_4_A1</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>myAssignment_myRule_6_A1</name>
-        <label>myAssignment_myRule_6_A1</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>myCollection_myRule_6_A1recipientIds</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>00GN0000007HAXYMA4</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>myRule_6_A1</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>myAssignment_myRule_8_A1</name>
-        <label>myAssignment_myRule_8_A1</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>myCollection_myRule_8_A1recipientIds</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>00GN0000007HAXXMA4</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>myRule_8_A1</targetReference>
+            <targetReference>myRule_24_A1</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -1260,7 +2006,7 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
         <processMetadataValues>
             <name>index</name>
             <value>
-                <numberValue>5.0</numberValue>
+                <numberValue>3.0</numberValue>
             </value>
         </processMetadataValues>
         <name>myDecision11</name>
@@ -1268,7 +2014,7 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision13</targetReference>
+            <targetReference>myDecision15</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
@@ -1302,11 +2048,121 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
                 <leftValueReference>myVariable_current.Billing_Approval_Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Billing Approved</stringValue>
+                    <stringValue>Sent to AR Head</stringValue>
                 </rightValue>
             </conditions>
             <connector>
                 <targetReference>myRule_12_pmetdec</targetReference>
+            </connector>
+            <label>Status is Sent to AR Head</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>4.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision15</name>
+        <label>myDecision15</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision19</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_16</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Billing_Approval_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Partially Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_16_pmetdec</targetReference>
+            </connector>
+            <label>Status is Partially Approved</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>5.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision19</name>
+        <label>myDecision19</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision23</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_20</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Billing_Approval_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Billing Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_20_pmetdec</targetReference>
             </connector>
             <label>Status is Billing Approved</label>
         </rules>
@@ -1318,13 +2174,13 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
                 <numberValue>6.0</numberValue>
             </value>
         </processMetadataValues>
-        <name>myDecision13</name>
-        <label>myDecision13</label>
+        <name>myDecision23</name>
+        <label>myDecision23</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>myRule_14</name>
+            <name>myRule_24</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -1358,7 +2214,7 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myAssignment_myRule_14_A1</targetReference>
+                <targetReference>myAssignment_myRule_24_A1</targetReference>
             </connector>
             <label>Status is Rework</label>
         </rules>
@@ -1375,7 +2231,7 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision5</targetReference>
+            <targetReference>myDecision7</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
@@ -1425,67 +2281,12 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
                 <numberValue>2.0</numberValue>
             </value>
         </processMetadataValues>
-        <name>myDecision5</name>
-        <label>myDecision5</label>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>myDecision7</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myRule_6</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.Billing_Approval_Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Sent to AR Manager</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_6_pmetdec</targetReference>
-            </connector>
-            <label>Status is Sent to AR Manager</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <processMetadataValues>
-            <name>index</name>
-            <value>
-                <numberValue>3.0</numberValue>
-            </value>
-        </processMetadataValues>
         <name>myDecision7</name>
         <label>myDecision7</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision9</targetReference>
+            <targetReference>myDecision11</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
@@ -1519,68 +2320,13 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
                 <leftValueReference>myVariable_current.Billing_Approval_Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Sent to AR Head</stringValue>
+                    <stringValue>Sent to AR Manager</stringValue>
                 </rightValue>
             </conditions>
             <connector>
                 <targetReference>myRule_8_pmetdec</targetReference>
             </connector>
-            <label>Status is Sent to AR Head</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <processMetadataValues>
-            <name>index</name>
-            <value>
-                <numberValue>4.0</numberValue>
-            </value>
-        </processMetadataValues>
-        <name>myDecision9</name>
-        <label>myDecision9</label>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>myDecision11</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myRule_10</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.Billing_Approval_Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Partially Approved</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_10_pmetdec</targetReference>
-            </connector>
-            <label>Status is Partially Approved</label>
+            <label>Status is Sent to AR Manager</label>
         </rules>
     </decisions>
     <decisions>
@@ -1782,73 +2528,12 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
         </rules>
     </decisions>
     <decisions>
-        <name>myRule_10_pmetdec</name>
-        <label>Previously Met Decision</label>
-        <locationX>1000</locationX>
-        <locationY>100</locationY>
-        <defaultConnector>
-            <targetReference>myAssignment_myRule_10_A1</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
-        <rules>
-            <name>myRule_10_pmetnullrule</name>
-            <conditionLogic>or</conditionLogic>
-            <conditions>
-                <leftValueReference>myVariable_old</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myAssignment_myRule_10_A1</targetReference>
-            </connector>
-            <label>Previously Met - Null</label>
-        </rules>
-        <rules>
-            <name>myRule_10_pmetrule</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_old.Billing_Approval_Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Partially Approved</stringValue>
-                </rightValue>
-            </conditions>
-            <label>Previously Met - Prev</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>myRule_12_pmetdec</name>
         <label>Previously Met Decision</label>
         <locationX>1200</locationX>
         <locationY>100</locationY>
         <defaultConnector>
-            <targetReference>myAssignment_myRule_12_A1</targetReference>
+            <targetReference>myRule_12_A1</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
         <rules>
@@ -1862,7 +2547,7 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myAssignment_myRule_12_A1</targetReference>
+                <targetReference>myRule_12_A1</targetReference>
             </connector>
             <label>Previously Met - Null</label>
         </rules>
@@ -1897,7 +2582,68 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
                 <leftValueReference>myVariable_old.Billing_Approval_Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Billing Approved</stringValue>
+                    <stringValue>Sent to AR Head</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Previously Met - Prev</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_16_pmetdec</name>
+        <label>Previously Met Decision</label>
+        <locationX>1600</locationX>
+        <locationY>100</locationY>
+        <defaultConnector>
+            <targetReference>myRule_16_A1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
+        <rules>
+            <name>myRule_16_pmetnullrule</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_16_A1</targetReference>
+            </connector>
+            <label>Previously Met - Null</label>
+        </rules>
+        <rules>
+            <name>myRule_16_pmetrule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_old.Billing_Approval_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Partially Approved</stringValue>
                 </rightValue>
             </conditions>
             <label>Previously Met - Prev</label>
@@ -1965,12 +2711,73 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
         </rules>
     </decisions>
     <decisions>
+        <name>myRule_20_pmetdec</name>
+        <label>Previously Met Decision</label>
+        <locationX>2000</locationX>
+        <locationY>100</locationY>
+        <defaultConnector>
+            <targetReference>myRule_20_A1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
+        <rules>
+            <name>myRule_20_pmetnullrule</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_20_A1</targetReference>
+            </connector>
+            <label>Previously Met - Null</label>
+        </rules>
+        <rules>
+            <name>myRule_20_pmetrule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_old.Billing_Approval_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Billing Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Previously Met - Prev</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>myRule_4_pmetdec</name>
         <label>Previously Met Decision</label>
         <locationX>400</locationX>
         <locationY>100</locationY>
         <defaultConnector>
-            <targetReference>myAssignment_myRule_4_A1</targetReference>
+            <targetReference>myRule_4_A1</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
         <rules>
@@ -1984,7 +2791,7 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myAssignment_myRule_4_A1</targetReference>
+                <targetReference>myRule_4_A1</targetReference>
             </connector>
             <label>Previously Met - Null</label>
         </rules>
@@ -2026,16 +2833,16 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
         </rules>
     </decisions>
     <decisions>
-        <name>myRule_6_pmetdec</name>
+        <name>myRule_8_pmetdec</name>
         <label>Previously Met Decision</label>
-        <locationX>600</locationX>
+        <locationX>800</locationX>
         <locationY>100</locationY>
         <defaultConnector>
-            <targetReference>myAssignment_myRule_6_A1</targetReference>
+            <targetReference>myRule_8_A1</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
         <rules>
-            <name>myRule_6_pmetnullrule</name>
+            <name>myRule_8_pmetnullrule</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -2045,12 +2852,12 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myAssignment_myRule_6_A1</targetReference>
+                <targetReference>myRule_8_A1</targetReference>
             </connector>
             <label>Previously Met - Null</label>
         </rules>
         <rules>
-            <name>myRule_6_pmetrule</name>
+            <name>myRule_8_pmetrule</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -2086,67 +2893,95 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
             <label>Previously Met - Prev</label>
         </rules>
     </decisions>
-    <decisions>
-        <name>myRule_8_pmetdec</name>
-        <label>Previously Met Decision</label>
-        <locationX>800</locationX>
-        <locationY>100</locationY>
-        <defaultConnector>
-            <targetReference>myAssignment_myRule_8_A1</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
-        <rules>
-            <name>myRule_8_pmetnullrule</name>
-            <conditionLogic>or</conditionLogic>
-            <conditions>
-                <leftValueReference>myVariable_old</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myAssignment_myRule_8_A1</targetReference>
-            </connector>
-            <label>Previously Met - Null</label>
-        </rules>
-        <rules>
-            <name>myRule_8_pmetrule</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_old.Billing_Approval_Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Sent to AR Head</stringValue>
-                </rightValue>
-            </conditions>
-            <label>Previously Met - Prev</label>
-        </rules>
-    </decisions>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Billing_Information__c].LastModifiedBy.FirstName + &quot; &quot; + [Billing_Information__c].LastModifiedBy.LastName + &quot; is requesting approval for billing information&quot;</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_10_myRule_8_A1_8307626971</name>
+        <dataType>String</dataType>
+        <expression>{!myVariable_current.LastModifiedBy.FirstName} + &quot; &quot; + {!myVariable_current.LastModifiedBy.LastName} + &quot; is requesting approval for billing information&quot;</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&quot;Project: &quot; + [Billing_Information__c].Project__r.Name + &quot;\n&quot; + 
+&quot;Billing Start Date: &quot; + TEXT([Billing_Information__c].Billing_Start_Date__c) + &quot;\n&quot; + 
+&quot;Billing End Date: &quot; + TEXT([Billing_Information__c].Billing_End_Date__c)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_13_myRule_12_A1_0234714184</name>
+        <dataType>String</dataType>
+        <expression>&quot;Project: &quot; + {!myVariable_current.Project__r.Name} + &quot;\n&quot; + 
+&quot;Billing Start Date: &quot; + TEXT({!myVariable_current.Billing_Start_Date__c}) + &quot;\n&quot; + 
+&quot;Billing End Date: &quot; + TEXT({!myVariable_current.Billing_End_Date__c})</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Billing_Information__c].LastModifiedBy.FirstName + &quot; &quot; + [Billing_Information__c].LastModifiedBy.LastName + &quot; is requesting approval for billing information&quot;</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_14_myRule_12_A1_1661882638</name>
+        <dataType>String</dataType>
+        <expression>{!myVariable_current.LastModifiedBy.FirstName} + &quot; &quot; + {!myVariable_current.LastModifiedBy.LastName} + &quot; is requesting approval for billing information&quot;</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&quot;Project: &quot; + [Billing_Information__c].Project__r.Name + &quot;\n&quot; + 
+&quot;Billing Start Date: &quot; + TEXT([Billing_Information__c].Billing_Start_Date__c) + &quot;\n&quot; + 
+&quot;Billing End Date: &quot; + TEXT([Billing_Information__c].Billing_End_Date__c) </stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_17_myRule_16_A1_6691786777</name>
+        <dataType>String</dataType>
+        <expression>&quot;Project: &quot; + {!myVariable_current.Project__r.Name} + &quot;\n&quot; + 
+&quot;Billing Start Date: &quot; + TEXT({!myVariable_current.Billing_Start_Date__c}) + &quot;\n&quot; + 
+&quot;Billing End Date: &quot; + TEXT({!myVariable_current.Billing_End_Date__c})</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Billing_Information__c].Name + &quot; has been approved partially.&quot;</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_18_myRule_16_A1_6886370288</name>
+        <dataType>String</dataType>
+        <expression>{!myVariable_current.Name} + &quot; has been approved partially.&quot;</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&quot;Project: &quot; + [Billing_Information__c].Project__r.Name + &quot;\n&quot; + 
+&quot;Billing Start Date: &quot; + TEXT([Billing_Information__c].Billing_Start_Date__c) + &quot;\n&quot; + 
+&quot;Billing End Date: &quot; + TEXT([Billing_Information__c].Billing_End_Date__c) </stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_21_myRule_20_A1_6718025828</name>
+        <dataType>String</dataType>
+        <expression>&quot;Project: &quot; + {!myVariable_current.Project__r.Name} + &quot;\n&quot; + 
+&quot;Billing Start Date: &quot; + TEXT({!myVariable_current.Billing_Start_Date__c}) + &quot;\n&quot; + 
+&quot;Billing End Date: &quot; + TEXT({!myVariable_current.Billing_End_Date__c})</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Billing_Information__c].Name + &quot; has been approved partially.&quot;</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_22_myRule_20_A1_9551405807</name>
+        <dataType>String</dataType>
+        <expression>{!myVariable_current.Name} + &quot; has been approved partially.&quot;</expression>
+    </formulas>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
@@ -2156,13 +2991,54 @@ TEXT([Billing_Information__c].Billing_Start_Date__c) + &apos;-&apos; + TEXT([Bil
 TEXT([Billing_Information__c].Project__r.Billing_Frequency__c) </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_9494491882</name>
+        <name>formula_2_myRule_1_A1_7245070317</name>
         <dataType>String</dataType>
         <expression>&apos;B-&apos; + {!myVariable_current.Project__r.Name} + &apos;-&apos; +  
 TEXT({!myVariable_current.Billing_Start_Date__c}) + &apos;-&apos; + TEXT({!myVariable_current.Billing_End_Date__c})    + &apos;-&apos; +
 TEXT({!myVariable_current.Project__r.Billing_Frequency__c})</expression>
     </formulas>
-    <interviewLabel>Billing_Information-2_InterviewLabel</interviewLabel>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&quot;Project: &quot; + [Billing_Information__c].Project__r.Name + &quot;\n&quot; +
+&quot;Billing Start Date: &quot; + TEXT([Billing_Information__c].Billing_Start_Date__c) + &quot;\n&quot; +
+&quot;Billing End Date: &quot; + TEXT([Billing_Information__c].Billing_End_Date__c)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_5_myRule_4_A1_1090123362</name>
+        <dataType>String</dataType>
+        <expression>&quot;Project: &quot; + {!myVariable_current.Project__r.Name} + &quot;\n&quot; +
+&quot;Billing Start Date: &quot; + TEXT({!myVariable_current.Billing_Start_Date__c}) + &quot;\n&quot; +
+&quot;Billing End Date: &quot; + TEXT({!myVariable_current.Billing_End_Date__c})</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Billing_Information__c].LastModifiedBy.FirstName  + &quot; &quot; + [Billing_Information__c].LastModifiedBy.LastName +  &quot; is requesting approval for billing information&quot;</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_6_myRule_4_A1_0457854500</name>
+        <dataType>String</dataType>
+        <expression>{!myVariable_current.LastModifiedBy.FirstName}  + &quot; &quot; + {!myVariable_current.LastModifiedBy.LastName} +  &quot; is requesting approval for billing information&quot;</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&quot;Project: &quot; + [Billing_Information__c].Project__r.Name + &quot;\n&quot; + 
+&quot;Billing Start Date: &quot; + TEXT([Billing_Information__c].Billing_Start_Date__c) + &quot;\n&quot; + 
+&quot;Billing End Date: &quot; + TEXT([Billing_Information__c].Billing_End_Date__c)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_9_myRule_8_A1_5807223410</name>
+        <dataType>String</dataType>
+        <expression>&quot;Project: &quot; + {!myVariable_current.Project__r.Name} + &quot;\n&quot; + 
+&quot;Billing Start Date: &quot; + TEXT({!myVariable_current.Billing_Start_Date__c}) + &quot;\n&quot; + 
+&quot;Billing End Date: &quot; + TEXT({!myVariable_current.Billing_End_Date__c})</expression>
+    </formulas>
+    <interviewLabel>Billing_Information-4_InterviewLabel</interviewLabel>
     <label>Billing Information</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -2267,7 +3143,7 @@ TEXT({!myVariable_current.Project__r.Billing_Frequency__c})</expression>
             </processMetadataValues>
             <field>Name</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_9494491882</elementReference>
+                <elementReference>formula_2_myRule_1_A1_7245070317</elementReference>
             </value>
         </inputAssignments>
         <object>Billing_Information__c</object>
@@ -2282,42 +3158,7 @@ TEXT({!myVariable_current.Project__r.Billing_Frequency__c})</expression>
         <isOutput>true</isOutput>
     </variables>
     <variables>
-        <name>myCollection_myRule_10_A1recipientIds</name>
-        <dataType>String</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>myCollection_myRule_12_A1recipientIds</name>
-        <dataType>String</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>myCollection_myRule_14_A1recipientIds</name>
-        <dataType>String</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>myCollection_myRule_4_A1recipientIds</name>
-        <dataType>String</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>myCollection_myRule_6_A1recipientIds</name>
-        <dataType>String</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>myCollection_myRule_8_A1recipientIds</name>
+        <name>myCollection_myRule_24_A1recipientIds</name>
         <dataType>String</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>
