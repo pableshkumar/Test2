@@ -1,6 +1,6 @@
 <apex:page sidebar="false" showheader="false" renderAs="pdf" StandardController="Invoice__c" extensions="InvoicePDFController" showQuickActionVfHeader="false" >
     <apex:pageMessages id="pbm"/>
-    <apex:outputPanel rendered="{!Mainflag}">       
+    <apex:outputPanel rendered="{!Mainflag}" >       
         <head>
         </head>
         
@@ -32,7 +32,7 @@
             </div>
         </div><br/>
         <apex:outputPanel rendered="{!if( invoiceDetails.Project__r.TIG_Entity_Name__r.Country1__c=='India',true,false)}">
-            <div style="font-size: 13px;font-family: 'Open Sans', sans-serif;float:left;margin-top:5px;line-height: 15px;text-transform: uppercase">
+            <div style="font-size: 13px;font-family: 'Open Sans', sans-serif;float:left;margin-top:5px;margin-left:10px;line-height: 15px;text-transform: uppercase">
                 <p><b> LUT/Bond No.:</b> {!invoiceDetails.Project__r.TIG_Entity_Name__r.LUT_Bond_No__c}<br/>
                     <b>From:</b><apex:outputText value="{0,date,MM/dd/yy}">
                     <apex:param value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Start_Date__c}" />
@@ -43,7 +43,7 @@
             </div> <br/><br/>
         </apex:outputPanel>
         
-        <table  cellpadding="2" style="font-size: 13px; border-collapse:collapse; width: 100%; font-family: 'Open Sans', sans-serif;margin-top:50px;">
+        <table  cellpadding="2" style="font-size: 13px; border-collapse:collapse; width: 100%; font-family: 'Open Sans', sans-serif;margin-top:50px;margin-left:10px">
             <tbody >
                 <tr >
                     <th style="width:40%;text-align:left">Description </th>
@@ -135,14 +135,14 @@
             </tbody>
         </table>
         <apex:outputPanel rendered="{!If(invoiceDetails.CurrencyIsoCode!=invoiceDetails.Project__r.TIG_Entity_Name__r.CurrencyIsoCode,true,false)}">
-            <div style="border: 1px solid ;border-style: groove;width:300px;margin-left: 5px;">
+            <div style="border: 1px solid ;border-style: groove;width:300px;margin-left: 10px;">
                 <div style="text-align:left;font-size: 13px;font-weight:bold;">*{!invoiceDetails.Project__r.TIG_Entity_Name__r.CurrencyIsoCode} Equivalent Conversion</div>
                 &nbsp;&nbsp;<span style="font-size: 13px;">{!invoiceDetails.Project__r.TIG_Entity_Name__r.CurrencyIsoCode} ={!invoiceDetails.Exchange_Rate__c} {!invoiceDetails.Purchase_Order__r.CurrencyIsoCode}</span> 
                 <div>     <hr/>       </div> 
                 <div style="width:300px;"><div style="width:100px;text-align:left;font-size: 13px;float:left"><span style="font-weight:bold;">Net Amount</span><br/>{!invoiceDetails.TIG_Amount__c}</div><div style="width:100px;text-align:left;font-size: 13px;float:left"><span style="font-weight:bold;">Tax</span><br/>{!invoiceDetails.TIG_Total_Tax__c}</div><div style="width:100px;text-align:left;font-size: 13px;float:left"><span style="font-weight:bold;">Total</span><br/>{!invoiceDetails.TIG_Total_Amount__c}</div ></div><br/> <br/>   
             </div>  
         </apex:outputPanel>
-        <table style="border-collapse:collapse; font-size: 13px; width: 100%; font-family: 'Open Sans', sans-serif;">
+        <table style="border-collapse:collapse; font-size: 13px; width: 100%; font-family: 'Open Sans', sans-serif;margin-left:10px">
             <br/><br/>
             <tbody>
                 <tr style="text-align: left;vertical-align: top;">
@@ -183,12 +183,12 @@
                     </td>
                 </tr>
             </tbody>
-        </table>
-        <p style="text-align:left;font-size: 13px; font-family: 'Open Sans', sans-serif; margin-top:15px;">
+        </table><br/>
+        <div style="text-align:center;font-size: 13px; font-family: 'Open Sans', sans-serif; margin-top:15px;margin-left:10px">
             Please email remittance advice at email id-
             <apex:outputField value="{!invoiceDetails.Project__r.TIG_Entity_Name__r.Email_Address_for_Remittance__c}" />
-        </p>
-        <div style="font-size: 13px;font-family: 'Open Sans', sans-serif;float:right;margin-Top:-65px;">
+        </div>
+        <div style="font-size: 13px;font-family: 'Open Sans', sans-serif;float:right;margin-Top:-65px;margin-right:10px">
             <b>Authorized signatory</b>
         </div>
         
