@@ -26,7 +26,7 @@ public with sharing class InvoicePDFController{
                             TIG_Entity_Bank_Information__r.Swift__c,TIG_Entity_Bank_Information__r.BSB__c,TIG_Entity_Bank_Information__r.Bank_Account_Number__c,
                             Project__r.TIG_Entity_Name__r.Email_Address_for_Remittance__c, Purchase_Order__r.Bill_to_Address__c, Purchase_Order__r.PO_Start_Date__c, 
                             CreatedDate,TIG_Entity__c,Service_Month__c,Total_Tax__c,Amount__c,Total_Amount__c,Project__r.TIG_Entity_Name__r.LUT_Bond_No__c,Project__r.TIG_Entity_Name__r.Start_Date__c,
-                            Project__r.TIG_Entity_Name__r.End_Date__c,TIG_Total_Amount__c,Project__r.TIG_Entity_Name__r.HSN_Code__c,Exchange_Rate__c  from Invoice__c where Id =:id];
+                            Project__r.TIG_Entity_Name__r.End_Date__c,TIG_Total_Amount__c,Project__r.TIG_Entity_Name__r.HSN_Code__c,Exchange_Rate__c,TIG_Total_Tax__c ,TIG_Amount__c  from Invoice__c where Id =:id];
             
             net=invoiceDetails.Project__r.Payment_Term__c;
             

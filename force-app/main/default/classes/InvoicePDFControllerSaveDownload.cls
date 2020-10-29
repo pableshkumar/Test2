@@ -15,42 +15,42 @@ public class InvoicePDFControllerSaveDownload{
         system.debug('id :'+ids);
         
         PageReference ref = new PageReference('/apex/InvoicePDFGenerator?id=' + ids);
-        
-        String pdfName='Invoice-'+ids;
- List<ContentVersion> listversion = [select contentDocumentId, contentDocument.title from ContentVersion where ContentDocument.title = :pdfName];                                     
-    System.debug('listversion : ' + listversion);
-    ContentVersion fl = new ContentVersion();
-            fl.ContentLocation = 'S';
-            fl.PathOnClient = 'file.pdf';
-            fl.Origin = 'H';
-            fl.Title = 'Invoice-'+ids;
-			        if(Test.isRunningTest()) { 
+        String invoiceNumber=[SELECT Name FROM Invoice__c where id=:ids].Name;
+        String pdfName='Invoice-'+invoiceNumber;
+        List<ContentVersion> listversion = [select contentDocumentId, contentDocument.title from ContentVersion where ContentDocument.title = :pdfName];                                     
+        System.debug('listversion : ' + listversion);
+        ContentVersion fl = new ContentVersion();
+        fl.ContentLocation = 'S';
+        fl.PathOnClient = 'file.pdf';
+        fl.Origin = 'H';
+        fl.Title = 'Invoice-'+invoiceNumber;
+        if(Test.isRunningTest()) { 
             
             fl.VersionData = blob.valueOf('Unit.Test');
         }else{
             fl.VersionData = ref.getContentAsPdf();
-			}
-        if (!listversion.isEmpty()){
-        fl.ContentDocumentId= listversion[0].ContentDocumentId;
         }
-   Savepoint sp = Database.setSavepoint();
-   try{
-           insert fl;
-        if(listversion.isEmpty()){
-
-        fl = [select ContentDocumentId from ContentVersion where id =: fl.Id];
-        ContentDocumentLink cl = new ContentDocumentLink(
-        LinkedEntityId = ids,
-        ContentDocumentId = fl.ContentDocumentId,
-        ShareType = 'I'
-        );
-        insert cl;   
-        }         
-     } catch(Exception e) {
-         Database.rollback(sp);
-        System.debug(e.getMessage());          
-        throw e;
-     }
+        if (!listversion.isEmpty()){
+            fl.ContentDocumentId= listversion[0].ContentDocumentId;
+        }
+        Savepoint sp = Database.setSavepoint();
+        try{
+            insert fl;
+            if(listversion.isEmpty()){
+                
+                fl = [select ContentDocumentId from ContentVersion where id =: fl.Id];
+                ContentDocumentLink cl = new ContentDocumentLink(
+                    LinkedEntityId = ids,
+                    ContentDocumentId = fl.ContentDocumentId,
+                    ShareType = 'I'
+                );
+                insert cl;   
+            }         
+        } catch(Exception e) {
+            Database.rollback(sp);
+            System.debug(e.getMessage());          
+            throw e;
+        }
         
     }    
 }

@@ -92,6 +92,11 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>fileOrganiser</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>tabs</name>
                     <value>Facet-139c32cb-aa38-4b91-9484-ee8d88b39565</value>
