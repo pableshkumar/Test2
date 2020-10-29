@@ -223,6 +223,11 @@
                 <componentName>force:relatedListSingleContainer</componentName>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>fileOrganiser</componentName>
+            </componentInstance>
+        </itemInstances>
         <mode>Replace</mode>
         <name>main</name>
         <type>Region</type>
