@@ -27,24 +27,9 @@
                 <label>Contract</label>
             </value>
             <value>
-                <fullName>SOW</fullName>
+                <fullName>Other</fullName>
                 <default>false</default>
-                <label>SOW</label>
-            </value>
-            <value>
-                <fullName>Change Note</fullName>
-                <default>false</default>
-                <label>Change Note</label>
-            </value>
-            <value>
-                <fullName>Billing Sheet</fullName>
-                <default>false</default>
-                <label>Billing Sheet</label>
-            </value>
-            <value>
-                <fullName>Invoice</fullName>
-                <default>false</default>
-                <label>Invoice</label>
+                <label>Other</label>
             </value>
         </valueSetDefinition>
         <valueSettings>
@@ -60,20 +45,10 @@
             <valueName>Contract</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Invoice__c</controllingFieldValue>
-            <valueName>Invoice</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Project__c</controllingFieldValue>
-            <valueName>SOW</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Project__c</controllingFieldValue>
-            <valueName>Change Note</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Billing_Information__c</controllingFieldValue>
-            <valueName>Billing Sheet</valueName>
+            <controllingFieldValue>Contact</controllingFieldValue>
+            <controllingFieldValue>Opportunity</controllingFieldValue>
+            <controllingFieldValue>Vendor_Enquiry__c</controllingFieldValue>
+            <valueName>Other</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Status_Validation</fullName>
-    <active>true</active>
+    <active>false</active>
     <description>User can&apos;t change Status manually if the values are &quot;Sent for Approval&quot;, &quot;Active&quot;</description>
     <errorConditionFormula>OR(
 ISPICKVAL(Status__c,&apos;Sent for Approval&apos;),
