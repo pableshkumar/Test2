@@ -5,32 +5,32 @@ trigger ContentDocumentLink_Trigger on ContentDocumentLink (after insert) {
             contentDocIds.add(cdl.ContentDocumentId);
         }
         
-        Set<Id> eventIds = new Set<Id>();
-        Map<String,String> eventMap = new Map<String,String>();
+        Set<Id> vendorIds = new Set<Id>();
+        Map<String,String> vendorMap = new Map<String,String>();
         
         for(ContentDocumentLink cdlObj: Trigger.new)
         {
-            System.debug('checking vendor obj-14->'+String.valueOf(cdlObj.LinkedEntityId).startsWith('a0E'));
-            if(String.valueOf(cdlObj.LinkedEntityId).startsWith('a0E')){ //Check if file is uploaded on event object
-                eventIds.add(cdlObj.LinkedEntityId);
-                system.debug('event ids--17-->' +eventIds);
+            //Check if file is uploaded on Vendor object
+            if(String.valueOf(cdlObj.LinkedEntityId).startsWith('a0E')){ 
+                vendorIds.add(cdlObj.LinkedEntityId);
             }
             
         }
-        for(Vendor_Enquiry__c e:[select id,name from Vendor_Enquiry__c where Id IN:eventIds]){
-            eventMap.put(e.Id, e.name);
-            system.debug('eventMap--23-->'+ eventMap);
-            for(Account acc:[select id,Vendor_Enquiry_Id__c from Account where Vendor_Enquiry_Id__c=:eventMap.values()]){
-               eventMap.put(e.Id, acc.Id); 
+        for(Vendor_Enquiry__c e:[select id,name from Vendor_Enquiry__c where Id IN:vendorIds]){
+            vendorMap.put(e.Id, e.name);
+            for(Account acc:[select id,Vendor_Enquiry_Id__c from Account where Vendor_Enquiry_Id__c=:vendorMap.values()]){
+               vendorMap.put(e.Id, acc.Id); 
             }
         }
         Map<String,String> parentRecMap = new Map<String,String>();
         for(ContentDocumentLink cdl: Trigger.new){
             System.debug('line 27 ' + String.valueOf(cdl.LinkedEntityId).startsWith('a0E'));
-            if(String.valueOf(cdl.LinkedEntityId).startsWith('a0E')){ //Check if file is uploaded on event object
-                system.debug('Line 29 -->' +String.valueOf(eventMap.get(cdl.LinkedEntityId)).startsWith('001'));
-                if(String.valueOf(eventMap.get(cdl.LinkedEntityId)).startsWith('001')) //Check if event parent is Account 
-                    parentRecMap.put(cdl.ContentDocumentId, eventMap.get(cdl.LinkedEntityId)); //Map<ContentDocumentId,AccountId>
+            //Check if file is uploaded on Vendor object
+            if(String.valueOf(cdl.LinkedEntityId).startsWith('a0E')){ 
+                //Check if event parent is Account
+                if(String.valueOf(vendorMap.get(cdl.LinkedEntityId)).startsWith('001'))  
+                    //Map<ContentDocumentId,AccountId>
+                    parentRecMap.put(cdl.ContentDocumentId, vendorMap.get(cdl.LinkedEntityId)); 
                     system.debug('parentRecMap' + parentRecMap);
             }
             

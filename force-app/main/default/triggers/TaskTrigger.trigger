@@ -27,19 +27,19 @@ trigger TaskTrigger on Task (after insert) {
         }
         Map<String,String> parentRecMap = new Map<String,String>();
         for(Task rltTasks: Trigger.new){
-            System.debug('line 27 ' + String.valueOf(rltTasks.WhatID).startsWith('a0E'));
-            if(String.valueOf(rltTasks.WhatID).startsWith('a0E')){ //Check if file is uploaded on Vendor Enquiry object
-                system.debug('Line 29 -->' +String.valueOf(vendorMap.get(rltTasks.WhatID)).startsWith('001'));
-                if(String.valueOf(vendorMap.get(rltTasks.WhatID)).startsWith('001')) //Check if vendor parent is Account 
-                    parentRecMap.put(rltTasks.Id, vendorMap.get(rltTasks.WhatID)); //Map<ContentDocumentId,AccountId>
+            //Check if file is uploaded on Vendor Enquiry object
+            if(String.valueOf(rltTasks.WhatID).startsWith('a0E')){ 
+                //Check if vendor parent is Account 
+                if(String.valueOf(vendorMap.get(rltTasks.WhatID)).startsWith('001')) 
+                //Map<ContentDocumentId,AccountId>
+                    parentRecMap.put(rltTasks.Id, vendorMap.get(rltTasks.WhatID)); 
                     system.debug('parentRecMap' + parentRecMap);
             }
             
         }
         List<Task> ts_List = new List<Task>();
         for(String str: parentRecMap.keySet()){
-                system.debug('str values--->' + str);
-                Task t = new Task(); // Content Document Link to share the file with Account(Parent) record
+                Task t = new Task(); 
                 system.debug('parent rec---43-->' +parentRecMap.get(str));
                 t.WhatId = parentRecMap.get(str); // Account ID
                 t.Id = str; //Task ID
@@ -48,6 +48,5 @@ trigger TaskTrigger on Task (after insert) {
             }
         
         Task_TriggerHelper.shareTask(ts_List);
-        //	upsert ts_List;
     }  
 }
