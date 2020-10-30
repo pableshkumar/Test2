@@ -67,7 +67,9 @@
                         </td>
                         <td style="text-align:center">1.00</td>
                         <td style="text-align:center"><apex:outputPanel rendered="{!if( invoiceDetails.Project__r.TIG_Entity_Name__r.Country1__c=='India',true,false)}">{!invoiceDetails.Project__r.TIG_Entity_Name__r.HSN_Code__c }</apex:outputPanel></td>
-                        <td style="text-align:center">{!inv.Amount__c}</td>
+                        <td style="text-align:center"><apex:outputText value="{0, number, ###,###,###,##0.00}">
+    <apex:param value="{!inv.Amount__c}"/>
+</apex:outputText></td>
                         
                         <apex:repeat value="{!InvoiceLineItemTaxes}" var="tax">
                             <apex:outputPanel layout="none" rendered="{!If(inv.Tax_Type_1__c==tax,true,false)}"> <td style="text-align:center"><apex:outputText value="{0, number, ###,###,###.##}"><apex:param value="{!inv.Tax_1__c}" /></apex:outputText>%</td></apex:outputPanel>   
@@ -76,7 +78,8 @@
                             <apex:outputPanel layout="none" rendered="{!If(inv.Tax_Type_1__c!=tax && inv.Tax_Type_2__c!=tax && inv.Tax_Type_3__c!=tax,true,false)}"> <td style="text-align:center">0%</td></apex:outputPanel>   
                         </apex:repeat>
                         <td style="text-align:center"></td>
-                        <td style="text-align:center">{!inv.Amount__c}</td>
+                        <td style="text-align:center"><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                            <apex:param value="{!inv.Amount__c}"/></apex:outputText></td>
                         
                     </tr>
                 </apex:repeat>
@@ -108,7 +111,8 @@
                     <td colspan="2" style="text-align: right;">Sub-Total</td>
                     <td></td>
                     
-                    <td  style="text-align: center;">{!ROUND(invoiceDetails.Amount__c,2)}</td>
+                    <td  style="text-align: center;"><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                            <apex:param value="{!invoiceDetails.Amount__c}"/></apex:outputText></td>
                     
                 </tr>
                 <tr style="text-align: center;vertical-align: top;">
@@ -120,7 +124,8 @@
                     <td colspan="2" style="text-align: right;">Total Tax <br/></td>
                     <td></td>
                     
-                    <td  style="text-align: center;">{!ROUND(invoiceDetails.Total_Tax__c,2)}</td>
+                    <td  style="text-align: center;"><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                           <apex:param value="{!invoiceDetails.Total_Tax__c}"/></apex:outputText></td>
                 </tr>
                 <tr style="text-align: center;vertical-align: top;">
                     <td></td>
@@ -130,7 +135,8 @@
                     <td></td>
                     <td colspan="2" style="text-align: right;font-weight:bold;border-top: 1px solid #000;"><div style="font-size: 13px">Total ({!invoiceDetails.Purchase_Order__r.CurrencyIsoCode})</div></td>
                     <td style="border-top: 1px solid #000;"></td>
-                    <td  style="text-align: center;font-weight:bold;border-top: 1px solid #000;">{!ROUND(invoiceDetails.Total_Amount__c,2)}</td>
+                    <td  style="text-align: center;font-weight:bold;border-top: 1px solid #000;"><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                            <apex:param value="{!ROUND(invoiceDetails.Total_Amount__c,2)}"/></apex:outputText></td>
                 </tr>
             </tbody>
         </table>
@@ -139,7 +145,10 @@
                 <div style="text-align:left;font-size: 13px;font-weight:bold;">*{!invoiceDetails.Project__r.TIG_Entity_Name__r.CurrencyIsoCode} Equivalent Conversion</div>
                 &nbsp;&nbsp;<span style="font-size: 13px;">{!invoiceDetails.Project__r.TIG_Entity_Name__r.CurrencyIsoCode} ={!invoiceDetails.Exchange_Rate__c} {!invoiceDetails.Purchase_Order__r.CurrencyIsoCode}</span> 
                 <div>     <hr/>       </div> 
-                <div style="width:300px;"><div style="width:100px;text-align:left;font-size: 13px;float:left"><span style="font-weight:bold;">Net Amount</span><br/>{!invoiceDetails.TIG_Amount__c}</div><div style="width:100px;text-align:left;font-size: 13px;float:left"><span style="font-weight:bold;">Tax</span><br/>{!invoiceDetails.TIG_Total_Tax__c}</div><div style="width:100px;text-align:left;font-size: 13px;float:left"><span style="font-weight:bold;">Total</span><br/>{!invoiceDetails.TIG_Total_Amount__c}</div ></div><br/> <br/>   
+                <div style="width:300px;"><div style="width:100px;text-align:left;font-size: 13px;float:left"><span style="font-weight:bold;">Net Amount</span><br/><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                            <apex:param value="{!VALUE(RIGHT(invoiceDetails.TIG_Amount__c, LEN(invoiceDetails.TIG_Amount__c)-4))}"/></apex:outputText></div><div style="width:100px;text-align:left;font-size: 13px;float:left"><span style="font-weight:bold;">Tax</span><br/><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                            <apex:param value="{!VALUE(RIGHT(invoiceDetails.TIG_Total_Tax__c, LEN(invoiceDetails.TIG_Total_Tax__c)-4))}"/></apex:outputText></div><div style="width:100px;text-align:left;font-size: 13px;float:left"><span style="font-weight:bold;">Total</span><br/><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                            <apex:param value="{!VALUE(RIGHT(invoiceDetails.TIG_Total_Amount__c, LEN(invoiceDetails.TIG_Total_Amount__c)-4))}"/></apex:outputText></div ></div> <br/> <br/>   
             </div>  
         </apex:outputPanel>
         <table style="border-collapse:collapse; font-size: 13px; width: 100%; font-family: 'Open Sans', sans-serif;margin-left:10px">
