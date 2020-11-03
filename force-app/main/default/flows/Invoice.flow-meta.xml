@@ -226,7 +226,7 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_15_myRule_14_A1_4277324110</elementReference>
+                <elementReference>formula_15_myRule_14_A1_7490165724</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -268,7 +268,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_16_myRule_14_A1_4114352892</elementReference>
+                <elementReference>formula_16_myRule_14_A1_4397587402</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -498,7 +498,7 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_19_myRule_18_A1_6304685850</elementReference>
+                <elementReference>formula_19_myRule_18_A1_3929574645</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -540,7 +540,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_20_myRule_18_A1_8743138067</elementReference>
+                <elementReference>formula_20_myRule_18_A1_6489894936</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -770,7 +770,7 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_23_myRule_22_A1_9407239605</elementReference>
+                <elementReference>formula_23_myRule_22_A1_7324706228</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -812,7 +812,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_24_myRule_22_A1_6755468448</elementReference>
+                <elementReference>formula_24_myRule_22_A1_2145521624</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -1062,7 +1062,7 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_31_myRule_30_A1_0322695837</elementReference>
+                <elementReference>formula_31_myRule_30_A1_7539989330</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -1104,7 +1104,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_32_myRule_30_A1_8153909031</elementReference>
+                <elementReference>formula_32_myRule_30_A1_5127391024</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -1334,7 +1334,7 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_35_myRule_34_A1_8533439362</elementReference>
+                <elementReference>formula_35_myRule_34_A1_5342613895</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -1376,7 +1376,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_36_myRule_34_A1_6985102372</elementReference>
+                <elementReference>formula_36_myRule_34_A1_3990012116</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -1606,7 +1606,7 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_39_myRule_38_A1_1402159780</elementReference>
+                <elementReference>formula_39_myRule_38_A1_1054098539</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -1648,7 +1648,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_40_myRule_38_A1_1133578089</elementReference>
+                <elementReference>formula_40_myRule_38_A1_4270229204</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -1878,7 +1878,7 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_43_myRule_42_A1_5358193524</elementReference>
+                <elementReference>formula_43_myRule_42_A1_7878291360</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -1920,7 +1920,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_44_myRule_42_A1_5700593434</elementReference>
+                <elementReference>formula_44_myRule_42_A1_0557183915</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -2153,7 +2153,7 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_5_myRule_4_A1_2032470961</elementReference>
+                <elementReference>formula_5_myRule_4_A1_2854301602</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -2195,7 +2195,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_6_myRule_4_A1_2585386230</elementReference>
+                <elementReference>formula_6_myRule_4_A1_7551429845</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -2428,7 +2428,7 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_9_myRule_8_A1_7766939643</elementReference>
+                <elementReference>formula_9_myRule_8_A1_8375803594</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -2470,7 +2470,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_10_myRule_8_A1_5805413524</elementReference>
+                <elementReference>formula_10_myRule_8_A1_0419452735</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -3652,6 +3652,34 @@
                 <rightValue>
                     <stringValue>Draft</stringValue>
                 </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Date</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Date</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>Date</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>GlobalConstant</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Invoice_Sent_Received_Date__c</leftValueReference>
+                <operator>EqualTo</operator>
             </conditions>
             <connector>
                 <targetReference>myRule_28_pmetdec</targetReference>
@@ -5396,9 +5424,34 @@
                     <stringValue>Draft</stringValue>
                 </rightValue>
             </conditions>
-            <connector>
-                <targetReference>myDecision29</targetReference>
-            </connector>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Date</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Date</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>Date</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>GlobalConstant</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_old.Invoice_Sent_Received_Date__c</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
             <label>Previously Met - Prev</label>
         </rules>
     </decisions>
@@ -5625,7 +5678,7 @@
                 <stringValue>[Invoice__c].Name + &quot; is received.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_10_myRule_8_A1_5805413524</name>
+        <name>formula_10_myRule_8_A1_0419452735</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Name} + &quot; is received.&quot;</expression>
     </formulas>
@@ -5636,7 +5689,7 @@
                 <stringValue>[Invoice__c].Name + &quot; has been approved to process.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_15_myRule_14_A1_4277324110</name>
+        <name>formula_15_myRule_14_A1_7490165724</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Name} + &quot; has been approved to process.&quot;</expression>
     </formulas>
@@ -5647,7 +5700,7 @@
                 <stringValue>[Invoice__c].Name + &quot; has been approved to process.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_16_myRule_14_A1_4114352892</name>
+        <name>formula_16_myRule_14_A1_4397587402</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Name} + &quot; has been approved to process.&quot;</expression>
     </formulas>
@@ -5658,7 +5711,7 @@
                 <stringValue>[Invoice__c].Name + &quot; is escalated.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_19_myRule_18_A1_6304685850</name>
+        <name>formula_19_myRule_18_A1_3929574645</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Name} + &quot; is escalated.&quot;</expression>
     </formulas>
@@ -5669,7 +5722,7 @@
                 <stringValue>[Invoice__c].Name + &quot; is escalated.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_20_myRule_18_A1_8743138067</name>
+        <name>formula_20_myRule_18_A1_6489894936</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Name} + &quot; is escalated.&quot;</expression>
     </formulas>
@@ -5680,7 +5733,7 @@
                 <stringValue> [Invoice__c].Name + &quot; is submitted for approval.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_23_myRule_22_A1_9407239605</name>
+        <name>formula_23_myRule_22_A1_7324706228</name>
         <dataType>String</dataType>
         <expression> {!myVariable_current.Name} + &quot; is submitted for approval.&quot;</expression>
     </formulas>
@@ -5691,7 +5744,7 @@
                 <stringValue> [Invoice__c].Name + &quot; is submitted for approval.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_24_myRule_22_A1_6755468448</name>
+        <name>formula_24_myRule_22_A1_2145521624</name>
         <dataType>String</dataType>
         <expression> {!myVariable_current.Name} + &quot; is submitted for approval.&quot;</expression>
     </formulas>
@@ -5702,7 +5755,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_7706200230</name>
+        <name>formula_2_myRule_1_A1_1375850368</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -5717,7 +5770,7 @@
 &quot;Invoice Status: &quot; + TEXT([Invoice__c].Status__c)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_31_myRule_30_A1_0322695837</name>
+        <name>formula_31_myRule_30_A1_7539989330</name>
         <dataType>String</dataType>
         <expression>&quot;Invoice information is as follows: Invoice Number: &quot; + {!myVariable_current.Name} + &quot;\n&quot; +
 &quot;Project Name: &quot; + {!myVariable_current.Project__c} + &quot;\n&quot; + 
@@ -5732,7 +5785,7 @@
                 <stringValue>&quot;Invoice is in \&quot;Validate Invoice\&quot;. Please take the necessary action.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_32_myRule_30_A1_8153909031</name>
+        <name>formula_32_myRule_30_A1_5127391024</name>
         <dataType>String</dataType>
         <expression>&quot;Invoice is in \&quot;Validate Invoice\&quot;. Please take the necessary action.&quot;</expression>
     </formulas>
@@ -5747,7 +5800,7 @@
 &quot;Invoice Status: &quot; + TEXT([Invoice__c].Status__c)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_35_myRule_34_A1_8533439362</name>
+        <name>formula_35_myRule_34_A1_5342613895</name>
         <dataType>String</dataType>
         <expression>&quot;Invoice information is as follows: Invoice Number: &quot; + {!myVariable_current.Name} + &quot;\n&quot; +
 &quot;Project Name: &quot; + {!myVariable_current.Project__c} + &quot;\n&quot; + 
@@ -5762,7 +5815,7 @@
                 <stringValue>&quot;Invoice is in \&quot;Invoice Ready to be Sent to Client\&quot;. Please take the necessary action.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_36_myRule_34_A1_6985102372</name>
+        <name>formula_36_myRule_34_A1_3990012116</name>
         <dataType>String</dataType>
         <expression>&quot;Invoice is in \&quot;Invoice Ready to be Sent to Client\&quot;. Please take the necessary action.&quot;</expression>
     </formulas>
@@ -5777,7 +5830,7 @@
 &quot;Invoice Status: &quot; + TEXT([Invoice__c].Status__c)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_39_myRule_38_A1_1402159780</name>
+        <name>formula_39_myRule_38_A1_1054098539</name>
         <dataType>String</dataType>
         <expression>&quot;Invoice information is as follows: Invoice Number: &quot; + {!myVariable_current.Name} + &quot;\n&quot; +
 &quot;Project Name: &quot; + {!myVariable_current.Project__c} + &quot;\n&quot; + 
@@ -5792,7 +5845,7 @@
                 <stringValue>&quot;Invoice has been approved by &quot; + [Invoice__c].LastModifiedBy.FirstName + &quot; &quot; +  [Invoice__c].LastModifiedBy.LastName + &quot;. Please take the necessary action.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_40_myRule_38_A1_1133578089</name>
+        <name>formula_40_myRule_38_A1_4270229204</name>
         <dataType>String</dataType>
         <expression>&quot;Invoice has been approved by &quot; + {!myVariable_current.LastModifiedBy.FirstName} + &quot; &quot; +  {!myVariable_current.LastModifiedBy.LastName} + &quot;. Please take the necessary action.&quot;</expression>
     </formulas>
@@ -5807,7 +5860,7 @@
 &quot;Invoice Status: &quot; + TEXT([Invoice__c].Status__c)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_43_myRule_42_A1_5358193524</name>
+        <name>formula_43_myRule_42_A1_7878291360</name>
         <dataType>String</dataType>
         <expression>&quot;Invoice information is as follows: Invoice Number: &quot; + {!myVariable_current.Name} + &quot;\n&quot; +
 &quot;Project Name: &quot; + {!myVariable_current.Project__c} + &quot;\n&quot; + 
@@ -5822,7 +5875,7 @@
                 <stringValue>&quot;Invoice has been rejected by &quot; + [Invoice__c].LastModifiedBy.FirstName + &quot; &quot; +  [Invoice__c].LastModifiedBy.LastName + &quot;. Please take the necessary action.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_44_myRule_42_A1_5700593434</name>
+        <name>formula_44_myRule_42_A1_0557183915</name>
         <dataType>String</dataType>
         <expression>&quot;Invoice has been rejected by &quot; + {!myVariable_current.LastModifiedBy.FirstName} + &quot; &quot; +  {!myVariable_current.LastModifiedBy.LastName} + &quot;. Please take the necessary action.&quot;</expression>
     </formulas>
@@ -5838,7 +5891,7 @@
 &quot;Invoice Status: &quot; + TEXT([Invoice__c].Status__c)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_5_myRule_4_A1_2032470961</name>
+        <name>formula_5_myRule_4_A1_2854301602</name>
         <dataType>String</dataType>
         <expression>&quot;Invoice information is as follows: \n\n&quot; +
 &quot;Invoice Number: &quot; + {!myVariable_current.Name} + &quot;\n&quot; +
@@ -5854,7 +5907,7 @@
                 <stringValue>&quot;Invoice is in \&quot;Review and Update Taxation\&quot;. Please take the necessary action.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_6_myRule_4_A1_2585386230</name>
+        <name>formula_6_myRule_4_A1_7551429845</name>
         <dataType>String</dataType>
         <expression>&quot;Invoice is in \&quot;Review and Update Taxation\&quot;. Please take the necessary action.&quot;</expression>
     </formulas>
@@ -5865,7 +5918,7 @@
                 <stringValue>[Invoice__c].Name + &quot; is received.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_9_myRule_8_A1_7766939643</name>
+        <name>formula_9_myRule_8_A1_8375803594</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Name} + &quot; is received.&quot;</expression>
     </formulas>
@@ -5993,7 +6046,7 @@ ISPICKVAL({!myVariable_current.Stage__c},&apos;Draft&apos;)
             </processMetadataValues>
             <field>Invoice_Sent_Received_Date__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_7706200230</elementReference>
+                <elementReference>formula_2_myRule_1_A1_1375850368</elementReference>
             </value>
         </inputAssignments>
         <object>Invoice__c</object>
@@ -6027,9 +6080,6 @@ ISPICKVAL({!myVariable_current.Stage__c},&apos;Draft&apos;)
         <label>Update Invoice Sent/Received Date</label>
         <locationX>2800</locationX>
         <locationY>200</locationY>
-        <connector>
-            <targetReference>myDecision29</targetReference>
-        </connector>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>

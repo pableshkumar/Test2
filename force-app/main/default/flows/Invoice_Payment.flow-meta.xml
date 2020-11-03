@@ -85,14 +85,14 @@
         <processMetadataValues>
             <name>reference</name>
             <value>
-                <stringValue>[Invoice_Payment__c]</stringValue>
+                <stringValue>[Invoice_Payment__c].Invoice</stringValue>
             </value>
         </processMetadataValues>
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
         <name>myRule_1_A1</name>
-        <label>Update currency</label>
+        <label>Update Invoice Stage</label>
         <locationX>100</locationX>
         <locationY>200</locationY>
         <filters>
@@ -105,7 +105,7 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>myVariable_current.Id</elementReference>
+                <elementReference>myVariable_current.Invoice__c</elementReference>
             </value>
         </filters>
         <inputAssignments>
@@ -124,7 +124,7 @@
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
-                    <stringValue>Currency ISO Code</stringValue>
+                    <stringValue>Stage</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -136,18 +136,18 @@
             <processMetadataValues>
                 <name>rightHandSideType</name>
                 <value>
-                    <stringValue>Reference</stringValue>
+                    <stringValue>Picklist</stringValue>
                 </value>
             </processMetadataValues>
-            <field>CurrencyIsoCode</field>
+            <field>Stage__c</field>
             <value>
-                <elementReference>myVariable_current.Invoice__r.CurrencyIsoCode</elementReference>
+                <stringValue>Paid</stringValue>
             </value>
         </inputAssignments>
-        <object>Invoice_Payment__c</object>
+        <object>Invoice__c</object>
     </recordUpdates>
     <startElementReference>myDecision</startElementReference>
-    <status>Obsolete</status>
+    <status>Active</status>
     <variables>
         <name>myVariable_current</name>
         <dataType>SObject</dataType>
