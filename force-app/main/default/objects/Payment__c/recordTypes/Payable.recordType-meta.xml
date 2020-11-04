@@ -2,6 +2,7 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Payable</fullName>
     <active>true</active>
+    <compactLayoutAssignment>Payment_Compact_Layout</compactLayoutAssignment>
     <label>Payable</label>
     <picklistValues>
         <picklist>Payment_Mode__c</picklist>

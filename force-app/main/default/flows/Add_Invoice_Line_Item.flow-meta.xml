@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <choices>
+        <name>None</name>
+        <choiceText>-- None --</choiceText>
+        <dataType>String</dataType>
+    </choices>
     <dynamicChoiceSets>
         <name>Services</name>
         <dataType>String</dataType>
@@ -8,14 +13,14 @@
             <field>Vendor_Purchase_Order__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_Invoice.Purchase_Order__c</elementReference>
+                <elementReference>Get_Current_Invoice.Purchase_Order__c</elementReference>
             </value>
         </filters>
         <filters>
             <field>Purchase_Order__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_Invoice.Purchase_Order__c</elementReference>
+                <elementReference>Get_Current_Invoice.Purchase_Order__c</elementReference>
             </value>
         </filters>
         <object>Project_Services__c</object>
@@ -64,13 +69,13 @@
         <inputAssignments>
             <field>CurrencyIsoCode</field>
             <value>
-                <elementReference>Get_Invoice.CurrencyIsoCode</elementReference>
+                <elementReference>Get_Current_Invoice.CurrencyIsoCode</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Invoice__c</field>
             <value>
-                <elementReference>recordId</elementReference>
+                <elementReference>Get_Current_Invoice.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -125,8 +130,8 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
-        <name>Get_Invoice</name>
-        <label>Get Invoice</label>
+        <name>Get_Current_Invoice</name>
+        <label>Get Current Invoice</label>
         <locationX>176</locationX>
         <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
@@ -142,6 +147,9 @@
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>Invoice__c</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>CurrencyIsoCode</queriedFields>
+        <queriedFields>Purchase_Order__c</queriedFields>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <screens>
@@ -173,8 +181,10 @@
         </fields>
         <fields>
             <name>Tax_Type_1</name>
+            <choiceReferences>None</choiceReferences>
             <choiceReferences>TaxType</choiceReferences>
             <dataType>String</dataType>
+            <defaultSelectedChoiceReference>None</defaultSelectedChoiceReference>
             <fieldText>Tax Type 1</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
@@ -190,7 +200,9 @@
         <fields>
             <name>Tax_Type_2</name>
             <choiceReferences>TaxType</choiceReferences>
+            <choiceReferences>None</choiceReferences>
             <dataType>String</dataType>
+            <defaultSelectedChoiceReference>None</defaultSelectedChoiceReference>
             <fieldText>Tax Type 2</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
@@ -206,7 +218,9 @@
         <fields>
             <name>Tax_Type_3</name>
             <choiceReferences>TaxType</choiceReferences>
+            <choiceReferences>None</choiceReferences>
             <dataType>String</dataType>
+            <defaultSelectedChoiceReference>None</defaultSelectedChoiceReference>
             <fieldText>Tax Type 3</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
@@ -232,7 +246,7 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_Invoice</targetReference>
+            <targetReference>Get_Current_Invoice</targetReference>
         </connector>
     </start>
     <status>Active</status>
