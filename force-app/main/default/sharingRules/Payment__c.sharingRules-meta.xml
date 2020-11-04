@@ -43,26 +43,12 @@
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>
-        <fullName>Share_payment_with_AP_Head_Role</fullName>
+        <fullName>Role_Subordinates_AP_Head</fullName>
         <accessLevel>Edit</accessLevel>
-        <description>Payments with record type Payable are being shared with AP mHeadRole</description>
-        <label>Share payment with AP Head Role</label>
+        <description>Role &amp; Subordinates: AP Head</description>
+        <label>Role &amp; Subordinates: AP Head</label>
         <sharedTo>
-            <role>AP_Head</role>
-        </sharedTo>
-        <criteriaItems>
-            <field>RecordTypeId</field>
-            <operation>equals</operation>
-            <value>Payable</value>
-        </criteriaItems>
-    </sharingCriteriaRules>
-    <sharingCriteriaRules>
-        <fullName>Share_payment_with_AP_Manager_Role</fullName>
-        <accessLevel>Edit</accessLevel>
-        <description>Payments with record type Payable are being shared with AP Manager Role</description>
-        <label>Share payment with AP Manager Role</label>
-        <sharedTo>
-            <role>AP_Manager</role>
+            <roleAndSubordinates>AP_Head</roleAndSubordinates>
         </sharedTo>
         <criteriaItems>
             <field>RecordTypeId</field>

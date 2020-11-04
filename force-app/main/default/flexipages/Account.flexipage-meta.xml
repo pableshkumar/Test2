@@ -176,6 +176,11 @@
                 <componentName>force:relatedListSingleContainer</componentName>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>fileOrganiser</componentName>
+            </componentInstance>
+        </itemInstances>
         <name>Facet-547c9054-546d-4298-b698-973b43f38760</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -219,11 +224,6 @@
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentName>fileOrganiser</componentName>
-            </componentInstance>
-        </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>

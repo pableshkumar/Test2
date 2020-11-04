@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Utilized_Amount</fullName>
+    <active>true</active>
+    <description>will check Payment Utilized amount with Payment amount , if Utilized amount exceeded, will throw an error while creating Invoice Payment</description>
+    <errorConditionFormula>Payment_Utilized_Amount__c &gt; Amount__c</errorConditionFormula>
+    <errorMessage>Payment utilized amount is being exceeded, please enter lesser amount</errorMessage>
+</ValidationRule>
