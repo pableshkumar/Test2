@@ -60,6 +60,9 @@
         <label>Create Invoice Line Item</label>
         <locationX>176</locationX>
         <locationY>398</locationY>
+        <faultConnector>
+            <targetReference>Error</targetReference>
+        </faultConnector>
         <inputAssignments>
             <field>Amount__c</field>
             <value>
@@ -153,6 +156,22 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <screens>
+        <name>Error</name>
+        <label>Error</label>
+        <locationX>440</locationX>
+        <locationY>518</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorMessage</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;{!$Flow.FaultMessage}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
         <name>New_Invoice_Line_Item</name>
         <label>New Invoice Line Item</label>
         <locationX>176</locationX>
@@ -192,7 +211,7 @@
         <fields>
             <name>Tax_1</name>
             <dataType>Number</dataType>
-            <fieldText>Tax 1</fieldText>
+            <fieldText>Tax 1 (%)</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
             <scale>0</scale>
@@ -210,7 +229,7 @@
         <fields>
             <name>Tax_2</name>
             <dataType>Number</dataType>
-            <fieldText>Tax 2</fieldText>
+            <fieldText>Tax 2 (%)</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
             <scale>0</scale>
@@ -228,7 +247,7 @@
         <fields>
             <name>Tax_3</name>
             <dataType>Number</dataType>
-            <fieldText>Tax 3</fieldText>
+            <fieldText>Tax 3 (%)</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
             <scale>0</scale>
