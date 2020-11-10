@@ -7,7 +7,7 @@
     <summaryFilterItems>
         <field>Invoice__c.Stage__c</field>
         <operation>equals</operation>
-        <value>Submitted, On Hold, Sent to Client, Accepted, Paid</value>
+        <value>Submitted, On Hold, Sent to Client, Accepted, In Current Payment Batch, Paid</value>
     </summaryFilterItems>
     <summaryForeignKey>Invoice__c.Purchase_Order__c</summaryForeignKey>
     <summaryOperation>sum</summaryOperation>

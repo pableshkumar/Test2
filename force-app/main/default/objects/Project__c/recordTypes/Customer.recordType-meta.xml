@@ -2,6 +2,7 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Customer</fullName>
     <active>true</active>
+    <compactLayoutAssignment>Project_Compact_Layout</compactLayoutAssignment>
     <label>Customer</label>
     <picklistValues>
         <picklist>Billing_Frequency__c</picklist>
