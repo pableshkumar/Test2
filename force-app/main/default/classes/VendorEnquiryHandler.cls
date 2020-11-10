@@ -52,7 +52,7 @@ public class VendorEnquiryHandler {
             
             filesLst.add(cDLRec);   
         } 
-        insert filesLst;
+        insert filesLst;   
         
         //Tasks
         List<Task> ts_List = new List<Task>();
