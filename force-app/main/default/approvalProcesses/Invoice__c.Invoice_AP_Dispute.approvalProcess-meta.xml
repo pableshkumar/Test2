@@ -21,6 +21,10 @@
         <submitter>AP_SR_Executive</submitter>
         <type>role</type>
     </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>SDM</submitter>
+        <type>roleSubordinates</type>
+    </allowedSubmitters>
     <approvalPageFields>
         <field>Name</field>
         <field>Billing_Information__c</field>
