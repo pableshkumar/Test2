@@ -24,6 +24,8 @@ public class InvoicePDFControllerSaveDownload{
         fl.PathOnClient = 'file.pdf';
         fl.Origin = 'H';
         fl.Title = 'Invoice-'+invoiceNumber;
+        fl.SObjectType__c='Invoice__c';
+        fl.Document_Type__c='Invoice';
         if(Test.isRunningTest()) { 
             
             fl.VersionData = blob.valueOf('Unit.Test');
