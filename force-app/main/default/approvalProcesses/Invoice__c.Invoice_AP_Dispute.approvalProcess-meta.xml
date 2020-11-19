@@ -57,6 +57,10 @@
         <allowDelegate>true</allowDelegate>
         <approvalActions>
             <action>
+                <name>Stage_Submitted</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
                 <name>Status_Validate_Invoice</name>
                 <type>FieldUpdate</type>
             </action>
