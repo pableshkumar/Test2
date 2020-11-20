@@ -40,6 +40,10 @@
             <fullName>Dispute in client billing</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>Exceptional Approval Required</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Reason_for_Late_Submission__c</picklist>
