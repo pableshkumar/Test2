@@ -1,632 +1,603 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <baseObject>Order__c</baseObject>
+    <baseObject>Project_Services__c</baseObject>
     <category>other</category>
-    <deployed>false</deployed>
-    <description>Custom Order Object</description>
+    <deployed>true</deployed>
+    <description>Project Services with invoice line items</description>
     <join>
-        <join>
-            <outerJoin>false</outerJoin>
-            <relationship>Invoice_Line_Items__r</relationship>
-        </join>
-        <outerJoin>false</outerJoin>
-        <relationship>Projects_Services__r</relationship>
+        <outerJoin>true</outerJoin>
+        <relationship>Invoice_Line_Items__r</relationship>
     </join>
-    <label>Order (C)</label>
+    <label>Project Services</label>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Billing_Frequency__c</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Bill_to_Address__c</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedDate</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CurrencyIsoCode</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Customer__c</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Customer_Purchase_Order__c</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastActivityDate</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedBy</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Id</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Payment_Terms__c</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>PO_Amount__c</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>PO_Amount_Utilised__c</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>PO_Approval_Status__c</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>PO_Balance__c</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>PO_End_Date__c</field>
-            <table>Order__c</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>Order__c</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>PO_Start_Date__c</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>PO_Status__c</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Project__c</field>
-            <table>Order__c</table>
+            <field>CurrencyIsoCode</field>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>RecordType</field>
-            <table>Order__c</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Ship_to_Address__c</field>
-            <table>Order__c</table>
+            <field>CreatedDate</field>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Tax_Included__c</field>
-            <table>Order__c</table>
+            <field>CreatedBy</field>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Project__c.Payment_Term__c</field>
-            <table>Order__c</table>
+            <field>LastModifiedDate</field>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Project__c.TIG_Entity_Name__c</field>
-            <table>Order__c</table>
+            <field>LastModifiedBy</field>
+            <table>Project_Services__c</table>
         </columns>
-        <masterLabel>Orders</masterLabel>
-    </sections>
-    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastActivityDate</field>
+            <table>Project_Services__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Purchase_Order__c</field>
+            <table>Project_Services__c</table>
+        </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Active_Service__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Additional_Hrs_rate_OH__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Additional_Hrs_rate_OOH__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Additional_TOT_Hours_Block__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Category__c</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedDate</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CurrencyIsoCode</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Day_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Day_Rate_OOH__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Day_Rate__c</field>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Description__c</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Half_Day__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Half_Day_OOH__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>LastActivityDate</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedBy</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
-            <table>Order__c.Projects_Services__r</table>
+            <field>Half_Day__c</field>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Minimum_Hours_T_M__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Minimum_Ticket_Commitment__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Monthly_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>No_of_Devices__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>OT_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P1_Resolution_SLA__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P1_Response_SLA__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P1_Ticket_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P2_Resolution_SLA__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P2_Response_SLA__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P2_Ticket_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P3_Resolution_SLA__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P3_Response_SLA__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P3_Ticket_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P4_Resolution_SLA__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P4_Response_SLA__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P4_Ticket_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P5_Resolution_SLA__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P5_Response_SLA__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>P5_Ticket_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Per_Device_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>PH_Full_Day__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>PH_Half_Day__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>PH_Hourly__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Per_Device_Rate__c</field>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Product_Cost__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Product_Number__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Product_Type__c</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Project__c</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>Name</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Project_Site__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Project__c</field>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>RecordType</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Serial_Number__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Service_End_Date__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Service_Start_Date__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Skill_Level__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Sourced_By__c</field>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Standby_Fees__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>T_M_Rate_in_hrs__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Time_on_Ticket__c</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Vendor__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Additional_Hrs_rate_OH__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Additional_Hrs_rate_OOH__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Additional_TOT_Hours_Block__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Vendor_Day_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <field>Vendor_Currency__c</field>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Day_Rate_OOH__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Vendor_Half_Day__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <field>Vendor_Day_Rate__c</field>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Half_Day_OOH__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Vendor_Half_Day__c</field>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Minimum_Hours_T_M__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Minimum_Ticket_Commitment__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Monthly_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_OT_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_P1_Ticket_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_P2_Ticket_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_P3_Ticket_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_P4_Ticket_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_P5_Ticket_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Vendor_Per_Device_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_PH_Full_Day__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_PH_Half_Day__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_PH_Hourly__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Vendor_Per_Device_Rate__c</field>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Project__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Purchase_Order__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Rate__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Standby_Fees__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_T_M_Rate_in_hrs__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Time_on_Ticket_TOT_in_hrs__c</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Vendor_Weekend_PH_Rates__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Weekend_Full_Day__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Weekend_Half_Day__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Vendor_Weekend_Hourly__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Weekend_PH_Rates__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <field>Vendor_Weekend_PH_Rates__c</field>
+            <table>Project_Services__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Vendor__c</field>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Weekend_Full_Day__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Weekend_Half_Day__c</field>
-            <table>Order__c.Projects_Services__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Country__c</field>
-            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CurrencyIsoCode</field>
-            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Name</field>
-            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Amount__c</field>
-            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Weekend_Hourly__c</field>
-            <table>Order__c.Projects_Services__r</table>
+            <table>Project_Services__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Services__c</field>
-            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+            <field>Weekend_PH_Rates__c</field>
+            <table>Project_Services__c</table>
         </columns>
         <masterLabel>Projects Services</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CurrencyIsoCode</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedBy</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedBy</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Amount__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>City__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Country__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Remarks__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Tax_1_Amount__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Tax_1__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Tax_2_Amount__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Tax_2__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Tax_3_Amount__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Tax_3__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Tax_Type_1__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Tax_Type_2__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Tax_Type_3__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Total_Amount__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Total_Tax__c</field>
+            <table>Project_Services__c.Invoice_Line_Items__r</table>
+        </columns>
+        <masterLabel>Invoice Line Items</masterLabel>
     </sections>
 </ReportType>
