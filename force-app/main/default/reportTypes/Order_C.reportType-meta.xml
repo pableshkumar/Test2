@@ -144,6 +144,11 @@
             <field>Project__c.TIG_Entity_Name__c</field>
             <table>Order__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Project__c.TIG_Entity_Name__c.Country1__c</field>
+            <table>Order__c</table>
+        </columns>
         <masterLabel>Orders</masterLabel>
     </sections>
     <sections>
@@ -628,5 +633,48 @@
             <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
         </columns>
         <masterLabel>Projects Services</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.Customer__c.Partner_Expense_Type__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.Amount__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.Stage__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.Total_Amount__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.Total_Tax__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.Invoice_Date__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.Name</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.CurrencyIsoCode</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <masterLabel>Invoice Line Items</masterLabel>
     </sections>
 </ReportType>
