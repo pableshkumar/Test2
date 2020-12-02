@@ -5,6 +5,10 @@
     <deployed>false</deployed>
     <description>Custom Order Object</description>
     <join>
+        <join>
+            <outerJoin>false</outerJoin>
+            <relationship>Invoice_Line_Items__r</relationship>
+        </join>
         <outerJoin>false</outerJoin>
         <relationship>Projects_Services__r</relationship>
     </join>
@@ -138,6 +142,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Project__c.TIG_Entity_Name__c</field>
+            <table>Order__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Project__c.TIG_Entity_Name__c.Country1__c</field>
             <table>Order__c</table>
         </columns>
         <masterLabel>Orders</masterLabel>
@@ -595,9 +604,77 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Country__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CurrencyIsoCode</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Name</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Amount__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Weekend_Hourly__c</field>
             <table>Order__c.Projects_Services__r</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Services__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
         <masterLabel>Projects Services</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.Customer__c.Partner_Expense_Type__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.Amount__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.Stage__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.Total_Amount__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.Total_Tax__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.Invoice_Date__c</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.Name</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Invoice__c.CurrencyIsoCode</field>
+            <table>Order__c.Projects_Services__r.Invoice_Line_Items__r</table>
+        </columns>
+        <masterLabel>Invoice Line Items</masterLabel>
     </sections>
 </ReportType>
