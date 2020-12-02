@@ -5,6 +5,7 @@
     <queueMembers>
         <roles>
             <role>AR_Head</role>
+            <role>Field_Service_Management_Head</role>
         </roles>
     </queueMembers>
     <queueSobject>

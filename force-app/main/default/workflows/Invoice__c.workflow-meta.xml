@@ -30,6 +30,10 @@
             <recipient>AP_Head</recipient>
             <type>role</type>
         </recipients>
+        <recipients>
+            <recipient>Field_Service_Management_Head</recipient>
+            <type>role</type>
+        </recipients>
         <senderType>CurrentUser</senderType>
         <template>Escalation_Email_Template/Send_Invoice_Escalation_Email</template>
     </alerts>
