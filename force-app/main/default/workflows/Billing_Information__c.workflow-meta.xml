@@ -8,6 +8,10 @@
             <recipient>AR_Head</recipient>
             <type>role</type>
         </recipients>
+        <recipients>
+            <recipient>Field_Service_Management_Head</recipient>
+            <type>role</type>
+        </recipients>
         <senderType>CurrentUser</senderType>
         <template>Escalation_Email_Template/Send_Escalation_Email</template>
     </alerts>
@@ -136,6 +140,10 @@
         <protected>false</protected>
         <recipients>
             <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>Field_Service_Management_Head</recipient>
+            <type>role</type>
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>Billing_Information_Email_Templates/AR_Head_Approval_Rejection_Email</template>
