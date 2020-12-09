@@ -211,9 +211,9 @@
         <label>Switzerland</label>
     </customValue>
     <customValue>
-        <fullName>Cote d'Ivoire</fullName>
+        <fullName>Cote d&apos;Ivoire</fullName>
         <default>false</default>
-        <label>Cote d'Ivoire</label>
+        <label>Cote d&apos;Ivoire</label>
     </customValue>
     <customValue>
         <fullName>Cook Islands</fullName>
@@ -581,9 +581,9 @@
         <label>Saint Kitts and Nevis</label>
     </customValue>
     <customValue>
-        <fullName>Korea, Democratic People's Republic of</fullName>
+        <fullName>Korea, Democratic People&apos;s Republic of</fullName>
         <default>false</default>
-        <label>Korea, Democratic People's Republic of</label>
+        <label>Korea, Democratic People&apos;s Republic of</label>
     </customValue>
     <customValue>
         <fullName>Korea, Republic of</fullName>
@@ -606,9 +606,9 @@
         <label>Kazakhstan</label>
     </customValue>
     <customValue>
-        <fullName>Lao People's Democratic Republic</fullName>
+        <fullName>Lao People&apos;s Democratic Republic</fullName>
         <default>false</default>
-        <label>Lao People's Democratic Republic</label>
+        <label>Lao People&apos;s Democratic Republic</label>
     </customValue>
     <customValue>
         <fullName>Lebanon</fullName>
@@ -1194,6 +1194,31 @@
         <fullName>Zimbabwe</fullName>
         <default>false</default>
         <label>Zimbabwe</label>
+    </customValue>
+    <customValue>
+        <fullName>Hong Kong</fullName>
+        <default>false</default>
+        <label>Hong Kong</label>
+    </customValue>
+    <customValue>
+        <fullName>South Korea</fullName>
+        <default>false</default>
+        <label>South Korea</label>
+    </customValue>
+    <customValue>
+        <fullName>NewZealand</fullName>
+        <default>false</default>
+        <label>NewZealand</label>
+    </customValue>
+    <customValue>
+        <fullName>Indoneisa</fullName>
+        <default>false</default>
+        <label>Indoneisa</label>
+    </customValue>
+    <customValue>
+        <fullName>Korea</fullName>
+        <default>false</default>
+        <label>Korea</label>
     </customValue>
     <masterLabel>Countries</masterLabel>
     <sorted>false</sorted>
