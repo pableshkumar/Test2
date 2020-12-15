@@ -20,7 +20,7 @@
             <states>
                 <active>true</active>
                 <integrationValue>Dubai</integrationValue>
-                <isoCode>DU</isoCode>
+                <isoCode>AEDU</isoCode>
                 <label>Dubai</label>
                 <standard>false</standard>
                 <visible>true</visible>
