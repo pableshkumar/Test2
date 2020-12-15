@@ -178,6 +178,10 @@
             <valueName>Hong Kong</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Hong Kong</controllingFieldValue>
+            <valueName>Kowloon</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Cayman Islands</controllingFieldValue>
             <valueName>Cayman Islands</valueName>
         </valueSettings>
@@ -232,6 +236,10 @@
         <valueSettings>
             <controllingFieldValue>United Arab Emirates</controllingFieldValue>
             <valueName>United Arab Emirates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Arab Emirates</controllingFieldValue>
+            <valueName>Dubai</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Lebanon</controllingFieldValue>
@@ -979,6 +987,14 @@
             <valueName>Germany</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>Hessan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>Saxony</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Djibouti</controllingFieldValue>
             <valueName>Djibouti</valueName>
         </valueSettings>
@@ -987,12 +1003,24 @@
             <valueName>Denmark</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Denmark</controllingFieldValue>
+            <valueName>Copenhagen</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Dominica</controllingFieldValue>
             <valueName>Dominica</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Netherlands</controllingFieldValue>
             <valueName>Netherlands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>North Holland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>South Holland</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Norway</controllingFieldValue>
@@ -1067,6 +1095,10 @@
             <valueName>Spain</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Spain</controllingFieldValue>
+            <valueName>Madrid</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Ethiopia</controllingFieldValue>
             <valueName>Ethiopia</valueName>
         </valueSettings>
@@ -1077,6 +1109,14 @@
         <valueSettings>
             <controllingFieldValue>Papua New Guinea</controllingFieldValue>
             <valueName>Papua New Guinea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Papua New Guinea</controllingFieldValue>
+            <valueName>Morobe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Papua New Guinea</controllingFieldValue>
+            <valueName>Port Moresby</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Philippines</controllingFieldValue>
@@ -1620,6 +1660,10 @@
             <valueName>Saudi Arabia</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Saudi Arabia</controllingFieldValue>
+            <valueName>Riyadh</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Solomon Islands</controllingFieldValue>
             <valueName>Solomon Islands</valueName>
         </valueSettings>
@@ -1910,6 +1954,14 @@
         <valueSettings>
             <controllingFieldValue>Thailand</controllingFieldValue>
             <valueName>Samut Prakan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Thailand</controllingFieldValue>
+            <valueName>Nakhon Pathom</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Thailand</controllingFieldValue>
+            <valueName>Bangkok</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Tajikistan</controllingFieldValue>
