@@ -18,12 +18,12 @@
             <orgDefault>false</orgDefault>
             <standard>true</standard>
             <states>
-                <active>false</active>
+                <active>true</active>
                 <integrationValue>Dubai</integrationValue>
-                <isoCode>AEDU</isoCode>
+                <isoCode>DE</isoCode>
                 <label>Dubai</label>
                 <standard>false</standard>
-                <visible>false</visible>
+                <visible>true</visible>
             </states>
             <visible>true</visible>
         </countries>
