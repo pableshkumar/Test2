@@ -17,14 +17,6 @@
             <label>United Arab Emirates</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
-            <states>
-                <active>true</active>
-                <integrationValue>Dubai</integrationValue>
-                <isoCode>DE</isoCode>
-                <label>Dubai</label>
-                <standard>false</standard>
-                <visible>true</visible>
-            </states>
             <visible>true</visible>
         </countries>
         <countries>
@@ -769,14 +761,6 @@
             <label>Switzerland</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
-            <states>
-                <active>true</active>
-                <integrationValue>Switzerland</integrationValue>
-                <isoCode>SL</isoCode>
-                <label>Switzerland</label>
-                <standard>false</standard>
-                <visible>true</visible>
-            </states>
             <visible>true</visible>
         </countries>
         <countries>
@@ -1166,14 +1150,6 @@
             <label>Czech Republic</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
-            <states>
-                <active>true</active>
-                <integrationValue>Prague</integrationValue>
-                <isoCode>PR</isoCode>
-                <label>Prague</label>
-                <standard>false</standard>
-                <visible>true</visible>
-            </states>
             <visible>true</visible>
         </countries>
         <countries>
@@ -1552,14 +1528,6 @@
             <label>Indonesia</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
-            <states>
-                <active>true</active>
-                <integrationValue>Jakarta</integrationValue>
-                <isoCode>JA</isoCode>
-                <label>Jakarta</label>
-                <standard>false</standard>
-                <visible>true</visible>
-            </states>
             <visible>true</visible>
         </countries>
         <countries>
@@ -3053,14 +3021,6 @@
             <label>Japan</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
-            <states>
-                <active>true</active>
-                <integrationValue>Tokyo</integrationValue>
-                <isoCode>TK</isoCode>
-                <label>Tokyo</label>
-                <standard>false</standard>
-                <visible>true</visible>
-            </states>
             <visible>true</visible>
         </countries>
         <countries>
@@ -3133,14 +3093,6 @@
             <label>Korea, Republic of</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
-            <states>
-                <active>true</active>
-                <integrationValue>Seoul</integrationValue>
-                <isoCode>SE</isoCode>
-                <label>Seoul</label>
-                <standard>false</standard>
-                <visible>true</visible>
-            </states>
             <visible>true</visible>
         </countries>
         <countries>
@@ -3213,14 +3165,6 @@
             <label>Sri Lanka</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
-            <states>
-                <active>true</active>
-                <integrationValue>Western Province</integrationValue>
-                <isoCode>WP</isoCode>
-                <label>Western Province</label>
-                <standard>false</standard>
-                <visible>true</visible>
-            </states>
             <visible>true</visible>
         </countries>
         <countries>
@@ -3711,14 +3655,6 @@
             <label>Malaysia</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
-            <states>
-                <active>true</active>
-                <integrationValue>Selangor</integrationValue>
-                <isoCode>SL</isoCode>
-                <label>Selangor</label>
-                <standard>false</standard>
-                <visible>true</visible>
-            </states>
             <visible>true</visible>
         </countries>
         <countries>
@@ -3836,14 +3772,6 @@
             <label>New Zealand</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
-            <states>
-                <active>true</active>
-                <integrationValue>Auckland</integrationValue>
-                <isoCode>AU</isoCode>
-                <label>Auckland</label>
-                <standard>false</standard>
-                <visible>true</visible>
-            </states>
             <visible>true</visible>
         </countries>
         <countries>
@@ -3898,14 +3826,6 @@
             <label>Philippines</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
-            <states>
-                <active>true</active>
-                <integrationValue>Manila</integrationValue>
-                <isoCode>ML</isoCode>
-                <label>Manila</label>
-                <standard>false</standard>
-                <visible>true</visible>
-            </states>
             <visible>true</visible>
         </countries>
         <countries>
@@ -4077,14 +3997,6 @@
             <label>Singapore</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
-            <states>
-                <active>true</active>
-                <integrationValue>Singapore</integrationValue>
-                <isoCode>SN</isoCode>
-                <label>Singapore</label>
-                <standard>false</standard>
-                <visible>true</visible>
-            </states>
             <visible>true</visible>
         </countries>
         <countries>
@@ -4355,14 +4267,6 @@
             <label>Taiwan</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
-            <states>
-                <active>true</active>
-                <integrationValue>Taipei</integrationValue>
-                <isoCode>TP</isoCode>
-                <label>Taipei</label>
-                <standard>false</standard>
-                <visible>true</visible>
-            </states>
             <visible>true</visible>
         </countries>
         <countries>
