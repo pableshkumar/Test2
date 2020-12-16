@@ -3,7 +3,7 @@
 #
 
 package.xml
-Address.settings
+**/Address.settings
 
 # LWC configuration files
 **/jsconfig.json
