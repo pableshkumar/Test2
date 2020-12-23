@@ -40,6 +40,11 @@
                 <default>false</default>
                 <label>Billing_Information__c</label>
             </value>
+            <value>
+                <fullName>Order__c</fullName>
+                <default>false</default>
+                <label>Order__c</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

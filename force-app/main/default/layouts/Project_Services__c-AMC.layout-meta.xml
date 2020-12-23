@@ -25,6 +25,10 @@
                 <behavior>Required</behavior>
                 <field>Sourced_By__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>Total_Price__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
