@@ -1,14 +1,16 @@
 public class InvoiceHandler {
     
     public static void validatedDispute(){
+        Map<ID, Schema.RecordTypeInfo> rtMap = Schema.SObjectType.Invoice__c.getRecordTypeInfosById();
         for(Invoice__c invoice:(List<Invoice__c>)trigger.new){
+        String recordType = rtMap.get(invoice.RecordTypeId).getName();
             if(invoice.Status__c == 'Disputed' && invoice.Disputed_Amount__c == null ){
                 //invoice.addError('Please enter disputed amount before rejection.');
                 invoice.addError(System.Label.Dispute_Amount_Error);
             }else if(invoice.Status__c == 'Disputed' && (invoice.Reason_For_Dispute__c == null ||  invoice.Reason_For_Dispute__c == '')){  
                 invoice.addError('Please enter reason for dispute before rejection.');
-            }
-            else if(invoice.Number_of_Invoice_Line_Items__c == 0 && invoice.Stage__c != 'Draft'){
+            }    
+            else if(invoice.Number_of_Invoice_Line_Items__c == 0 && invoice.Stage__c != 'Draft' && recordType != 'Indirect Purchase Invoice'){
                 //invoice.addError('Please enter disputed amount before rejection.');
                 invoice.addError('Please add line items to the invoice before proceeding.');
             }
@@ -17,6 +19,7 @@ public class InvoiceHandler {
 
     @future
     public static void sendToTIGSDMOnDispute(String inv){
+        Map<ID, Schema.RecordTypeInfo> rtNewMap = Schema.SObjectType.Invoice__c.getRecordTypeInfosById();
         List<Invoice__c> invList =   (List<Invoice__c>)System.JSON.deserialize(inv, List<Invoice__c>.class);
         Map<String, String> roleMap = new Map<String, String>();
         List<String> projs = new List<String>();
@@ -38,6 +41,7 @@ public class InvoiceHandler {
         }
         //End Here
         for(Invoice__c invoice: invList){
+        String recType = rtNewMap.get(invoice.RecordTypeId).getName();
             if(!existingApprovalsSet.contains(invoice.id)){
                 if(invoice.Status__c == 'Disputed' && invoice.Stage__c == 'On Hold'){
                     Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
@@ -46,11 +50,17 @@ public class InvoiceHandler {
                     req1.setNextApproverIds(new List<Id>{roleMap.get(invoice.Customer_Project__c)});  
                     Approval.ProcessResult result = Approval.process(req1);
                 }
-                else if(invoice.Status__c == 'Validate Invoice' || invoice.Status__c == 'Escalated' || invoice.Status__c == 'Exception Approval Needed'){
+                else if((invoice.Status__c == 'Validate Invoice' || invoice.Status__c == 'Escalated' || invoice.Status__c == 'Exception Approval Needed') && recType != 'Indirect Purchase Invoice'){
                     Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
                     req1.setObjectId(invoice.id);
                     Approval.ProcessResult result = Approval.process(req1);
-                }
+                }/*else if(invoice.Status__c == 'Validate Invoice' && invoice.Customer__r.Partner_Expense_Type__c == 'Indirect'){
+                    Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
+                    req1.setComments('Approval for indirect expense invoice');
+                    req1.setObjectId(invoice.id);
+                    req1.setNextApproverIds(new List<Id>{roleMap.get(invoice.Customer_Project__c)});  
+                    Approval.ProcessResult result = Approval.process(req1);
+                }*/
             }
         }
         

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_Center__c</fullName>
+    <description>To store list of department.</description>
+    <externalId>false</externalId>
+    <label>Cost Center</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Presales</fullName>
+                <default>false</default>
+                <label>Presales</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Automation</fullName>
+                <default>false</default>
+                <label>Automation</label>
+            </value>
+            <value>
+                <fullName>Delivery</fullName>
+                <default>false</default>
+                <label>Delivery</label>
+            </value>
+            <value>
+                <fullName>Audit &amp; Governance</fullName>
+                <default>false</default>
+                <label>Audit &amp; Governance</label>
+            </value>
+            <value>
+                <fullName>Field Service Management</fullName>
+                <default>false</default>
+                <label>Field Service Management</label>
+            </value>
+            <value>
+                <fullName>PMO</fullName>
+                <default>false</default>
+                <label>PMO</label>
+            </value>
+            <value>
+                <fullName>People Department</fullName>
+                <default>false</default>
+                <label>People Department</label>
+            </value>
+            <value>
+                <fullName>HR</fullName>
+                <default>false</default>
+                <label>HR</label>
+            </value>
+            <value>
+                <fullName>AR &amp; AP</fullName>
+                <default>false</default>
+                <label>AR &amp; AP</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -204,6 +204,45 @@
         <template>Invoice_Approval_Templates/Notify_to_Vendor_for_accept_invoice</template>
     </alerts>
     <fieldUpdates>
+        <fullName>Indirect_Expense_Update_Status</fullName>
+        <field>Status__c</field>
+        <literalValue>Validate Invoice</literalValue>
+        <name>Indirect Expense Update Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Indirect_Invoice_Status_Approved</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Indirect Invoice Status : Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage1_In_Current_Payment_Batch</fullName>
+        <field>Stage__c</field>
+        <literalValue>In Current Payment Batch</literalValue>
+        <name>Stage1 : In Current Payment Batch</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage5_In_Current_Payment_Batch</fullName>
+        <field>Stage__c</field>
+        <literalValue>In Current Payment Batch</literalValue>
+        <name>Stage5 : In Current Payment Batch</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Stage_Accepted</fullName>
         <field>Stage__c</field>
         <literalValue>Accepted</literalValue>
@@ -222,6 +261,15 @@
         <operation>Literal</operation>
         <protected>false</protected>
         <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_In_Current_Payment_Batch</fullName>
+        <field>Stage__c</field>
+        <literalValue>In Current Payment Batch</literalValue>
+        <name>Stage : In Current Payment Batch</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Stage_On_Hold</fullName>
@@ -244,6 +292,16 @@
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Stage_Rejected_Invoice</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Stage : Rejected Invoice</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Stage_Sent_to_client</fullName>
         <field>Stage__c</field>
         <literalValue>Sent to Client</literalValue>
@@ -254,10 +312,130 @@
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Stage_Step_3_In_Current_Payment_Batch</fullName>
+        <field>Stage__c</field>
+        <literalValue>In Current Payment Batch</literalValue>
+        <name>Stage Step 3 : In Current Payment Batch</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Step_4_In_Current_Payment_Batch</fullName>
+        <field>Stage__c</field>
+        <literalValue>In Current Payment Batch</literalValue>
+        <name>Stage Step 4 : In Current Payment Batch</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Stage_Submitted</fullName>
         <field>Stage__c</field>
         <literalValue>Submitted</literalValue>
         <name>Stage: Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status1_Approved</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Status1: Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status1_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status1 : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status1_Send_to_C_Group</fullName>
+        <field>Status__c</field>
+        <literalValue>Sent To Client</literalValue>
+        <name>Status :Send to C Group</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status2_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status2 : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status5_Approved</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Status5 : Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_2_Send_to_Department_Head</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Status 2: Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_3_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status 3 : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_4_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status 4 : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_4_Send_to_C_Group</fullName>
+        <field>Status__c</field>
+        <literalValue>Send to C Group</literalValue>
+        <name>Status 4 : Send to C Group</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_5_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status 5 : Rejected</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
@@ -342,6 +520,16 @@
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Status_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Status_Review_and_Update_Taxation</fullName>
         <field>Status__c</field>
         <literalValue>Review and Update Taxation</literalValue>
@@ -352,10 +540,618 @@
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Status_Send_Department_Head</fullName>
+        <field>Status__c</field>
+        <literalValue>Send to Department Head</literalValue>
+        <name>Status : Send to Department Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Send_to_C_Group</fullName>
+        <field>Status__c</field>
+        <literalValue>Send to C Group</literalValue>
+        <name>Status : Send to C Group</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Send_to_Department_Head</fullName>
+        <field>Status__c</field>
+        <literalValue>Send to Department Head</literalValue>
+        <name>Status : Send to Department Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Step4_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status Step 4 : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Step_4_Approved</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Status Step 4 : Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Step_4_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status Step 4  : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Status_Validate_Invoice</fullName>
         <field>Status__c</field>
         <literalValue>Validate Invoice</literalValue>
         <name>Status: Validate Invoice</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Step1_Status_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status1 : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Step2_Status_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_AR_AP_Stage2_Rejected</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update AR &amp; AP Stage2 : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_AR_AP_Stage3_Rejected</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update AR &amp; AP Stage3 : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_AR_AP_Stage4_Rejected</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update AR &amp; AP Stage4 : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_AR_AP_Stage_Rejected</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update AR &amp; AP Stage : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Audit_Governance_Stage</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Audit &amp; Governance Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Audit_Governance_Stage2</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Audit &amp; Governance Stage2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Audit_Governance_Stage3</fullName>
+        <field>Stage__c</field>
+        <literalValue>Accepted</literalValue>
+        <name>Update Audit &amp; Governance Stage3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Audit_Governance_Stage4</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Audit &amp; Governance Stage4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Automation_Stage</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Automation Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Automation_Stage1</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Automation Stage1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Automation_Stage2</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Automation Stage2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Automation_Stage4</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Automation Stage4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Delivery_Stage1</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Delivery Stage1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Delivery_Stage2</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Delivery Stage2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Delivery_Stage3</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Delivery Stage3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Delivery_Stage4</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Delivery Stage4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_FSM_Stage1</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update FSM Stage1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_FSM_Stage2</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update FSM Stage2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_FSM_Stage3</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update FSM Stage3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_FSM_Stage4</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update FSM Stage4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Finance_Stage1</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Finance Stage1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Finance_Stage2</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Finance Stage2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Finance_Stage3</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Finance Stage3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Finance_Stage4</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Finance Stage4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_HR_Stage1</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update HR Stage1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_HR_Stage2</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update HR Stage2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_HR_Stage3</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update HR Stage3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_HR_Stage4</fullName>
+        <field>Stage__c</field>
+        <literalValue>Accepted</literalValue>
+        <name>Update HR Stage4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_IT_Stage2_Rejected</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update IT Stage2 : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_IT_Stage3_Rejected</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update IT Stage3 : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_IT_Stage4_Rejected</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update IT Stage4 : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_IT_Stage_Rejected</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update IT Stage : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Marketing_Stage1</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Marketing Stage1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Marketing_Stage2</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Marketing Stage2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Marketing_Stage3</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Marketing Stage3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Marketing_Stage4</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Marketing Stage4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_PMO_Stage1</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update PMO Stage1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_PMO_Stage2</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update PMO Stage2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_PMO_Stage3</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update PMO Stage3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_PMO_Stage4</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update PMO Stage4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_People_Department_Stage1</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update People Department Stage1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_People_Department_Stage2</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update People Department Stage2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_People_Department_Stage3</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update People Department Stage3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_People_Department_Stage4</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update People Department Stage4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Presales_Stage1</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Presales Stage1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Presales_Stage2</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Presales Stage2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Presales_Stage3</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Presales Stage3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Presales_Stage4</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Presales Stage4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Sales_Stage1</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Sales Stage1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Sales_Stage2</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Sales Stage2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Sales_Stage3</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Sales Stage3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Sales_Stage4</fullName>
+        <field>Stage__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Sales Stage4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status</fullName>
+        <description>Update status of Invoice before submit for approval.</description>
+        <field>Status__c</field>
+        <literalValue>Validate Invoice</literalValue>
+        <name>Update status</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>

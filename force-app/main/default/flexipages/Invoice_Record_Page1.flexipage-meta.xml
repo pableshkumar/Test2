@@ -40,7 +40,7 @@
                         <valueListItems>
                             <value>Invoice__c.Submit_Invoice</value>
                             <visibilityRule>
-                                <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+                                <booleanFilter>(1 OR 2) AND (3 OR 4)</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.Stage__c}</leftValue>
                                     <operator>EQUAL</operator>
@@ -55,6 +55,11 @@
                                     <leftValue>{!Record.RecordType.Name}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>Purchase Invoice</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.RecordType.Name}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Indirect Purchase Invoice</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>

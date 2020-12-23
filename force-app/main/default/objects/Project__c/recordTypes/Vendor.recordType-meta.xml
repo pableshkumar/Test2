@@ -40,6 +40,61 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Cost_Center__c</picklist>
+        <values>
+            <fullName>AR %26 AP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audit %26 Governance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Field Service Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PMO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>People Department</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Payment_Term__c</picklist>
         <values>
             <fullName>NET10</fullName>

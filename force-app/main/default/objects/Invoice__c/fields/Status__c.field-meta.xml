@@ -46,6 +46,16 @@
                 <label>Exception Approval Needed</label>
             </value>
             <value>
+                <fullName>Send to Department Head</fullName>
+                <default>false</default>
+                <label>Send to Department Head</label>
+            </value>
+            <value>
+                <fullName>Send to C Group</fullName>
+                <default>false</default>
+                <label>Send to C Group</label>
+            </value>
+            <value>
                 <fullName>Sent To Client</fullName>
                 <default>false</default>
                 <label>Sent To Client</label>

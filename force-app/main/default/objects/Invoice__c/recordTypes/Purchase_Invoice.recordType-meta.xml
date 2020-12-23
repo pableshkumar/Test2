@@ -260,6 +260,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Send to Department Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Validate Invoice</fullName>
             <default>false</default>
         </values>
