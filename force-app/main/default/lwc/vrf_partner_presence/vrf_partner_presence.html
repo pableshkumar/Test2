@@ -1,6 +1,157 @@
 <template>
-  <lightning-record-edit-form class="Account" record-id={recordId} object-api-name="Account" onsuccess={handleSucess}>
+  <!-- <lightning-record-edit-form class="Account" record-id={recordId} object-api-name="Account" onsuccess={handleSucess}>
     <lightning-input-field field-name="Countries_Supported_by_Vendor__c" onchange={handleCountriesSupport}> </lightning-input-field>
     <lightning-input-field field-name="Type_of_Support__c" onchange={handleTypeOfSupport}> </lightning-input-field>
-  </lightning-record-edit-form>
+  </lightning-record-edit-form>-->
+
+  <!--this code is written by jatinder kumar code 7-1-2021-->
+  <div class="slds-m-around--xx-large container-fluid">
+    <div class="slds-float_right slds-p-bottom_small">
+      <h1 class="slds-page-header__title">Add Row
+        <lightning-button-icon icon-name="utility:add" size="large" variant="bare" alternative-text="Add"
+          onclick={addRow}> </lightning-button-icon>
+      </h1>
+    </div>
+    <div class="container-fluid">
+      <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+        <thead>
+          <tr class="slds-text-title_caps">
+            <th scope="col">
+              <div class="slds-truncate">#</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Company">Company</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Capability">Capability</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Name of Country Directly Supported">Name of Country Directly Supported
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Desktop/Laptop Support">Desktop/Laptop Support
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Desktop/Laptop Spares">Desktop/Laptop Spares
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Printer / MFD Support">Printer / MFD Support
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="N/W Equipment Support">N/W Equipment Support
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Data Center H And F Support">Data Center H And F Support
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Tape Management Support">Tape Management Support
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Voice And Telephony Support">Voice And Telephony Support
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Audio - Video Support">Audio - Video Support
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="DC B/F Support for Server Equipment">DC B/F Support for Server Equipment
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Telecom Equipment">Telecom Equipment
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Warehouse/Spare Management">Warehouse/Spare Management
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Action">Action</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <template for:each={partnerList} for:item="partner" for:index="indx">
+            <tr key={partner.key} id={partner.key}>
+              <td>{indx}</td>
+              <td>
+                <lightning-input data-id={indx}  value={partner.Company__c} onchange={handleNameChange}>
+                </lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx}  value={partner.Capability__c}
+                  onchange={handleAccountNumberChange}></lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx}  value={partner.Name_of_Country_Directly_Supported__c} onchange={handlePhoneChange}>
+                </lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx}  value={partner.DesktopLaptop_Support__c} onchange={handlePhoneChange}>
+                </lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx}  value={partner.DesktopLaptop_Spares__c} onchange={handlePhoneChange}>
+                </lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx}  value={partner.Printer_MFD_Support__c} onchange={handlePhoneChange}>
+                </lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx}  value={partner.NW_Equipment_Support__c} onchange={handlePhoneChange}>
+                </lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx}  value={partner.Data_Center_H_F_Support__c} onchange={handlePhoneChange}>
+                </lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx}  value={partner.Tape_Management_Support__c} onchange={handlePhoneChange}>
+                </lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx}  value={partner.Voice_Telephony_Support__c} onchange={handlePhoneChange}>
+                </lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx}  value={partner.Audio_Video_Support__c} onchange={handlePhoneChange}>
+                </lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx}  value={partner.DC_BF_Support_for_Server_Equipment__c} onchange={handlePhoneChange}>
+                </lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx}  value={partner.Telecom_Equipment__c} onchange={handlePhoneChange}>
+                </lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx}  value={partner.WarehouseSpare_Management__c} onchange={handlePhoneChange}>
+                </lightning-input>
+              </td>
+              <td>
+                <lightning-button-icon icon-name="utility:delete" data-id={indx} alternative-text="Delete"
+                  class="slds-m-left_xx-small" onclick={removeRow} title="Delete"></lightning-button-icon>
+              </td>
+            </tr>
+          </template>
+
+        </tbody>
+      </table>
+      <div class="slds-align_absolute-center slds-p-top_small">
+        <lightning-button name="Save" label="Save" onclick={saveRecord}></lightning-button>
+      </div>
+    </div>
+  </div>
+
 </template>
