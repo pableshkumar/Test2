@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Document_Type__c</fullName>
+    <businessStatus>Active</businessStatus>
     <externalId>false</externalId>
     <label>Document Type</label>
     <required>false</required>
+    <securityClassification>Public</securityClassification>
     <trackHistory>false</trackHistory>
     <type>Picklist</type>
     <valueSet>
@@ -46,6 +48,36 @@
                 <default>false</default>
                 <label>Invoice</label>
             </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>MOM</fullName>
+                <default>false</default>
+                <label>MOM</label>
+            </value>
+            <value>
+                <fullName>Vendor Capability</fullName>
+                <default>false</default>
+                <label>Vendor Capability</label>
+            </value>
+            <value>
+                <fullName>Partner Presence</fullName>
+                <default>false</default>
+                <label>Partner Presence</label>
+            </value>
+            <value>
+                <fullName>Financial Information</fullName>
+                <default>false</default>
+                <label>Financial Information</label>
+            </value>
+            <value>
+                <fullName>Escalation Matrix</fullName>
+                <default>false</default>
+                <label>Escalation Matrix</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>Account</controllingFieldValue>
@@ -58,6 +90,26 @@
         <valueSettings>
             <controllingFieldValue>Account</controllingFieldValue>
             <valueName>Contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account</controllingFieldValue>
+            <valueName>MOM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account</controllingFieldValue>
+            <valueName>Vendor Capability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account</controllingFieldValue>
+            <valueName>Partner Presence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account</controllingFieldValue>
+            <valueName>Financial Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account</controllingFieldValue>
+            <valueName>Escalation Matrix</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Invoice__c</controllingFieldValue>
@@ -74,6 +126,10 @@
         <valueSettings>
             <controllingFieldValue>Billing_Information__c</controllingFieldValue>
             <valueName>Billing Sheet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor_Enquiry__c</controllingFieldValue>
+            <valueName>Other</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

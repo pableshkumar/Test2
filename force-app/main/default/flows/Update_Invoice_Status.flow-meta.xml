@@ -44,5 +44,5 @@
             <targetReference>Update_Invoice_Status</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Draft</status>
 </Flow>

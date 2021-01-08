@@ -7,7 +7,6 @@
     <columns>ACCOUNT.TYPE</columns>
     <columns>Status__c</columns>
     <columns>ACCOUNT.ADDRESS1_STATE</columns>
-    
     <columns>Bank_Name__c</columns>
     <columns>Company_Group__c</columns>
     <columns>CORE.USERS.FIRST_NAME</columns>

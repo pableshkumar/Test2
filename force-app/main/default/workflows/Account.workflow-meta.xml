@@ -1,2 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Workflow xmlns="http://soap.sforce.com/2006/04/metadata"/>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>update_description_test</fullName>
+        <description>testing purpose</description>
+        <field>AnnualRevenue</field>
+        <formula>13235</formula>
+        <name>update description test</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>updating_to_Active</fullName>
+        <field>Status__c</field>
+        <literalValue>Active</literalValue>
+        <name>updating to Active</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>updating_to_DD</fullName>
+        <field>Status__c</field>
+        <literalValue>Due Diligence</literalValue>
+        <name>updating to DD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>updating_to_MSA</fullName>
+        <field>Status__c</field>
+        <literalValue>MSA</literalValue>
+        <name>updating to MSA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>updating_to_Registration</fullName>
+        <field>Status__c</field>
+        <literalValue>Registration</literalValue>
+        <name>updating to Registration</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+</Workflow>

@@ -1,0 +1,23 @@
+<template>
+  <div class="slds-box slds-theme_default">
+  <!--Loading Spinner-->
+  <div class="spinner">
+    <template if:true={isLoading}>
+      <lightning-spinner alternative-text="Loading" variant="brand" size="large"> </lightning-spinner>
+    </template>
+  </div>
+  <!--Progress indicator-->
+  <lightning-progress-indicator current-step={currentStep} type="path" variant="base">
+    <lightning-progress-step label="Vendor Capacity" value="1"> </lightning-progress-step>
+    <lightning-progress-step label="Partner Presence" value="2"> </lightning-progress-step>
+    <lightning-progress-step label="Financial Information" value="3"> </lightning-progress-step>
+    <lightning-progress-step label="Escalation Matrix" value="4"> </lightning-progress-step>
+  </lightning-progress-indicator>
+  <!--Step 1 : Vendor Capacity Form-->
+  <div class="stepOne">
+    <c-vrf_vendor_capability class="acntForm" object-api-name='Account' current-record-id={recordId}></c-vrf_vendor_capability>
+    <lightning-button class="slds-m-top_small" label="Next" onclick={goToStepTwo}> </lightning-button>
+    <lightning-button class="slds-m-top_small" label="Save" onclick={handleSave}> </lightning-button>
+  </div>
+</div>
+</template>

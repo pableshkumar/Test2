@@ -1,0 +1,8 @@
+<template>
+  <lightning-record-edit-form class="Account" record-id={recordId} object-api-name="Account" onsuccess={handleSucess}>
+    <lightning-input-field field-name="Documents_List__c" onchange={handleDocList}> </lightning-input-field>
+    <lightning-input-field field-name="Bank_details__c" onchange={handleBankDetails}> </lightning-input-field>
+    <lightning-input-field field-name="Payment_terms__c" onchange={handlePaymentTerms}> </lightning-input-field>
+    <lightning-input-field field-name="Invoicing_process__c" onchange={handleInvoicingProcess}> </lightning-input-field>
+  </lightning-record-edit-form>
+</template>
