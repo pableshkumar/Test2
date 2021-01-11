@@ -15,7 +15,10 @@
   </lightning-progress-indicator>
   <!--Step 1 : Vendor Capacity Form-->
   <div class="stepOne">
-    <c-vrf_vendor_capability class="acntForm" object-api-name='Account' current-record-id={recordId}></c-vrf_vendor_capability>
+  <!-- <c-vrf_vendor_capability class="acntForm" object-api-name='Account' current-record-id={recordId}></c-vrf_vendor_capability> -->
+   <!--  <c-vrf_partner_presence account-id={recordId} ></c-vrf_partner_presence> -->
+   <c-vrf_financial_information object-api-name='Bank_Information__c'  fields='' field-set-name='Bank_Information'
+   current-record-id=''></c-vrf_financial_information>
     <lightning-button class="slds-m-top_small" label="Next" onclick={goToStepTwo}> </lightning-button>
     <lightning-button class="slds-m-top_small" label="Save" onclick={handleSave}> </lightning-button>
   </div>

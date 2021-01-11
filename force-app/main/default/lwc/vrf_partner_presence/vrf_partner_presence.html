@@ -17,11 +17,11 @@
         <thead>
           <tr class="slds-text-title_caps">
             <th scope="col">
-              <div class="slds-truncate">#</div>
+              <div class="slds-truncate">Sr No</div>
             </th>
-            <th scope="col">
+            <!--   <th scope="col">
               <div class="slds-truncate" title="Company">Company</div>
-            </th>
+            </th> -->
             <th scope="col">
               <div class="slds-truncate" title="Capability">Capability</div>
             </th>
@@ -83,61 +83,78 @@
           <template for:each={partnerList} for:item="partner" for:index="indx">
             <tr key={partner.key} id={partner.key}>
               <td>{indx}</td>
-              <td>
-                <lightning-input data-id={indx}  value={partner.Company__c} onchange={handleNameChange}>
+              <!--  <td>
+               <lightning-input data-id={indx} label="Compnay" value={partner.compnay} onchange={handlCompanyChange}
+                  variant="label-hidden">
                 </lightning-input>
+              </td>  -->
+              <td>
+                <lightning-input data-id={indx} type="checkbox" label="Capability" value={partner.capability}
+                  onchange={handleCapabilityChange} variant="label-hidden"></lightning-input>
               </td>
               <td>
-                <lightning-input data-id={indx}  value={partner.Capability__c}
-                  onchange={handleAccountNumberChange}></lightning-input>
+                <lightning-combobox data-id={indx} label="Name of Country Directly"
+                  value={partner.nameofCountryDirectly} placeholder="-Select-" options={countryListvalues}
+                  onchange={handleCountryChange} variant="label-hidden" required>
+                </lightning-combobox>
               </td>
               <td>
-                <lightning-input data-id={indx}  value={partner.Name_of_Country_Directly_Supported__c} onchange={handlePhoneChange}>
-                </lightning-input>
+                <lightning-combobox data-id={indx} label="Desktop/Laptop Support" value={partner.desktopLaptopSupport}
+                  placeholder="-Select-" options={pickListvalues} onchange={handleSupportChange} variant="label-hidden" required>
+                </lightning-combobox>
               </td>
               <td>
-                <lightning-input data-id={indx}  value={partner.DesktopLaptop_Support__c} onchange={handlePhoneChange}>
-                </lightning-input>
+                <lightning-combobox data-id={indx} label="Desktop/Laptop Spares" value={partner.desktopLaptopSpares}
+                  placeholder="-Select-" options={pickListvalues} onchange={handleSparesChange} variant="label-hidden" required>
+                </lightning-combobox>
               </td>
               <td>
-                <lightning-input data-id={indx}  value={partner.DesktopLaptop_Spares__c} onchange={handlePhoneChange}>
-                </lightning-input>
+                <lightning-combobox data-id={indx} label="Printer / MFD Support" value={partner.printerMFDSupport}
+                  placeholder="-Select-" options={pickListvalues} onchange={handlePrinterChange} variant="label-hidden" required>
+                </lightning-combobox>
               </td>
               <td>
-                <lightning-input data-id={indx}  value={partner.Printer_MFD_Support__c} onchange={handlePhoneChange}>
-                </lightning-input>
+                <lightning-combobox data-id={indx} label="N/W Equipment Support" value={partner.nWEquipmentSupport}
+                  placeholder="-Select-" options={pickListvalues} onchange={handleEquipmentChange}
+                  variant="label-hidden" required>
+                </lightning-combobox>
               </td>
               <td>
-                <lightning-input data-id={indx}  value={partner.NW_Equipment_Support__c} onchange={handlePhoneChange}>
-                </lightning-input>
+                <lightning-combobox data-id={indx} label="Data Center H And F Support" value={partner.dataCenter}
+                  placeholder="-Select-" options={pickListvalues} onchange={handleDataChange} variant="label-hidden" required>
+                </lightning-combobox>
               </td>
               <td>
-                <lightning-input data-id={indx}  value={partner.Data_Center_H_F_Support__c} onchange={handlePhoneChange}>
-                </lightning-input>
+                <lightning-combobox data-id={indx} label="Tape Management Support" value={partner.tapeManagement}
+                  placeholder="-Select-" options={pickListvalues} onchange={handleTapeChange} variant="label-hidden" required>
+                </lightning-combobox>
               </td>
               <td>
-                <lightning-input data-id={indx}  value={partner.Tape_Management_Support__c} onchange={handlePhoneChange}>
-                </lightning-input>
+                <lightning-combobox data-id={indx} label="Voice And Telephony Support" value={partner.voiceTelephony}
+                  placeholder="-Select-" options={pickListvalues} onchange={handleVoiceChange} variant="label-hidden" required>
+                </lightning-combobox>
               </td>
               <td>
-                <lightning-input data-id={indx}  value={partner.Voice_Telephony_Support__c} onchange={handlePhoneChange}>
-                </lightning-input>
+                <lightning-combobox data-id={indx} label="Audio - Video Support" value={partner.audioVideo}
+                  placeholder="-Select-" options={pickListvalues} onchange={handleAudioChange} variant="label-hidden" required>
+                </lightning-combobox>
               </td>
               <td>
-                <lightning-input data-id={indx}  value={partner.Audio_Video_Support__c} onchange={handlePhoneChange}>
-                </lightning-input>
+                <lightning-combobox data-id={indx} label="DC B/F Support for Server Equipment"
+                  value={partner.dCBFSupport} placeholder="-Select-" options={pickListvalues} onchange={handleDCChange}
+                  variant="label-hidden" required>
+                </lightning-combobox>
               </td>
               <td>
-                <lightning-input data-id={indx}  value={partner.DC_BF_Support_for_Server_Equipment__c} onchange={handlePhoneChange}>
-                </lightning-input>
+                <lightning-combobox data-id={indx} label="Telecom Equipment" value={partner.telecomEquipment}
+                  placeholder="-Select-" options={pickListvalues} onchange={handleTelecomChange} variant="label-hidden" required>
+                </lightning-combobox>
               </td>
               <td>
-                <lightning-input data-id={indx}  value={partner.Telecom_Equipment__c} onchange={handlePhoneChange}>
-                </lightning-input>
-              </td>
-              <td>
-                <lightning-input data-id={indx}  value={partner.WarehouseSpare_Management__c} onchange={handlePhoneChange}>
-                </lightning-input>
+                <lightning-combobox data-id={indx} label="Warehouse/Spare Management" value={partner.warehouseSpare}
+                  placeholder="-Select-" options={pickListvalues} onchange={handleWarehouseChange}
+                  variant="label-hidden" required>
+                </lightning-combobox>
               </td>
               <td>
                 <lightning-button-icon icon-name="utility:delete" data-id={indx} alternative-text="Delete"
