@@ -1,26 +1,42 @@
 <template>
   <div class="slds-box slds-theme_default">
-  <!--Loading Spinner-->
-  <div class="spinner">
-    <template if:true={isLoading}>
-      <lightning-spinner alternative-text="Loading" variant="brand" size="large"> </lightning-spinner>
-    </template>
+    <!--Loading Spinner-->
+    <div class="spinner">
+      <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" variant="brand" size="large"> </lightning-spinner>
+      </template>
+    </div>
+    <!--Progress indicator-->
+    <lightning-progress-indicator current-step={currentStep} type="path" variant="base">
+      <lightning-progress-step label="Vendor Capacity" value="1"> </lightning-progress-step>
+      <lightning-progress-step label="Partner Presence" value="2"> </lightning-progress-step>
+      <lightning-progress-step label="Financial Information" value="3"> </lightning-progress-step>
+      <lightning-progress-step label="Escalation Matrix" value="4"> </lightning-progress-step>
+    </lightning-progress-indicator>
+    <!--Step 1 : Vendor Capacity Form-->
+    <div class="stepOne">
+      <c-vrf_vendor_capability class="acntForm" object-api-name='Account' current-record-id={recordId}>
+      </c-vrf_vendor_capability>
+      <!--  <c-vrf_partner_presence account-id={recordId} ></c-vrf_partner_presence> -->
+      <!-- <c-vrf_financial_information object-api-name='Bank_Information__c'  fields='' field-set-name='Bank_Information'
+   current-record-id={recordId}></c-vrf_financial_information> -->
+     
+      <lightning-button class="slds-m-top_small" label="Next" onclick={goToStepTwo}> </lightning-button>
+      <!-- <lightning-button class="slds-m-top_small" label="Save" onclick={handleSave}> </lightning-button> -->
+    </div>
+
+    <div class="stepTwo" style="display: none">
+      <c-vrf_partner_presence account-id={recordId}></c-vrf_partner_presence>
+      <lightning-button class="slds-m-top_small" label="Next" onclick={goToStepThree}> </lightning-button>
+    </div>
+    <div class="stepThree" style="display: none">
+      <c-vrf_financial_information object-api-name='Bank_Information__c'  fields='' field-set-name='Bank_Information'
+      current-record-id={recordId}></c-vrf_financial_information>
+      <lightning-button class="slds-m-top_small" label="Next" onclick={goToStepFour}> </lightning-button>
+    </div>
+    <div class="stepFour" style="display: none">
+      <c-vrf_escalation_matrix account-id={recordId}></c-vrf_escalation_matrix>
+      <lightning-button class="slds-m-top_small" label="Finish"> </lightning-button>
+    </div>
   </div>
-  <!--Progress indicator-->
-  <lightning-progress-indicator current-step={currentStep} type="path" variant="base">
-    <lightning-progress-step label="Vendor Capacity" value="1"> </lightning-progress-step>
-    <lightning-progress-step label="Partner Presence" value="2"> </lightning-progress-step>
-    <lightning-progress-step label="Financial Information" value="3"> </lightning-progress-step>
-    <lightning-progress-step label="Escalation Matrix" value="4"> </lightning-progress-step>
-  </lightning-progress-indicator>
-  <!--Step 1 : Vendor Capacity Form-->
-  <div class="stepOne">
-  <!-- <c-vrf_vendor_capability class="acntForm" object-api-name='Account' current-record-id={recordId}></c-vrf_vendor_capability> -->
-   <!--  <c-vrf_partner_presence account-id={recordId} ></c-vrf_partner_presence> -->
-   <c-vrf_financial_information object-api-name='Bank_Information__c'  fields='' field-set-name='Bank_Information'
-   current-record-id=''></c-vrf_financial_information>
-    <lightning-button class="slds-m-top_small" label="Next" onclick={goToStepTwo}> </lightning-button>
-    <lightning-button class="slds-m-top_small" label="Save" onclick={handleSave}> </lightning-button>
-  </div>
-</div>
 </template>

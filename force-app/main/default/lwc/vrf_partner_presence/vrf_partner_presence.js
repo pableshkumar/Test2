@@ -14,8 +14,8 @@ import VOICE_FIELD from '@salesforce/schema/Vendor_Partner_Presence__c.Voice_Tel
 import DC_BF_FIELD from '@salesforce/schema/Vendor_Partner_Presence__c.DC_BF_Support_for_Server_Equipment__c';
 import TELECOM_FIELD from '@salesforce/schema/Vendor_Partner_Presence__c.Telecom_Equipment__c';
 import WAREHOUSE_FIELD from '@salesforce/schema/Vendor_Partner_Presence__c.WarehouseSpare_Management__c';
-import savePartner from '@salesforce/apex/VendorPartnerController.savePartner';
-import getPickListValues from '@salesforce/apex/VendorPartnerController.getPickListValues';
+import savePartner from '@salesforce/apex/VendorOnBoardingController.savePartner';
+import getPickListValues from '@salesforce/apex/VendorOnBoardingController.getPickListValues';
 
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
@@ -176,9 +176,6 @@ export default class Vrf_partner_presence extends LightningElement {
     handleAudioChange(event){
         var selectedRow = event.currentTarget;
         var key = selectedRow.dataset.id;
-        if(event.target.value ==''){
-            console.log('sucess find===');
-        }
         this.partnerList[key].Audio_Video_Support__c = event.target.value;
     }
     handleDCChange(event){
@@ -234,8 +231,6 @@ export default class Vrf_partner_presence extends LightningElement {
                     );
                     console.log("error", JSON.stringify(this.error));
                 });
-          }else{
-            alert("Please fill the all required filed");
           }
        
     }

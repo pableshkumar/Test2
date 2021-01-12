@@ -19,6 +19,7 @@ export default class Vrf_form_lwc extends LightningElement {
         this.template
             .querySelector('div.stepTwo')
             .classList.remove('slds-hide');
+    
    }
     goBackToStepTwo() {
         this.currentStep = '2';

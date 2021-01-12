@@ -1,6 +1,141 @@
 <template>
+  <!--
   <lightning-record-edit-form class="Account" record-id={recordId} object-api-name="Account" onsuccess={handleSucess}>
     <lightning-input-field field-name="Vendor_business_contacts__c" onchange={handleVendorBusinessCon}> </lightning-input-field>
     <lightning-input-field field-name="Escalation_directory__c" onchange={handleEscalationDirectory}> </lightning-input-field>
-  </lightning-record-edit-form>
+  </lightning-record-edit-form> -->
+  <!--this code is written by jatinder kumar 12-jan-2020-->
+  <div class="slds-m-around--xx-large container-fluid">
+    <div class="slds-float_right slds-p-bottom_small">
+      <h1 class="slds-page-header__title">Add Row
+        <lightning-button-icon icon-name="utility:add" size="large" variant="bare" alternative-text="Add"
+          onclick={addRow}> </lightning-button-icon>
+      </h1>
+    </div>
+    <div class="container-fluid">
+      <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+        <thead>
+          <tr class="slds-text-title_caps">
+            <th scope="col">
+              <div class="slds-truncate">Sr No</div>
+            </th>
+            <!--   <th scope="col">
+              <div class="slds-truncate" title="Company">Company</div>
+            </th> -->
+            <th scope="col">
+              <div class="slds-truncate" title="Contact Types">Contact Types</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Job title/ Designation">Job title/ Designation
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="First Name">First Name
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Last Name">Last Name
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Email">Email
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Mobile Phone">Mobile Phone
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Street">Street</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="City">City</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="State/Province">State/Province</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title=" Zip/Postal Code"> Zip/Postal Code</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Country"> Country</div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="LinkedIn Profile">LinkedIn Profile
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" title="Action">Action</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <template for:each={contactList} for:item="con" for:index="indx">
+            <tr key={con.key} id={con.key}>
+              <td>{indx}</td>
+              <td>
+                <lightning-combobox data-id={indx} label="Contact Types" value={con.nameofCountryDirectly}
+                  placeholder="-Select-" options={pickListvalues} onchange={handleTypesChange} variant="label-hidden"
+                  required>
+                </lightning-combobox>
+              </td>
+              <td>
+                <lightning-input data-id={indx} type="text" label="Job title/ Designation" value={con.job}
+                  onchange={handleJobChange} variant="label-hidden" required></lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx} type="text" label="First Name" value={con.first}
+                  onchange={handleFirstChange} variant="label-hidden" required></lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx} type="text" label="last Name" value={con.last}
+                  onchange={handlelastChange} variant="label-hidden" required></lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx} type="email" label="Email" value={con.email}
+                  onchange={handleEmailChange} variant="label-hidden" required></lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx} type="phone" label="Mobile Phone" value={con.mobile}
+                  onchange={handleMobileChange} variant="label-hidden" required></lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx} type="text" label="Street" value={con.street}
+                  onchange={handleStreetChange} variant="label-hidden"></lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx} type="text" label="City" value={con.city}
+                  onchange={handleCityChange} variant="label-hidden" required></lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx} type="text" label="State/Province" value={con.state}
+                  onchange={handleStateChange} variant="label-hidden" required></lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx} type="text" label="Zip/Postal Code" value={con.zipCode}
+                  onchange={handleZipChange} variant="label-hidden" required></lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx} type="text" label=" Country" value={con.country}
+                  onchange={handleCountryChange} variant="label-hidden" required></lightning-input>
+              </td>
+              <td>
+                <lightning-input data-id={indx} type="text" label="LinkedIn Profile" value={con.linkedIn}
+                  onchange={handleLinkedInChange} variant="label-hidden" required></lightning-input>
+              </td>
+              <td>
+                <lightning-button-icon icon-name="utility:delete" data-id={indx} alternative-text="Delete"
+                  class="slds-m-left_xx-small" onclick={removeRow} title="Delete"></lightning-button-icon>
+              </td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+      <div class="slds-align_absolute-center slds-p-top_small">
+        <lightning-button name="Save" label="Save" onclick={saveRecord}></lightning-button>
+      </div>
+    </div>
+  </div>
+
 </template>
