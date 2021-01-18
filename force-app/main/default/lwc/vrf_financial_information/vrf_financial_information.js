@@ -5,62 +5,6 @@ import getPickListValues from "@salesforce/apex/VendorOnBoardingController.getPi
 import getAccountData from "@salesforce/apex/VendorOnBoardingController.getAccountData";
 import updateAccount from "@salesforce/apex/VendorOnBoardingController.updateAccount";
 export default class Vrf_financial_information extends LightningElement {
-  /* //@api contactId;
-    @api accountId;
-    @track fields ={};
-
-    @api handleSubmit(){
-        //this.fields.ContactId = this.contactId;
-        //this.fields.AccountId = this.accountId;
-        this.template.querySelector('lightning-record-edit-form').submit(this.fields);
-    } */
-
-  /*handleSubjectChange(event){
-     this.fields.Subject =event.target.value;
-    }
-    handleDescriptionChange(event){
-        this.fields.Description =event.target.value;
-    }
-    handleOriginChange(event){
-    this.fields.Origin =event.target.value;
-    }*/
-  /*
-    handleDocList(event) {
-        this.fields.Documents_List__c = event.target.value;
-    }
-    handleBankDetails(event) {
-        this.fields.Bank_details__c = event.target.value;
-    }
-    handlePaymentTerms(event) {
-        this.fields.Payment_terms__c = event.target.value;
-    }
-    handleInvoicingProcess(event) {
-        this.fields.Invoicing_process__c = event.target.value;
-    }
-
-    handleSucess(event) {
-        const accountId = event.detail.id;
-        const selectEvent = new CustomEvent('accountid', {
-            detail: accountId
-        });
-        this.dispatchEvent(selectEvent);
-    } */
-  /*handleSucess (){
-        this[NavigationMixin.Navigate]({
-            type: 'standard__recordPage',
-            attributes: {
-                recordId: this.accountId,
-                objectApiName: 'Account',
-                actionName: 'view'
-            }
-        });
-        const evt = new ShowToastEvent({
-            message: "Account,Contact & Case has been created sucessfully",
-            variant: "success",
-        });
-        this.dispatchEvent(evt);
-    }*/
-
   @api currentRecordId = "";
   @api heading = "";
   @api fields = "";
@@ -170,10 +114,10 @@ export default class Vrf_financial_information extends LightningElement {
         variant: "success"
       })
     );
-    this.dispatchEvent(new CustomEvent("success"));
+    this.dispatchEvent(new CustomEvent("savefinancial"));
   }
 
-  getAccountData(event) {
+  updateAccountData(event) {
     const allValid = [
       ...this.template.querySelectorAll("lightning-input")
     ].reduce((validSoFar, inputCmp) => {
@@ -197,7 +141,7 @@ export default class Vrf_financial_information extends LightningElement {
         }
       }, this);
       let account = {
-        Id: this.currentRecordId,
+        Id:this.currentRecordId,
         Certificate_of_Incorporate_Registration__c: this.certificatesofIncorporationAndRegistration,
         Tax_Information__c: this.taxValue,
         GSTVAT_Registration_Certificate__c: this.gstAndVAT,
@@ -205,18 +149,21 @@ export default class Vrf_financial_information extends LightningElement {
         TAX_Identification_Number__c: this.taxIdetification,
         Cancel_Check_of_Bank_Account_Number__c: this.cancelCheck
       };
-      this.accountList.push(JSON.parse(JSON.stringify(account)));
-      updateAccount({ accList: this.accountList, accId: this.currentRecordId })
+      updateAccount({ accData: JSON.parse(JSON.stringify(account))})
         .then((result) => {
-          let reusltdata = result;
-          if (reusltdata) {
-            this.showLoadingSpinner = flase;
             this.handleSubmit(event);
-          }
         })
         .catch((error) => {
-          let dataError = error;
-          console.log("Data Error" + dataError);
+          let dataError = error.getMessage();
+          this.dispatchEvent(
+            new ShowToastEvent({
+              title: 'Error',
+              message: dataError,
+              variant: 'error',
+              mode: 'dismissable'
+          })
+          );
+          
         })
         .finally(() => {
           // hide spinner

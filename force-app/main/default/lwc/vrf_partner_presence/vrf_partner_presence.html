@@ -1,174 +1,36 @@
 <template>
-  <!-- <lightning-record-edit-form class="Account" record-id={recordId} object-api-name="Account" onsuccess={handleSucess}>
-    <lightning-input-field field-name="Countries_Supported_by_Vendor__c" onchange={handleCountriesSupport}> </lightning-input-field>
-    <lightning-input-field field-name="Type_of_Support__c" onchange={handleTypeOfSupport}> </lightning-input-field>
-  </lightning-record-edit-form>-->
-
   <!--this code is written by jatinder kumar code 7-1-2021-->
-  <div class="slds-m-around--xx-large container-fluid">
-    <div class="slds-float_right slds-p-bottom_small">
-      <h1 class="slds-page-header__title">Add Row
-        <lightning-button-icon icon-name="utility:add" size="large" variant="bare" alternative-text="Add"
-          onclick={addRow}> </lightning-button-icon>
-      </h1>
-    </div>
-    <div class="container-fluid">
-      <table class="slds-table slds-table_bordered slds-table_cell-buffer">
-        <thead>
-          <tr class="slds-text-title_caps">
-            <th scope="col">
-              <div class="slds-truncate">Sr No</div>
-            </th>
-            <!--   <th scope="col">
-              <div class="slds-truncate" title="Company">Company</div>
-            </th> -->
-            <th scope="col">
-              <div class="slds-truncate" title="Capability">Capability</div>
-            </th>
-            <th scope="col">
-              <div class="slds-truncate" title="Name of Country Directly Supported">Name of Country Directly Supported
-              </div>
-            </th>
-            <th scope="col">
-              <div class="slds-truncate" title="Desktop/Laptop Support">Desktop/Laptop Support
-              </div>
-            </th>
-            <th scope="col">
-              <div class="slds-truncate" title="Desktop/Laptop Spares">Desktop/Laptop Spares
-              </div>
-            </th>
-            <th scope="col">
-              <div class="slds-truncate" title="Printer / MFD Support">Printer / MFD Support
-              </div>
-            </th>
-            <th scope="col">
-              <div class="slds-truncate" title="N/W Equipment Support">N/W Equipment Support
-              </div>
-            </th>
-            <th scope="col">
-              <div class="slds-truncate" title="Data Center H And F Support">Data Center H And F Support
-              </div>
-            </th>
-            <th scope="col">
-              <div class="slds-truncate" title="Tape Management Support">Tape Management Support
-              </div>
-            </th>
-            <th scope="col">
-              <div class="slds-truncate" title="Voice And Telephony Support">Voice And Telephony Support
-              </div>
-            </th>
-            <th scope="col">
-              <div class="slds-truncate" title="Audio - Video Support">Audio - Video Support
-              </div>
-            </th>
-            <th scope="col">
-              <div class="slds-truncate" title="DC B/F Support for Server Equipment">DC B/F Support for Server Equipment
-              </div>
-            </th>
-            <th scope="col">
-              <div class="slds-truncate" title="Telecom Equipment">Telecom Equipment
-              </div>
-            </th>
-            <th scope="col">
-              <div class="slds-truncate" title="Warehouse/Spare Management">Warehouse/Spare Management
-              </div>
-            </th>
-            <th scope="col">
-              <div class="slds-truncate" title="Action">Action</div>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-
-          <template for:each={partnerList} for:item="partner" for:index="indx">
-            <tr key={partner.key} id={partner.key}>
-              <td>{indx}</td>
-              <!--  <td>
-               <lightning-input data-id={indx} label="Compnay" value={partner.compnay} onchange={handlCompanyChange}
-                  variant="label-hidden">
-                </lightning-input>
-              </td>  -->
-              <td>
-                <lightning-input data-id={indx} type="checkbox" label="Capability" value={partner.capability}
-                  onchange={handleCapabilityChange} variant="label-hidden"></lightning-input>
-              </td>
-              <td>
-                <lightning-combobox data-id={indx} label="Name of Country Directly"
-                  value={partner.nameofCountryDirectly} placeholder="-Select-" options={countryListvalues}
-                  onchange={handleCountryChange} variant="label-hidden" required>
-                </lightning-combobox>
-              </td>
-              <td>
-                <lightning-combobox data-id={indx} label="Desktop/Laptop Support" value={partner.desktopLaptopSupport}
-                  placeholder="-Select-" options={pickListvalues} onchange={handleSupportChange} variant="label-hidden" required>
-                </lightning-combobox>
-              </td>
-              <td>
-                <lightning-combobox data-id={indx} label="Desktop/Laptop Spares" value={partner.desktopLaptopSpares}
-                  placeholder="-Select-" options={pickListvalues} onchange={handleSparesChange} variant="label-hidden" required>
-                </lightning-combobox>
-              </td>
-              <td>
-                <lightning-combobox data-id={indx} label="Printer / MFD Support" value={partner.printerMFDSupport}
-                  placeholder="-Select-" options={pickListvalues} onchange={handlePrinterChange} variant="label-hidden" required>
-                </lightning-combobox>
-              </td>
-              <td>
-                <lightning-combobox data-id={indx} label="N/W Equipment Support" value={partner.nWEquipmentSupport}
-                  placeholder="-Select-" options={pickListvalues} onchange={handleEquipmentChange}
-                  variant="label-hidden" required>
-                </lightning-combobox>
-              </td>
-              <td>
-                <lightning-combobox data-id={indx} label="Data Center H And F Support" value={partner.dataCenter}
-                  placeholder="-Select-" options={pickListvalues} onchange={handleDataChange} variant="label-hidden" required>
-                </lightning-combobox>
-              </td>
-              <td>
-                <lightning-combobox data-id={indx} label="Tape Management Support" value={partner.tapeManagement}
-                  placeholder="-Select-" options={pickListvalues} onchange={handleTapeChange} variant="label-hidden" required>
-                </lightning-combobox>
-              </td>
-              <td>
-                <lightning-combobox data-id={indx} label="Voice And Telephony Support" value={partner.voiceTelephony}
-                  placeholder="-Select-" options={pickListvalues} onchange={handleVoiceChange} variant="label-hidden" required>
-                </lightning-combobox>
-              </td>
-              <td>
-                <lightning-combobox data-id={indx} label="Audio - Video Support" value={partner.audioVideo}
-                  placeholder="-Select-" options={pickListvalues} onchange={handleAudioChange} variant="label-hidden" required>
-                </lightning-combobox>
-              </td>
-              <td>
-                <lightning-combobox data-id={indx} label="DC B/F Support for Server Equipment"
-                  value={partner.dCBFSupport} placeholder="-Select-" options={pickListvalues} onchange={handleDCChange}
-                  variant="label-hidden" required>
-                </lightning-combobox>
-              </td>
-              <td>
-                <lightning-combobox data-id={indx} label="Telecom Equipment" value={partner.telecomEquipment}
-                  placeholder="-Select-" options={pickListvalues} onchange={handleTelecomChange} variant="label-hidden" required>
-                </lightning-combobox>
-              </td>
-              <td>
-                <lightning-combobox data-id={indx} label="Warehouse/Spare Management" value={partner.warehouseSpare}
-                  placeholder="-Select-" options={pickListvalues} onchange={handleWarehouseChange}
-                  variant="label-hidden" required>
-                </lightning-combobox>
-              </td>
-              <td>
-                <lightning-button-icon icon-name="utility:delete" data-id={indx} alternative-text="Delete"
-                  class="slds-m-left_xx-small" onclick={removeRow} title="Delete"></lightning-button-icon>
-              </td>
-            </tr>
-          </template>
-
-        </tbody>
-      </table>
-      <div class="slds-align_absolute-center slds-p-top_small">
-        <lightning-button name="Save" label="Save" onclick={saveRecord}></lightning-button>
-      </div>
-    </div>
-  </div>
-
+  <div class="slds-is-relative">
+    <template if:true={showLoadingSpinner}>
+        <lightning-spinner alternative-text="Loading" size="medium" role="alert">
+        </lightning-spinner>
+    </template>
+    <lightning-record-edit-form layout-type="Full" record-id='' object-api-name={objectApiName}
+            onsubmit={handleSubmit} onsuccess={handleSuccess}>
+            <lightning-layout multiple-rows="true" style="width:100%">
+                <lightning-layout-item size="12">
+                    <lightning-messages>
+                    </lightning-messages>
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                    <h2 style="background-color: #f3f2f2;margin-top: 15px;padding: 15px;"><b>Vendor Partner Presence</b></h2>
+                    <lightning-layout multiple-rows="true">
+                        <template for:each={fieldArray} for:item="field">
+                            <lightning-layout-item size="12" key={field.Key} medium-device-size="6"
+                                padding="horizontal-medium" class="slds-var-p-top_small">
+                                <lightning-input-field field-name={field.Name}>
+                                </lightning-input-field>
+                            </lightning-layout-item>
+                        </template>
+                    </lightning-layout>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-record-edit-form>
+        <div class="slds-float--right slds-p-top_small">
+          <lightning-button variant="brand-outline"  name="addMore" onclick={handleAddMore}
+          label="Save &amp; Add More"></lightning-button>
+            <lightning-button class="slds-p-left_x-small" variant="brand" type="submit" name="update" onclick={handleSaveAndNext}
+                label="Save &amp; Next"></lightning-button>
+        </div>
+</div>
 </template>

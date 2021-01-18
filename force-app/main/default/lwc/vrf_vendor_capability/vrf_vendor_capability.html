@@ -1,14 +1,4 @@
 <template>
-    <!--  <lightning-record-edit-form class="Account" record-id={recordId} object-api-name="Account" onsubmit={handleSubmit} onsuccess={handleSucess}>
-<lightning-input-field field-name="Company_Overview__c" onchange={handleCompanyOverview}> </lightning-input-field>
-<lightning-input-field field-name="Company_registration_details__c" onchange={handleCompanyRegDetails}> </lightning-input-field>
-<lightning-input-field field-name="Details_of_Key_personnel__c" onchange={handleDetailsOfKeyPersonnel}> </lightning-input-field>
-<lightning-input-field field-name="Employee_Call_support__c" onchange={handleEmployeeCallSupport}> </lightning-input-field>
-<lightning-input-field field-name="Field_Support__c" onchange={handleFieldSupport}> </lightning-input-field>
-<lightning-input-field field-name="Certificate_from_OEM__c" onchange={handleCertificate}> </lightning-input-field>
-<lightning-input-field field-name="Service_Capability__c" onchange={handleServiceCapa}> </lightning-input-field>  -->
-    <!--<lightning-button type="submit" variant="brand" label="Save" title="Save" class="slds-m-left_x-small"> </lightning-button>-->
-    <!--</lightning-record-edit-form> -->
     <!-- Spinner -->
     <div class="slds-is-relative">
         <template if:true={showLoadingSpinner}>
@@ -218,7 +208,8 @@
                 <lightning-layout multiple-rows="true">
                     <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
                         class="slds-var-p-top_small">
-                        <lightning-input type="text" label="Name of Owners/Director of the Company" name="Name of Owners/Director of the Company">
+                        <lightning-input type="text" label="Name of Owners/Director of the Company"
+                            name="Name of Owners/Director of the Company">
                         </lightning-input>
                     </lightning-layout-item>
                     <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
@@ -243,31 +234,33 @@
                     </lightning-layout-item>
                     <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
                         class="slds-var-p-top_small">
-                        <lightning-input type="email" label="Sales Department (Email:)" name="Sales Department Email"></lightning-input>
-                    </lightning-layout-item>
-                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
-                        class="slds-var-p-top_small">
-                        <lightning-input type="tel" label="Sales Department (Phone No:)" name="Sales Department Phone"></lightning-input>
-                    </lightning-layout-item>
-                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
-                        class="slds-var-p-top_small">
-                        <lightning-input type="email" label="Dispatch Help Desk Department (Email:)" name="Dispatch Help Desk Email">
+                        <lightning-input type="email" label="Sales Department (Email:)" name="Sales Department Email">
                         </lightning-input>
                     </lightning-layout-item>
                     <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
                         class="slds-var-p-top_small">
-                        <lightning-input type="tel" label="Dispatch Help Desk Department (Phone No:)" name="Dispatch Help Desk Phone">
+                        <lightning-input type="tel" label="Sales Department (Phone No:)" name="Sales Department Phone">
+                        </lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="email" label="Dispatch Help Desk Department (Email:)"
+                            name="Dispatch Help Desk Email">
+                        </lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="tel" label="Dispatch Help Desk Department (Phone No:)"
+                            name="Dispatch Help Desk Phone">
                         </lightning-input>
                     </lightning-layout-item>
                 </lightning-layout>
             </lightning-layout-item>
-            <lightning-layout>
-                <lightning-layout-item size="12" class="slds-float_right slds-var-m-top_medium">
-                    <lightning-button class="slds-m-left_x-small" variant="brand"  onclick={handleSubmit}
-                                            name="update" label="Save"></lightning-button>
-                </lightning-layout-item>
-            </lightning-layout>
         </lightning-layout>
 
+        <div class="slds-float--right slds-p-top_small">
+            <lightning-button class="slds-m-left_x-small" variant="brand" onclick={handleSubmit} name="update"
+                label="Save &amp; Next"></lightning-button>
+        </div>
     </div>
 </template>

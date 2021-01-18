@@ -107,11 +107,11 @@ public with sharing class VendorOnBoardingController {
     }
 
     @AuraEnabled
-    public static void updateAccount(List<Account> accList,String accId){
+    public static void updateAccount(Account accData){
       try {
-          if(!accList.isEmpty()){
-              update accList;  
-          } 
+          system.debug('Account---<>'+accData);
+              update accData;  
+         
       } catch (Exception e) {
         throw new AuraHandledException(e.getMessage());
       }

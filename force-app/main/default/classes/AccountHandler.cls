@@ -1,18 +1,4 @@
 public class AccountHandler {
-    public void vendorStages(List<Account> lstAcc){
-        
-        for(Account acc:lstAcc){
-            if(acc.MSA_Required__c == 'Yes'){
-                acc.Status__c = 'MSA';
-                // Leadstatus.add(acc);
-            }  
-            else if(acc.MSA_Required__c == 'No'){
-                //acc.Status__c = 'Registration';
-                // acc.MSA_Required__c = 'None';
-            }
-        }
-    }
-    
     public void rejectComm(List<Account> lstAcc){
         
         List<Account> Leads = New List <Account>();

@@ -37,10 +37,11 @@ public with sharing class FileOrganiserHandler {
         file.Document_Type__c = documentType;
         update file;
         try{
-            String checkId = accId.substring(0, Math.min(accId.length(), 4));
-            if(checkId =='0011'){
+            String checkId = accId.substring(0, Math.min(accId.length(), 3));
+            if(checkId =='001'){
                 Account acc=[select Id,Status__c,File_Type__c from Account where Id =: accId LIMIT 1]; 
                 acc.File_Type__c=documentType;
+                system.debug('file type--->'+acc.File_Type__c);
                 if(documentType =='Vendor Capability'){
                     acc.Vendor_capability__c=true;
                 }else if(documentType =='Partner Presence'){

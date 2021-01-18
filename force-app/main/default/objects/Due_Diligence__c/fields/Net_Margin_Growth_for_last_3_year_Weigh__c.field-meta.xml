@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Net_Margin_Growth_for_last_3_year_Weigh__c</fullName>
+    <defaultValue>2</defaultValue>
+    <externalId>false</externalId>
+    <label>Net Margin Growth for last 3year Weight%</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

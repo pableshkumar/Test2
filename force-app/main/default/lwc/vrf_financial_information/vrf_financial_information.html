@@ -1,89 +1,78 @@
 <template>
-    <!-- <lightning-record-edit-form class="Account" record-id={recordId} object-api-name="Account" onsuccess={handleSucess}>
-       <lightning-input-field field-name="Documents_List__c" onchange={handleDocList}> </lightning-input-field>
-       <lightning-input-field field-name="Bank_details__c" onchange={handleBankDetails}> </lightning-input-field>
-       <lightning-input-field field-name="Payment_terms__c" onchange={handlePaymentTerms}> </lightning-input-field>
-       <lightning-input-field field-name="Invoicing_process__c" onchange={handleInvoicingProcess}> </lightning-input-field>
-     </lightning-record-edit-form> -->
     <!--This code is written by jatinder kumar in 1-jan-2020-->
-    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
-        <!-- Spinner -->
-        <div class="slds-is-relative">
-            <template if:true={showLoadingSpinner}>
-                <lightning-spinner alternative-text="Loading" size="medium" role="alert">
-                </lightning-spinner>
-            </template>
-            <!--Account details-->
-            <lightning-layout>
-                <lightning-layout-item size="12" style="width:100%">
-                    <h2><b>Document List</b></h2>
+    <!-- Spinner -->
+    <div class="slds-is-relative">
+        <template if:true={showLoadingSpinner}>
+            <lightning-spinner alternative-text="Loading" size="medium" role="alert">
+            </lightning-spinner>
+        </template>
+        <!--Account details-->
+        <lightning-layout>
+            <lightning-layout-item size="12" style="width:100%">
+                <h2 style="background-color: #f3f2f2;margin-top: 15px;padding: 15px;"><b>Document List</b></h2>
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="text" label="Certificates of Incorporation /Registration"
+                            name="Certificates of Incorporation / Registration"
+                            value={certificatesofIncorporationAndRegistration}>
+                        </lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-combobox label="Tax Information" value={taxValue} placeholder="-Select-"
+                            options={pickListvalues} onchange={handleTaxChange} required>
+                        </lightning-combobox>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="text" label="GST/VAT Registration Certificate"
+                            name="GST/VAT Registration Certificate" value={gstAndVAT}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="text" label="Service Tax Registartion Number"
+                            name="Service Tax Registartion Number" value={servicetax}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="email" label="Tax Identification Number" name="Tax Identification Number"
+                            value={taxIdetification}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input-rich-text type="tel" label="Cancel Check of Bank Account Number"
+                            name="Cancel Check of Bank Account Number" value={cancelCheck}>
+                        </lightning-input-rich-text>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-record-edit-form layout-type="Full" record-id='' object-api-name={objectApiName}
+            onsubmit={handleSubmit} onsuccess={handleSuccess}>
+            <lightning-layout multiple-rows="true" style="width:100%">
+                <lightning-layout-item size="12">
+                    <lightning-messages>
+                    </lightning-messages>
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                    <h2 style="background-color: #f3f2f2;margin-top: 15px;padding: 15px;"><b>Bank Information</b></h2>
                     <lightning-layout multiple-rows="true">
-                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
-                            class="slds-var-p-top_small">
-                            <lightning-input type="text" label="Certificates of Incorporation /Registration"
-                                name="Certificates of Incorporation / Registration"
-                                value={certificatesofIncorporationAndRegistration}>
-                            </lightning-input>
-                        </lightning-layout-item>
-                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
-                            class="slds-var-p-top_small">
-                            <lightning-combobox label="Tax Information" value={taxValue} placeholder="-Select-"
-                                options={pickListvalues} onchange={handleTaxChange} required>
-                            </lightning-combobox>
-                        </lightning-layout-item>
-                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
-                            class="slds-var-p-top_small">
-                            <lightning-input type="text" label="GST/VAT Registration Certificate"
-                                name="GST/VAT Registration Certificate" value={gstAndVAT}></lightning-input>
-                        </lightning-layout-item>
-                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
-                            class="slds-var-p-top_small">
-                            <lightning-input type="text" label="Service Tax Registartion Number"
-                                name="Service Tax Registartion Number" value={servicetax}></lightning-input>
-                        </lightning-layout-item>
-                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
-                            class="slds-var-p-top_small">
-                            <lightning-input type="email" label="Tax Identification Number"
-                                name="Tax Identification Number" value={taxIdetification}></lightning-input>
-                        </lightning-layout-item>
-                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
-                            class="slds-var-p-top_small">
-                            <lightning-input-rich-text type="tel" label="Cancel Check of Bank Account Number"
-                                name="Cancel Check of Bank Account Number" value={cancelCheck}>
-                            </lightning-input-rich-text>
-                        </lightning-layout-item>
+                        <template for:each={fieldArray} for:item="field">
+                            <lightning-layout-item size="12" key={field.Key} medium-device-size="6"
+                                padding="horizontal-medium" class="slds-var-p-top_small">
+                                <lightning-input-field field-name={field.Name}>
+                                </lightning-input-field>
+                            </lightning-layout-item>
+                        </template>
                     </lightning-layout>
                 </lightning-layout-item>
             </lightning-layout>
-
-            <lightning-record-edit-form layout-type="Full" record-id='' object-api-name={objectApiName}
-                onsubmit={handleSubmit} onsuccess={handleSuccess}>
-                <lightning-layout multiple-rows="true" style="width:100%">
-                    <lightning-layout-item size="12">
-                        <lightning-messages>
-                        </lightning-messages>
-                    </lightning-layout-item>
-                    <lightning-layout-item size="12">
-                        <h2><b>Bank Information</b></h2>
-                        <lightning-layout multiple-rows="true">
-                            <template for:each={fieldArray} for:item="field">
-                                <lightning-layout-item size="12" key={field.Key} medium-device-size="6"
-                                    padding="horizontal-medium" class="slds-var-p-top_small">
-                                    <lightning-input-field field-name={field.Name}>
-                                    </lightning-input-field>
-                                </lightning-layout-item>
-                            </template>
-                        </lightning-layout>
-                    </lightning-layout-item>
-                    <lightning-layout-item size="12" class="slds-float_right slds-var-m-top_medium">
-                        <lightning-button variant="brand-outline" label="Cancel"
-                            title="Primary action with lighter look" onclick={closeModal} class="slds-m-top_small">
-                        </lightning-button>
-                        <lightning-button class="slds-m-left_x-small" variant="brand" type="submit" name="update"
-                            onclick={getAccountData} label="Save"></lightning-button>
-                    </lightning-layout-item>
-                </lightning-layout>
-            </lightning-record-edit-form>
+        </lightning-record-edit-form>
+        <div class="slds-float--right slds-p-top_small">
+            <lightning-button variant="brand" type="submit" name="update" onclick={updateAccountData}
+                label="Save &amp; Next"></lightning-button>
         </div>
     </div>
 </template>

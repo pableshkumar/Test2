@@ -3,7 +3,10 @@ import { LightningElement, api, track } from 'lwc';
 export default class Vrf_form_lwc extends LightningElement {
     @api recordId;
     @track currentStep;
-    @track accountId;
+    @track showVendor=true;
+    @track  showPartner;
+    @track showFinancial;
+    @track showEscalation;
     //@track contactId;
     isloading = false;
     goBackToStepOne() {
@@ -15,46 +18,27 @@ export default class Vrf_form_lwc extends LightningElement {
     }
    goToStepTwo() {
         this.currentStep = '2';
-        this.template.querySelector('div.stepOne').classList.add('slds-hide');
-        this.template
-            .querySelector('div.stepTwo')
-            .classList.remove('slds-hide');
-    
+        this.showVendor=false;
+        this.showPartner=true;
    }
-    goBackToStepTwo() {
-        this.currentStep = '2';
-        this.template.querySelector('div.stepThree').classList.add('slds-hide');
-        this.template
-            .querySelector('div.stepTwo')
-            .classList.remove('slds-hide');
-    }
+    
    goToStepThree() {
         this.currentStep = '3';
-        this.template.querySelector('div.stepTwo').classList.add('slds-hide');
-        this.template
-            .querySelector('div.stepThree')
-            .classList.remove('slds-hide');
+        this.showPartner=false;
+        this.showVendor=false;
+        this.showFinancial=true;
+        
     } 
-    goBackToStepThree() {
-        this.currentStep = '3';
-        this.template.querySelector('div.stepFour').classList.add('slds-hide');
-        this.template
-            .querySelector('div.stepThree')
-            .classList.remove('slds-hide');
-    }
     goToStepFour() {
         this.currentStep = '4';
-        this.template.querySelector('div.stepThree').classList.add('slds-hide');
-        this.template
-            .querySelector('div.stepFour')
-            .classList.remove('slds-hide');
+        this.showPartner=false;
+        this.showVendor=false;
+        this.showFinancial=false;
+        this.showEscalation=true;
+        
     } 
-    
-    handleSave() {
-        console.log('hi');
-        this.isloading = true;
-        this.template.querySelector("c-vrf_vendor_capability").handleSubmit();
+    closeComponent(){
+        this.dispatchEvent(new CustomEvent('close'));
     }
-  
-    
+        
 }

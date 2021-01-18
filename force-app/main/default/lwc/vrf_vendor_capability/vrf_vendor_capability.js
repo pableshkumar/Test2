@@ -77,8 +77,6 @@ export default class Vrf_vendor_capability extends LightningElement {
 
         this.showLoadingSpinner=false;
       
-    } else {
-      alert("Please fill the all required filed");
     }
   }
   // refreshing the datatable after record edit form success
@@ -138,7 +136,7 @@ export default class Vrf_vendor_capability extends LightningElement {
               variant: "success"
             })
           );
-          this.dispatchEvent(new CustomEvent("success"));
+          this.dispatchEvent(new CustomEvent("savevendor"));
         }
       })
       .catch((error) => {
