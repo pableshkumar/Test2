@@ -1,4 +1,4 @@
-<apex:page sidebar="false" showheader="false" renderAs="pdf" StandardController="Order__c" extensions="PurchaseOrderPDF" showQuickActionVfHeader="true" >
+<apex:page sidebar="false" showheader="false" renderAs="PDF" StandardController="Order__c" extensions="PurchaseOrderPDF" showQuickActionVfHeader="true" >
     <head>
     </head>
     
@@ -9,8 +9,8 @@
         <div style="font-size: 13px;margin-left:10px;font-family: 'Open Sans', sans-serif;word-wrap: break-word; Width:30%;float:left">
             <div>{!poDetails.Customer__r.Name}</div>
             <div style="margin-top: 5px;">
-{!poDetails.Bill_to_Address__c}                
-                </div> <br/>
+                {!poDetails.Bill_to_Address__c}                
+            </div> <br/>
             <!--  <apex:outputField value="{!poDetails.Customer__r.BillingCity} " /><br/>
 <apex:outputField value="{!poDetails.Customer__r.BillingState} " /><br/>
 <apex:outputField value="{!poDetails.Customer__r.BillingCountry} " /><br/>
@@ -36,47 +36,30 @@
     <table  cellpadding="2" style="font-size: 13px; border-collapse:collapse; width: 100%; font-family: 'Open Sans', sans-serif;margin-top:50px;margin-left:10px">
         <tbody >
             <tr >
-                 <th style="width:20%;text-align:left;color:blue">Project Site</th>                    
-                <th style="width:20%;text-align:left">Service Name </th>
-                <th style="width:10%;text-align:center">Quantity</th>                    
-                <th style="width:15%;text-align:center">Service Start date</th>
-                <th style="width:15%;text-align:center">Service End date</th>
-                <th style="width:20%;text-align:center;">Service Amount ({!poDetails.CurrencyIsoCode})</th>
+                <th style="width:80%;text-align:left;">Service Description</th>                    
+                <th style="width:20%;text-align:left">Total Quantity </th>
             </tr>
             <!-- <apex:repeat value="{!poDetails.Projects_Services1__r}" var="srv">  -->
-            <apex:repeat value="{!siteData}" var="site">
-                <tr><td colspan="6" style="width:100%"><hr/></td> </tr>
-                <tr> <td colspan="6" style="text-align:left;font-weight:bolder;color:blue;width:100%;padding-bottom: 10px;">{!site}</td></tr>
+            <apex:repeat value="{!serviceData}" var="serviceType">
+                <tr><td colspan="2" style="width:100%"><hr/></td> </tr>
                 
-                <apex:repeat value="{!siteServices[site]}" var="serviceData" >
-                    <apex:repeat value="{!serviceData}" var="srv">
-                <tr style="margin-bottom:5px;">
-                    <td></td>
-                    <td style="text-align:left">{!srv.name}
-                    </td>
-                    <td style="text-align:center">1</td>
-                    <td style="text-align:center"><apex:outputText value="{0,date,MM/dd/yy}">
-                        <apex:param value="{!srv.Service_Start_Date__c}" />
-                        </apex:outputText></td>
-                    <td style="text-align:center"><apex:outputText value="{0,date,MM/dd/yy}">
-                        <apex:param value="{!srv.Service_End_Date__c}" />
-                        </apex:outputText></td>
-                    <td style="text-align:center"><apex:outputText value="{0, number, ###,###,###,##0.00}">
-                        <apex:param value="{!srv.Total_Price__c}"/>
-                        </apex:outputText></td>                
-</tr>
-                                            </apex:repeat>
+                        <tr>
+                            <td style="text-align:left">{!serviceType}:
+                           <apex:repeat value="{!serviceData[serviceType]}" var="serviceData" >
+                               {!serviceData}
+                                </apex:repeat>
+
+                            </td>
+                            <td style="text-align:center">{!serviceCount[serviceType]}</td>
+                                         
+                        </tr>
                     </apex:repeat>
-            </apex:repeat>
-            <tr><td colspan="7" style="width:100%"><hr/></td> </tr>
+            <tr><td colspan="3" style="width:100%"><hr/></td> </tr>
             <tr style="text-align: center;vertical-align: top;">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td  style="text-align: right;font-weight:bolder;">Total Amount:</td>
+
+                <td  style="text-align: right;font-weight:bolder;">Total PO Amount:</td>
                 <td  style="text-align: center;font-weight:bolder;"><apex:outputText value="{0, number, ###,###,###,##0.00}">
-                    <apex:param value="{!totalServiceAmount}"/> </apex:outputText> </td>
+                    <apex:param value="{!poDetails.PO_Amount__c}"/> </apex:outputText> </td>
                 
             </tr>
             <!--   <tr style="text-align: center;vertical-align: top;">
