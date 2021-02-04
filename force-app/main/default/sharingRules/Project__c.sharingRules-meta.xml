@@ -41,7 +41,7 @@
     </sharingCriteriaRules>
     <sharingCriteriaRules>
         <fullName>Field_Service</fullName>
-        <accessLevel>Read</accessLevel>
+        <accessLevel>Edit</accessLevel>
         <label>Field Service</label>
         <sharedTo>
             <roleAndSubordinates>Field_Service_Management_Head</roleAndSubordinates>

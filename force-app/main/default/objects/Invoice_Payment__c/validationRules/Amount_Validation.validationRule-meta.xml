@@ -3,7 +3,7 @@
     <fullName>Amount_Validation</fullName>
     <active>true</active>
     <description>Amount can&apos;t be greater than invoice outstanding amount</description>
-    <errorConditionFormula>Amount__c &gt; Invoice__r.Outstanding_Amount__c</errorConditionFormula>
+    <errorConditionFormula>Round(Amount__c,2) &gt; Round(Invoice__r.Outstanding_Amount__c,2)</errorConditionFormula>
     <errorDisplayField>Amount__c</errorDisplayField>
     <errorMessage>Please enter amount that is less than or equals to invoice outstanding amount</errorMessage>
 </ValidationRule>

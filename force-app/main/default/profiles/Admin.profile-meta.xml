@@ -77,6 +77,10 @@
         <apexClass>Test_Data_Factory</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>VendorEnquiry_WebtoLeadClass</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
@@ -298,7 +302,6 @@
         <field>Account.Trade_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Transit_Number__c</field>
@@ -1481,6 +1484,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Project__c.Cost_Center__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Project__c.Customer_Project__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1629,6 +1637,61 @@
         <field>Task.WhoId</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Vendor_Enquiry__c.Contact_number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Vendor_Enquiry__c.Country__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Vendor_Enquiry__c.Designation__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Vendor_Enquiry__c.First_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Vendor_Enquiry__c.How_did_you_hear_about_TIG__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Vendor_Enquiry__c.Last_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Vendor_Enquiry__c.Name_of_the_Organization__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Vendor_Enquiry__c.Official_Email_id__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Vendor_Enquiry__c.Query__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Vendor_Enquiry__c.Rejection_Reason__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Vendor_Enquiry__c.Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
     <layoutAssignments>
         <layout>Account-Customer Layout</layout>
     </layoutAssignments>
@@ -1660,6 +1723,10 @@
         <layout>Invoice_Payment__c-Payment Line Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Invoice__c-Indirect Purchase Invoice</layout>
+        <recordType>Invoice__c.Indirect_Purchase_Invoice</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Invoice__c-Purchase Invoice</layout>
         <recordType>Invoice__c.Purchase_Invoice</recordType>
     </layoutAssignments>
@@ -1669,6 +1736,10 @@
     <layoutAssignments>
         <layout>Invoice__c-Sales Invoice</layout>
         <recordType>Invoice__c.Sales_Invoice</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Order__c-Indirect Purchase Order</layout>
+        <recordType>Order__c.Indirect_Purchase_Order</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Order__c-Purchase Order</layout>
@@ -1741,6 +1812,10 @@
         <recordType>Project__c.Customer</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Project__c-Indirect Vendor Layout</layout>
+        <recordType>Project__c.Indirect_Vendor</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Project__c-Vendor Project Layout</layout>
         <recordType>Project__c.Vendor</recordType>
     </layoutAssignments>
@@ -1749,6 +1824,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>TIG_Entity__c-TIG Entity Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Vendor_Enquiry__c-Vendor Enquiry Layout</layout>
     </layoutAssignments>
     <loginIpRanges>
         <endAddress>255.255.255.255</endAddress>
@@ -1898,6 +1976,15 @@
         <object>TIG_Entity__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Vendor_Enquiry__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
     <pageAccesses>
         <apexPage>InvoicePDF</apexPage>
         <enabled>true</enabled>
@@ -1931,12 +2018,22 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>Invoice__c.Indirect_Purchase_Invoice</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>Invoice__c.Purchase_Invoice</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
         <recordType>Invoice__c.Sales_Invoice</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Order__c.Indirect_Purchase_Order</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
@@ -1997,6 +2094,11 @@
     <recordTypeVisibilities>
         <default>true</default>
         <recordType>Project__c.Customer</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Project__c.Indirect_Vendor</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DisputeAmountCantbeGreaterthanTotalAmoun</fullName>
+    <active>true</active>
+    <description>Disputed amount can not be greater than invoice total amount</description>
+    <errorConditionFormula>Disputed_Amount__c &gt; Total_Amount__c</errorConditionFormula>
+    <errorDisplayField>Disputed_Amount__c</errorDisplayField>
+    <errorMessage>Disputed Amount can not be greater than Total Amount.</errorMessage>
+</ValidationRule>

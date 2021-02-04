@@ -31,11 +31,17 @@
             <lightning-spinner alternative-text="Loading..." variant="brand">
             </lightning-spinner>
         </div>
-        <template if:true={hasFiles}>
-            <c-datatable-group columns={columns} rows={rows}></c-datatable-group>
-        </template>
-        <template if:false={hasFiles}>
-
-        </template>
+        <div style="overflow: auto;">
+            <template if:true={hasFiles}>
+                <c-datatable-group columns={columns} rows={rows}></c-datatable-group>
+            </template>
+            <template if:false={hasFiles}>
+                <div class="slds-illustration slds-illustration_small slds-card slds-has-top-magnet">
+                    <div class="slds-text-longform">
+                        <p class="slds-text-body_regular">No Files!!! Click Refresh or Upload a new File</p>
+                    </div>
+                </div>
+            </template>
+        </div>
     </div>
 </template>
