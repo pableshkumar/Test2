@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Products_supported_Weight__c</fullName>
-    <defaultValue>4</defaultValue>
+    <defaultValue>$CustomMetadata.DD_Weightage__mdt.DD_Weightage21.Products_supported_Weight__c</defaultValue>
     <externalId>false</externalId>
     <label>Products supported Weight%</label>
     <precision>18</precision>

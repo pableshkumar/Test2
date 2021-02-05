@@ -483,7 +483,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Contact.CleanStatus</field>
+        <field></field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

@@ -21,7 +21,15 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Active__c</field>
+                <field>Overall_Normalized_Partnership_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Date_of_Expiry__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Status__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -48,216 +56,85 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Evaluation Criteria Weights (Admin Purpose)</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Company_Established_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Health_Safety_Processes_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Net_Margin_Growth_for_last_3_year_Weigh__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>No_of_Field_Engineers_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>OEM_Product_support_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Existing_Customer_Recommendation_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>No_of_Countries_covered_direct_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Future_plan_enhance_the_presence_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>X4_hours_Fix_Resolution_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>NBD_Resolution_or_Others_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Skilled_Employees_Certification_WeightTC__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Products_supported_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>E_bonding_capabilities_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Current_spare_in_stock_Management_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>OEM_model_Spare_replacement_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Responsiveness_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Value_add_innovation_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Customer_Base_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Referral_Customer_feedback_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>X2_hours_Fix_Resolution_Weight__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Quality_PC_SC_List_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Employee_Strength_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Revenue_Growth_for_last_3_year_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Assets_Vs_Liability_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Skilled_Employees_Certification_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Maintenance_or_break_fix_support_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Overall_delivery_capabilities_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Point_of_presence_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>X8_hours_Fix_Resolution_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>OEM_Partnership_Certification_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Technical_delivery_Matrix_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Ticketing_tools_process_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>X24x7_call_center_HelpDesk_support_Weigh__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Financial_stability_or_Credit_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Warehouse_Management_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Warranty_Out_of_warranty_support_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Quality_of_Communication_Document_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Proactiveness_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Retention_of_the_customer_Weight__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>No_of_High_value_customers_Weight__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Company Overview (Overall Weight 10%)</label>
+        <label>Company Overview</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Overall9__c</field>
+                <field>Company_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>In_considered1__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Company_Established__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Company_Established_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Company_Established_Rating__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Company_Established_Score__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Quality_PC_SC_List_Rating__c</field>
+                <field>Employee_Strength__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Employee_Strength_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Employee_Strength_Rating__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Health_Safety_Processes_Rating__c</field>
+                <behavior>Readonly</behavior>
+                <field>Employee_Strength_Score__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Company_Overview_RAG_del__c</field>
+                <field>Overall9__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Company_Established_Score__c</field>
+                <field>Company_Overview_RAG_del__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>QualityPCSC_List__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Quality_PC_SC_List_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Quality_PC_SC_List_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Quality_PC_SC_List_Score__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Health_Safety_Processes__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Employee_Strength_Score__c</field>
+                <field>Health_Safety_Processes_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Health_Safety_Processes_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -270,45 +147,85 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Financial Credibility (Overall Weight 10%)</label>
+        <label>Financial Credibility</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Overall6__c</field>
+                <field>Financial_Credibility_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>In_considered2__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label3__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Revenue_Growth_for_last_3_year_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Revenue_Growth_for_last_3_years_Rating__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Revenue_Growth_for_last_3_year_Score__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Net_Margin_Growth_for_last_3_year_Rating__c</field>
+                <field>label5__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Assets_Vs_Liability_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Assets_Vs_Liability_Rating__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Financial_stability_or_Credit_Rating__c</field>
+                <behavior>Readonly</behavior>
+                <field>Assets_Vs_Liability_Score__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>RAG_Financial_Credibility__c</field>
+                <field>Overall6__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Revenue_Growth_for_last_3_year_Score__c</field>
+                <field>RAG_Financial_Credibility__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label4__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Net_Margin_Growth_for_last_3_year_Weigh__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Net_Margin_Growth_for_last_3_year_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Net_Margin_Growth_for_last_3_year_Score__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label6__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Assets_Vs_Liability_Score__c</field>
+                <field>Financial_stability_or_Credit_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Financial_stability_or_Credit_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -321,61 +238,117 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Service Delivery (Overall Weight 20%)</label>
+        <label>Service Delivery</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Overall4__c</field>
+                <field>Service_Delivery_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>In_considered3__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label7__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>No_of_Field_Engineers_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>No_of_Field_Engineers_Rating__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>No_of_Field_Engineers_Score__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Skilled_Employees_Certification_Rating__c</field>
+                <field>label9__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>OEM_Product_support_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>OEM_Product_support_Rating__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>OEM_Product_support_Score__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Maintenance_or_break_fix_support_Rating__c</field>
+                <field>label11__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Existing_Customer_Recommendation_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Existing_Customer_Recommendations_Rating__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Overall_delivery_capabilities_Rating__c</field>
+                <behavior>Readonly</behavior>
+                <field>Existing_Score__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>RAG_Service_Delivery__c</field>
+                <field>Overall4__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>No_of_Field_Engineers_Score__c</field>
+                <field>RAG_Service_Delivery__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label21__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Skilled_Employees_Certification_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Skilled_Employees_Certification_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Skilled_Employees_Certification_Score__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label10__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>OEM_Product_support_Score__c</field>
+                <field>Maintenance_or_break_fix_support_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Maintenance_or_break_fix_support_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Maintenance_or_break_fix_support_Score__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label12__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Existing_Score__c</field>
+                <field>Overall_delivery_capabilities_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Overall_delivery_capabilities_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -388,41 +361,73 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Coverage / Point of presence(Overall Weight 10%)</label>
+        <label>Coverage / Point of presence</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Overall8__c</field>
+                <field>Coverage_Point_Presence_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>In_considered4__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label13__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>No_of_Countries_covered_direct_Rating__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Point_of_presence_Rating__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Future_plan_enhance_the_presence_Rating__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>RAG_CoveragePointPresence__c</field>
+                <field>No_of_Countries_covered_direct_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>No_of_Countries_covered_direct_Score__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label15__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Point_of_presence_Score__c</field>
+                <field>Future_plan_enhance_the_presence_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Future_plan_enhance_the_presence_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Future_plan_enhance_the_presence_Score__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Overall8__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>RAG_CoveragePointPresence__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label14__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Point_of_presence_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Point_of_presence_Rating__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Point_of_presence_Score__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -431,45 +436,85 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>SLA(Overall Weight 10%)</label>
+        <label>SLA</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Overall3__c</field>
+                <field>SLA_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>In_considered5__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label16__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>X2_hours_Fix_Resolution_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>X2_hours_Fix_Resolution_Rating__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>X2_hours_Fix_Resolution_Score__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
-                <field>X4_hours_Fix_Resolution_Rating__c</field>
+                <field>label18__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>X8_hours_Fix_Resolution_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>X8_hours_Fix_Resolution_Rating__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>NBD_Resolution_or_Others_Rating__c</field>
+                <behavior>Readonly</behavior>
+                <field>X8_hours_Fix_Resolution_Score__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>RAG_SLA__c</field>
+                <field>Overall3__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>X2_hours_Fix_Resolution_Score__c</field>
+                <field>RAG_SLA__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label17__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>X4_hours_Fix_Resolution_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>X4_hours_Fix_Resolution_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>X4_hours_Fix_Resolution_Score__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label19__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>X8_hours_Fix_Resolution_Score__c</field>
+                <field>NBD_Resolution_or_Others_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>NBD_Resolution_or_Others_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -482,45 +527,85 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Technical capabilities(Overall Weight 15%)</label>
+        <label>Technical capabilities</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Overall1__c</field>
+                <field>Technical_capabilities_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>In_considered6__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label20__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>OEM_Partnership_Certification_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>OEM_Partnership_Certification_Rating__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>OEM_Partnership_Certification_Score__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Skilled_Employees_Certification_RatingTC__c</field>
+                <field>label22__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Technical_delivery_Matrix_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Technical_delivery_Matrix_Rating__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Products_supported_Rating__c</field>
+                <behavior>Readonly</behavior>
+                <field>Technical_delivery_Matrix_Score__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>RAG_Technical_capabilities__c</field>
+                <field>Overall1__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>OEM_Partnership_Certification_Score__c</field>
+                <field>RAG_Technical_capabilities__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label8__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Skilled_Employees_Certification_WeightTC__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Skilled_Employees_Certification_RatingTC__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Skilled_Employees_Certification_ScoreTC__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label23__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Technical_delivery_Matrix_Score__c</field>
+                <field>Products_supported_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Products_supported_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -533,41 +618,73 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Call Support Flow/ Management(Overall Weight 5%)</label>
+        <label>Call Support Flow/ Management</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Overall10__c</field>
+                <field>Call_Support_Management_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>In_considered7__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label24__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Ticketing_tools_process_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Ticketing_tools_process_Rating__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Ticketing_tools_process_Score__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
-                <field>E_bonding_capabilities_Rating__c</field>
+                <field>label26__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>X24x7_call_center_HelpDesk_support_Weigh__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>X24x7_call_center_HelpDesk_support_Ratin__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>X24x7_call_center_HelpDesk_support_Score__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Overall10__c</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>RAG_Call_Support_Management__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label25__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Ticketing_tools_process_Score__c</field>
+                <field>E_bonding_capabilities_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>E_bonding_capabilities_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>E_bonding_capabilities_Score__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>X24x7_call_center_HelpDesk_support_Score__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -576,45 +693,85 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Spare Management(Overall Weight 5%)</label>
+        <label>Spare Management</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Overall2__c</field>
+                <field>Spare_Management_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>In_considered8__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label27__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Current_spare_in_stock_Management_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Current_spares_in_stock_Management__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Current_spare_in_stock_Management_Score__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Warehouse_Management_Rating__c</field>
+                <field>label40__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>OEM_model_Spare_replacement_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>OEM_model_Spare_replacement_Rating__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Warranty_Out_of_warranty_support_Rating__c</field>
+                <behavior>Readonly</behavior>
+                <field>OEM_model_Spare_Score__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>RAG_Spare_Management__c</field>
+                <field>Overall2__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Current_spare_in_stock_Management_Score__c</field>
+                <field>RAG_Spare_Management__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label28__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Warehouse_Management_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Warehouse_Management_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Warehouse_Management_Score__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label38__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>OEM_model_Spare_Score__c</field>
+                <field>Warranty_Out_of_warranty_support_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Warranty_Out_of_warranty_support_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -627,45 +784,85 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Responses / Quality of documents(Overall Weight 5%)</label>
+        <label>Responses / Quality of documents</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Overall5__c</field>
+                <field>Responses_Quality_of_Doc_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>In_considered9__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label31__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Responsiveness_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Responsiveness_Rating__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Responsiveness_Score__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Proactiveness_Rating__c</field>
+                <field>label39__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Quality_of_Communication_Document_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Quality_of_Communication_Documents_sub__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Value_add_innovation_Rating__c</field>
+                <behavior>Readonly</behavior>
+                <field>Quality_of_Communication_Document_submit__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>RAG_Responses_Quality_of_Doc__c</field>
+                <field>Overall5__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Responsiveness_Score__c</field>
+                <field>RAG_Responses_Quality_of_Doc__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label32__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Proactiveness_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Proactiveness_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Proactiveness_Score__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label33__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Quality_of_Communication_Document_submit__c</field>
+                <field>Value_add_innovation_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Value_add_innovation_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -678,45 +875,85 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Customer Base / Feedback(Overall Weight 10%)</label>
+        <label>Customer Base / Feedback</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Overall7__c</field>
+                <field>Customer_Base_Feedback_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>In_considered10__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label34__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Customer_Base_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Customer_Base_Rating__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Customer_Base_Score__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Retention_of_the_customer_Rating__c</field>
+                <field>label36__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Retention_of_the_customer_Weight__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Referral_Customer_feedback_Rating__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>No_of_High_value_customers_Rating__c</field>
+                <behavior>Readonly</behavior>
+                <field>Referral_Customer_feedback_Score__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>RAG_Customer_Base_Feedback__c</field>
+                <field>Overall7__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Customer_Base_Score__c</field>
+                <field>RAG_Customer_Base_Feedback__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label35__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Referral_Customer_feedback_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Retention_of_the_customer_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Retention_of_the_customer_Score__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>label37__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Referral_Customer_feedback_Score__c</field>
+                <field>No_of_High_value_customers_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>No_of_High_value_customers_Rating__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>

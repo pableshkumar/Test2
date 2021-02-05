@@ -44,6 +44,7 @@
             </value>
         </inputParameters>
     </actionCalls>
+    <apiVersion>49.0</apiVersion>
     <assignments>
         <name>Assign_Recipient_From_Queue</name>
         <label>Assign Recipient From Queue</label>
@@ -131,6 +132,7 @@
         <connector>
             <targetReference>Assign_Recipient_From_Queue</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>DeveloperName</field>
             <operator>EqualTo</operator>
@@ -158,6 +160,7 @@
         <connector>
             <targetReference>Recipient_Type</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>DeveloperName</field>
             <operator>EqualTo</operator>

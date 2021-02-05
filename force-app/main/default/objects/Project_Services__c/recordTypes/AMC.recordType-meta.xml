@@ -2,6 +2,7 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>AMC</fullName>
     <active>true</active>
+    <compactLayoutAssignment>Custom_Compact_layout</compactLayoutAssignment>
     <label>AMC</label>
     <picklistValues>
         <picklist>Category__c</picklist>

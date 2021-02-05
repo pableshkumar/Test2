@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>49.0</apiVersion>
     <decisions>
         <name>check_contact_availability</name>
         <label>check contact availability</label>
@@ -46,7 +47,7 @@
         <dataType>Picklist</dataType>
         <displayField xsi:nil="true"/>
         <object xsi:nil="true"/>
-        <picklistField>Beneficiary_Bank_Address_State_Province__c</picklistField>
+        <picklistField>State1__c</picklistField>
         <picklistObject>Bank_Information__c</picklistObject>
     </dynamicChoiceSets>
     <dynamicChoiceSets>
@@ -120,18 +121,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Beneficiary_Bank_Address_Country__c</field>
-            <value>
-                <elementReference>dpPicklist.topValue</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Beneficiary_Bank_Address_State_Province__c</field>
-            <value>
-                <elementReference>dpPicklist.middleValue</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Beneficiary_Bank_Name__c</field>
             <value>
                 <elementReference>Beneficiary_Bank_Name</elementReference>
@@ -150,6 +139,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Country1__c</field>
+            <value>
+                <elementReference>dpPicklist.topValue</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>IBAN__c</field>
             <value>
                 <elementReference>IBAN</elementReference>
@@ -159,6 +154,12 @@
             <field>Name</field>
             <value>
                 <elementReference>Account_Number</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>State1__c</field>
+            <value>
+                <elementReference>dpPicklist.middleValue</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -345,6 +346,7 @@
         <connector>
             <targetReference>check_contact_availability</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>AccountId</field>
             <operator>EqualTo</operator>
@@ -365,6 +367,7 @@
         <connector>
             <targetReference>Vendor_capability</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>AccountId</field>
             <operator>EqualTo</operator>
@@ -385,6 +388,7 @@
         <connector>
             <targetReference>Escalation_Matrix</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>AccountId</field>
             <operator>EqualTo</operator>
@@ -404,6 +408,7 @@
         <connector>
             <targetReference>Create_Bank_Information</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
@@ -457,6 +462,7 @@
         <connector>
             <targetReference>Partner_Presence</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>AccountId</field>
             <operator>EqualTo</operator>
@@ -531,6 +537,7 @@
         <label>Update contact with new data</label>
         <locationX>376</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>AccountId</field>
             <operator>EqualTo</operator>
@@ -609,11 +616,12 @@
     <recordUpdates>
         <name>update_vendor_Account</name>
         <label>update vendor Account</label>
-        <locationX>812</locationX>
-        <locationY>77</locationY>
+        <locationX>813</locationX>
+        <locationY>78</locationY>
         <connector>
             <targetReference>Get_Contact</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
@@ -793,12 +801,6 @@
             <field>Website</field>
             <value>
                 <elementReference>Company_s_Website</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Year_of_Establishment__c</field>
-            <value>
-                <elementReference>Year_of_Establishment</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1288,14 +1290,6 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>Year_of_Establishment</name>
-            <dataType>Number</dataType>
-            <fieldText>Year of Establishment?</fieldText>
-            <fieldType>InputField</fieldType>
-            <isRequired>false</isRequired>
-            <scale>0</scale>
-        </fields>
-        <fields>
             <name>No_of_employees_on_your_Direct_payroll</name>
             <dataType>Number</dataType>
             <fieldText>No. of employees on your Direct payroll?</fieldText>
@@ -1668,7 +1662,7 @@
             <targetReference>Get_contact_before_screen</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>newContact</name>
         <dataType>SObject</dataType>

@@ -150,6 +150,11 @@
                         </lightning-layout-item>
                         <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
                             class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Call_Logging_Process__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
                             <lightning-input-field field-name="English_speaking_engineers_for_TIG__c">
                             </lightning-input-field>
                         </lightning-layout-item>
@@ -175,8 +180,29 @@
                 </lightning-layout-item>
 
                 <lightning-layout-item size="12">
+                    <h2><b>Certifications From OEMs</b></h2>
+                    <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Certified_partner_for_OEMs__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="12">
                     <h2><b>SERVICE CAPABILITY </b></h2>
                     <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="List_of_Market_Sector__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Type_of_Service_Agreements__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
                         <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
                             class="slds-var-p-top_small">
                             <lightning-input-field field-name="Company_customers_products_and_services__c">
@@ -201,7 +227,8 @@
                 </lightning-layout-item>
             </lightning-layout>
         </lightning-record-edit-form>
-        <!--Contact details-->
+
+        <!--Contact details
         <lightning-layout>
             <lightning-layout-item size="12" style="width:100%">
                 <h2><b>Contact Details of Key Personnel</b></h2>
@@ -256,11 +283,11 @@
                     </lightning-layout-item>
                 </lightning-layout>
             </lightning-layout-item>
-        </lightning-layout>
+        </lightning-layout> -->
 
-        <div class="slds-float--right slds-p-top_small">
+        <div class="slds-float--right slds-p-top_small slds-p-bottom_small">
             <lightning-button class="slds-m-left_x-small" variant="brand" onclick={handleSubmit} name="update"
-                label="Save &amp; Next"></lightning-button>
+                label="Save"></lightning-button>
         </div>
     </div>
 </template>

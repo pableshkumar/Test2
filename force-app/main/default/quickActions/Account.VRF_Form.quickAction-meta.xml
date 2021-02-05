@@ -2,7 +2,7 @@
 <QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
     <height>600</height>
     <label>VRF Form</label>
-    <lightningComponent>VevndorOnBoarding</lightningComponent>
+    <lightningComponent>VendorOnBoarding</lightningComponent>
     <optionsCreateFeedItem>false</optionsCreateFeedItem>
     <type>LightningComponent</type>
     <width>-100</width>

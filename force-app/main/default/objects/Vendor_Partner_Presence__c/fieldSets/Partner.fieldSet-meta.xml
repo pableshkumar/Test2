@@ -3,12 +3,7 @@
     <fullName>Partner</fullName>
     <description>This filed set is use for creating vendor partner presence</description>
     <displayedFields>
-        <field>Company__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
-    <displayedFields>
-        <field>Capability__c</field>
+        <field>Support_Type__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </displayedFields>

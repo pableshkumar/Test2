@@ -18,6 +18,7 @@
         </inputParameters>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
+    <apiVersion>49.0</apiVersion>
     <interviewLabel>Submit Invoice {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Submit Invoice</label>
     <processMetadataValues>
@@ -44,6 +45,7 @@
         <faultConnector>
             <targetReference>Error_Handling</targetReference>
         </faultConnector>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>

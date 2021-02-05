@@ -59,6 +59,16 @@
                 <lightning-layout-item size="12">
                     <h2 style="background-color: #f3f2f2;margin-top: 15px;padding: 15px;"><b>Bank Information</b></h2>
                     <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input-field field-name="Company_Name_Vendor_Name__c" value={currentRecordId} disabled>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input-field  field-name="Name" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
                         <template for:each={fieldArray} for:item="field">
                             <lightning-layout-item size="12" key={field.Key} medium-device-size="6"
                                 padding="horizontal-medium" class="slds-var-p-top_small">
@@ -70,7 +80,7 @@
                 </lightning-layout-item>
             </lightning-layout>
         </lightning-record-edit-form>
-        <div class="slds-float--right slds-p-top_small">
+        <div class="slds-float--right slds-p-top_small slds-p-bottom_small">
             <lightning-button variant="brand" type="submit" name="update" onclick={updateAccountData}
                 label="Save &amp; Next"></lightning-button>
         </div>

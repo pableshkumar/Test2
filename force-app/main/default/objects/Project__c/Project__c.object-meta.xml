@@ -170,8 +170,8 @@
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <searchLayouts>
-        <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
     <visibility>Public</visibility>

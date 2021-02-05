@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Net_Margin_Growth_for_last_3_year_Weigh__c</fullName>
-    <defaultValue>2</defaultValue>
+    <defaultValue>$CustomMetadata.DD_Weightage__mdt.DD_Weightage21.Net_Margin_Growth_for_last_3year_Weight__c</defaultValue>
     <externalId>false</externalId>
     <label>Net Margin Growth for last 3year Weight%</label>
     <precision>18</precision>

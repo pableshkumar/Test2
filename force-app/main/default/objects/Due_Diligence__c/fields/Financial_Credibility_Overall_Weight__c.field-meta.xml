@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Financial_Credibility_Overall_Weight__c</fullName>
+    <externalId>false</externalId>
+    <formula>(Revenue_Growth_for_last_3_year_Weight__c +  Net_Margin_Growth_for_last_3_year_Weigh__c +
+ Assets_Vs_Liability_Weight__c +  Financial_stability_or_Credit_Weight__c ) / 100</formula>
+    <label>Financial Credibility Overall  Weight</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

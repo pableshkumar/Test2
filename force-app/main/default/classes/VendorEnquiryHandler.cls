@@ -12,6 +12,9 @@ public class VendorEnquiryHandler {
                 acc.Status__c ='Initiation';
                 acc.RecordTypeId = vendorRecordTypeId;
                 acc.Vendor_Enquiry_Id__c = vendorRec.Name;
+                acc.Captured_through_Vendor_Enquiry__c=TRUE;
+                acc.Vendor_Enquiry__c=vendorRec.Id;
+                acc.One_Time_Vendor__c=vendorRec.One_Time_Vendor__c;
                 sObjList.add(acc);
             }
             if(!sObjList.isEmpty()){
@@ -120,6 +123,7 @@ update sObjListRole;
                 ts_List1.add(newTaskRec);
             }
             upsert ts_List1;
-        } 
+        }
+        
     }
 }

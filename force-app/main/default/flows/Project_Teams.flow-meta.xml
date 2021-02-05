@@ -102,6 +102,7 @@ TIG Entity: {!myVariable_current.Project__r.TIG_Entity_Name__c}</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
+    <apiVersion>49.0</apiVersion>
     <assignments>
         <name>myAssignment_myRule_1_A3</name>
         <label>myAssignment_myRule_1_A3</label>
@@ -259,6 +260,7 @@ ISCHANGED({!myVariable_current.Primary__c}),
         <connector>
             <targetReference>myRule_1_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -391,6 +393,7 @@ ISCHANGED({!myVariable_current.Primary__c}),
         <connector>
             <targetReference>myAssignment_myRule_1_A3</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>

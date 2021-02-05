@@ -4,5 +4,29 @@
     <entityName>Account</entityName>
     <fieldName>Status__c</fieldName>
     <masterLabel>Account Status Stages</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;DD creation is require to get &lt;/b&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;Overall Normalized Partnership Score.&lt;/b&gt;&lt;/p&gt;</info>
+        <picklistValueName>Due Diligence</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;MOM document is required on this stage.&lt;/b&gt;&lt;/p&gt;</info>
+        <picklistValueName>Initiation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;MSA document is required on this stage.&lt;/b&gt;&lt;/p&gt;</info>
+        <picklistValueName>MSA</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;NDA document is required on this stage.&lt;/b&gt;&lt;/p&gt;</info>
+        <picklistValueName>NDA</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;The record is under approval.&lt;/b&gt;&lt;/p&gt;</info>
+        <picklistValueName>Registration</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;The following documents are required on this stage to move forward.&lt;/b&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;b&gt;Vendor Capability&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Partner Presence&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Financial Information&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Escalation Matrix&lt;/b&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;b&gt;And VRF form must be filled.&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>VRF</picklistValueName>
+    </pathAssistantSteps>
     <recordTypeName>Vendor</recordTypeName>
 </PathAssistant>

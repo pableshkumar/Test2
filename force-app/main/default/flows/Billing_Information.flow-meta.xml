@@ -1803,6 +1803,7 @@ Billing End Date: {!myVariable_current.Billing_End_Date__c}</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
+    <apiVersion>49.0</apiVersion>
     <assignments>
         <name>myAssignment_myRule_24_A1</name>
         <label>myAssignment_myRule_24_A1</label>
@@ -3097,6 +3098,7 @@ TEXT({!myVariable_current.Project__r.Billing_Frequency__c})</expression>
         <connector>
             <targetReference>myWait_myRule_1</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>

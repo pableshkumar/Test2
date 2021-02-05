@@ -1,6 +1,5 @@
 public class AccountHandler {
     public void rejectComm(List<Account> lstAcc){
-        
         List<Account> Leads = New List <Account>();
         List<Id> Ids = New List <Id>();
         for (Account l:lstAcc){
@@ -34,5 +33,113 @@ public class AccountHandler {
             
         }     
         
+    }
+    public void msaRequired(List<Account> listAcc, Map<Id,Account> oldMapAcc){
+        for(Account acc:listAcc){
+            if(acc.File_Type__c == 'Due Diligence' && acc.Status__c == 'Registration' && acc.MSA_Required__c == null && acc.ParentId == null && acc.One_Time_Vendor__c == false ){
+                acc.adderror('Please select MSA Required.');
+            }else if(acc.File_Type__c != 'MSA' && acc.Status__c == 'Registration' && acc.MSA_Required__c == 'Yes' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Please upload MSA file');
+            }else if(acc.Due_Diligence__c == null && acc.Status__c == 'Registration' && acc.MSA_Required__c == 'No' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Please create Due Diligence');
+            }else if(acc.Date_of_Signature_MSA__c == null && acc.Date_of_Expiry_MSA__c == null && oldMapAcc.get(acc.Id).Status__c == 'MSA' && acc.Status__c == 'Registration' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Please select MSA Date of Signature and  Expiry');
+            }
+            
+        }
+    }
+    
+    
+    public void requireRejectionComment(List<Account> listAcc, Map<Id,Account> oldMapAcc){
+        
+        Map<Id, Account> rejectedStatements = new Map<Id, Account>{};
+            
+            for(Account acc: listAcc )
+        {
+            
+            Account oldacc = oldMapAcc.get(acc.Id);
+            
+            if (oldacc.Approval_status__c != 'Rejected' 
+                && acc.Approval_status__c == 'Rejected')
+            { 
+                rejectedStatements.put(acc.Id, acc);  
+            }
+        }
+        
+        if (!rejectedStatements.isEmpty())  
+        {
+            
+            List<Id> processInstanceIds = new List<Id>{};
+                
+                for (Account accs : [SELECT (SELECT ID
+                                             FROM ProcessInstances
+                                             ORDER BY CreatedDate DESC
+                                             LIMIT 1)
+                                     FROM Account
+                                     WHERE ID IN :rejectedStatements.keySet()])
+            {
+                processInstanceIds.add(accs.ProcessInstances[0].Id);
+            }
+            
+            // the most recent process steps for comments.  
+            for (ProcessInstance pi : [SELECT TargetObjectId,
+                                       (SELECT Id, StepStatus, Comments 
+                                        FROM Steps
+                                        ORDER BY CreatedDate DESC
+                                        LIMIT 1 )
+                                       FROM ProcessInstance
+                                       WHERE Id IN :processInstanceIds
+                                       ORDER BY CreatedDate DESC])   
+            {                   
+                if ((pi.Steps[0].Comments == null || 
+                     pi.Steps[0].Comments.trim().length() == 0))
+                {
+                    rejectedStatements.get(pi.TargetObjectId).addError(
+                        'Operation Cancelled: Please provide a rejection reason!');
+                }
+            }  
+        }
+    }
+    
+    public void checkFileType(List<Account> listAcc,Map<Id,Account> oldMapAcc){
+        Set<Id> accountId = new Set<Id>();
+        for(Account acc: listAcc){
+            accountId.add(acc.Id); 
+        }
+        List<String> fileType=new List<String>();
+        for (Account a: [SELECT Name, (SELECT ContentDocumentId, ContentDocument.Title, ContentDocument.ContentSize,ContentDocument.LatestPublishedVersion.Document_Type__c FROM ContentDocumentLinks) FROM Account where Id IN:accountId]) {
+            for (ContentDocumentLink cdl: a.ContentDocumentLinks) {
+                if(cdl.ContentDocument.LatestPublishedVersion.Document_Type__c != null){
+                    fileType.add(cdl.ContentDocument.LatestPublishedVersion.Document_Type__c);
+                }
+            }
+        }
+        for(Account acc:listAcc){
+          if(acc.File_Type__c == 'Due Diligence' && acc.Status__c == 'Registration' && acc.MSA_Required__c == null && acc.ParentId == null && acc.One_Time_Vendor__c == false ){
+                acc.adderror('Please select MSA Required.');
+            }else if(!AccountHandler.listContains(fileType, 'MSA') && acc.Status__c == 'Registration' && acc.MSA_Required__c == 'Yes' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Please upload MSA file');
+            }else if(acc.Due_Diligence__c == null && acc.Status__c == 'Registration' && acc.MSA_Required__c == 'No' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Please create Due Diligence');
+            }else if(acc.Date_of_Signature_MSA__c == null && acc.Date_of_Expiry_MSA__c == null && oldMapAcc.get(acc.Id).Status__c == 'MSA' && acc.Status__c == 'Registration' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Please select MSA Date of Signature and  Expiry');
+            }else if(acc.Status__c == 'Due Diligence' && !AccountHandler.listContains(fileType, 'Escalation Matrix')  && oldMapAcc.get(acc.Id).Status__c == 'VRF' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Please upload Escalation Matrix file then go to Due Diligence stage');
+            }else if(acc.Status__c == 'Due Diligence' && !AccountHandler.listContains(fileType, 'Vendor Capability')  && oldMapAcc.get(acc.Id).Status__c == 'VRF' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Please upload Vendor Capability file then go to Due Diligence stage');
+            }else if(acc.Status__c == 'Due Diligence' && !AccountHandler.listContains(fileType, 'Partner Presence')  && oldMapAcc.get(acc.Id).Status__c == 'VRF' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Please upload Partner Presence file then go to Due Diligence stage');
+            }else if(acc.Status__c == 'Due Diligence' && !AccountHandler.listContains(fileType, 'Financial Information')  && oldMapAcc.get(acc.Id).Status__c == 'VRF' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Please upload Financial Information file then go to Due Diligence stage.');
+            }else if(acc.Status__c == 'NDA' && !AccountHandler.listContains(fileType, 'MOM')  && oldMapAcc.get(acc.Id).Status__c == 'Initiation' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Before going to NDA stage, you need to upload MOM file.');
+            }else if(acc.Status__c == 'VRF' && !AccountHandler.listContains(fileType, 'NDA') && acc.Date_of_Signature_NDA__c == null && acc.Date_of_Expiry_NDA__c == null && oldMapAcc.get(acc.Id).Status__c == 'NDA' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Before going to VRF stage, you need to upload NDA file and NDA Date of Signature and  Expiry.');
+            }
+        }
+    }
+    
+    public static Boolean listContains(Object[] source, Object target) {
+        return (new Set<Object>(source)).contains(target);
     }
 }

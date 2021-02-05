@@ -2,47 +2,7 @@ import { LightningElement, track, api } from "lwc";
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 import createContact from "@salesforce/apex/VendorOnBoardingController.createContact";
 export default class Vrf_vendor_capability extends LightningElement {
-  /* @api recordId;
-  @track fields = {};
-
-  handleSubmit() {
-    console.log(fields);
-    this.template
-      .querySelector("lightning-record-edit-form")
-      .submit(this.fields);
-  }
-
-  handleCompanyOverview(event) {
-    console.log(event.currentTarget.value);
-    this.fields.Company_Overview__c = event.currentTarget.value;
-  }
-  handleCompanyRegDetails(event) {
-    this.fields.Company_registration_details__c = event.currentTarget.value;
-  }
-  handleDetailsOfKeyPersonnel(event) {
-    this.fields.Details_of_Key_personnel__c = event.currentTarget.value;
-  }
-  handleEmployeeCallSupport(event) {
-    this.fields.Employee_Call_support__c = event.currentTarget.value;
-  }
-  handleFieldSupport(event) {
-    this.fields.Field_Support__c = event.currentTarget.value;
-  }
-  handleCertificate(event) {
-    this.fields.Certificate_from_OEM__c = event.currentTarget.value;
-  }
-  handleServiceCapa(event) {
-    this.fields.Service_Capability__c = event.currentTarget.value;
-  }
-  handleSucess(event) {
-    const accountId = event.detail.id;
-    const selectEvent = new CustomEvent("accountid", {
-      detail: accountId
-    });
-    this.dispatchEvent(selectEvent);
-  }*/
-
-  // this is my code
+  // this code is written by jatinder kumar 08-01-2020
   @api currentRecordId = "";
   @api objectApiName = "";
   @track showLoadingSpinner;
@@ -75,14 +35,21 @@ export default class Vrf_vendor_capability extends LightningElement {
         .querySelector("lightning-record-edit-form")
         .submit(event.detail.fields);
 
-        this.showLoadingSpinner=false;
-      
+      this.showLoadingSpinner = false;
     }
   }
   // refreshing the datatable after record edit form success
   handleSuccess() {
-    this.showLoadingSpinner=true;
-    this.getContactData();
+   /* this.showLoadingSpinner = true;
+    this.getContactData(); */
+    this.dispatchEvent(
+      new ShowToastEvent({
+        title: "Success!!",
+        message: " Updated Successfully!!.",
+        variant: "success"
+      })
+    );
+    this.dispatchEvent(new CustomEvent("savevendor"));
   }
 
   getContactData() {
@@ -140,8 +107,21 @@ export default class Vrf_vendor_capability extends LightningElement {
         }
       })
       .catch((error) => {
-        let dataError = error;
-        console.log("Data Error" + dataError);
+        let errorMessage = "Unknown error";
+        if (Array.isArray(error.body)) {
+          errorMessage = error.body.map((e) => e.message).join(", ");
+        } else if (typeof error.body.message === "string") {
+          errorMessage = error.body.message;
+        }
+        console.log("errorMessage---" + errorMessage);
+        this.dispatchEvent(
+          new ShowToastEvent({
+            title: "Error",
+            message: errorMessage,
+            variant: "error",
+            mode: "dismissable"
+          })
+        );
       })
       .finally(() => {
         // hide spinner

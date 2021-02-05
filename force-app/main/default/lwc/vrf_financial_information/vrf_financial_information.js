@@ -26,6 +26,7 @@ export default class Vrf_financial_information extends LightningElement {
   @track fieldData = [];
 
   connectedCallback() {
+    this.showLoadingSpinner=true;
     if (this.fields.length > 0) {
       console.log("field Data");
       fieldData = this.fields.split(",");
@@ -54,16 +55,18 @@ export default class Vrf_financial_information extends LightningElement {
     } catch (error) {
       console.log(error);
     }
+    finally{
+      this.showLoadingSpinner=false;
+    }
   }
   setAccountData(data) {
     this.certificatesofIncorporationAndRegistration =
       data.Certificate_of_Incorporate_Registration__c;
-      this.gstAndVAT =data.GSTVAT_Registration_Certificate__c ;
-     this.servicetax = data.Service_Tax_Registration_Number__c;
-     this.taxIdetification = data.TAX_Identification_Number__c;
-     this.cancelCheck = data.Cancel_Check_of_Bank_Account_Number__c;
-     this.taxValue=data.Tax_Information__c;
-    
+    this.gstAndVAT = data.GSTVAT_Registration_Certificate__c;
+    this.servicetax = data.Service_Tax_Registration_Number__c;
+    this.taxIdetification = data.TAX_Identification_Number__c;
+    this.cancelCheck = data.Cancel_Check_of_Bank_Account_Number__c;
+    this.taxValue = data.Tax_Information__c;
   }
   convertFieldresult(result) {
     let filedValuewithComma = "";
@@ -103,6 +106,7 @@ export default class Vrf_financial_information extends LightningElement {
         .querySelector("lightning-record-edit-form")
         .submit(event.detail.fields);
       this.showLoadingSpinner = false;
+    
   }
   // refreshing the datatable after record edit form success
   handleSuccess() {
@@ -119,7 +123,7 @@ export default class Vrf_financial_information extends LightningElement {
 
   updateAccountData(event) {
     const allValid = [
-      ...this.template.querySelectorAll("lightning-input")
+      ...this.template.querySelectorAll("lightning-combobox")
     ].reduce((validSoFar, inputCmp) => {
       inputCmp.reportValidity();
       return validSoFar && inputCmp.checkValidity();
@@ -141,29 +145,36 @@ export default class Vrf_financial_information extends LightningElement {
         }
       }, this);
       let account = {
-        Id:this.currentRecordId,
-        Certificate_of_Incorporate_Registration__c: this.certificatesofIncorporationAndRegistration,
+        Id: this.currentRecordId,
+        Certificate_of_Incorporate_Registration__c: this
+          .certificatesofIncorporationAndRegistration,
         Tax_Information__c: this.taxValue,
         GSTVAT_Registration_Certificate__c: this.gstAndVAT,
         Service_Tax_Registration_Number__c: this.servicetax,
         TAX_Identification_Number__c: this.taxIdetification,
         Cancel_Check_of_Bank_Account_Number__c: this.cancelCheck
       };
-      updateAccount({ accData: JSON.parse(JSON.stringify(account))})
+      updateAccount({ accData: JSON.parse(JSON.stringify(account)) })
         .then((result) => {
-            this.handleSubmit(event);
+          console.log('result---->'+result);
+          this.handleSubmit(event);
         })
         .catch((error) => {
-          let dataError = error.getMessage();
+         let errorMessage = 'Unknown error';
+            if (Array.isArray(error.body)) {
+              errorMessage = error.body.map(e => e.message).join(', ');
+            } else if (typeof error.body.message === 'string') {
+              errorMessage = error.body.message;
+            }
+          console.log('errorMessage---'+ errorMessage);
           this.dispatchEvent(
             new ShowToastEvent({
-              title: 'Error',
-              message: dataError,
-              variant: 'error',
-              mode: 'dismissable'
-          })
+              title: "Error",
+              message: errorMessage,
+              variant: "error",
+              mode: "dismissable"
+            })
           );
-          
         })
         .finally(() => {
           // hide spinner

@@ -102,7 +102,7 @@ public with sharing class VendorOnBoardingController {
             }
            
         } catch (Exception e) {
-            System.debug(e.getMessage());
+            throw new AuraHandledException(e.getMessage());
         }
     }
 
@@ -113,7 +113,12 @@ public with sharing class VendorOnBoardingController {
               update accData;  
          
       } catch (Exception e) {
-        throw new AuraHandledException(e.getMessage());
+          if(e.getMessage().contains('Please check if Billing and Shipping addresses are captured correctly')){
+               throw new AuraHandledException('Please check if Billing and Shipping addresses are captured correctly');
+          }else{
+              throw new AuraHandledException(e.getMessage());
+          }
+          
       }
     }
 
@@ -121,7 +126,7 @@ public with sharing class VendorOnBoardingController {
     public static Account getAccountData(String accId){
       Account accountVar=new Account();
       try {
-        accountVar=[select Certificate_of_Incorporate_Registration__c,TAX_Identification_Number__c,GSTVAT_Registration_Certificate__c,Service_Tax_Registration_Number__c,Tax_Information__c,Cancel_Check_of_Bank_Account_Number__c from Account where Id=:accId];
+        accountVar=[select Status__c,Certificate_of_Incorporate_Registration__c,TAX_Identification_Number__c,GSTVAT_Registration_Certificate__c,Service_Tax_Registration_Number__c,Tax_Information__c,Cancel_Check_of_Bank_Account_Number__c from Account where Id=:accId];
         System.debug('accountVar--->'+accountVar);
       } catch (Exception e) {
         throw new AuraHandledException(e.getMessage());

@@ -42,6 +42,10 @@
                 <behavior>Edit</behavior>
                 <field>Primary_Business_Contact_Information__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>OwnerId</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
@@ -52,8 +56,8 @@
         <label>Account Other Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>Type</field>
+                <behavior>Edit</behavior>
+                <field>One_Time_Vendor__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -69,10 +73,26 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>MSA_Required__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Date_of_Signature_NDA__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Date_of_Signature_MSA__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Description</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>Type</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>NumberOfEmployees</field>
@@ -91,7 +111,15 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>OwnerId</field>
+                <field>Date_of_Expiry_DD__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Date_of_Expiry_NDA__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Date_of_Expiry_MSA__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -313,6 +341,10 @@
                 <behavior>Edit</behavior>
                 <field>English_speaking_Engineers_for_support__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Call_Logging_Process__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -339,8 +371,25 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
+        <label>Certifications From OEMs</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Certified_partner_for_OEMs__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>OneColumn</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
         <label>SERVICE CAPABILITY</label>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>List_of_Market_Sector__c</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Company_customers_products_and_services__c</field>
@@ -351,6 +400,10 @@
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Type_of_Service_Agreements__c</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Do_you_perform_hardware_disposal_activit__c</field>
@@ -399,27 +452,21 @@
                 <behavior>Edit</behavior>
                 <field>Due_Diligence__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Overall_Normalized_Partnership_RAG__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Overall_Normalized_Partnership_Score__c</field>
             </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>MSA Information</label>
-        <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>MSA_Required__c</field>
+                <field>Due_Diligence_Status__c</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns/>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -485,19 +532,24 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>Account.Create_Record_Update_Existing</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>Submit</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>0</sortOrder>
+            <sortOrder>1</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>Account.VRF_Form</actionName>
             <actionType>QuickAction</actionType>
-            <sortOrder>1</sortOrder>
+            <sortOrder>2</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>Account.Reject</actionName>
             <actionType>QuickAction</actionType>
-            <sortOrder>2</sortOrder>
+            <sortOrder>3</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList>
@@ -593,10 +645,14 @@
         <relatedList>Bank_Information__c.Company_Name_Vendor_Name__c</relatedList>
     </relatedLists>
     <relatedLists>
+        <excludeButtons>MassChangeOwner</excludeButtons>
+        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
-        <fields>Active__c</fields>
+        <fields>Status__c</fields>
         <fields>Overall_Normalized_Partnership_Score__c</fields>
         <fields>Overall_Normalized_Partnership_RAG__c</fields>
+        <fields>CREATED_DATE</fields>
+        <fields>LAST_UPDATE</fields>
         <relatedList>Due_Diligence__c.Partner__c</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>

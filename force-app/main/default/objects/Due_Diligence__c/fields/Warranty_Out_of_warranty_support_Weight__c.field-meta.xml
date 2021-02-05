@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Warranty_Out_of_warranty_support_Weight__c</fullName>
-    <defaultValue>1</defaultValue>
+    <defaultValue>$CustomMetadata.DD_Weightage__mdt.DD_Weightage21.Warranty_Out_of_warranty_support_Weigh__c</defaultValue>
     <externalId>false</externalId>
     <label>Warranty /Out of warranty support Weigh%</label>
     <precision>18</precision>

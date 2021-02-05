@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
     <interviewLabel>Reject Button on Account {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Reject Button on Account New5</label>
     <processMetadataValues>
@@ -26,6 +27,7 @@
         <label>Update Reason</label>
         <locationX>487</locationX>
         <locationY>434</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
@@ -77,6 +79,7 @@
     <status>Active</status>
     <textTemplates>
         <name>ReasonforReject</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
         <text>{!$Flow.CurrentStage}</text>
     </textTemplates>
     <variables>

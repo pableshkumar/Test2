@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
-    <active>true</active>
+    <active>false</active>
     <allowRecall>false</allowRecall>
     <allowedSubmitters>
         <type>owner</type>
@@ -31,6 +31,10 @@
     </entryCriteria>
     <finalApprovalActions>
         <action>
+            <name>Approval_Status_Approved2</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
             <name>Update_stage_to_active</name>
             <type>FieldUpdate</type>
         </action>
@@ -38,19 +42,31 @@
     <finalApprovalRecordLock>false</finalApprovalRecordLock>
     <finalRejectionActions>
         <action>
-            <name>Update_stage_to_MSA</name>
+            <name>Approval_Status_Rejected2</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_stage_to_Rejected</name>
             <type>FieldUpdate</type>
         </action>
     </finalRejectionActions>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <initialSubmissionActions>
         <action>
+            <name>Approval_Status_Pending_2</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>update_approval_FSM_Head</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
             <name>Update_stage_to_Registration</name>
             <type>FieldUpdate</type>
         </action>
     </initialSubmissionActions>
     <label>Submitting MSA</label>
-    <processOrder>2</processOrder>
+    <processOrder>1</processOrder>
     <recordEditability>AdminOnly</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

@@ -4,12 +4,55 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>actionNames</name>
+                    <valueList>
+                        <valueListItems>
+                            <value>Account.VRF_Form</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>VRF</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Submit</value>
+                            <visibilityRule>
+                                <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+                                <criteria>
+                                    <leftValue>{!Record.Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Due Diligence</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>MSA</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.One_Time_Vendor__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>true</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Parent.Name}</leftValue>
+                                    <operator>NE</operator>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Account.Create_Record_Update_Existing</value>
+                        </valueListItems>
+                    </valueList>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>collapsed</name>
                     <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>enableActionsConfiguration</name>
-                    <value>false</value>
+                    <value>true</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>hideChatterActions</name>
@@ -256,7 +299,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>relatedListComponentOverride</name>
-                    <value>NONE</value>
+                    <value>ADVGRID</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>rowsToDisplay</name>

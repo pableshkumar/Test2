@@ -118,6 +118,11 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>NewTask</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>NewEvent</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>1</sortOrder>
@@ -156,11 +161,6 @@
             <actionName>FeedItem.ContentNote</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>8</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>NewTask</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>0</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
@@ -246,6 +246,7 @@
         <fields>Project_Start_Date__c</fields>
         <fields>Project_End_Date__c</fields>
         <fields>Billing_Frequency__c</fields>
+        <fields>Vendor_status__c</fields>
         <relatedList>Project__c.Customer_Project__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -266,7 +267,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h0p000000kM2Z</masterLabel>
+        <masterLabel>00hN00000018QB5</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

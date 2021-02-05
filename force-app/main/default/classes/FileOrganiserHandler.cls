@@ -39,12 +39,13 @@ public with sharing class FileOrganiserHandler {
         try{
             String checkId = accId.substring(0, Math.min(accId.length(), 3));
             if(checkId =='001'){
-                Account acc=[select Id,Status__c,File_Type__c from Account where Id =: accId LIMIT 1]; 
+                Account acc=[select Id,Status__c,File_Type__c from Account where Id =: accId LIMIT 1];
+                
                 acc.File_Type__c=documentType;
                 system.debug('file type--->'+acc.File_Type__c);
-                if(documentType =='Vendor Capability'){
+                if(documentType =='Vendor Capability' ){
                     acc.Vendor_capability__c=true;
-                }else if(documentType =='Partner Presence'){
+                }else if(documentType =='Partner Presence' ){
                     acc.partner_presence__c=true;
                 }
                 else if(documentType =='Financial Information'){
@@ -67,6 +68,7 @@ public with sharing class FileOrganiserHandler {
         }
     }
     
+  
     public class FileWrap{
         
         @AuraEnabled

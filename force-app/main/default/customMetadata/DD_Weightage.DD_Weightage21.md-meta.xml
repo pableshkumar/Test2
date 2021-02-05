@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>DD Weightage21</label>
+    <protected>false</protected>
+    <values>
+        <field>Assets_Vs_Liability_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Company_Established_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Current_spare_in_stock_Management_Weigh__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Customer_Base_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>E_bonding_capabilities_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Employee_Strength_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Existing_Customer_Recommendation_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Financial_stability_or_Credit_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Future_plan_enhance_the_presence_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Health_Safety_Processes_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Maintenance_or_break_fix_support_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>NBD_Resolution_or_Others_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Net_Margin_Growth_for_last_3year_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>No_of_Countries_covered_direct_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>No_of_Field_Engineers_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>No_of_High_value_customers_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>OEM_Partnership_Certification_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>OEM_Product_support_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>OEM_model_Spare_replacement_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Overall_delivery_capabilities_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Point_of_presence_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Proactiveness_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Products_supported_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Quality_PC_SC_List_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Quality_of_Communication_Document_Weigh__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Referral_Customer_feedback_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Responsiveness_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Retention_of_the_customer_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Revenue_Growth_for_last_3_year_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>SkilledEmployeesCertificationWeightSD__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Skilled_Employees_Certification_Weight_T__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Technical_delivery_Matrix_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Ticketing_tools_process_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Value_add_innovation_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Warehouse_Management_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Warranty_Out_of_warranty_support_Weigh__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>X24x7_call_center_HelpDesk_support_Weigh__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>X2_hours_Fix_Resolution_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>X4_hours_Fix_Resolution_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>X8_hours_Fix_Resolution_Weight__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+</CustomMetadata>

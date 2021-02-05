@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Vendor_Enquiry__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>Enquiry status</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Vendor enquiry has been drafted, to onboard this vendor update the status as &amp;quot;Selected for Onboarding&amp;quot; and the vendor record will be created automatically.&lt;/b&gt;&lt;/p&gt;</info>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;Please update the status as &amp;quot;Rejected&amp;quot; if you wish to reject this vendor.&lt;/b&gt;&lt;/p&gt;</info>
+        <picklistValueName>Rejected</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;b&gt;The vendor will be on-boarded on this stage&lt;/b&gt;&lt;/p&gt;</info>
+        <picklistValueName>Selected for Onboarding</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

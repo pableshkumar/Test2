@@ -21,6 +21,7 @@
         </inputParameters>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
+    <apiVersion>49.0</apiVersion>
     <assignments>
         <name>AddToListOfApprovers</name>
         <label>AddToListOfApprovers</label>
@@ -112,6 +113,7 @@
         <connector>
             <targetReference>Check_If_Purchase_Invoice</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>DeveloperName</field>
             <operator>EqualTo</operator>
@@ -139,6 +141,7 @@
         <connector>
             <targetReference>Get_SDM</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>Name</field>
             <operator>EqualTo</operator>
@@ -167,6 +170,7 @@
         <connector>
             <targetReference>AddToListOfApprovers</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>Primary__c</field>
             <operator>EqualTo</operator>

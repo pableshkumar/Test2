@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Maintenance_or_break_fix_support_Weight__c</fullName>
-    <defaultValue>3</defaultValue>
+    <defaultValue>$CustomMetadata.DD_Weightage__mdt.DD_Weightage21.Maintenance_or_break_fix_support_Weight__c</defaultValue>
     <externalId>false</externalId>
     <label>Maintenance or break fix support Weight%</label>
     <precision>18</precision>

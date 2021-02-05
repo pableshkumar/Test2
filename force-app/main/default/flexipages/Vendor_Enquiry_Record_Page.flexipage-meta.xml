@@ -26,6 +26,19 @@
                 <componentName>force:highlightsPanel</componentName>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>hideUpdateButton</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>variant</name>
+                    <value>linear</value>
+                </componentInstanceProperties>
+                <componentName>runtime_sales_pathassistant:pathAssistant</componentName>
+            </componentInstance>
+        </itemInstances>
         <mode>Replace</mode>
         <name>header</name>
         <type>Region</type>
@@ -104,6 +117,11 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldItem>Record.One_Time_Vendor__c</fieldItem>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
                     <value>required</value>
@@ -178,7 +196,7 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
-                <fieldItem>Record.File_Type__c</fieldItem>
+                <fieldItem>Record.Source__c</fieldItem>
             </fieldInstance>
         </itemInstances>
         <name>Facet-b431b573-fe9a-40d1-9a9b-bf053da15d99</name>

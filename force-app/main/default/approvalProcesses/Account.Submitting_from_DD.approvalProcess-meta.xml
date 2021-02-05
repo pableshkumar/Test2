@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
-    <active>true</active>
+    <active>false</active>
     <allowRecall>false</allowRecall>
     <allowedSubmitters>
         <type>owner</type>
@@ -31,6 +31,10 @@
     </entryCriteria>
     <finalApprovalActions>
         <action>
+            <name>Approval_Status_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
             <name>updating_to_Active</name>
             <type>FieldUpdate</type>
         </action>
@@ -38,19 +42,31 @@
     <finalApprovalRecordLock>true</finalApprovalRecordLock>
     <finalRejectionActions>
         <action>
-            <name>updating_to_DD</name>
+            <name>Approval_Status_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>updating_to_Rejected</name>
             <type>FieldUpdate</type>
         </action>
     </finalRejectionActions>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <initialSubmissionActions>
         <action>
+            <name>Approval_Status_Pending</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_file_type</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
             <name>updating_to_Registration</name>
             <type>FieldUpdate</type>
         </action>
     </initialSubmissionActions>
     <label>Submitting from DD</label>
-    <processOrder>1</processOrder>
+    <processOrder>2</processOrder>
     <recordEditability>AdminOnly</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>
