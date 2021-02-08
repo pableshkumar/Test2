@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Captured_through_Vendor_Enquiry__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>It will be true if the vendor is created through vendor enquiry form and then converted into vendor record.</description>
+    <externalId>false</externalId>
+    <label>Captured through Vendor Enquiry?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

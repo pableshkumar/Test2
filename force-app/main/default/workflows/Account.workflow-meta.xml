@@ -1,13 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldUpdates>
-        <fullName>Update_stage_to_MSA</fullName>
-        <field>Status__c</field>
-        <literalValue>MSA</literalValue>
-        <name>Update stage to MSA</name>
+        <fullName>Approval_Status_Approved</fullName>
+        <field>Approval_status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Approval Status Approved</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Status_Approved2</fullName>
+        <field>Approval_status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Approval Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Status_Pending</fullName>
+        <field>Approval_status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Approval Status Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Status_Pending_2</fullName>
+        <field>Approval_status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Approval Status Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Status_Rejected</fullName>
+        <field>Approval_status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Approval Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Status_Rejected2</fullName>
+        <field>Approval_status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Approval Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_By_FSM_Head</fullName>
+        <field>Approval_status_head__c</field>
+        <literalValue>Sent to FSM Head</literalValue>
+        <name>Approved By FSM Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_By_FSM_Head2</fullName>
+        <field>Approval_status_head__c</field>
+        <literalValue>Sent to FSM Head</literalValue>
+        <name>Approved By FSM Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_By_Finance_Head</fullName>
+        <field>Approval_status_head__c</field>
+        <literalValue>Sent to Finance Head</literalValue>
+        <name>Approved By Finance Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_By_Finance_Head2</fullName>
+        <field>Approval_status_head__c</field>
+        <literalValue>Sent to Finance Head</literalValue>
+        <name>Approved By Finance Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_DD_Status</fullName>
+        <field>Due_Diligence_Status__c</field>
+        <literalValue>Completed</literalValue>
+        <name>Update DD Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_DD_Status2</fullName>
+        <field>Due_Diligence_Status__c</field>
+        <literalValue>Completed</literalValue>
+        <name>Update DD Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_DD_Status3</fullName>
+        <field>Due_Diligence_Status__c</field>
+        <literalValue>Completed</literalValue>
+        <name>Update DD Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_DD_Status4</fullName>
+        <field>Due_Diligence_Status__c</field>
+        <literalValue>Completed</literalValue>
+        <name>Update DD Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_approval_status_FSM</fullName>
+        <field>Approval_status_head__c</field>
+        <literalValue>Approved by FSM</literalValue>
+        <name>Update approval status FSM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_file_type</fullName>
+        <field>File_Type__c</field>
+        <formula>&quot;Due Diligence&quot;</formula>
+        <name>Update file type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Update_stage_to_Registration</fullName>
@@ -17,6 +168,17 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_stage_to_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update stage to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Update_stage_to_active</fullName>
@@ -26,6 +188,27 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_approval_FSM_Head</fullName>
+        <field>Approval_status_head__c</field>
+        <literalValue>Sent to FSM Head</literalValue>
+        <name>update approval FSM Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_approval_status</fullName>
+        <field>Approval_status_head__c</field>
+        <literalValue>Approved by Finance Head</literalValue>
+        <name>update approval status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>update_description_test</fullName>
@@ -36,6 +219,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
         <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>updating_to_Active</fullName>
@@ -45,15 +229,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
-    </fieldUpdates>
-    <fieldUpdates>
-        <fullName>updating_to_DD</fullName>
-        <field>Status__c</field>
-        <literalValue>Due Diligence</literalValue>
-        <name>updating to DD</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>updating_to_MSA</fullName>
@@ -63,6 +239,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>updating_to_Registration</fullName>
@@ -73,5 +250,15 @@
         <operation>Literal</operation>
         <protected>false</protected>
         <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>updating_to_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>updating to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
 </Workflow>
