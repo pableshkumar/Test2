@@ -140,16 +140,7 @@
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
-    <fieldUpdates>
-        <fullName>Update_approval_status_FSM</fullName>
-        <field>Approval_status_head__c</field>
-        <literalValue>Approved by FSM</literalValue>
-        <name>Update approval status FSM</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>false</reevaluateOnChange>
-    </fieldUpdates>
+   
     <fieldUpdates>
         <fullName>Update_file_type</fullName>
         <field>File_Type__c</field>
@@ -200,16 +191,7 @@
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
-    <fieldUpdates>
-        <fullName>update_approval_status</fullName>
-        <field>Approval_status_head__c</field>
-        <literalValue>Approved by Finance Head</literalValue>
-        <name>update approval status</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>false</reevaluateOnChange>
-    </fieldUpdates>
+   
     <fieldUpdates>
         <fullName>update_description_test</fullName>
         <description>testing purpose</description>
