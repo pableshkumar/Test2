@@ -46,6 +46,11 @@
                 <default>false</default>
                 <label>Invoice</label>
             </value>
+            <value>
+                <fullName>Purchase Order</fullName>
+                <default>false</default>
+                <label>Purchase Order</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>Account</controllingFieldValue>
@@ -74,6 +79,10 @@
         <valueSettings>
             <controllingFieldValue>Billing_Information__c</controllingFieldValue>
             <valueName>Billing Sheet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order__c</controllingFieldValue>
+            <valueName>Purchase Order</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

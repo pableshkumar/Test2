@@ -22,4 +22,9 @@ trigger Billing_Information_Trigger on Billing_Information__c (before update, af
             Billing_Information_Trigger_Handler.checkApprovalStatus(Trigger.OldMap,Trigger.New);
         }
     }
+    
+    if(Trigger.isAfter && Trigger.isUpdate){
+        shareito.ShareITInit shareInit = new shareito.ShareITInit(shareito.ShareITType.FULL);
+        shareInit.processSharing();
+    }
 }
