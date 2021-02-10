@@ -15,7 +15,7 @@
     ],
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "49.0",
+    "sourceApiVersion": "50.0",
     "packageAliases": {
         "TotalIT": "0Ho2x000000PBc2CAG",
         "ShareIT-O": "04t2v0000076AfeAAE",

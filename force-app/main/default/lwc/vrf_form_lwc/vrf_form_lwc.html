@@ -1,0 +1,67 @@
+<template>
+    <!--Progress indicator-->
+    <!-- <lightning-progress-indicator current-step={currentStep} type="path" variant="base">
+    <lightning-progress-step label="Vendor Capability" value="1" onclick={handleClick}> </lightning-progress-step>
+    <lightning-progress-step label="Partner Presence" value="2" onclick={handleClick}> </lightning-progress-step>
+    <lightning-progress-step label="Financial Information" value="3" onclick={handleClick}> </lightning-progress-step>
+    <lightning-progress-step label="Escalation Matrix" value="4" onclick={handleClick}> </lightning-progress-step>
+  </lightning-progress-indicator> -->
+
+
+    <!-- Button group
+  <lightning-button-group>
+    <lightning-button label="Vendor Capability" variant={vendorVariant} onclick={goToStepOne}>
+
+    </lightning-button>
+    <lightning-button label="Partner Presence" variant={partnerVariant} onclick={goToStepTwo}></lightning-button>
+    <lightning-button label="Financial Information" variant={financialVariant} onclick={goToStepThree}></lightning-button>
+    <lightning-button label="Escalation Matrix" variant={escalationVariant} onclick={goToStepFour}></lightning-button>
+</lightning-button-group> -->
+
+    <!--tab set-->
+    <lightning-tabset variant="scoped">
+      <lightning-tab label="Vendor Capability" value="1" onactive={handleClick}>
+        <c-vrf_vendor_capability class="acntForm" object-api-name='Account' current-record-id={recordId}
+        onsavevendor={goToStepTwo}>
+      </c-vrf_vendor_capability>
+      </lightning-tab>
+      <lightning-tab label="Partner Presence" value="2" onactive={handleClick}>
+        <c-vrf_partner_presence account-id={recordId} onsavepartner={goToStepThree}></c-vrf_partner_presence>
+      </lightning-tab>
+      <lightning-tab label="Financial Information" value="3" onactive={handleClick}>
+        <c-vrf_financial_information object-api-name='Bank_Information__c' fields='' field-set-name='Bank_Information'
+          current-record-id={recordId} onsavefinancial={goToStepFour}></c-vrf_financial_information>
+      </lightning-tab>
+      <lightning-tab label="Escalation Matrix" value="4" onactive={handleClick}>
+        <c-vrf_escalation_matrix account-id={recordId} onsaveescalation={closeComponent}></c-vrf_escalation_matrix>
+      </lightning-tab>
+    </lightning-tabset>
+
+    <!--Step 1 : Vendor Capacity Form
+    <template if:true={showVendor}>
+      <div class="stepOne">
+        <c-vrf_vendor_capability class="acntForm" object-api-name='Account' current-record-id={recordId}
+          onsavevendor={goToStepTwo}>
+        </c-vrf_vendor_capability>
+      </div>
+    </template> -->
+    <!--Step 2 : Vendor Partner Presence Form
+    <template if:true={showPartner}>
+      <div class="stepTwo">
+        <c-vrf_partner_presence account-id={recordId} onsavepartner={goToStepThree}></c-vrf_partner_presence>
+      </div>
+    </template> -->
+    <!--Step 3 : Vendor Financial Informatio Form
+    <template if:true={showFinancial}>
+      <div class="stepThree">
+        <c-vrf_financial_information object-api-name='Bank_Information__c' fields='' field-set-name='Bank_Information'
+          current-record-id={recordId} onsavefinancial={goToStepFour}></c-vrf_financial_information>
+      </div>
+    </template> -->
+    <!--Step 3 : Vendor Escalation Matrix Form
+    <template if:true={showEscalation}>
+      <div class="stepFour">
+        <c-vrf_escalation_matrix account-id={recordId} onsaveescalation={closeComponent}></c-vrf_escalation_matrix>
+      </div>
+    </template> -->
+</template>

@@ -24,19 +24,19 @@
         <value>Please enter disputed amount before rejection.</value>
     </labels>
     <labels>
-        <fullName>Submit_to_AR_Head_or_Client_SDM</fullName>
-        <categories>Billing Approval Messages</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Submit to &quot;AR Head&quot; or &quot;Client SDM</shortDescription>
-        <value>Please Submit to &quot;AR Head&quot; or &quot;Client SDM</value>
-    </labels>
-    <labels>
         <fullName>Invoice_Line_Item_Error_Message</fullName>
         <categories>Invoice Line Item Messages</categories>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Please add the Invoice Line Item</shortDescription>
         <value>Please add the Invoice Line Item</value>
+    </labels>
+    <labels>
+        <fullName>Submit_to_AR_Head_or_Client_SDM</fullName>
+        <categories>Billing Approval Messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submit to &quot;AR Head&quot; or &quot;Client SDM</shortDescription>
+        <value>Please Submit to &quot;AR Head&quot; or &quot;Client SDM</value>
     </labels>
 </CustomLabels>

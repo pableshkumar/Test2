@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Tax_Included__c</fullName>
     <externalId>false</externalId>
+    <inlineHelpText>This information belongs to PO amount. if PO Amount is included with Tax then in that case it should be Yes otherwise No.</inlineHelpText>
     <label>Tax Included</label>
     <required>true</required>
     <trackHistory>false</trackHistory>

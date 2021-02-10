@@ -34,6 +34,7 @@ export default class UploadFile extends LightningElement {
         if (this.docTypeValue) {
             this.disabled = false;
         }
+        this.dispatchEvent(new CustomEvent('selected', { detail: this.docTypeValue }));
     }
 
     handleUploadFinished(event) {
@@ -42,7 +43,8 @@ export default class UploadFile extends LightningElement {
         updateFile({
             recordId: uploadedFiles[0].documentId,
             objType: this.objType,
-            documentType: this.docTypeValue
+            documentType: this.docTypeValue,
+            accId:this.recordId
         }).then(() => {
             this.docTypeValue = '';
             this.disabled = false;

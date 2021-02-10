@@ -12,11 +12,11 @@
                 if (status === "SUCCESS") {
                     modalBody = components[0];
                     modalFooter = components[1];
-                    component.find('overlayLib').showCustomModal({
+                  component.find('overlayLib').showCustomModal({
                         header: "Upload File",
                         body: modalBody,
                         footer: modalFooter,
-                        showCloseButton: true
+                        showCloseButton: true,
                     })
                 }
             }

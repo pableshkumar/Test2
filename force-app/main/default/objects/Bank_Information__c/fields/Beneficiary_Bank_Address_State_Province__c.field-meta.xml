@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Beneficiary_Bank_Address_State_Province__c</fullName>
+    <externalId>false</externalId>
+    <label>Beneficiary Bank Address(State/Province)</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Beneficiary_Bank_Address_Country__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>States</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Andorra</controllingFieldValue>
+            <valueName>Anguilla</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Andorra</controllingFieldValue>
+            <valueName>Albania</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>India</controllingFieldValue>
+            <valueName>Gujarat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>India</controllingFieldValue>
+            <valueName>Haryana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>India</controllingFieldValue>
+            <valueName>Jharkhand</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

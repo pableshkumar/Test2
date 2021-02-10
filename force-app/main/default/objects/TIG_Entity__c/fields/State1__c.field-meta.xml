@@ -4,7 +4,6 @@
     <externalId>false</externalId>
     <label>State</label>
     <required>false</required>
-    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
@@ -20,20 +19,8 @@
             <valueName>Japan</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Japan</controllingFieldValue>
-            <valueName>Tokyo</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Vietnam</controllingFieldValue>
             <valueName>Vietnam</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Vietnam</controllingFieldValue>
-            <valueName>Linh</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Vietnam</controllingFieldValue>
-            <valueName>Quyen</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Kenya</controllingFieldValue>
@@ -149,7 +136,6 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Aland Islands</controllingFieldValue>
-            <controllingFieldValue>Singapore</controllingFieldValue>
             <valueName>Aland Islands</valueName>
         </valueSettings>
         <valueSettings>
@@ -173,34 +159,8 @@
             <valueName>Belgium</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Hong Kong</controllingFieldValue>
-            <controllingFieldValue>China</controllingFieldValue>
-            <valueName>Hong Kong</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Hong Kong</controllingFieldValue>
-            <valueName>Kowloon</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Cayman Islands</controllingFieldValue>
             <valueName>Cayman Islands</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>South Korea</controllingFieldValue>
-            <controllingFieldValue>Korea</controllingFieldValue>
-            <valueName>Seoul</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>South Korea</controllingFieldValue>
-            <valueName>Seocho-gu</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>South Korea</controllingFieldValue>
-            <valueName>Gyeonggi-do</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>South Korea</controllingFieldValue>
-            <valueName>South Korea</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Kazakhstan</controllingFieldValue>
@@ -215,31 +175,8 @@
             <valueName>Lao People&apos;s Democratic Republic</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Indoneisa</controllingFieldValue>
-            <controllingFieldValue>Indonesia</controllingFieldValue>
-            <valueName>Java</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Indoneisa</controllingFieldValue>
-            <controllingFieldValue>Indonesia</controllingFieldValue>
-            <valueName>Jawa Barat</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Indoneisa</controllingFieldValue>
-            <controllingFieldValue>Indonesia</controllingFieldValue>
-            <valueName>Riau Islands</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Indoneisa</controllingFieldValue>
-            <valueName>Indoneisa</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>United Arab Emirates</controllingFieldValue>
             <valueName>United Arab Emirates</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Arab Emirates</controllingFieldValue>
-            <valueName>Dubai</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Lebanon</controllingFieldValue>
@@ -324,15 +261,6 @@
         <valueSettings>
             <controllingFieldValue>Bermuda</controllingFieldValue>
             <valueName>Bermuda</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Bermuda</controllingFieldValue>
-            <controllingFieldValue>Brunei Darussalam</controllingFieldValue>
-            <controllingFieldValue>Bolivia, Plurinational State of</controllingFieldValue>
-            <controllingFieldValue>Bonaire, Sint Eustatius and Saba</controllingFieldValue>
-            <controllingFieldValue>Brazil</controllingFieldValue>
-            <controllingFieldValue>Pakistan</controllingFieldValue>
-            <valueName>Pakistan</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Brunei Darussalam</controllingFieldValue>
@@ -771,6 +699,10 @@
             <valueName>Xinjiang</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>China</controllingFieldValue>
+            <valueName>Hong Kong</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Colombia</controllingFieldValue>
             <valueName>Colombia</valueName>
         </valueSettings>
@@ -915,22 +847,6 @@
             <valueName>Malaysia</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Malaysia</controllingFieldValue>
-            <valueName>Johor</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Malaysia</controllingFieldValue>
-            <valueName>Kuala Lumpur</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Malaysia</controllingFieldValue>
-            <valueName>Penang</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Malaysia</controllingFieldValue>
-            <valueName>Selangor</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Mozambique</controllingFieldValue>
             <valueName>Mozambique</valueName>
         </valueSettings>
@@ -987,14 +903,6 @@
             <valueName>Germany</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Germany</controllingFieldValue>
-            <valueName>Hessan</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Germany</controllingFieldValue>
-            <valueName>Saxony</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Djibouti</controllingFieldValue>
             <valueName>Djibouti</valueName>
         </valueSettings>
@@ -1003,24 +911,12 @@
             <valueName>Denmark</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Denmark</controllingFieldValue>
-            <valueName>Copenhagen</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Dominica</controllingFieldValue>
             <valueName>Dominica</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Netherlands</controllingFieldValue>
             <valueName>Netherlands</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Netherlands</controllingFieldValue>
-            <valueName>North Holland</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Netherlands</controllingFieldValue>
-            <valueName>South Holland</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Norway</controllingFieldValue>
@@ -1041,10 +937,6 @@
         <valueSettings>
             <controllingFieldValue>New Zealand</controllingFieldValue>
             <valueName>New Zealand</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>New Zealand</controllingFieldValue>
-            <valueName>Auckland</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Oman</controllingFieldValue>
@@ -1095,10 +987,6 @@
             <valueName>Spain</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Spain</controllingFieldValue>
-            <valueName>Madrid</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Ethiopia</controllingFieldValue>
             <valueName>Ethiopia</valueName>
         </valueSettings>
@@ -1111,109 +999,12 @@
             <valueName>Papua New Guinea</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Papua New Guinea</controllingFieldValue>
-            <valueName>Morobe</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Papua New Guinea</controllingFieldValue>
-            <valueName>Port Moresby</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Philippines</controllingFieldValue>
             <valueName>Philippines</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Agusan del Sur</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Batangas</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Bulacan</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Cagayan</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Cavite</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Cebu</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Davoe Del Sur</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Iloilo</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>La Union</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Laguna</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Leyte</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Manila</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Negros Occidental</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Nueva Ecija</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Oriental Mindoro</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Pangasinan</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Quezon</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Rizal</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Zambales</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Zamboanga del Sur</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Philippines</controllingFieldValue>
-            <valueName>Davao Del Sur</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Pakistan</controllingFieldValue>
-            <controllingFieldValue>India</controllingFieldValue>
-            <valueName>Punjab</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Pakistan</controllingFieldValue>
-            <valueName>Sindh</valueName>
+            <valueName>Pakistan</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Poland</controllingFieldValue>
@@ -1268,362 +1059,6 @@
             <valueName>United Kingdom</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Aberdeen City</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Aberdeenshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Aberystwyth</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Argyll and Bute</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Bangor</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Bedfordshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Berkshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Blackwood</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Bournemouth</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Bristol</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Buckinghamshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Caernarfon</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Cambridgeshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Carmarthenshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Central Bedfordshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Ceredigion</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Chelmsford</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Cheshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>City of London</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Conwy</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Cornwall</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>County Durham</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Cumbria</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Denbighshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Derbyshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Devon</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Dorset</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>East Ayrshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>East Riding of Yorkshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>East Sussex</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Ebbw Vale</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>England</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Essex</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Glasgow City</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Gloucestershire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Greater London</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Greater Manchester</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Gwynedd</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Hampshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Herefordshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Hertfordshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Isle of Anglesey</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Kent</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Lancashire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Leicestershire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Lincolnshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Llanelli</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Manchester</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>London</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Monmouthshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Merseyside</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Neath</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Norfolk</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Newport</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Northamptonshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>North Yorkshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Norwich</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Nottinghamshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Oxfordshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Pembrokeshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Poole</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Pen-y-groes</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Port Talbot</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Powys</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Scotland</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Shropshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Sheffield</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Somerset</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>South Yorkshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Solihull</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Suffolk</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Staffordshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Sunderland</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Surrey</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Sussex</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Tonbridge and Malling</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Tipton</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Tyne and Wear</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Torfaen</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Wales</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Warwickshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Walsall</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>West Midlands</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>West Sussex</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>West Lothian</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>West Yorkshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Wiltshire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Worcestershire</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>United Kingdom</controllingFieldValue>
-            <valueName>Wrexham</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Grenada</controllingFieldValue>
             <valueName>Grenada</valueName>
         </valueSettings>
@@ -1658,10 +1093,6 @@
         <valueSettings>
             <controllingFieldValue>Saudi Arabia</controllingFieldValue>
             <valueName>Saudi Arabia</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Saudi Arabia</controllingFieldValue>
-            <valueName>Riyadh</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Solomon Islands</controllingFieldValue>
@@ -1722,10 +1153,6 @@
         <valueSettings>
             <controllingFieldValue>Singapore</controllingFieldValue>
             <valueName>Singapore</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Singapore</controllingFieldValue>
-            <valueName>Island</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Saint Helena, Ascension and Tristan da Cunha</controllingFieldValue>
@@ -1948,22 +1375,6 @@
             <valueName>Thailand</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Thailand</controllingFieldValue>
-            <valueName>Chachoengsao</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Thailand</controllingFieldValue>
-            <valueName>Samut Prakan</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Thailand</controllingFieldValue>
-            <valueName>Nakhon Pathom</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Thailand</controllingFieldValue>
-            <valueName>Bangkok</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Tajikistan</controllingFieldValue>
             <valueName>Tajikistan</valueName>
         </valueSettings>
@@ -1998,10 +1409,6 @@
         <valueSettings>
             <controllingFieldValue>Taiwan</controllingFieldValue>
             <valueName>Taiwan</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Taiwan</controllingFieldValue>
-            <valueName>Taipei</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Isle of Man</controllingFieldValue>
@@ -2117,6 +1524,10 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>India</controllingFieldValue>
+            <valueName>Punjab</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>India</controllingFieldValue>
             <valueName>Puducherry</valueName>
         </valueSettings>
         <valueSettings>
@@ -2150,22 +1561,6 @@
         <valueSettings>
             <controllingFieldValue>India</controllingFieldValue>
             <valueName>West Bengal</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>India</controllingFieldValue>
-            <valueName>Chattisgarh</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>India</controllingFieldValue>
-            <valueName>Jakarta</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>India</controllingFieldValue>
-            <valueName>Uttarakad</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>India</controllingFieldValue>
-            <valueName>Yogyakarta</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Ukraine</controllingFieldValue>

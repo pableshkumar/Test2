@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accrediations_held_by_the_Engineers__c</fullName>
+    <externalId>false</externalId>
+    <label>Accrediations held by the Engineers</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MCSE</fullName>
+                <default>false</default>
+                <label>MCSE</label>
+            </value>
+            <value>
+                <fullName>A+</fullName>
+                <default>false</default>
+                <label>A+</label>
+            </value>
+            <value>
+                <fullName>CCNA</fullName>
+                <default>false</default>
+                <label>CCNA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

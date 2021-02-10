@@ -14,6 +14,7 @@
     <label>TotalIT</label>
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
+    <tabs>Vendor_Enquiry__c</tabs>
     <tabs>standard-Account</tabs>
     <tabs>Project__c</tabs>
     <tabs>Order__c</tabs>

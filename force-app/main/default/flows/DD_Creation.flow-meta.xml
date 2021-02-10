@@ -1,0 +1,3024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>50.0</apiVersion>
+    <choices>
+        <name>AssetsVsLiabilityRatingDefault</name>
+        <choiceText>{!AssetsVsLiabilityRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>CompanyEstablishedRatingDefault</name>
+        <choiceText>{!CompanyEstablishedRatingCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>CurrentsparesinstockManagementDefault</name>
+        <choiceText>{!CurrentsparesinstockManagementCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>CustomerBaseRatingDefault</name>
+        <choiceText>{!CustomerBaseRatingCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>EbondingcapabilitiesRatingDefault</name>
+        <choiceText>{!EbondingcapabilitiesRatingCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>EmployeeStrengthRatingDefault</name>
+        <choiceText>{!EmployeeStrengthRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>ExistingCustomerRecommendationsRatingDefault</name>
+        <choiceText>{!ExistingCustomerRecommendationsRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>FinancialstabilityorCreditRatingDefault</name>
+        <choiceText>{!FinancialstabilityorCreditRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>FutureplanenhancethepresenceRatingDefault</name>
+        <choiceText>{!FutureplanenhancethepresenceRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>HealthSafetyProcessesRatingDefault</name>
+        <choiceText>{!HealthSafetyProcessesRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>MaintenanceorbreakfixsupportRatingdefault</name>
+        <choiceText>{!MaintenanceorbreakfixsupportRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>NBDResolutionorOthersRatingDefault</name>
+        <choiceText>{!NBDResolutionorOthersRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>NetMarginGrowthforlast3yearRatingDeafult</name>
+        <choiceText>{!NetMarginGrowthforlast3yearRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>none</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;-- None --&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>NoOfCountriescovereddirectRatingDefault</name>
+        <choiceText>{!NoOfCountriescovereddirectRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>NoofFieldEngineersRatingDefault</name>
+        <choiceText>{!NoofFieldEngineersRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>NoOfHighvaluecustomersRatingDefault</name>
+        <choiceText>{!NoOfHighvaluecustomersRatingCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>OEMmodelSparereplacementRatingDefault</name>
+        <choiceText>{!OEMmodelSparereplacementRatingCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>OEMPartnershipCertificationRatingDefault</name>
+        <choiceText>{!OEMPartnershipCertificationRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>OEMProductsupportRatingDefault</name>
+        <choiceText>{!OEMProductsupportRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>OveralldeliverycapabilitiesRatingdefault</name>
+        <choiceText>{!OveralldeliverycapabilitiesRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>PointofpresenceRatingDefault</name>
+        <choiceText>{!PointofpresenceRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>ProactivenessRatingDefault</name>
+        <choiceText>{!ProactivenessRatingCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>ProductssupportedRatingDefault</name>
+        <choiceText>{!ProductssupportedRatingCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>QualityofCommunicationDocumentsubmitDefault</name>
+        <choiceText>{!QualityofCommunicationDocumentsubmitCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>QualityPCSCListRatingDefault</name>
+        <choiceText>{!QualityPCSCListRatingCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>ReferralCustomerfeedbackRatingDefault</name>
+        <choiceText>{!ReferralCustomerfeedbackRatingCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>ResponsivenessRatingDefault</name>
+        <choiceText>{!ResponsivenessRatingCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>RetentionofthecustomerRatingDefault</name>
+        <choiceText>{!RetentionofthecustomerRatingCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>RevenueGrowthforlast3yearRatingDeafult</name>
+        <choiceText>{!RevenueGrowthforlast3yearRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>SkilledEmployeesCertificationRatingDefault</name>
+        <choiceText>{!SkilledEmployeesCertificationRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>TechnicaldeliveryMatrixRatingDefault</name>
+        <choiceText>{!TechnicaldeliveryMatrixRatingCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>TicketingtoolsprocessRatingDefault</name>
+        <choiceText>{!TicketingtoolsprocessRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>ValueaddinnovationRatingDefault</name>
+        <choiceText>&lt;span style=&quot;font-size: 14px;&quot;&gt;{!ValueaddinnovationRatingCheck}&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>WarehouseManagementRatingDefault</name>
+        <choiceText>{!WarehouseManagementRatingCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>WarrantyOutofwarrantysupportRatingDefault</name>
+        <choiceText>{!WarrantyOutofwarrantysupportRatingCheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>X24x7callcenterHelpDesksupportRatingDefault</name>
+        <choiceText>{!X24x7callcenterHelpDesksupportRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>X2hoursFixResolutionRatingDefault</name>
+        <choiceText>{!X2hoursFixResolutionRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>X4hoursFixResolutionRatingDefault</name>
+        <choiceText>{!X4hoursFixResolutionRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>X8hoursFixResolutionRatingdefault</name>
+        <choiceText>{!X8hoursFixResolutionRatingcheck}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <decisions>
+        <name>Check_DD_is_Available_or_Not</name>
+        <label>Check DD is Available or Not</label>
+        <locationX>581</locationX>
+        <locationY>75</locationY>
+        <defaultConnector>
+            <targetReference>Create_DD_in_Completed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>if_available</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account_Data.Due_Diligence__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_DD_Data</targetReference>
+            </connector>
+            <label>if available</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_DD_Status</name>
+        <label>Check DD Status</label>
+        <locationX>860</locationX>
+        <locationY>106</locationY>
+        <defaultConnector>
+            <targetReference>Create_DD_in_Completed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Completed</defaultConnectorLabel>
+        <rules>
+            <name>If_In_Progress</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_DD_Data.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>In Progress</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_DD_In_Progress</targetReference>
+            </connector>
+            <label>If In Progress</label>
+        </rules>
+    </decisions>
+    <dynamicChoiceSets>
+        <name>AssetsVsLiabilityWeightPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Assets_Vs_Liability_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>CompanyEstablishedRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Company_Established_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>CurrentsparesinstockManagementPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Current_spares_in_stock_Management__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>CustomerBaseRatingpicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Customer_Base_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>EbondingcapabilitiesRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>E_bonding_capabilities_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>EmployeeStrengthRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Employee_Strength_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>ExistingCustomerRecommendationsRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Existing_Customer_Recommendations_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>FinancialstabilityorCreditPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Financial_stability_or_Credit_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>FutureplanenhancethepresenceRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Future_plan_enhance_the_presence_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>HealthSafetyProcessesRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Health_Safety_Processes_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>MaintenanceorbreakfixsupportRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Maintenance_or_break_fix_support_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>NBDResolutionorOthersRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>NBD_Resolution_or_Others_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>NetMarginGrowthforlast3yearRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Net_Margin_Growth_for_last_3_year_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>NoOfCountriescovereddirectRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>No_of_Countries_covered_direct_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>NoofFieldEngineersRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>No_of_Field_Engineers_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>NoOfHighvaluecustomersRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>No_of_High_value_customers_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>OEMmodelSparereplacementRatingpicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>OEM_model_Spare_replacement_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>OEMPartnershipCertificationRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>OEM_Partnership_Certification_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>OEMProductsupportRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>OEM_Product_support_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>OveralldeliverycapabilitiesRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Overall_delivery_capabilities_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>PointofpresenceRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Point_of_presence_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>ProactivenessRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Proactiveness_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>ProductssupportedRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Products_supported_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>QualityofCommunicationDocumentsubmitpicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Quality_of_Communication_Documents_sub__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>QualityPCSCListRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Quality_PC_SC_List_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>ReferralCustomerfeedbackRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Referral_Customer_feedback_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>ResponsivenessRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Responsiveness_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>RetentionofthecustomerRatingpicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Retention_of_the_customer_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>RevenueGrowthforlast3yearRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Revenue_Growth_for_last_3_years_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>SkilledEmployeesCertificationRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Skilled_Employees_Certification_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>SkilledEmployeesCertificationRatingPicklistTC</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Skilled_Employees_Certification_RatingTC__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>Status</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Status__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>TechnicaldeliveryMatrixRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Technical_delivery_Matrix_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>TicketingtoolsprocessRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Ticketing_tools_process_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>ValueaddinnovationRatingpicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Value_add_innovation_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>WarehouseManagementRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Warehouse_Management_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>WarrantyOutofwarrantysupportRatingpicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Warranty_Out_of_warranty_support_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>X24x7callcenterHelpDesksupportRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>X24x7_call_center_HelpDesk_support_Ratin__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>X2hoursFixResolutionRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>X2_hours_Fix_Resolution_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>X4hoursFixResolutionRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>X4_hours_Fix_Resolution_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>X8hoursFixResolutionRatingPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>X8_hours_Fix_Resolution_Rating__c</picklistField>
+        <picklistObject>Due_Diligence__c</picklistObject>
+    </dynamicChoiceSets>
+    <formulas>
+        <name>AssetsVsLiabilityRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Assets_Vs_Liability_Rating__c} )) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Assets_Vs_Liability_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>AssetsVsLiabilityRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK( {!Assets_Vs_Liability_Rating2}) ,TEXT( {!Get_DD_Data.Assets_Vs_Liability_Rating__c}),{!Assets_Vs_Liability_Rating2} )</expression>
+    </formulas>
+    <formulas>
+        <name>CompanyEstablishedRatingCheck</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK(TEXT({!Get_DD_Data.Company_Established_Rating__c})) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Company_Established_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>CompanyEstablishedRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Company_Established_Rating2}) ,TEXT( {!Get_DD_Data.Company_Established_Rating__c}),{!Company_Established_Rating2} )</expression>
+    </formulas>
+    <formulas>
+        <name>CurrentsparesinstockManagementCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Current_spares_in_stock_Management__c} )) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Current_spares_in_stock_Management__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>CurrentsparesinstockManagementFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Current_spares_in_stock_Management2}) ,TEXT({!Get_DD_Data.Current_spares_in_stock_Management__c}),{!Current_spares_in_stock_Management2})</expression>
+    </formulas>
+    <formulas>
+        <name>CustomerBaseRatingCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.Customer_Base_Rating__c})) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Customer_Base_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>CustomerBaseRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Customer_Base_Rating2}) ,TEXT({!Get_DD_Data.Customer_Base_Rating__c}),{!Customer_Base_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>EbondingcapabilitiesRatingCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.E_bonding_capabilities_Rating__c})) ,&apos;--None--&apos;,TEXT({!Get_DD_Data.E_bonding_capabilities_Rating__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>EbondingcapabilitiesRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!E_bonding_capabilities_Rating2}) ,TEXT({!Get_DD_Data.E_bonding_capabilities_Rating__c}),{!E_bonding_capabilities_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>EmployeeStrengthRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Employee_Strength_Rating__c})) ,&apos;--None--&apos;,TEXT({!Get_DD_Data.Employee_Strength_Rating__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>EmployeeStrengthRatingFormula</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK( {!Employee_Strength_Rating2}) ,TEXT({!Get_DD_Data.Employee_Strength_Rating__c} ),{!Employee_Strength_Rating2} )</expression>
+    </formulas>
+    <formulas>
+        <name>ExistingCustomerRecommendationsRatingcheck</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK(TEXT({!Get_DD_Data.Existing_Customer_Recommendations_Rating__c} )) ,&apos;--None--&apos;,TEXT({!Get_DD_Data.Existing_Customer_Recommendations_Rating__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>ExistingCustomerRecommendationsRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Existing_Customer_Recommendations_Rating2} ) ,TEXT( {!Get_DD_Data.Existing_Customer_Recommendations_Rating__c}), {!Existing_Customer_Recommendations_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>FinancialstabilityorCreditRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Financial_stability_or_Credit_Rating__c} )) ,&apos;--None--&apos;,TEXT({!Get_DD_Data.Financial_stability_or_Credit_Rating__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>FinancialstabilityorCreditRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Financial_stability_or_Credit_Rating2} ) ,TEXT({!Get_DD_Data.Financial_stability_or_Credit_Rating__c} ), {!Financial_stability_or_Credit_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>FutureplanenhancethepresenceRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.Future_plan_enhance_the_presence_Rating__c})) ,&apos;--None--&apos;,TEXT({!Get_DD_Data.Future_plan_enhance_the_presence_Rating__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>FutureplanenhancethepresenceRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK( {!Future_plan_enhance_the_presence_Rating2}) ,TEXT({!Get_DD_Data.Future_plan_enhance_the_presence_Rating__c} ), {!Future_plan_enhance_the_presence_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>HealthSafetyProcessesRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Health_Safety_Processes_Rating__c})) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Health_Safety_Processes_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>HealthSafetyProcessesRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK( {!Health_Safety_Processes_Rating2}) ,TEXT({!Get_DD_Data.Health_Safety_Processes_Rating__c} ), {!Health_Safety_Processes_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>MaintenanceorbreakfixsupportRatingcheck</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK(TEXT({!Get_DD_Data.Maintenance_or_break_fix_support_Rating__c} )) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Maintenance_or_break_fix_support_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>MaintenanceorbreakfixsupportRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK( {!Maintenance_or_break_fix_support_Rating2}) ,TEXT( {!Get_DD_Data.Maintenance_or_break_fix_support_Rating__c}),{!Maintenance_or_break_fix_support_Rating2} )</expression>
+    </formulas>
+    <formulas>
+        <name>NBDResolutionorOthersRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.NBD_Resolution_or_Others_Rating__c})) ,&apos;--None--&apos;,TEXT({!Get_DD_Data.NBD_Resolution_or_Others_Rating__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>NBDResolutionorOthersRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!NBD_Resolution_or_Others_Rating2} ) ,TEXT({!Get_DD_Data.NBD_Resolution_or_Others_Rating__c} ),{!NBD_Resolution_or_Others_Rating2} )</expression>
+    </formulas>
+    <formulas>
+        <name>NetMarginGrowthforlast3yearRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.Net_Margin_Growth_for_last_3_year_Rating__c})) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Net_Margin_Growth_for_last_3_year_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>NetMarginGrowthforlast3yearRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK( {!Net_Margin_Growth_for_last_3_year_Rating2}) ,TEXT( {!Get_DD_Data.Net_Margin_Growth_for_last_3_year_Rating__c}), {!Net_Margin_Growth_for_last_3_year_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>NoOfCountriescovereddirectRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.No_of_Countries_covered_direct_Rating__c})) ,&apos;--None--&apos;,TEXT({!Get_DD_Data.No_of_Countries_covered_direct_Rating__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>NoOfCountriescovereddirectRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!No_of_Countries_covered_direct_Rating2} ) ,TEXT({!Get_DD_Data.No_of_Countries_covered_direct_Rating__c} ), {!No_of_Countries_covered_direct_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>NoofFieldEngineersRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.No_of_Field_Engineers_Rating__c} )) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.No_of_Field_Engineers_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>NoofFieldEngineersRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!No_of_Field_Engineers_Rating2} ) ,TEXT({!Get_DD_Data.No_of_Field_Engineers_Rating__c} ), {!No_of_Field_Engineers_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>NoOfHighvaluecustomersRatingCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.No_of_High_value_customers_Rating__c} )) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.No_of_High_value_customers_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>NoOfHighvaluecustomersRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!No_of_High_value_customers_Rating2}) ,TEXT({!Get_DD_Data.No_of_High_value_customers_Rating__c}),{!No_of_High_value_customers_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>OEMmodelSparereplacementRatingCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.OEM_model_Spare_replacement_Rating__c})) ,&apos;--None--&apos;,TEXT({!Get_DD_Data.OEM_model_Spare_replacement_Rating__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>OEMmodelSparereplacementRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!OEM_model_Spare_replacement_Rating2}) ,TEXT({!Get_DD_Data.OEM_model_Spare_replacement_Rating__c}),{!OEM_model_Spare_replacement_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>OEMPartnershipCertificationRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.OEM_Partnership_Certification_Rating__c})) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.OEM_Partnership_Certification_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>OEMPartnershipCertificationRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK( {!OEM_Partnership_Certification_Rating2}) ,TEXT({!Get_DD_Data.OEM_Partnership_Certification_Rating__c} ), {!OEM_model_Spare_replacement_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>OEMProductsupportRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.OEM_Product_support_Rating__c})) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.OEM_Product_support_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>OEMProductsupportRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK( {!OEM_Product_support_Rating2}) ,TEXT({!Get_DD_Data.OEM_Product_support_Rating__c} ),{!OEM_Product_support_Rating2} )</expression>
+    </formulas>
+    <formulas>
+        <name>OveralldeliverycapabilitiesRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Overall_delivery_capabilities_Rating__c} )) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Overall_delivery_capabilities_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>OveralldeliverycapabilitiesRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Overall_delivery_capabilities_Rating2} ) ,TEXT({!Get_DD_Data.Overall_delivery_capabilities_Rating__c} ), {!Overall_delivery_capabilities_Rating2} )</expression>
+    </formulas>
+    <formulas>
+        <name>PointofpresenceRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.Point_of_presence_Rating__c})) ,&apos;--None--&apos;,TEXT({!Get_DD_Data.Point_of_presence_Rating__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>PointofpresenceRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK( {!Point_of_presence_Rating2}) ,TEXT({!Get_DD_Data.Point_of_presence_Rating__c} ), {!Point_of_presence_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>ProactivenessRatingCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Proactiveness_Rating__c} )) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Proactiveness_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>ProactivenessRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Proactiveness_Rating2}) ,TEXT({!Get_DD_Data.Proactiveness_Rating__c}),{!Proactiveness_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>ProductssupportedRatingCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Products_supported_Rating__c} )) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Products_supported_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>ProductssupportedRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Products_supported_Rating2} ) ,TEXT({!Get_DD_Data.Products_supported_Rating__c} ),{!Products_supported_Rating2} )</expression>
+    </formulas>
+    <formulas>
+        <name>QualityofCommunicationDocumentsubmitCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Quality_of_Communication_Documents_sub__c} )) ,&apos;--None--&apos;,TEXT({!Get_DD_Data.Quality_of_Communication_Documents_sub__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>QualityofCommunicationDocumentsubmitFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Quality_of_Communication_Document_submit2}) ,TEXT({!Get_DD_Data.Quality_of_Communication_Documents_sub__c}),{!Quality_of_Communication_Document_submit2})</expression>
+    </formulas>
+    <formulas>
+        <name>QualityPCSCListRatingCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Quality_PC_SC_List_Rating__c})) ,&apos;--None--&apos;,TEXT({!Get_DD_Data.Quality_PC_SC_List_Rating__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>QualityPCSCListRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Quality_PC_SC_List_Rating2}) ,TEXT({!Get_DD_Data.Quality_PC_SC_List_Rating__c} ),{!Quality_PC_SC_List_Rating2} )</expression>
+    </formulas>
+    <formulas>
+        <name>ReferralCustomerfeedbackRatingCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Referral_Customer_feedback_Rating__c})) ,&apos;--None--&apos;,TEXT({!Get_DD_Data.Referral_Customer_feedback_Rating__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>ReferralCustomerfeedbackRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Referral_Customer_feedback_Rating2}) ,TEXT({!Get_DD_Data.Referral_Customer_feedback_Rating__c}),{!Referral_Customer_feedback_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>ResponsivenessRatingCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.Responsiveness_Rating__c})) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Responsiveness_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>ResponsivenessRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Responsiveness_Rating2}) ,TEXT({!Get_DD_Data.Responsiveness_Rating__c}),{!Responsiveness_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>RetentionofthecustomerRatingCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Retention_of_the_customer_Rating__c} )) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Retention_of_the_customer_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>RetentionofthecustomerRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Retention_of_the_customer_Rating2}) ,TEXT({!Get_DD_Data.Retention_of_the_customer_Rating__c}),{!Retention_of_the_customer_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>RevenueGrowthforlast3yearRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Revenue_Growth_for_last_3_years_Rating__c} )) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Revenue_Growth_for_last_3_years_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>RevenueGrowthforlast3yearRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Revenue_Growth_for_last_3_year_Rating2} ) ,TEXT({!Get_DD_Data.Revenue_Growth_for_last_3_years_Rating__c} ), {!Revenue_Growth_for_last_3_year_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>SkilledEmployeesCertificationRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.Skilled_Employees_Certification_Rating__c})) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Skilled_Employees_Certification_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>SkilledEmployeesCertificationRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Skilled_Employees_Certification_Rating2}) ,TEXT({!Get_DD_Data.Skilled_Employees_Certification_Rating__c}),{!Skilled_Employees_Certification_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>SkilledEmployeesCertificationRatingTcCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Skilled_Employees_Certification_RatingTC__c} )) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Skilled_Employees_Certification_RatingTC__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>SkilledEmployeesCertificationRatingTCFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Skilled_Employees_Certification_RatingTC2} ) ,TEXT( {!Get_DD_Data.Skilled_Employees_Certification_RatingTC__c}),{!Skilled_Employees_Certification_RatingTC2} )</expression>
+    </formulas>
+    <formulas>
+        <name>TechnicaldeliveryMatrixRatingCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.Technical_delivery_Matrix_Rating__c})) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Technical_delivery_Matrix_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>TechnicaldeliveryMatrixRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK( {!Technical_delivery_Matrix_Rating2}) ,TEXT( {!Get_DD_Data.Technical_delivery_Matrix_Rating__c}),{!Technical_delivery_Matrix_Rating2} )</expression>
+    </formulas>
+    <formulas>
+        <name>TicketingtoolsprocessRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.Ticketing_tools_process_Rating__c})) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Ticketing_tools_process_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>TicketingtoolsprocessRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Ticketing_tools_process_Rating2}) ,TEXT({!Get_DD_Data.Ticketing_tools_process_Rating__c}),{!Ticketing_tools_process_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>ValueaddinnovationRatingCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.Value_add_innovation_Rating__c})) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Value_add_innovation_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>ValueaddinnovationRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Value_add_innovation_Rating2}) ,TEXT({!Get_DD_Data.Value_add_innovation_Rating__c}),{!Value_add_innovation_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>WarehouseManagementRatingCheck</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK(TEXT({!Get_DD_Data.Warehouse_Management_Rating__c} )) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Warehouse_Management_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>WarehouseManagementRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Warehouse_Management_Rating2}) ,TEXT({!Get_DD_Data.Warehouse_Management_Rating__c}),{!Warehouse_Management_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>WarrantyOutofwarrantysupportRatingCheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT({!Get_DD_Data.Warranty_Out_of_warranty_support_Rating__c} )) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.Warranty_Out_of_warranty_support_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>WarrantyOutofwarrantysupportRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!Warranty_Out_of_warranty_support_Rating2}) ,TEXT({!Get_DD_Data.Warranty_Out_of_warranty_support_Rating__c}),{!Warranty_Out_of_warranty_support_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>X24x7callcenterHelpDesksupportRatingcheck</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK(TEXT({!Get_DD_Data.X24x7_call_center_HelpDesk_support_Ratin__c} )) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.X24x7_call_center_HelpDesk_support_Ratin__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>X24x7callcenterHelpDesksupportRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK({!X24x7_call_center_HelpDesk_support_Rating2}) ,TEXT({!Get_DD_Data.X24x7_call_center_HelpDesk_support_Ratin__c}),{!X24x7_call_center_HelpDesk_support_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>X2hoursFixResolutionRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.X2_hours_Fix_Resolution_Rating__c})) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.X2_hours_Fix_Resolution_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>X2hoursFixResolutionRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK( {!X2_hours_Fix_Resolution_Rating2}) ,TEXT( {!Get_DD_Data.X2_hours_Fix_Resolution_Rating__c}),{!X2_hours_Fix_Resolution_Rating2} )</expression>
+    </formulas>
+    <formulas>
+        <name>X4hoursFixResolutionRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.X4_hours_Fix_Resolution_Rating__c})) ,&apos;--None--&apos;,TEXT( {!Get_DD_Data.X4_hours_Fix_Resolution_Rating__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>X4hoursFixResolutionRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK( {!X4_hours_Fix_Resolution_Rating2}) ,TEXT( {!Get_DD_Data.X4_hours_Fix_Resolution_Rating__c}), {!X4_hours_Fix_Resolution_Rating2})</expression>
+    </formulas>
+    <formulas>
+        <name>X8hoursFixResolutionRatingcheck</name>
+        <dataType>String</dataType>
+        <expression> IF( ISBLANK(TEXT( {!Get_DD_Data.X8_hours_Fix_Resolution_Rating__c})) ,&apos;--None--&apos;,TEXT({!Get_DD_Data.X8_hours_Fix_Resolution_Rating__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>X8hoursFixResolutionRatingFormula</name>
+        <dataType>String</dataType>
+        <expression>IF( ISBLANK( {!X8_hours_Fix_Resolution_Rating2}) ,TEXT({!Get_DD_Data.X8_hours_Fix_Resolution_Rating__c} ),{!X8_hours_Fix_Resolution_Rating2} )</expression>
+    </formulas>
+    <interviewLabel>DD Creation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>DD Creation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_DD_Data</name>
+        <label>Create DD Data</label>
+        <locationX>1024</locationX>
+        <locationY>240</locationY>
+        <inputAssignments>
+            <field>Assets_Vs_Liability_Rating__c</field>
+            <value>
+                <elementReference>Assets_Vs_Liability_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Company_Established_Rating__c</field>
+            <value>
+                <elementReference>Company_Established_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Current_spares_in_stock_Management__c</field>
+            <value>
+                <elementReference>Current_spares_in_stock_Management</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Customer_Base_Rating__c</field>
+            <value>
+                <elementReference>Customer_Base_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>E_bonding_capabilities_Rating__c</field>
+            <value>
+                <elementReference>E_bonding_capabilities_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Employee_Strength_Rating__c</field>
+            <value>
+                <elementReference>Employee_Strength_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Existing_Customer_Recommendations_Rating__c</field>
+            <value>
+                <elementReference>Existing_Customer_Recommendations_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FSM_Geo_Head__c</field>
+            <value>
+                <elementReference>FSM_Geo_Head</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Financial_stability_or_Credit_Rating__c</field>
+            <value>
+                <elementReference>Financial_stability_or_Credit_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Future_plan_enhance_the_presence_Rating__c</field>
+            <value>
+                <elementReference>Future_plan_enhance_the_presence_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Health_Safety_Processes_Rating__c</field>
+            <value>
+                <elementReference>Health_Safety_Processes_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Maintenance_or_break_fix_support_Rating__c</field>
+            <value>
+                <elementReference>Maintenance_or_break_fix_support_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>NBD_Resolution_or_Others_Rating__c</field>
+            <value>
+                <elementReference>NBD_Resolution_or_Others_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Net_Margin_Growth_for_last_3_year_Rating__c</field>
+            <value>
+                <elementReference>Net_Margin_Growth_for_last_3_year_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>No_of_Countries_covered_direct_Rating__c</field>
+            <value>
+                <elementReference>No_of_Countries_covered_direct_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>No_of_Field_Engineers_Rating__c</field>
+            <value>
+                <elementReference>No_of_Field_Engineers_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>No_of_High_value_customers_Rating__c</field>
+            <value>
+                <elementReference>No_of_High_value_customers_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OEM_Partnership_Certification_Rating__c</field>
+            <value>
+                <elementReference>OEM_Partnership_Certification_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OEM_Product_support_Rating__c</field>
+            <value>
+                <elementReference>OEM_Product_support_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OEM_model_Spare_replacement_Rating__c</field>
+            <value>
+                <elementReference>OEM_model_Spare_replacement_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Overall_delivery_capabilities_Rating__c</field>
+            <value>
+                <elementReference>Overall_delivery_capabilities_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Partner_H_O__c</field>
+            <value>
+                <elementReference>Partner_H_O</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Partner__c</field>
+            <value>
+                <elementReference>Get_Account_Data.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Point_of_presence_Rating__c</field>
+            <value>
+                <elementReference>Point_of_presence_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Proactiveness_Rating__c</field>
+            <value>
+                <elementReference>Proactiveness_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Products_supported_Rating__c</field>
+            <value>
+                <elementReference>Products_supported_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Prospective_Project__c</field>
+            <value>
+                <elementReference>Prospective_Project</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Quality_PC_SC_List_Rating__c</field>
+            <value>
+                <elementReference>Quality_PC_SC_List_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Quality_of_Communication_Documents_sub__c</field>
+            <value>
+                <elementReference>Quality_of_Communication_Document_submit</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Referral_Customer_feedback_Rating__c</field>
+            <value>
+                <elementReference>Referral_Customer_feedback_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Responsiveness_Rating__c</field>
+            <value>
+                <elementReference>Responsiveness_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Retention_of_the_customer_Rating__c</field>
+            <value>
+                <elementReference>Retention_of_the_customer_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Revenue_Growth_for_last_3_years_Rating__c</field>
+            <value>
+                <elementReference>Revenue_Growth_for_last_3_year_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Skilled_Employees_Certification_RatingTC__c</field>
+            <value>
+                <elementReference>Skilled_Employees_Certification_RatingTC</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Skilled_Employees_Certification_Rating__c</field>
+            <value>
+                <elementReference>Skilled_Employees_Certification_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <elementReference>Status_Data</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Technical_delivery_Matrix_Rating__c</field>
+            <value>
+                <elementReference>Technical_delivery_Matrix_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Ticketing_tools_process_Rating__c</field>
+            <value>
+                <elementReference>Ticketing_tools_process_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Value_add_innovation_Rating__c</field>
+            <value>
+                <elementReference>Value_add_innovation_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Warehouse_Management_Rating__c</field>
+            <value>
+                <elementReference>Warehouse_Management_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Warranty_Out_of_warranty_support_Rating__c</field>
+            <value>
+                <elementReference>Warranty_Out_of_warranty_support_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>X24x7_call_center_HelpDesk_support_Ratin__c</field>
+            <value>
+                <elementReference>X24x7_call_center_HelpDesk_support_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>X2_hours_Fix_Resolution_Rating__c</field>
+            <value>
+                <elementReference>X2_hours_Fix_Resolution_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>X4_hours_Fix_Resolution_Rating__c</field>
+            <value>
+                <elementReference>X4_hours_Fix_Resolution_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>X8_hours_Fix_Resolution_Rating__c</field>
+            <value>
+                <elementReference>X8_hours_Fix_Resolution_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Due_Diligence__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Account_Data</name>
+        <label>Get Account Data</label>
+        <locationX>420</locationX>
+        <locationY>83</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_DD_is_Available_or_Not</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_DD_Data</name>
+        <label>Get DD Data</label>
+        <locationX>747</locationX>
+        <locationY>104</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_DD_Status</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Active__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Partner__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Due_Diligence__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_DD_Data</name>
+        <label>Update DD Data</label>
+        <locationX>710</locationX>
+        <locationY>279</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_DD_Data.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Assets_Vs_Liability_Rating__c</field>
+            <value>
+                <elementReference>AssetsVsLiabilityRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Company_Established_Rating__c</field>
+            <value>
+                <elementReference>CompanyEstablishedRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Current_spares_in_stock_Management__c</field>
+            <value>
+                <elementReference>CurrentsparesinstockManagementFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Customer_Base_Rating__c</field>
+            <value>
+                <elementReference>CustomerBaseRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>E_bonding_capabilities_Rating__c</field>
+            <value>
+                <elementReference>EbondingcapabilitiesRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Employee_Strength_Rating__c</field>
+            <value>
+                <elementReference>EmployeeStrengthRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Existing_Customer_Recommendations_Rating__c</field>
+            <value>
+                <elementReference>ExistingCustomerRecommendationsRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FSM_Geo_Head__c</field>
+            <value>
+                <elementReference>FSM_Geo_Head2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Financial_stability_or_Credit_Rating__c</field>
+            <value>
+                <elementReference>FinancialstabilityorCreditRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Future_plan_enhance_the_presence_Rating__c</field>
+            <value>
+                <elementReference>FutureplanenhancethepresenceRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Health_Safety_Processes_Rating__c</field>
+            <value>
+                <elementReference>HealthSafetyProcessesRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Maintenance_or_break_fix_support_Rating__c</field>
+            <value>
+                <elementReference>MaintenanceorbreakfixsupportRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>NBD_Resolution_or_Others_Rating__c</field>
+            <value>
+                <elementReference>NBDResolutionorOthersRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Net_Margin_Growth_for_last_3_year_Rating__c</field>
+            <value>
+                <elementReference>NetMarginGrowthforlast3yearRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>No_of_Countries_covered_direct_Rating__c</field>
+            <value>
+                <elementReference>NoOfCountriescovereddirectRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>No_of_Field_Engineers_Rating__c</field>
+            <value>
+                <elementReference>NoofFieldEngineersRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>No_of_High_value_customers_Rating__c</field>
+            <value>
+                <elementReference>NoOfHighvaluecustomersRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OEM_Partnership_Certification_Rating__c</field>
+            <value>
+                <elementReference>OEMPartnershipCertificationRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OEM_Product_support_Rating__c</field>
+            <value>
+                <elementReference>OEMProductsupportRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OEM_model_Spare_replacement_Rating__c</field>
+            <value>
+                <elementReference>OEMmodelSparereplacementRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Overall_delivery_capabilities_Rating__c</field>
+            <value>
+                <elementReference>OveralldeliverycapabilitiesRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Partner_H_O__c</field>
+            <value>
+                <elementReference>Partner_H_O2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Point_of_presence_Rating__c</field>
+            <value>
+                <elementReference>PointofpresenceRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Proactiveness_Rating__c</field>
+            <value>
+                <elementReference>ProactivenessRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Products_supported_Rating__c</field>
+            <value>
+                <elementReference>ProductssupportedRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Prospective_Project__c</field>
+            <value>
+                <elementReference>Prospective_Project2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Quality_PC_SC_List_Rating__c</field>
+            <value>
+                <elementReference>QualityPCSCListRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Quality_of_Communication_Documents_sub__c</field>
+            <value>
+                <elementReference>QualityofCommunicationDocumentsubmitFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Referral_Customer_feedback_Rating__c</field>
+            <value>
+                <elementReference>ReferralCustomerfeedbackRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Responsiveness_Rating__c</field>
+            <value>
+                <elementReference>ResponsivenessRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Retention_of_the_customer_Rating__c</field>
+            <value>
+                <elementReference>RetentionofthecustomerRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Revenue_Growth_for_last_3_years_Rating__c</field>
+            <value>
+                <elementReference>RevenueGrowthforlast3yearRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Skilled_Employees_Certification_RatingTC__c</field>
+            <value>
+                <elementReference>SkilledEmployeesCertificationRatingTCFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Skilled_Employees_Certification_Rating__c</field>
+            <value>
+                <elementReference>SkilledEmployeesCertificationRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <elementReference>Status2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Technical_delivery_Matrix_Rating__c</field>
+            <value>
+                <elementReference>TechnicaldeliveryMatrixRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Ticketing_tools_process_Rating__c</field>
+            <value>
+                <elementReference>TicketingtoolsprocessRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Value_add_innovation_Rating__c</field>
+            <value>
+                <elementReference>ValueaddinnovationRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Warehouse_Management_Rating__c</field>
+            <value>
+                <elementReference>WarehouseManagementRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Warranty_Out_of_warranty_support_Rating__c</field>
+            <value>
+                <elementReference>WarrantyOutofwarrantysupportRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>X24x7_call_center_HelpDesk_support_Ratin__c</field>
+            <value>
+                <elementReference>X24x7callcenterHelpDesksupportRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>X2_hours_Fix_Resolution_Rating__c</field>
+            <value>
+                <elementReference>X2hoursFixResolutionRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>X4_hours_Fix_Resolution_Rating__c</field>
+            <value>
+                <elementReference>X4hoursFixResolutionRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>X8_hours_Fix_Resolution_Rating__c</field>
+            <value>
+                <elementReference>X8hoursFixResolutionRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Due_Diligence__c</object>
+    </recordUpdates>
+    <screens>
+        <name>Create_DD_in_Completed</name>
+        <label>Create DD in Completed</label>
+        <locationX>1026</locationX>
+        <locationY>67</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Create_DD_Data</targetReference>
+        </connector>
+        <fields>
+            <name>Information</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;Information&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>FSM_Geo_Head</name>
+            <dataType>String</dataType>
+            <fieldText>FSM Geo Head</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Partner_H_O</name>
+            <dataType>String</dataType>
+            <fieldText>Partner H.O.</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Prospective_Project</name>
+            <dataType>String</dataType>
+            <fieldText>Prospective Project</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Status_Data</name>
+            <choiceReferences>Status</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Status</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Company_Overview</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;Company Overview&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>h1</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----------Company Established----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Company_Established_Rating</name>
+            <choiceReferences>none</choiceReferences>
+            <choiceReferences>CompanyEstablishedRatingPicklist</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Company Established Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h2</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;color: rgb(62, 62, 60); font-size: 12px; background-color: rgb(255, 255, 255);&quot;&gt;Employee Strength&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Employee_Strength_Rating</name>
+            <choiceReferences>EmployeeStrengthRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Employee Strength Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h3</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Quality/PC/SC List&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Quality_PC_SC_List_Rating</name>
+            <choiceReferences>QualityPCSCListRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Quality/PC/SC List Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h4</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Health &amp;amp; Safety Processes&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Health_Safety_Processes_Rating</name>
+            <choiceReferences>HealthSafetyProcessesRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Health &amp; Safety Processes Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Financial_Credibility_heading</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(62, 62, 60); font-size: 14px; background-color: rgb(255, 255, 255);&quot;&gt;Financial Credibility&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>h5</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Revenue Growth for last 3 year&lt;/b&gt;&lt;b&gt;---------&lt;/b&gt;-&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Revenue_Growth_for_last_3_year_Rating</name>
+            <choiceReferences>RevenueGrowthforlast3yearRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Revenue Growth for last 3 year Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h6</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Net Margin Growth for last 3year&amp;nbsp;&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Net_Margin_Growth_for_last_3_year_Rating</name>
+            <choiceReferences>NetMarginGrowthforlast3yearRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Net Margin Growth for last 3 year Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h7</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Assets Vs Liability&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Assets_Vs_Liability_Rating</name>
+            <choiceReferences>AssetsVsLiabilityWeightPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Assets Vs Liability Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h8</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Financial stability or Credit&lt;/b&gt;&lt;b&gt;----------&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Financial_stability_or_Credit_Rating</name>
+            <choiceReferences>FinancialstabilityorCreditPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Financial stability or Credit Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Service_Delivery_Heading</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;Service Delivery&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>h9</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;color: rgb(62, 62, 60); font-size: 12px; background-color: rgb(255, 255, 255);&quot;&gt;No of Field Engineers&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>No_of_Field_Engineers_Rating</name>
+            <choiceReferences>NoofFieldEngineersRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>No of Field Engineers Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h10</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Skilled Employees/Certification&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Skilled_Employees_Certification_Rating</name>
+            <choiceReferences>SkilledEmployeesCertificationRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Skilled Employees/Certification Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h11</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;OEM Product support&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>OEM_Product_support_Rating</name>
+            <choiceReferences>OEMProductsupportRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>OEM Product support Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h12</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Maintenance or break fix support&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Maintenance_or_break_fix_support_Rating</name>
+            <choiceReferences>MaintenanceorbreakfixsupportRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Maintenance or break fix support Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h13</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;color: rgb(62, 62, 60); font-size: 12px; background-color: rgb(255, 255, 255);&quot;&gt;Existing Customer Recommendation&lt;/b&gt;&lt;b&gt;--------&lt;/b&gt;--&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Existing_Customer_Recommendations_Rating</name>
+            <choiceReferences>ExistingCustomerRecommendationsRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Existing Customer Recommendations Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h14</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Overall delivery capabilities&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Overall_delivery_capabilities_Rating</name>
+            <choiceReferences>OveralldeliverycapabilitiesRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Overall delivery capabilities Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h15</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;Coverage Point Presence&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>h16</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;No. of Countries covered direct&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>No_of_Countries_covered_direct_Rating</name>
+            <choiceReferences>NoOfCountriescovereddirectRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>No. of Countries covered direct Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h17</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Point of presence&amp;nbsp;&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Point_of_presence_Rating</name>
+            <choiceReferences>PointofpresenceRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Point of presence Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h18</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Future plan enhance the presence&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Future_plan_enhance_the_presence_Rating</name>
+            <choiceReferences>FutureplanenhancethepresenceRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Future plan enhance the presence Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h19</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;SLA Overall&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>h20</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----2 hours Fix Resolution-----&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>X2_hours_Fix_Resolution_Rating</name>
+            <choiceReferences>X2hoursFixResolutionRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>2 hours Fix Resolution Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h21</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----4 hours Fix Resolution ----&lt;/b&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>X4_hours_Fix_Resolution_Rating</name>
+            <choiceReferences>X4hoursFixResolutionRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>4 hours Fix Resolution Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h22</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----8 hours Fix Resolution-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>X8_hours_Fix_Resolution_Rating</name>
+            <choiceReferences>X8hoursFixResolutionRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>8 hours Fix Resolution Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h23</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;-----NBD Resolution or Others-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>NBD_Resolution_or_Others_Rating</name>
+            <choiceReferences>NBDResolutionorOthersRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>NBD Resolution or Others Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h24</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;Technical capabilities&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>h25</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----OEM Partnership/Certification-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>OEM_Partnership_Certification_Rating</name>
+            <choiceReferences>OEMPartnershipCertificationRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>OEM Partnership / Certification Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h26</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Skilled Employees-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Skilled_Employees_Certification_RatingTC</name>
+            <choiceReferences>SkilledEmployeesCertificationRatingPicklistTC</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Skilled Employees/Certification Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h27</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Technical delivery Matrix-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Technical_delivery_Matrix_Rating</name>
+            <choiceReferences>TechnicaldeliveryMatrixRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Technical delivery Matrix Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h28</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Products supported-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Products_supported_Rating</name>
+            <choiceReferences>ProductssupportedRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Products supported Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h29</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;Call Support/Management&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>h30</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Ticketing tools &amp;amp; process-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Ticketing_tools_process_Rating</name>
+            <choiceReferences>TicketingtoolsprocessRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Ticketing tools &amp; process Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h31</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----E-bonding capabilities-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>E_bonding_capabilities_Rating</name>
+            <choiceReferences>EbondingcapabilitiesRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>E-bonding capabilities Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h32</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----24x7 call center/HelpDesk-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>X24x7_call_center_HelpDesk_support_Rating</name>
+            <choiceReferences>X24x7callcenterHelpDesksupportRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>24x7 call center/HelpDesk support Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h33</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;Spare Management&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>h34</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Current spare in stock-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Current_spares_in_stock_Management</name>
+            <choiceReferences>CurrentsparesinstockManagementPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Current spares in stock &amp; Management</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h36</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Warehouse Management-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Warehouse_Management_Rating</name>
+            <choiceReferences>WarehouseManagementRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Warehouse Management Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h37</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----OEM model/Spare-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>OEM_model_Spare_replacement_Rating</name>
+            <choiceReferences>OEMmodelSparereplacementRatingpicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>OEM model/Spare replacement Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h38</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Warranty /Out of warranty-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Warranty_Out_of_warranty_support_Rating</name>
+            <choiceReferences>WarrantyOutofwarrantysupportRatingpicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Warranty /Out of warranty support Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h39</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;Responses/Quality of Doc&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>h40</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Responsiveness-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Responsiveness_Rating</name>
+            <choiceReferences>ResponsivenessRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Responsiveness Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h41</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Proactiveness-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Proactiveness_Rating</name>
+            <choiceReferences>ProactivenessRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Proactiveness Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h42</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Quality of Communication----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Quality_of_Communication_Document_submit</name>
+            <choiceReferences>QualityofCommunicationDocumentsubmitpicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Quality of Communication/Document submit</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h43</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Value add &amp;amp; innovation-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Value_add_innovation_Rating</name>
+            <choiceReferences>ValueaddinnovationRatingpicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Value add &amp; innovation Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h44</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;Customer Base / Feedback&amp;nbsp;&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>h45</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Customer Base-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Customer_Base_Rating</name>
+            <choiceReferences>CustomerBaseRatingpicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Customer Base Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h46</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Referral Customer feedback-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Retention_of_the_customer_Rating</name>
+            <choiceReferences>RetentionofthecustomerRatingpicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Retention of the customer Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h47</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;-----Retention of the customer-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Referral_Customer_feedback_Rating</name>
+            <choiceReferences>ReferralCustomerfeedbackRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>Referral Customer feedback Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>h48</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----No. of High value customers-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>No_of_High_value_customers_Rating</name>
+            <choiceReferences>NoOfHighvaluecustomersRatingPicklist</choiceReferences>
+            <choiceReferences>none</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
+            <fieldText>No. of High value customers Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Update_DD_In_Progress</name>
+        <label>Update DD In Progress</label>
+        <locationX>877</locationX>
+        <locationY>281</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Update_DD_Data</targetReference>
+        </connector>
+        <fields>
+            <name>Information2</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;Information&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>FSM_Geo_Head2</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>Get_DD_Data.FSM_Geo_Head__c</elementReference>
+            </defaultValue>
+            <fieldText>FSM Geo Head</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Partner_H_O2</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>Get_DD_Data.Partner_H_O__c</elementReference>
+            </defaultValue>
+            <fieldText>Partner H.O.</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Prospective_Project2</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>Get_DD_Data.Prospective_Project__c</elementReference>
+            </defaultValue>
+            <fieldText>Prospective Project</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Status2</name>
+            <choiceReferences>Status</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Status</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Company_Overview1</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Company Overview&lt;/b&gt;&lt;i&gt;﻿&lt;/i&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>hh1</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 12px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;----------Company Established----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Company_Established_Rating2</name>
+            <choiceReferences>CompanyEstablishedRatingPicklist</choiceReferences>
+            <choiceReferences>CompanyEstablishedRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>CompanyEstablishedRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Company Established Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh2</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;--------Quality/PC/SC List--------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Quality_PC_SC_List_Rating2</name>
+            <choiceReferences>QualityPCSCListRatingPicklist</choiceReferences>
+            <choiceReferences>QualityPCSCListRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>QualityPCSCListRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Quality/PC/SC List Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh3</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;----------Employee Strength----------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Employee_Strength_Rating2</name>
+            <choiceReferences>EmployeeStrengthRatingPicklist</choiceReferences>
+            <choiceReferences>EmployeeStrengthRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>EmployeeStrengthRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Employee Strength Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh4</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255); font-size: 12px;&quot;&gt;--------Health &amp;amp; Safety Processes-------&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Health_Safety_Processes_Rating2</name>
+            <choiceReferences>HealthSafetyProcessesRatingPicklist</choiceReferences>
+            <choiceReferences>HealthSafetyProcessesRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>HealthSafetyProcessesRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Health &amp; Safety Processes Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Financial_Credibility_heading2</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;Financial Credibility&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>hh5</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60); font-size: 12px;&quot;&gt;-----Revenue Growth for last 3 year-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Revenue_Growth_for_last_3_year_Rating2</name>
+            <choiceReferences>RevenueGrowthforlast3yearRatingPicklist</choiceReferences>
+            <choiceReferences>RevenueGrowthforlast3yearRatingDeafult</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>RevenueGrowthforlast3yearRatingDeafult</defaultSelectedChoiceReference>
+            <fieldText>Revenue Growth for last 3 year Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh6</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60); font-size: 12px;&quot;&gt;-----Net Margin Growth ----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Net_Margin_Growth_for_last_3_year_Rating2</name>
+            <choiceReferences>NetMarginGrowthforlast3yearRatingPicklist</choiceReferences>
+            <choiceReferences>NetMarginGrowthforlast3yearRatingDeafult</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>NetMarginGrowthforlast3yearRatingDeafult</defaultSelectedChoiceReference>
+            <fieldText>Net Margin Growth for last 3 year Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh7</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60); font-size: 12px;&quot;&gt;-----Assets Vs Liability-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Assets_Vs_Liability_Rating2</name>
+            <choiceReferences>AssetsVsLiabilityWeightPicklist</choiceReferences>
+            <choiceReferences>AssetsVsLiabilityRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>AssetsVsLiabilityRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Assets Vs Liability Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh8</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255); font-size: 12px;&quot;&gt;-----Financial stability or Credit -----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Financial_stability_or_Credit_Rating2</name>
+            <choiceReferences>FinancialstabilityorCreditPicklist</choiceReferences>
+            <choiceReferences>FinancialstabilityorCreditRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>FinancialstabilityorCreditRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Financial stability or Credit Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Service_Delivery_Heading2</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;Service Delivery&amp;nbsp;&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>hh9</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----No of Field Engineers-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>No_of_Field_Engineers_Rating2</name>
+            <choiceReferences>NoofFieldEngineersRatingPicklist</choiceReferences>
+            <choiceReferences>NoofFieldEngineersRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>NoofFieldEngineersRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>No of Field Engineers Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh10</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255); font-size: 12px;&quot;&gt;-----Skilled Employees-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Skilled_Employees_Certification_Rating2</name>
+            <choiceReferences>SkilledEmployeesCertificationRatingPicklist</choiceReferences>
+            <choiceReferences>SkilledEmployeesCertificationRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>SkilledEmployeesCertificationRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Skilled Employees/Certification Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh11</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----OEM Product support-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>OEM_Product_support_Rating2</name>
+            <choiceReferences>OEMProductsupportRatingPicklist</choiceReferences>
+            <choiceReferences>OEMProductsupportRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>OEMProductsupportRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>OEM Product support Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh12</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Maintenance fix suppor&lt;/b&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;t-----&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Maintenance_or_break_fix_support_Rating2</name>
+            <choiceReferences>MaintenanceorbreakfixsupportRatingPicklist</choiceReferences>
+            <choiceReferences>MaintenanceorbreakfixsupportRatingdefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>MaintenanceorbreakfixsupportRatingdefault</defaultSelectedChoiceReference>
+            <fieldText>Maintenance or break fix support Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh13</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Existing Customer----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Existing_Customer_Recommendations_Rating2</name>
+            <choiceReferences>ExistingCustomerRecommendationsRatingPicklist</choiceReferences>
+            <choiceReferences>ExistingCustomerRecommendationsRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>ExistingCustomerRecommendationsRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Existing Customer Recommendations Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh14</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Overall delivery capabilities-&lt;/b&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;----&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Overall_delivery_capabilities_Rating2</name>
+            <choiceReferences>OveralldeliverycapabilitiesRatingPicklist</choiceReferences>
+            <choiceReferences>OveralldeliverycapabilitiesRatingdefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>OveralldeliverycapabilitiesRatingdefault</defaultSelectedChoiceReference>
+            <fieldText>Overall delivery capabilities Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh15</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60); font-size: 14px;&quot;&gt;Coverage Point Presence&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>hh16</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-&lt;/span&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;----No. of Countries covered-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>No_of_Countries_covered_direct_Rating2</name>
+            <choiceReferences>NoOfCountriescovereddirectRatingPicklist</choiceReferences>
+            <choiceReferences>NoOfCountriescovereddirectRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>NoOfCountriescovereddirectRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>No. of Countries covered direct Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh18</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Point of presence Weight-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Point_of_presence_Rating2</name>
+            <choiceReferences>PointofpresenceRatingPicklist</choiceReferences>
+            <choiceReferences>PointofpresenceRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>PointofpresenceRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Point of presence Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh19</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Future plan enhance-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Future_plan_enhance_the_presence_Rating2</name>
+            <choiceReferences>FutureplanenhancethepresenceRatingPicklist</choiceReferences>
+            <choiceReferences>FutureplanenhancethepresenceRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>FutureplanenhancethepresenceRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Future plan enhance the presence Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh20</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;SLA&amp;nbsp;&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>hh21</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----2 hours Fix Resolution-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>X2_hours_Fix_Resolution_Rating2</name>
+            <choiceReferences>X2hoursFixResolutionRatingPicklist</choiceReferences>
+            <choiceReferences>X2hoursFixResolutionRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>X2hoursFixResolutionRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>2 hours Fix Resolution Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh22</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;-----4 hours Fix Resolution -----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>X4_hours_Fix_Resolution_Rating2</name>
+            <choiceReferences>X4hoursFixResolutionRatingPicklist</choiceReferences>
+            <choiceReferences>X4hoursFixResolutionRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>X4hoursFixResolutionRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>4 hours Fix Resolution Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh25</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----8 hours Fix Resolution-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>X8_hours_Fix_Resolution_Rating2</name>
+            <choiceReferences>X8hoursFixResolutionRatingPicklist</choiceReferences>
+            <choiceReferences>X8hoursFixResolutionRatingdefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>X8hoursFixResolutionRatingdefault</defaultSelectedChoiceReference>
+            <fieldText>8 hours Fix Resolution Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh26</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----NBD Resolution or Others-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>NBD_Resolution_or_Others_Rating2</name>
+            <choiceReferences>NBDResolutionorOthersRatingPicklist</choiceReferences>
+            <choiceReferences>NBDResolutionorOthersRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>NBDResolutionorOthersRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>NBD Resolution or Others Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh27</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;Technical capabilities&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>hh28</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----OEM Partnership/Certification-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>OEM_Partnership_Certification_Rating2</name>
+            <choiceReferences>OEMPartnershipCertificationRatingPicklist</choiceReferences>
+            <choiceReferences>OEMPartnershipCertificationRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>OEMPartnershipCertificationRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>OEM Partnership / Certification Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh52</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Products supported-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Products_supported_Rating2</name>
+            <choiceReferences>ProductssupportedRatingPicklist</choiceReferences>
+            <choiceReferences>ProductssupportedRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>ProductssupportedRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Products supported Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh29</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Skilled Employees-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Skilled_Employees_Certification_RatingTC2</name>
+            <choiceReferences>SkilledEmployeesCertificationRatingPicklistTC</choiceReferences>
+            <choiceReferences>SkilledEmployeesCertificationRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>SkilledEmployeesCertificationRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Skilled Employees/Certification Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh30</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Technical delivery Matrix-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Technical_delivery_Matrix_Rating2</name>
+            <choiceReferences>TechnicaldeliveryMatrixRatingPicklist</choiceReferences>
+            <choiceReferences>TechnicaldeliveryMatrixRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>TechnicaldeliveryMatrixRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Technical delivery Matrix Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh31</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Ticketing tools &amp;amp; process-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Ticketing_tools_process_Rating2</name>
+            <choiceReferences>TicketingtoolsprocessRatingPicklist</choiceReferences>
+            <choiceReferences>TicketingtoolsprocessRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>TicketingtoolsprocessRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Ticketing tools &amp; process Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh32</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----E-bonding capabilities-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>E_bonding_capabilities_Rating2</name>
+            <choiceReferences>EbondingcapabilitiesRatingPicklist</choiceReferences>
+            <choiceReferences>EbondingcapabilitiesRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>EbondingcapabilitiesRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>E-bonding capabilities Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh33</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----24x7 call center/HelpDesk-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>X24x7_call_center_HelpDesk_support_Rating2</name>
+            <choiceReferences>X24x7callcenterHelpDesksupportRatingPicklist</choiceReferences>
+            <choiceReferences>X24x7callcenterHelpDesksupportRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>X24x7callcenterHelpDesksupportRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>24x7 call center/HelpDesk support Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh35</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;Spare Management&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>hh36</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Current spare in stock-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Current_spares_in_stock_Management2</name>
+            <choiceReferences>CurrentsparesinstockManagementPicklist</choiceReferences>
+            <choiceReferences>CurrentsparesinstockManagementDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>CurrentsparesinstockManagementDefault</defaultSelectedChoiceReference>
+            <fieldText>Current spares in stock &amp; Management</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh37</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Warehouse Management-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Warehouse_Management_Rating2</name>
+            <choiceReferences>WarehouseManagementRatingPicklist</choiceReferences>
+            <choiceReferences>WarehouseManagementRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>WarehouseManagementRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Warehouse Management Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh38</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----OEM model/Spare-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>OEM_model_Spare_replacement_Rating2</name>
+            <choiceReferences>OEMmodelSparereplacementRatingpicklist</choiceReferences>
+            <choiceReferences>OEMmodelSparereplacementRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>OEMmodelSparereplacementRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>OEM model/Spare replacement Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh39</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Warranty /Out of warranty-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Warranty_Out_of_warranty_support_Rating2</name>
+            <choiceReferences>WarrantyOutofwarrantysupportRatingpicklist</choiceReferences>
+            <choiceReferences>WarrantyOutofwarrantysupportRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>WarrantyOutofwarrantysupportRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Warranty /Out of warranty support Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh40</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;Responses/Quality of Doc&amp;nbsp;&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>hh41</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Responsiveness-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Responsiveness_Rating2</name>
+            <choiceReferences>ResponsivenessRatingPicklist</choiceReferences>
+            <choiceReferences>ResponsivenessRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>ResponsivenessRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Responsiveness Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh42</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Proactiveness-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Proactiveness_Rating2</name>
+            <choiceReferences>ProactivenessRatingPicklist</choiceReferences>
+            <choiceReferences>ProactivenessRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>ProactivenessRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Proactiveness Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh45</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Quality of Communication-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Quality_of_Communication_Document_submit2</name>
+            <choiceReferences>QualityofCommunicationDocumentsubmitpicklist</choiceReferences>
+            <choiceReferences>QualityofCommunicationDocumentsubmitDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>QualityofCommunicationDocumentsubmitDefault</defaultSelectedChoiceReference>
+            <fieldText>Quality of Communication/Document submit</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh46</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Value add &amp;amp; innovation-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Value_add_innovation_Rating2</name>
+            <choiceReferences>ValueaddinnovationRatingpicklist</choiceReferences>
+            <choiceReferences>ValueaddinnovationRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>ValueaddinnovationRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Value add &amp; innovation Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh47</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;Customer Base / Feedback&amp;nbsp;&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>hh48</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Customer Base-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Customer_Base_Rating2</name>
+            <choiceReferences>CustomerBaseRatingpicklist</choiceReferences>
+            <choiceReferences>CustomerBaseRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>CustomerBaseRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Customer Base Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh49</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Referral Customer feedback-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Retention_of_the_customer_Rating2</name>
+            <choiceReferences>RetentionofthecustomerRatingpicklist</choiceReferences>
+            <choiceReferences>RetentionofthecustomerRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>RetentionofthecustomerRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Retention of the customer Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh50</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Retention of the customer-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Referral_Customer_feedback_Rating2</name>
+            <choiceReferences>ReferralCustomerfeedbackRatingPicklist</choiceReferences>
+            <choiceReferences>ReferralCustomerfeedbackRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>ReferralCustomerfeedbackRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>Referral Customer feedback Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>hh51</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----No. of High value customers-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>No_of_High_value_customers_Rating2</name>
+            <choiceReferences>NoOfHighvaluecustomersRatingPicklist</choiceReferences>
+            <choiceReferences>NoOfHighvaluecustomersRatingDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>NoOfHighvaluecustomersRatingDefault</defaultSelectedChoiceReference>
+            <fieldText>No. of High value customers Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Get_Account_Data</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>
