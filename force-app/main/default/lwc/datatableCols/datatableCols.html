@@ -1,0 +1,14 @@
+<template>
+    <template iterator:col={row}>
+        <td key={col.value} rowspan={col.value.rowspan} style="vertical-align: middle;border-top: 1px solid #dddbda;">
+            <template if:true={col.first}>
+                <lightning-button-icon icon-name="utility:preview" variant="bare" alternative-text="Preview"
+                    title="Preview" onclick={getURL}>
+                </lightning-button-icon>
+            </template>
+            <template if:false={col.first}>
+                {col.value.fieldValue}
+            </template>
+        </td>
+    </template>
+</template>

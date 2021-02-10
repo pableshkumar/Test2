@@ -42,13 +42,13 @@
         </notificationChannels>
         <notificationType>event_reminder</notificationType>
     </notificationTypeSettings>
-    <notificationTypeSettings>
+    <!--<notificationTypeSettings>
         <notificationChannels>
             <desktopEnabled>true</desktopEnabled>
             <mobileEnabled>false</mobileEnabled>
         </notificationChannels>
-        <notificationType>forecasting_jump_to</notificationType>
-    </notificationTypeSettings>
+       <notificationType>forecasting_jump_to</notificationType>
+    </notificationTypeSettings>-->
     <notificationTypeSettings>
         <notificationChannels>
             <desktopEnabled>true</desktopEnabled>

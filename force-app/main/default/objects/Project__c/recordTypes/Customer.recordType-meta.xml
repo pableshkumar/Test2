@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Project_Compact_Layout</compactLayoutAssignment>
+    <label>Customer</label>
+    <picklistValues>
+        <picklist>Billing_Frequency__c</picklist>
+        <values>
+            <fullName>ADHOC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bi-Weekly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Half-Yearly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>One Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weekly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yearly</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Term__c</picklist>
+        <values>
+            <fullName>NET10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NET30</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>NET45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NET60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NET90</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Project_Status__c</picklist>
+        <values>
+            <fullName>BAU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terminated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transition</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>AMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Total_IT_Billing_Entity__c</picklist>
+        <values>
+            <fullName>TIC Netherlands B%2EV%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIGM Global Computer Systems Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOTAL IT GLOBAL POLAND Sp%2E z o %2Eo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Consult DK ApS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Consult LLP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Consult Pte Ltd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Consult Pty ltd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Germany GMBH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Global Company Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Global Finland OY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Global France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Global HK Ltd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Global Inc%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Global KK%2CJapan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Global NZ Ltd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Global Pte Ltd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Global Sdn Bhd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Global UK Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total IT Norway AS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Project__c</picklist>
+        <values>
+            <fullName>Enterprise Infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workspace infrastructure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

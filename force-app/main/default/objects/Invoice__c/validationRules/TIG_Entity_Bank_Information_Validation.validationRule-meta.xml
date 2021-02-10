@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TIG_Entity_Bank_Information_Validation</fullName>
+    <active>true</active>
+    <description>TIG Entity Bank Information must be associated to the same TIG Entity which is linked at project level.</description>
+    <errorConditionFormula>AND(
+ RecordType.Name =&apos;Sales Invoice&apos;,
+TIG_Entity_Bank_Information__r.TIG_Entity__c != Project__r.TIG_Entity_Name__c
+)</errorConditionFormula>
+    <errorDisplayField>TIG_Entity_Bank_Information__c</errorDisplayField>
+    <errorMessage>Please select the correct TIG Entity Bank Information which is linked to the project TIG Entity.</errorMessage>
+</ValidationRule>

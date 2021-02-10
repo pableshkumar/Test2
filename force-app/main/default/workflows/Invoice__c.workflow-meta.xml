@@ -1,5 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>AR_Invoice_Escalation_to_Finance_Head</fullName>
+        <description>AR Invoice Escalation to Finance Head</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Send_Invoice_Escalation_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>AR_Invoice_Escalation_to_Finance_Manager</fullName>
+        <description>AR Invoice Escalation to Finance Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Send_Invoice_Escalation_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Escalate_to_AP_Head</fullName>
+        <description>Escalate to AP Head</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AP_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>Field_Service_Management_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Send_Invoice_Escalation_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Escalate_to_AP_Manager</fullName>
+        <description>Escalate to AP Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AP_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Send_Invoice_Escalation_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Escalate_to_Global_Delivery_Director_about_Purchase_Invoice</fullName>
+        <description>Escalate to Global Delivery Director about Purchase Invoice</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Global_Delivery_Director</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Send_Invoice_Escalation_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Escalate_to_Regional_Service_Delivery_Head_about_Purchase_Invoice</fullName>
+        <description>Escalate to Regional Service Delivery Head about Purchase Invoice</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Regional_Service_Delivery_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Send_Invoice_Escalation_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Manager_for_the_Invoice_approval_request</fullName>
+        <description>Notify Finance Manager for the Invoice approval request</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Invoice_Approval_Templates/Notify_Finance_Manager_for_the_Invoice_approval_request</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_TIG_SDM_RDH_Account_Manager_once_Invoice_is_approved_by_Finance_Manager</fullName>
+        <description>Notify TIG SDM,RDH,Account Manager once Invoice is approved by Finance Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AP_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>Regional_Service_Delivery_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Invoice_Approval_Templates/Notify_TIG_SDM_RDH_Account_Manager_once_Invoice_is_approved_by_Finance_Manager</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_to_AP_Executive_about_Invoice_Escalation</fullName>
+        <description>Notify to AP Executive about Invoice Escalation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AP_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AP_SR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Notify_about_Invoice_Escalation</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_to_AP_Manager_AP_Executive_about_Invoice_Escalation</fullName>
+        <description>Notify to AP Manager &amp; AP Executive about Invoice Escalation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AP_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AP_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AP_SR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Notify_about_Invoice_Escalation</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_to_AR_Executive_AR_SR_Executives_if_the_Invoice_is_Rejected_by_Finance_Ex</fullName>
+        <description>Notify to AR Executive/ AR SR Executives if the Invoice is Rejected  by Finance Executive</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>AR_SR_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Invoice_Approval_Templates/Notify_to_AR_Executive_AR_Sr_Executive_once_Invoice_is_rejected_by_Finance_Exec</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_to_Finance_Executive_Finance_Manager_about_AR_Invoice_Escalation</fullName>
+        <description>Notify to Finance Executive &amp; Finance Manager about AR Invoice Escalation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Notify_about_Invoice_Escalation</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_to_Finance_Executive_about_AR_Invoice_Escalation</fullName>
+        <description>Notify to Finance Executive about AR Invoice Escalation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Send_Invoice_Escalation_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_to_Finance_Executive_if_the_Invoice_is_Rejected_by_Finance_Manager</fullName>
+        <description>Notify to Finance Executive if the Invoice is Rejected by Finance Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Invoice_Approval_Templates/Notify_to_Finance_Executive_once_Invoice_is_rejected_by_Finance_Manager</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_to_Regional_Service_Delivery_Head_about_Invoice_Escalation</fullName>
+        <description>Notify to Regional Service Delivery Head about Invoice Escalation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Regional_Service_Delivery_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Escalation_Email_Template/Notify_about_Invoice_Escalation</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_Notification_to_Vendor_for_accept_Invoice</fullName>
+        <description>Send Email Notification to Vendor for accept Invoice</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Invoice_Approval_Templates/Notify_to_Vendor_for_accept_invoice</template>
+    </alerts>
     <fieldUpdates>
         <fullName>Stage_Accepted</fullName>
         <field>Stage__c</field>
@@ -8,6 +211,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Stage_Draft</fullName>
@@ -17,6 +221,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Stage_On_Hold</fullName>
@@ -26,6 +231,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Stage_Rejected</fullName>
@@ -35,6 +241,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Stage_Sent_to_client</fullName>
@@ -44,6 +251,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Stage_Submitted</fullName>
@@ -53,6 +261,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Status_Approved</fullName>
@@ -62,6 +271,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Status_Check_SOW_PO</fullName>
@@ -80,6 +290,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Status_Escalate</fullName>
@@ -89,6 +300,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Status_Exceptional_Approval_Required</fullName>
@@ -98,6 +310,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Status_None</fullName>
@@ -106,6 +319,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Status_Ready_to_be_Sent_to_Client</fullName>
@@ -115,6 +329,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Status_Reject_Invoice</fullName>
@@ -124,6 +339,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Status_Review_and_Update_Taxation</fullName>
@@ -133,6 +349,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Status_Validate_Invoice</fullName>
@@ -142,5 +359,6 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
 </Workflow>

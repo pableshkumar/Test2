@@ -1,2 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata"/>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Billing_sharing_with_Field_Service_Management_Head_Role_and_Subordinates</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing rule on Billing Information to share in read only mode with Role and Subordinates Field Service Management Head</description>
+        <label>Billing sharing with Field Service Management Head:Role and Subordinates</label>
+        <sharedTo>
+            <roleAndSubordinates>Field_Service_Management_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_with_AR_Head_Role_and_Sub_Ord</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share billing record with Customer record type with AR Head and Subordinates (Read Only)</description>
+        <label>Share with AR Head Role and Sub Ord</label>
+        <sharedTo>
+            <roleAndSubordinates>AR_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_with_Finance_Head_Role_and_Sub_Ord</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share billing record with Customer record type with Finance Head and Subordinates (Read Only)</description>
+        <label>Share with Finance Head Role and Sub Ord</label>
+        <sharedTo>
+            <roleAndSubordinates>Finance_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_with_Project_Management_Head</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with Project Management Head</label>
+        <sharedTo>
+            <roleAndSubordinates>Project_Management_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

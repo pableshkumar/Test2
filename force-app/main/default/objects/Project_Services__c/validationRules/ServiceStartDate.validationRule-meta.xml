@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ServiceStartDate</fullName>
+    <active>true</active>
+    <description>Service Start Date should not be less than Project Start Date and greater than project end date</description>
+    <errorConditionFormula>OR( Service_Start_Date__c &lt; Project__r.Project_Start_Date__c ,
+ Service_Start_Date__c &gt; Project__r.Project_End_Date__c ,
+ Service_End_Date__c &gt; Project__r.Project_End_Date__c 
+)</errorConditionFormula>
+    <errorMessage>Service Start Date can not be less than Project Start Date and greater than Project End Date / Service end date can not be greater than the project end date.</errorMessage>
+</ValidationRule>

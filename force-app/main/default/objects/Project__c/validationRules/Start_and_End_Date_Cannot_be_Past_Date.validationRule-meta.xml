@@ -4,7 +4,7 @@
     <active>true</active>
     <description>Start Date and End Date Can&apos;t be Past Date</description>
     <errorConditionFormula>AND(ISNEW(),
-OR( Project_Start_Date__c &lt;  TODAY() ,
+OR( AND(Project_Start_Date__c &lt;  TODAY(),  $Profile.Name != &apos;System Administrator&apos;) ,
  Project_End_Date__c &lt; TODAY()
 )
 )</errorConditionFormula>

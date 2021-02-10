@@ -5,14 +5,16 @@
 *Developer Name
 ******************************************************/
 public class Project_Team_Trigger_Handler {
-    Public static void updatePrimaryProjectTeamMember(List<Project_Team__c>  ptRecords, Map<Id,Project_Team__c> projOldMap)
+    
+    public static void updatePrimaryProjectTeamMember(List<Project_Team__c>  ptRecords, Map<Id,Project_Team__c> projOldMap)
     {
         if(ptRecords.size()>0 && projOldMap==NULL)
         {
-            primaryLogic(ptRecords);
+            updatePrimaryMember(ptRecords);
         }
         else if(ptRecords.size()>0 && projOldMap.size()>0 )
         {
+            System.debug('on update only');
             List<Project_Team__c> teamList=new List<Project_Team__c>();
             for(Project_Team__c pt:ptRecords)
             {
@@ -22,20 +24,21 @@ public class Project_Team_Trigger_Handler {
                 }
             }
             if(ptRecords.size()>0)
-                primaryLogic(teamList);
+                updatePrimaryMember(teamList);
         }
     }
-    //common logic to update  primary project team member at project role 
-    Public static void primaryLogic(List<Project_Team__c>  ptRecords)
+    //common logic to update  primary project team member at project record type + project role level
+    //if the new primary user is added then the existing primary will be unchecked at project record type + project role level
+    public static void updatePrimaryMember(List<Project_Team__c>  ptRecords)
     {
         Set<Id> projectIds = new Set<Id>();   // add project ids
         Set<Id> teamIds = new Set<Id>();      // add project team record ids
-        Set<String> TeamProjectRoles = new Set<String>();      // add project team record ids
-        Set<String> projectTeamRecordType = new Set<String>();      // add project team record ids
+        Set<String> TeamProjectRoles = new Set<String>();      // add project team roles
+        Set<String> projectTeamRecordType = new Set<String>();      // add project team record types
         
         for(Project_Team__c pt:ptRecords)
         {
-            If(pt.Primary__c==TRUE)
+            If(pt.Primary__c==TRUE)   // collect only the records which are getting updated as true
             {
                 projectIds.add(pt.Project__c);
                 teamIds.add(pt.id);
@@ -89,35 +92,85 @@ public class Project_Team_Trigger_Handler {
         }
     }
     
-    //mmethod will make first Internal SDM as primary by default regardless of user selection/not selection of primary
-    public static void firstDefaulPrimarytInternalSDM(List<Project_Team__c>  ptRecords)
+    //method contains the logic to make first project team user as primary by default regardless of user selection/not selection of primary at project team and project role level
+    public static void firstDefaultPrimary(List<Project_Team__c>  ptRecords)
     {
         Set<Id> projectIds = new Set<Id>();   // add project ids
         Set<Id> teamIds = new Set<Id>();      // add project team record ids
-        Map<Id,Project__c>  projectWithTeam;
+        Set<String> teamRoles = new Set<String>();  //will hold project team roles
+        Map<Id,Map<Id,Set<String>>> projteamMap=new Map<Id,Map<Id,Set<String>>>();  // will hold project team data fetch from org
+        List<Project_Team__c> teamList;
+        System.debug('ptRecords :'+ptRecords);
         for(Project_Team__c pt:ptRecords)
         {
-            if(pt.RecordType.Name=='Internal' && pt.Primary__c==FALSE && pt.Project_Role__c=='SDM')
+            if(pt.Primary__c==FALSE)  // collect new record with the primary as false n do processing on them
             {
                 projectIds.add(pt.Project__c);
+                teamRoles.add(pt.Project_Role__c);
             }
             
-            projectWithTeam=new Map<Id,Project__c>([Select id, (SELECT RecordType.Name,Primary__c,Project_Role__c from Project_Teams__r WHERE RecordType.Name='Internal' AND Project_Role__c='SDM' ) FROM Project__c]);
         }
-        
-        if(projectWithTeam.size()>0 && ptRecords.size()>0)
-           {
-        for(Project_Team__c pt:ptRecords)
+        teamList=[SELECT RecordTypeId,Primary__c,Project_Role__c,Project__c from Project_Team__c WHERE Project_Role__c IN :teamRoles AND Project__c in:projectIds];
+        system.debug('teamList :'+ teamList);
+        if(teamList.size()>0)
         {
-            if(projectWithTeam.get(pt.Project__c)!=NULL)
-            {
-            if(projectWithTeam.get(pt.Project__c).Project_Teams__r.size()==0)
-            {
-                pt.Primary__c=TRUE;
+            for(Project_Team__c pt:teamList){
+                if(!projteamMap.containsKey(pt.Project__c))
+                {
+                    Map<Id,Set<String>> subMap=new Map<Id, Set<String>>();
+                    subMap.put(pt.RecordTypeId, new Set<String>{pt.Project_Role__c});
+                     projteamMap.put(pt.Project__c,subMap);
+                }
+                else if(projteamMap.containsKey(pt.Project__c))
+                {
+                    if(projteamMap.get(pt.Project__c).containsKey(pt.RecordTypeId))
+                    {
+                        Set<String> roles=projteamMap.get(pt.Project__c).get(pt.RecordTypeId);
+                        roles.add(pt.Project_Role__c);
+                        Map<Id,Set<String>> subMap=projteamMap.get(pt.Project__c);
+                        subMap.put(pt.RecordTypeId,roles);
+                        projteamMap.put(pt.Project__c,subMap);
+                    }
+                    else if(!projteamMap.get(pt.Project__c).containsKey(pt.RecordTypeId))
+                    {
+                        Set<String> roles=new Set<String>{pt.Project_Role__c};
+                            Map<Id,Set<String>> subMap=projteamMap.get(pt.Project__c);
+                        subMap.put(pt.RecordTypeId,roles);
+                        projteamMap.put(pt.Project__c,subMap);
+                    }
+                    
+                }
             }
+            
+            for(Project_Team__c pt: ptRecords)
+            {
+                if(!projteamMap.containsKey(pt.Project__c))
+                {
+                    pt.Primary__c=true;
+                }
+                else if(projteamMap.containsKey(pt.Project__c))
+                {
+                    if(!projteamMap.get(pt.Project__c).containsKey(pt.RecordTypeId))
+                    {
+                        pt.Primary__c=true;
+                    }
+                    else if(projteamMap.get(pt.Project__c).containsKey(pt.RecordTypeId))
+                    {
+                        if(!projteamMap.get(pt.Project__c).get(pt.RecordTypeId).contains(pt.Project_Role__c))
+                        {
+                            pt.Primary__c=true;
+                        }
+                        
+                        
+                    }
+                }
+            } 
+        }else if(teamList.size()==0)
+        {
+            for(Project_Team__c pt:ptRecords)
+            {
+                pt.Primary__c=true;
             }
         }
-           }
-        
     }
 }

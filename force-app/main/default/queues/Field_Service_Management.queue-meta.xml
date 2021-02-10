@@ -5,9 +5,10 @@
     <queueMembers>
         <roles>
             <role>Field_Service_Executive</role>
+            <role>Field_Service_Sr_Executive</role>
         </roles>
     </queueMembers>
     <queueSobject>
-        <sobjectType>Invoice__c</sobjectType>
+        <sobjectType>Project__c</sobjectType>
     </queueSobject>
 </Queue>

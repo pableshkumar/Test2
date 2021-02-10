@@ -28,6 +28,10 @@
                 <behavior>Edit</behavior>
                 <field>Company_Group__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Branch_Country__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -54,6 +58,10 @@
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>Type</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>Type_of_Partner__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -92,7 +100,7 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Customer Bank Information</label>
+        <label>Vendor Bank Information</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -108,10 +116,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Bank_Code__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Bank_Account_Country_Code__c</field>
             </layoutItems>
             <layoutItems>
@@ -124,19 +128,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Bank_Account_Name__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>State_Bank__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Partner_Expense_Type__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Bank_Name_Where_Account_Maintained__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -332,33 +328,44 @@
     <relatedContent>
         <relatedContentItems>
             <layoutItem>
-                <component>wits:newsPanel</component>
-            </layoutItem>
-        </relatedContentItems>
-        <relatedContentItems>
-            <layoutItem>
                 <component>runtime_sales_social:socialPanel</component>
             </layoutItem>
         </relatedContentItems>
     </relatedContent>
     <relatedLists>
-        <excludeButtons>NewContact</excludeButtons>
+        <excludeButtons>MassAddToCampaign</excludeButtons>
+        <excludeButtons>Merge</excludeButtons>
         <fields>CONTACT.FULL_NAME</fields>
+        <fields>CONTACT.TITLE</fields>
         <fields>CONTACT.EMAIL</fields>
         <fields>CONTACT.PHONE1</fields>
         <fields>ACCCONRELATION.ROLES</fields>
         <relatedList>RelatedAccountContactRelationList</relatedList>
     </relatedLists>
     <relatedLists>
-        <relatedList>RelatedFileList</relatedList>
+        <excludeButtons>MassChangeOwner</excludeButtons>
+        <fields>NAME</fields>
+        <fields>Project_Start_Date__c</fields>
+        <fields>Project_End_Date__c</fields>
+        <fields>Project_Status__c</fields>
+        <fields>Billing_Frequency__c</fields>
+        <relatedList>Project__c.Customer__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>ORDERS.ORDER_NUMBER</fields>
+        <fields>ORDERS.STATUS</fields>
+        <fields>ORDERS.EFFECTIVE_DATE</fields>
+        <fields>CONTRACT.CONTRACT_NUMBER</fields>
+        <fields>ORDERS.TOTAL_AMOUNT</fields>
+        <relatedList>RelatedOrderList</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Order__c.Vendor__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>Invoice_Number__c</fields>
         <fields>Invoice_Date__c</fields>
+        <fields>Amount__c</fields>
+        <fields>Total_Tax__c</fields>
+        <fields>Total_Amount__c</fields>
+        <fields>RECORDTYPE</fields>
         <relatedList>Invoice__c.Customer__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -375,7 +382,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h2x000000xmCY</masterLabel>
+        <masterLabel>00h9D000000mSa6</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

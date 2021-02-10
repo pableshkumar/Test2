@@ -1,0 +1,11 @@
+Hi Team,
+
+This is to notify you that you have been assigned with a billing record that needs your approval.
+
+Please find the record details below.
+Project : {!Billing_Information__c.Project__c}
+Customer : {!Billing_Information__c.Customer__c}
+Total Amount : {!Billing_Information__c.Total_Amount__c}
+
+Record link is given below.
+{!Billing_Information__c.Link}

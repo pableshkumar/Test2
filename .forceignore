@@ -10,3 +10,7 @@ package.xml
 
 # LWC Jest
 **/__tests__/**
+
+**profileSession
+**profilePassword
+**AP_PO_Tracker_190

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>P5_Ticket_Rate_should_be_greater_than_0</fullName>
+    <active>true</active>
+    <description>P5 Ticket Rate should be greater than zero</description>
+    <errorConditionFormula>P5_Ticket_Rate__c &lt;=0</errorConditionFormula>
+    <errorDisplayField>P5_Ticket_Rate__c</errorDisplayField>
+    <errorMessage>P5 Ticket Rate should be greater than zero</errorMessage>
+</ValidationRule>

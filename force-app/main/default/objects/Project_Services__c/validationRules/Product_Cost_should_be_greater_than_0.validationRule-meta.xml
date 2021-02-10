@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Cost_should_be_greater_than_0</fullName>
+    <active>true</active>
+    <description>Product Cost should be greater than zero</description>
+    <errorConditionFormula>Product_Cost__c &lt;=0</errorConditionFormula>
+    <errorDisplayField>Product_Cost__c</errorDisplayField>
+    <errorMessage>Product Cost should be greater than zero</errorMessage>
+</ValidationRule>

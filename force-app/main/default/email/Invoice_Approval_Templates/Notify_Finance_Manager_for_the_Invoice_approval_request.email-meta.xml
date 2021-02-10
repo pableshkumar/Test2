@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notify Finance Manager for the Invoice approval request so that finance manager will take the further action</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Notify Finance Manager for the Invoice approval request</name>
+    <style>none</style>
+    <subject>Invoice Approval Request by Finance Executive: {!Invoice__c.LastModifiedBy}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

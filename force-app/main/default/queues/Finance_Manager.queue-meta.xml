@@ -8,6 +8,6 @@
         </roles>
     </queueMembers>
     <queueSobject>
-        <sobjectType>Invoice__c</sobjectType>
+        <sobjectType>Project__c</sobjectType>
     </queueSobject>
 </Queue>

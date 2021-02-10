@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OT_Rate_should_be_greater_than_zero</fullName>
+    <active>true</active>
+    <description>OT Rate should be greater than zero</description>
+    <errorConditionFormula>OT_Rate__c &lt;=0</errorConditionFormula>
+    <errorDisplayField>OT_Rate__c</errorDisplayField>
+    <errorMessage>OT Rate should be greater than zero</errorMessage>
+</ValidationRule>

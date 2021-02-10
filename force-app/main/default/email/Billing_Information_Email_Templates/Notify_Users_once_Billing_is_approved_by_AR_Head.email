@@ -1,0 +1,11 @@
+Hi Team,
+
+This is to notify you that the following billing is has been approved by AR Head and sent to Client SDM to be approved. details are given below.
+
+Project : {!Billing_Information__c.Project__c}
+Customer : {!Billing_Information__c.Customer__c}
+Total Amount : {!Billing_Information__c.Total_Amount__c}
+Billing Status: {!Billing_Information__c.Billing_Approval_Status__c}
+
+Record link is given below.
+{!Billing_Information__c.Link}

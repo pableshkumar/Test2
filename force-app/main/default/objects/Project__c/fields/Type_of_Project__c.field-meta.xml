@@ -13,9 +13,14 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>None</fullName>
+                <fullName>Workspace infrastructure</fullName>
                 <default>false</default>
-                <label>None</label>
+                <label>Workspace infrastructure</label>
+            </value>
+            <value>
+                <fullName>Enterprise Infrastructure</fullName>
+                <default>false</default>
+                <label>Enterprise Infrastructure</label>
             </value>
         </valueSetDefinition>
     </valueSet>

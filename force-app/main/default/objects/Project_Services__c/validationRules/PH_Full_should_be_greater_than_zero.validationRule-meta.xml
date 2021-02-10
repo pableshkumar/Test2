@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PH_Full_should_be_greater_than_zero</fullName>
+    <active>true</active>
+    <description>PH Full Day should be greater than zero</description>
+    <errorConditionFormula>PH_Full_Day__c &lt;=0</errorConditionFormula>
+    <errorDisplayField>PH_Full_Day__c</errorDisplayField>
+    <errorMessage>PH Full Day should be greater than zero</errorMessage>
+</ValidationRule>

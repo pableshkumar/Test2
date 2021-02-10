@@ -41,6 +41,12 @@
         </value>
     </processMetadataValues>
     <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
         <name>OriginBuilderType</name>
         <value>
             <stringValue>LightningFlowBuilder</stringValue>
@@ -50,8 +56,11 @@
     <recordCreates>
         <name>Create_Invoice_Payment</name>
         <label>Create Invoice Payment</label>
-        <locationX>222</locationX>
-        <locationY>491</locationY>
+        <locationX>161</locationX>
+        <locationY>345</locationY>
+        <faultConnector>
+            <targetReference>errro</targetReference>
+        </faultConnector>
         <inputAssignments>
             <field>Amount__c</field>
             <value>
@@ -82,11 +91,14 @@
     <recordCreates>
         <name>Create_Payment</name>
         <label>Create Payment</label>
-        <locationX>407</locationX>
-        <locationY>423</locationY>
+        <locationX>428</locationX>
+        <locationY>385</locationY>
         <connector>
             <targetReference>Create_Invoice_Payment</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>errro</targetReference>
+        </faultConnector>
         <inputAssignments>
             <field>Account__c</field>
             <value>
@@ -180,10 +192,26 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <screens>
+        <name>errro</name>
+        <label>errro</label>
+        <locationX>412</locationX>
+        <locationY>642</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>erorr</name>
+            <fieldText>&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <name>Record_Payment</name>
         <label>Record Payment</label>
-        <locationX>703</locationX>
-        <locationY>187</locationY>
+        <locationX>835</locationX>
+        <locationY>151</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -209,7 +237,7 @@
         </fields>
         <fields>
             <name>Amount</name>
-            <dataType>Currency</dataType>
+            <dataType>Number</dataType>
             <defaultValue>
                 <elementReference>Get_Invoice.Outstanding_Amount__c</elementReference>
             </defaultValue>
@@ -218,7 +246,7 @@
             <isRequired>true</isRequired>
             <scale>2</scale>
             <validationRule>
-                <errorMessage>&lt;p&gt;Excess amount entered.&lt;/p&gt;</errorMessage>
+                <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Excess amount entered.&lt;/span&gt;&lt;/p&gt;</errorMessage>
                 <formulaExpression>{!outstandingAmount} - {!Amount} &gt;= 0</formulaExpression>
             </validationRule>
         </fields>

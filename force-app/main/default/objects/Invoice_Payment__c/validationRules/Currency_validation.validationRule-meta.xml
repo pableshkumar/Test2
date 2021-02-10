@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Currency_validation</fullName>
+    <active>true</active>
+    <description>Invoice Payment Currency should be same as Payment Currency and Invoice Currency</description>
+    <errorConditionFormula>TEXT(Payment__r.CurrencyIsoCode ) != TEXT(Invoice__r.CurrencyIsoCode )</errorConditionFormula>
+    <errorMessage>Payment Currency should be same as Invoice Currency.</errorMessage>
+</ValidationRule>

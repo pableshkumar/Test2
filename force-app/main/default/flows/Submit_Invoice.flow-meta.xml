@@ -41,6 +41,9 @@
         <connector>
             <targetReference>Submit_initial_Approval</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Error_Handling</targetReference>
+        </faultConnector>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
@@ -62,6 +65,22 @@
         </inputAssignments>
         <object>Invoice__c</object>
     </recordUpdates>
+    <screens>
+        <name>Error_Handling</name>
+        <label>Error Handling</label>
+        <locationX>207</locationX>
+        <locationY>489</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Error</name>
+            <fieldText>&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
     <screens>
         <name>SuccessScreen</name>
         <label>Success</label>

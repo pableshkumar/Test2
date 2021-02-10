@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TIG_Entity__c</fullName>
+    <externalId>false</externalId>
+    <label>TIG Entity Name</label>
+    <referenceTo>TIG_Entity__c</referenceTo>
+    <relationshipLabel>TIG Entity Bank Informations</relationshipLabel>
+    <relationshipName>TIG_Entity_Bank_Informations</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -3,7 +3,8 @@
 	"edition": "Developer",
 	"features": [
 		"MultiCurrency",
-		"AuthorApex"
+		"AuthorApex",
+		"ContactsToMultipleAccounts"
 	],
 	"settings": {
 		"lightningExperienceSettings": {
@@ -17,8 +18,8 @@
 		"mobileSettings": {
 			"enableS1EncryptedStoragePref2": false
 		},
-		"communitiesSettings": {
-			"enableNetworksEnabled": true
+		"enhancedNotesSettings": {
+			"enableEnhancedNotes": true
 		}
 	}
 }

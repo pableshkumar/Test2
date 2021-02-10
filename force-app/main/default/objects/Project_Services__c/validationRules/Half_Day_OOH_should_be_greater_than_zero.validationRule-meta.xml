@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Half_Day_OOH_should_be_greater_than_zero</fullName>
+    <active>true</active>
+    <description>Half Day (OOH) should be greater than zero</description>
+    <errorConditionFormula>Half_Day_OOH__c &lt;=0</errorConditionFormula>
+    <errorDisplayField>Half_Day_OOH__c</errorDisplayField>
+    <errorMessage>Half Day (OOH) should be greater than zero</errorMessage>
+</ValidationRule>
