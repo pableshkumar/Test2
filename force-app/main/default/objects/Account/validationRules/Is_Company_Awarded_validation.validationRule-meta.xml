@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Company_Awarded_validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ Is_Company_Awarded__c == True,
+ ISBLANK( Award_Details__c) 
+)</errorConditionFormula>
+    <errorDisplayField>Award_Details__c</errorDisplayField>
+    <errorMessage>If Company is Awarded  then Award details is mandatory.</errorMessage>
+</ValidationRule>

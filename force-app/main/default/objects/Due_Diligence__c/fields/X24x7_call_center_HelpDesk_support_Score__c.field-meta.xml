@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X24x7_call_center_HelpDesk_support_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(TEXT(    X24x7_call_center_HelpDesk_support_Ratin__c ),
+ &apos;Exceed Expectations&apos;,  X24x7_call_center_HelpDesk_support_Weigh__c *1,
+ &apos;Meet Expectations&apos;,X24x7_call_center_HelpDesk_support_Weigh__c *0.85,
+&apos;Average&apos;,X24x7_call_center_HelpDesk_support_Weigh__c *0.6,
+&apos;High Risk&apos;,X24x7_call_center_HelpDesk_support_Weigh__c *0.25,
+0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>24x7 call center/HelpDesk support Score%</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,293 @@
+<template>
+    <!-- Spinner -->
+    <div class="slds-is-relative">
+        <template if:true={showLoadingSpinner}>
+            <lightning-spinner alternative-text="Loading" size="medium" role="alert">
+            </lightning-spinner>
+        </template>
+
+        <lightning-record-edit-form layout-type="Full" record-id={currentRecordId} object-api-name={objectApiName}
+            onsubmit={handleSubmit} onsuccess={handleSuccess}>
+            <lightning-layout multiple-rows="true" style="width:100%">
+                <lightning-layout-item size="12">
+                    <lightning-messages>
+                    </lightning-messages>
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                    <h2><b>Company Overview</b></h2>
+                    <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Company_Name__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Country_Headquartered__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Year_of_Establishment__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="No_of_employees_on_your_Direct_payroll__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Website">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Company_s_LinkedIN_Profile__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Is_Company_Awarded__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Award_Details__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Provisions_for_Health_Safety__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Primary_Business_Contact_Information__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="12">
+                    <h2><b>Company Registration Details</b></h2>
+                    <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Company_Registration_Number__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Statutory_Details__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="GSTVAT_Registration_Number__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Service_Tax_Registration_Number__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="TAX_Identification_Number__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Do_you_accept_bank_payments_in_US__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Do_you_accept_bank_payments_in_EURO__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="CurrencyIsoCode">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="12">
+                    <h2><b>Employees And Call Support Activity </b></h2>
+                    <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Can_the_company_provide_24x7_support__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Do_you_have_a_multi_lingual_Helpdesk__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Number_of_Support_Call_per_Month__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="English_speaking_Engineers_for_support__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Communication_Method__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="company_have_automated_web_access_for_lo__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Call_Logging_Process__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="English_speaking_engineers_for_TIG__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+
+                    </lightning-layout>
+                </lightning-layout-item>
+
+
+                <lightning-layout-item size="12">
+                    <h2><b>FIELD SUPPORT</b></h2>
+                    <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Number_of_Engineers__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Accrediations_held_by_the_Engineers__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="12">
+                    <h2><b>Certifications From OEMs</b></h2>
+                    <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Certified_partner_for_OEMs__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="12">
+                    <h2><b>SERVICE CAPABILITY </b></h2>
+                    <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="List_of_Market_Sector__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Type_of_Service_Agreements__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Company_customers_products_and_services__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Customers_whom_TIG_may_contact_reference__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Do_you_perform_hardware_disposal_activit__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                            class="slds-var-p-top_small">
+                            <lightning-input-field field-name="Other_service_which_company_can_provide__c">
+                            </lightning-input-field>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-record-edit-form>
+
+        <!--Contact details
+        <lightning-layout>
+            <lightning-layout-item size="12" style="width:100%">
+                <h2><b>Contact Details of Key Personnel</b></h2>
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="text" label="Name of Owners/Director of the Company"
+                            name="Name of Owners/Director of the Company">
+                        </lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="text" label="First Name" name="First Name" required></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="text" label="Last Name" name="Last Name" required></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="text" label="Title" name="Title"></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="email" label="Email" name="Email" required></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="tel" label="Phone" name="Phone" required></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="email" label="Sales Department (Email:)" name="Sales Department Email">
+                        </lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="tel" label="Sales Department (Phone No:)" name="Sales Department Phone">
+                        </lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="email" label="Dispatch Help Desk Department (Email:)"
+                            name="Dispatch Help Desk Email">
+                        </lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-medium"
+                        class="slds-var-p-top_small">
+                        <lightning-input type="tel" label="Dispatch Help Desk Department (Phone No:)"
+                            name="Dispatch Help Desk Phone">
+                        </lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+        </lightning-layout> -->
+
+        <div class="slds-float--right slds-p-top_small slds-p-bottom_small">
+            <lightning-button class="slds-m-left_x-small" variant="brand" onclick={handleSubmit} name="update"
+                label="Save"></lightning-button>
+        </div>
+    </div>
+</template>

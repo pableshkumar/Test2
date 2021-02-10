@@ -6,7 +6,11 @@
     <label>Customer/Vendor</label>
     <lookupFilter>
         <active>true</active>
-        <booleanFilter>(1 AND 2) OR (3 AND 4)</booleanFilter>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< feature/VendorOnboarding
+        <booleanFilter>(1 AND 2) OR (3 AND 4) OR (3 AND 5)</booleanFilter>
+========================================================================
+        <booleanFilter>(1 AND 2) OR (3 AND 4 AND 5)</booleanFilter>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> VendorOnBoardingDevlopment
         <filterItems>
             <field>Account.RecordType.Name</field>
             <operation>equals</operation>
@@ -27,6 +31,19 @@
             <operation>equals</operation>
             <value>Purchase Order</value>
         </filterItems>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< feature/VendorOnboarding
+        <filterItems>
+            <field>$Source.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Indirect Purchase Order</value>
+        </filterItems>
+========================================================================
+        <filterItems>
+            <field>Account.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> VendorOnBoardingDevlopment
         <isOptional>false</isOptional>
     </lookupFilter>
     <referenceTo>Account</referenceTo>

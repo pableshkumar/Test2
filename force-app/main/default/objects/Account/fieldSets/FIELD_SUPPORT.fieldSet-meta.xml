@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FIELD_SUPPORT</fullName>
+    <description>This field is use for FIELD SUPPORT</description>
+    <displayedFields>
+        <field>Number_of_Engineers__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Accrediations_held_by_the_Engineers__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>FIELD SUPPORT</label>
+</FieldSet>

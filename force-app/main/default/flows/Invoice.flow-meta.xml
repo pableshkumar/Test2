@@ -2727,6 +2727,7 @@
             </value>
         </inputParameters>
     </actionCalls>
+    <apiVersion>49.0</apiVersion>
     <assignments>
         <name>myWaitAssignment_myWait_myRule_12</name>
         <label>myWaitAssignment_myWait_myRule_12</label>
@@ -6000,6 +6001,7 @@ ISPICKVAL({!myVariable_current.Stage__c},&apos;Draft&apos;)
         <label>Update Invoice Sent/Received Date</label>
         <locationX>100</locationX>
         <locationY>200</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -6080,6 +6082,7 @@ ISPICKVAL({!myVariable_current.Stage__c},&apos;Draft&apos;)
         <label>Update Invoice Sent/Received Date</label>
         <locationX>2800</locationX>
         <locationY>200</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>

@@ -7,7 +7,6 @@
     <trackFeedHistory>false</trackFeedHistory>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
@@ -21,19 +20,9 @@
                 <label>NDA Signed</label>
             </value>
             <value>
-                <fullName>Due Diligence</fullName>
-                <default>false</default>
-                <label>Due Diligence</label>
-            </value>
-            <value>
                 <fullName>Sent for Approval</fullName>
                 <default>false</default>
                 <label>Sent for Approval</label>
-            </value>
-            <value>
-                <fullName>Active</fullName>
-                <default>false</default>
-                <label>Active</label>
             </value>
             <value>
                 <fullName>Inactive</fullName>
@@ -54,6 +43,46 @@
                 <fullName>DeActivation Pending</fullName>
                 <default>false</default>
                 <label>DeActivation Pending</label>
+            </value>
+            <value>
+                <fullName>Initiation</fullName>
+                <default>false</default>
+                <label>Initiation</label>
+            </value>
+            <value>
+                <fullName>NDA</fullName>
+                <default>false</default>
+                <label>NDA</label>
+            </value>
+            <value>
+                <fullName>VRF</fullName>
+                <default>false</default>
+                <label>VRF</label>
+            </value>
+            <value>
+                <fullName>Due Diligence</fullName>
+                <default>false</default>
+                <label>Due Diligence</label>
+            </value>
+            <value>
+                <fullName>MSA</fullName>
+                <default>false</default>
+                <label>MSA</label>
+            </value>
+            <value>
+                <fullName>Registration</fullName>
+                <default>false</default>
+                <label>Registration</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
             </value>
         </valueSetDefinition>
     </valueSet>

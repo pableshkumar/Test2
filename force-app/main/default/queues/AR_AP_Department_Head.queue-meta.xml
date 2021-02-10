@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>AR &amp; AP Department Head</name>
+    <queueMembers>
+        <roleAndSubordinates>
+            <roleAndSubordinate>AP_Head</roleAndSubordinate>
+            <roleAndSubordinate>AR_Head</roleAndSubordinate>
+        </roleAndSubordinates>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Project__c</sobjectType>
+    </queueSobject>
+</Queue>
