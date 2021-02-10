@@ -1,0 +1,108 @@
+<apex:page sidebar="false" showheader="false" renderAs="" StandardController="Order__c" extensions="PurchaseOrderPDF" showQuickActionVfHeader="true" >
+    <head>
+    </head>
+    
+    <br/>
+    <div style="overflow: hidden;"  width="100%" height="500px;">
+        <div> <apex:image style="margin-left:70%;" url="{!$Resource.Logo}" width="90px" height="90px" /></div>
+        <div style="font-size: 22px;margin-Top:50px;margin-left:10px;font-family: 'Open Sans', sans-serif;font-weight:bolder;">Purchase Order</div><br/><br/><br/>
+        <div style="font-size: 13px;margin-left:10px;font-family: 'Open Sans', sans-serif;word-wrap: break-word; Width:30%;float:left">
+            <div>{!poDetails.Customer__r.Name}</div>
+            <div style="margin-top: 5px;">
+                {!poDetails.Bill_to_Address__c}                
+            </div> <br/>
+            <!--  <apex:outputField value="{!poDetails.Customer__r.BillingCity} " /><br/>
+<apex:outputField value="{!poDetails.Customer__r.BillingState} " /><br/>
+<apex:outputField value="{!poDetails.Customer__r.BillingCountry} " /><br/>
+<apex:outputField value="{!poDetails.Customer__r.BillingPostalCode} " />  -->
+        </div>
+        <div style="font-size: 13px;font-family: 'Open Sans', sans-serif;float:left;margin-left:10%;">
+            <b>Purchase Order Date</b><br/>
+            <apex:outputField value="{!poDetails.PO_Start_Date__c}" label="Purchage Order Date" /><br/><br/>
+            <b>Purchase Order Number</b><br/>
+            <apex:outputField value="{!poDetails.Name}" label="Purchase Order Number" /><br/><br/>        </div>
+        <div style="font-size: 13px;font-family: 'Open Sans', sans-serif;margin-left:70%;">
+            <apex:outputtext style="font-size: 13px;" value="{!poDetails.Project__r.TIG_Entity_Name__r.Name}" /><br/>
+            <apex:outputtext style="font-size: 12px;" value="{!poDetails.Project__r.TIG_Entity_Name__r.Street_Address__c}" /><br/>
+            <apex:outputtext style="font-size: 12px;" value="{!poDetails.Project__r.TIG_Entity_Name__r.City__c}" /> &nbsp;<br/>
+            <apex:outputtext style="font-size: 12px;" value="{!poDetails.Project__r.TIG_Entity_Name__r.State1__c}" />&nbsp;<br/>
+            <apex:outputtext style="font-size: 12px;" value="{!poDetails.Project__r.TIG_Entity_Name__r.Zip_Postal_Code__c}" /><br/>
+            <apex:outputtext style="font-size: 12px;" value="{!poDetails.Project__r.TIG_Entity_Name__r.Country1__c}" /><br/>
+            <apex:outputtext style="font-size: 12px;" value="{!poDetails.Project__r.TIG_Entity_Name__r.Tax_Name__c}" />:
+            <apex:outputtext style="font-size: 12px;" value="{!poDetails.Project__r.TIG_Entity_Name__r.Tax_Code__c}" /><br/>
+        </div>
+    </div><br/>
+    
+    <table  cellpadding="2" style="font-size: 13px; border-collapse:collapse; width: 100%; font-family: 'Open Sans', sans-serif;margin-top:50px;margin-left:10px">
+        <tbody >
+            <tr >
+                <th style="width:80%;text-align:left;">Service Description</th>                    
+                <th style="width:20%;text-align:left">Total Quantity </th>
+            </tr>
+            <!-- <apex:repeat value="{!poDetails.Projects_Services1__r}" var="srv">  -->
+            <apex:repeat value="{!serviceData}" var="serviceType">
+                <tr><td colspan="2" style="width:100%"><hr/></td> </tr>
+                
+                        <tr>
+                            <td style="text-align:left">{!serviceType}:
+                           <apex:repeat value="{!serviceData[serviceType]}" var="serviceData" >
+                               {!serviceData}
+                                </apex:repeat>
+
+                            </td>
+                            <td style="text-align:center">{!serviceCount[serviceType]}</td>
+                                         
+                        </tr>
+                    </apex:repeat>
+            <tr><td colspan="3" style="width:100%"><hr/></td> </tr>
+            <tr style="text-align: center;vertical-align: top;">
+
+                <td  style="text-align: right;font-weight:bolder;">Total PO Amount:</td>
+                <td  style="text-align: center;font-weight:bolder;"><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                    <apex:param value="{!poDetails.PO_Amount__c}"/> </apex:outputText> </td>
+                
+            </tr>
+            <!--   <tr style="text-align: center;vertical-align: top;">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td  style="text-align: right;">Total Tax <br/></td>                    
+<td  style="text-align: center;"><apex:outputText value="{0, number, ###,###,###,##0.00}">
+<apex:param value="{!50}"/></apex:outputText></td>
+</tr> -->
+            <!--     <tr style="text-align: center;vertical-align: top;">
+<td></td>  
+<td></td>
+<td></td>
+<td></td>
+<td></td>           
+<td  style="text-align: right;font-weight:bold;border-top: 1px solid #000;"><div style="font-size: 13px">Total ({!poDetails.CurrencyIsoCode})</div></td>
+<td style="border-top: 1px solid #000;"></td>  //need to be commented
+<td  style="text-align: center;font-weight:bold;border-top: 1px solid #000;"><apex:outputText value="{0, number, ###,###,###,##0.00}">
+<apex:param value="{!550}"/></apex:outputText></td>
+</tr>   -->
+        </tbody>
+    </table> <br/>
+    <div style="font-size: 18px;margin-Top:50px;margin-left:10px;font-family: 'Open Sans', sans-serif;font-weight:bolder;">Delivery Details</div><br/>
+    
+    <div style="overflow: hidden;">
+        <div style="font-size: 13px;margin-left:10px;font-family: 'Open Sans', sans-serif;word-wrap: break-word; Width:30%;float:left">
+            <b>Delivery Instructions:</b><br/>
+            <apex:outputField value="{!poDetails.Delivery_Instructions__c} " /><br/><br/>
+            <b>Delivery Address:</b><br/>
+            <apex:outputField rendered="{!if(poDetails.Delivery_Instructions__c!=null,true,false)}" value="{!poDetails.Ship_to_Address__c} " /><br/>
+            <!--  <apex:outputField value="{!poDetails.Customer__r.ShippingCity} " /><br/>
+<apex:outputField value="{!poDetails.Customer__r.ShippingState} " /><br/>
+<apex:outputField value="{!poDetails.Customer__r.ShippingCountry} " /><br/>
+<apex:outputField value="{!poDetails.Customer__r.ShippingPostalCode} " />  -->
+        </div>
+        <div style="font-size: 13px;font-family: 'Open Sans', sans-serif;float:right;margin-left:10%;">
+            <b>Terms and Conditions:</b><br/>
+            Payment Terms:&nbsp;<apex:outputField value="{!poDetails.Payment_Terms__c}"  /><br/>
+            Project Name:&nbsp;<apex:outputField value="{!poDetails.Project__r.Name}"  /> 
+        </div>
+        
+    </div><br/>
+</apex:page>

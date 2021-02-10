@@ -48,6 +48,7 @@
                 <default>false</default>
                 <label>Invoice</label>
             </value>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< DEV
             <value>
                 <fullName>Other</fullName>
                 <default>false</default>
@@ -78,6 +79,13 @@
                 <default>false</default>
                 <label>Escalation Matrix</label>
             </value>
+========================================================================
+            <value>
+                <fullName>Purchase Order</fullName>
+                <default>false</default>
+                <label>Purchase Order</label>
+            </value>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> feature/VendorPO
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>Account</controllingFieldValue>
@@ -127,9 +135,16 @@
             <controllingFieldValue>Billing_Information__c</controllingFieldValue>
             <valueName>Billing Sheet</valueName>
         </valueSettings>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< DEV
         <valueSettings>
             <controllingFieldValue>Vendor_Enquiry__c</controllingFieldValue>
             <valueName>Other</valueName>
         </valueSettings>
+========================================================================
+        <valueSettings>
+            <controllingFieldValue>Order__c</controllingFieldValue>
+            <valueName>Purchase Order</valueName>
+        </valueSettings>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> feature/VendorPO
     </valueSet>
 </CustomField>

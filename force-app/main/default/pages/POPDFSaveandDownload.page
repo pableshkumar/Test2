@@ -1,0 +1,6 @@
+<apex:page controller="PurchaseOrderPDFControllerSaveDownload" action="{!SaveFile}"
+           showHeader="false" 
+           cache="true"
+           contentType="application/x-pdf#PurchaseOrder.pdf">        
+    <apex:include pageName="PurchaseOrderPDFGenerator"/>        
+</apex:page>

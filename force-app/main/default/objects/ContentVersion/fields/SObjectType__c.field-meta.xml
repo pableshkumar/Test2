@@ -40,11 +40,19 @@
                 <default>false</default>
                 <label>Billing_Information__c</label>
             </value>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< DEV
             <value>
                 <fullName>Vendor_Enquiry__c</fullName>
                 <default>false</default>
                 <label>Vendor Enquiry</label>
             </value>
+========================================================================
+            <value>
+                <fullName>Order__c</fullName>
+                <default>false</default>
+                <label>Order__c</label>
+            </value>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> feature/VendorPO
         </valueSetDefinition>
     </valueSet>
 </CustomField>
