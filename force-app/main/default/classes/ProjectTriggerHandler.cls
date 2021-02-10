@@ -59,7 +59,7 @@ public with sharing class ProjectTriggerHandler {
                 }
                 else if(Proj.Billing_Frequency__c=='Monthly'){
                     Billing_Information__c bi=new Billing_Information__c();
-                    if(Proj.Project_Start_Date__c.Month()<System.today().Month())
+                    if(Proj.Project_Start_Date__c<System.today() && (Proj.Project_Start_Date__c.Month()<System.today().Month() ||  Proj.Project_Start_Date__c.Year()<System.today().Year() ))
                     {
                     bi.Billing_Start_Date__c=System.today().toStartOfMonth();
                     }else
@@ -76,7 +76,7 @@ public with sharing class ProjectTriggerHandler {
                 }
                 else if(Proj.Billing_Frequency__c=='Quarterly'){
                     Billing_Information__c bi=new Billing_Information__c();
-                    if(Proj.Project_Start_Date__c.Month()<System.today().Month())
+                    if(Proj.Project_Start_Date__c<System.today() && (Proj.Project_Start_Date__c.Month()<System.today().Month() ||  Proj.Project_Start_Date__c.Year()<System.today().Year() ))
                     {
                     bi.Billing_Start_Date__c=System.today().toStartOfMonth();
                     }else
@@ -93,7 +93,7 @@ public with sharing class ProjectTriggerHandler {
                 }    
                 else if(Proj.Billing_Frequency__c=='Half-Yearly'){
                     Billing_Information__c bi=new Billing_Information__c();
-                    if(Proj.Project_Start_Date__c.Month()<System.today().Month())
+                    if(Proj.Project_Start_Date__c<System.today() && (Proj.Project_Start_Date__c.Month()<System.today().Month() ||  Proj.Project_Start_Date__c.Year()<System.today().Year() ))
                     {
                     bi.Billing_Start_Date__c=System.today().toStartOfMonth();
                     }else
@@ -110,7 +110,7 @@ public with sharing class ProjectTriggerHandler {
                 }  
                 else if(Proj.Billing_Frequency__c=='Yearly'){
                     Billing_Information__c bi=new Billing_Information__c();
-                    if(Proj.Project_Start_Date__c.Month()<System.today().Month())
+                    if(Proj.Project_Start_Date__c<System.today() && (Proj.Project_Start_Date__c.Month()<System.today().Month() ||  Proj.Project_Start_Date__c.Year()<System.today().Year() ))
                     {
                     bi.Billing_Start_Date__c=System.today().toStartOfMonth();
                     }else
