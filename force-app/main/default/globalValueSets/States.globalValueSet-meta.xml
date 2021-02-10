@@ -436,9 +436,9 @@
         <label>Switzerland</label>
     </customValue>
     <customValue>
-        <fullName>Cote d'Ivoire</fullName>
+        <fullName>Cote d&apos;Ivoire</fullName>
         <default>false</default>
-        <label>Cote d'Ivoire</label>
+        <label>Cote d&apos;Ivoire</label>
     </customValue>
     <customValue>
         <fullName>Cook Islands</fullName>
@@ -1241,9 +1241,9 @@
         <label>Ascoli Piceno</label>
     </customValue>
     <customValue>
-        <fullName>L'Aquila</fullName>
+        <fullName>L&apos;Aquila</fullName>
         <default>false</default>
-        <label>L'Aquila</label>
+        <label>L&apos;Aquila</label>
     </customValue>
     <customValue>
         <fullName>Arezzo</fullName>
@@ -1816,9 +1816,9 @@
         <label>Saint Kitts and Nevis</label>
     </customValue>
     <customValue>
-        <fullName>Korea, Democratic People's Republic of</fullName>
+        <fullName>Korea, Democratic People&apos;s Republic of</fullName>
         <default>false</default>
-        <label>Korea, Democratic People's Republic of</label>
+        <label>Korea, Democratic People&apos;s Republic of</label>
     </customValue>
     <customValue>
         <fullName>Korea, Republic of</fullName>
@@ -1841,9 +1841,9 @@
         <label>Kazakhstan</label>
     </customValue>
     <customValue>
-        <fullName>Lao People's Democratic Republic</fullName>
+        <fullName>Lao People&apos;s Democratic Republic</fullName>
         <default>false</default>
-        <label>Lao People's Democratic Republic</label>
+        <label>Lao People&apos;s Democratic Republic</label>
     </customValue>
     <customValue>
         <fullName>Lebanon</fullName>
@@ -2879,6 +2879,751 @@
         <fullName>Zimbabwe</fullName>
         <default>false</default>
         <label>Zimbabwe</label>
+    </customValue>
+    <customValue>
+        <fullName>Seoul</fullName>
+        <default>false</default>
+        <label>Seoul</label>
+    </customValue>
+    <customValue>
+        <fullName>Auckland</fullName>
+        <default>false</default>
+        <label>Auckland</label>
+    </customValue>
+    <customValue>
+        <fullName>Seocho-gu</fullName>
+        <default>false</default>
+        <label>Seocho-gu</label>
+    </customValue>
+    <customValue>
+        <fullName>Gyeonggi-do</fullName>
+        <default>false</default>
+        <label>Gyeonggi-do</label>
+    </customValue>
+    <customValue>
+        <fullName>Aberdeen City</fullName>
+        <default>false</default>
+        <label>Aberdeen City</label>
+    </customValue>
+    <customValue>
+        <fullName>Aberdeenshire</fullName>
+        <default>false</default>
+        <label>Aberdeenshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Aberystwyth</fullName>
+        <default>false</default>
+        <label>Aberystwyth</label>
+    </customValue>
+    <customValue>
+        <fullName>Agusan del Sur</fullName>
+        <default>false</default>
+        <label>Agusan del Sur</label>
+    </customValue>
+    <customValue>
+        <fullName>Argyll and Bute</fullName>
+        <default>false</default>
+        <label>Argyll and Bute</label>
+    </customValue>
+    <customValue>
+        <fullName>Bangor</fullName>
+        <default>false</default>
+        <label>Bangor</label>
+    </customValue>
+    <customValue>
+        <fullName>Batangas</fullName>
+        <default>false</default>
+        <label>Batangas</label>
+    </customValue>
+    <customValue>
+        <fullName>Bedfordshire</fullName>
+        <default>false</default>
+        <label>Bedfordshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Berkshire</fullName>
+        <default>false</default>
+        <label>Berkshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Blackwood</fullName>
+        <default>false</default>
+        <label>Blackwood</label>
+    </customValue>
+    <customValue>
+        <fullName>Bournemouth</fullName>
+        <default>false</default>
+        <label>Bournemouth</label>
+    </customValue>
+    <customValue>
+        <fullName>Bristol</fullName>
+        <default>false</default>
+        <label>Bristol</label>
+    </customValue>
+    <customValue>
+        <fullName>Buckinghamshire</fullName>
+        <default>false</default>
+        <label>Buckinghamshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Bulacan</fullName>
+        <default>false</default>
+        <label>Bulacan</label>
+    </customValue>
+    <customValue>
+        <fullName>Caernarfon</fullName>
+        <default>false</default>
+        <label>Caernarfon</label>
+    </customValue>
+    <customValue>
+        <fullName>Cagayan</fullName>
+        <default>false</default>
+        <label>Cagayan</label>
+    </customValue>
+    <customValue>
+        <fullName>Cambridgeshire</fullName>
+        <default>false</default>
+        <label>Cambridgeshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Carmarthenshire</fullName>
+        <default>false</default>
+        <label>Carmarthenshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Cavite</fullName>
+        <default>false</default>
+        <label>Cavite</label>
+    </customValue>
+    <customValue>
+        <fullName>Cebu</fullName>
+        <default>false</default>
+        <label>Cebu</label>
+    </customValue>
+    <customValue>
+        <fullName>Central Bedfordshire</fullName>
+        <default>false</default>
+        <label>Central Bedfordshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Ceredigion</fullName>
+        <default>false</default>
+        <label>Ceredigion</label>
+    </customValue>
+    <customValue>
+        <fullName>Chachoengsao</fullName>
+        <default>false</default>
+        <label>Chachoengsao</label>
+    </customValue>
+    <customValue>
+        <fullName>Chattisgarh</fullName>
+        <default>false</default>
+        <label>Chattisgarh</label>
+    </customValue>
+    <customValue>
+        <fullName>Chelmsford</fullName>
+        <default>false</default>
+        <label>Chelmsford</label>
+    </customValue>
+    <customValue>
+        <fullName>Cheshire</fullName>
+        <default>false</default>
+        <label>Cheshire</label>
+    </customValue>
+    <customValue>
+        <fullName>City of London</fullName>
+        <default>false</default>
+        <label>City of London</label>
+    </customValue>
+    <customValue>
+        <fullName>Conwy</fullName>
+        <default>false</default>
+        <label>Conwy</label>
+    </customValue>
+    <customValue>
+        <fullName>Cornwall</fullName>
+        <default>false</default>
+        <label>Cornwall</label>
+    </customValue>
+    <customValue>
+        <fullName>County Durham</fullName>
+        <default>false</default>
+        <label>County Durham</label>
+    </customValue>
+    <customValue>
+        <fullName>Cumbria</fullName>
+        <default>false</default>
+        <label>Cumbria</label>
+    </customValue>
+    <customValue>
+        <fullName>Davoe Del Sur</fullName>
+        <default>false</default>
+        <label>Davoe Del Sur</label>
+    </customValue>
+    <customValue>
+        <fullName>Denbighshire</fullName>
+        <default>false</default>
+        <label>Denbighshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Derbyshire</fullName>
+        <default>false</default>
+        <label>Derbyshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Devon</fullName>
+        <default>false</default>
+        <label>Devon</label>
+    </customValue>
+    <customValue>
+        <fullName>Dorset</fullName>
+        <default>false</default>
+        <label>Dorset</label>
+    </customValue>
+    <customValue>
+        <fullName>East Ayrshire</fullName>
+        <default>false</default>
+        <label>East Ayrshire</label>
+    </customValue>
+    <customValue>
+        <fullName>East Riding of Yorkshire</fullName>
+        <default>false</default>
+        <label>East Riding of Yorkshire</label>
+    </customValue>
+    <customValue>
+        <fullName>East Sussex</fullName>
+        <default>false</default>
+        <label>East Sussex</label>
+    </customValue>
+    <customValue>
+        <fullName>Ebbw Vale</fullName>
+        <default>false</default>
+        <label>Ebbw Vale</label>
+    </customValue>
+    <customValue>
+        <fullName>England</fullName>
+        <default>false</default>
+        <label>England</label>
+    </customValue>
+    <customValue>
+        <fullName>Essex</fullName>
+        <default>false</default>
+        <label>Essex</label>
+    </customValue>
+    <customValue>
+        <fullName>Glasgow City</fullName>
+        <default>false</default>
+        <label>Glasgow City</label>
+    </customValue>
+    <customValue>
+        <fullName>Gloucestershire</fullName>
+        <default>false</default>
+        <label>Gloucestershire</label>
+    </customValue>
+    <customValue>
+        <fullName>Greater London</fullName>
+        <default>false</default>
+        <label>Greater London</label>
+    </customValue>
+    <customValue>
+        <fullName>Greater Manchester</fullName>
+        <default>false</default>
+        <label>Greater Manchester</label>
+    </customValue>
+    <customValue>
+        <fullName>Gwynedd</fullName>
+        <default>false</default>
+        <label>Gwynedd</label>
+    </customValue>
+    <customValue>
+        <fullName>Hampshire</fullName>
+        <default>false</default>
+        <label>Hampshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Herefordshire</fullName>
+        <default>false</default>
+        <label>Herefordshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Hertfordshire</fullName>
+        <default>false</default>
+        <label>Hertfordshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Iloilo</fullName>
+        <default>false</default>
+        <label>Iloilo</label>
+    </customValue>
+    <customValue>
+        <fullName>Island</fullName>
+        <default>false</default>
+        <label>Island</label>
+    </customValue>
+    <customValue>
+        <fullName>Isle of Anglesey</fullName>
+        <default>false</default>
+        <label>Isle of Anglesey</label>
+    </customValue>
+    <customValue>
+        <fullName>Jakarta</fullName>
+        <default>false</default>
+        <label>Jakarta</label>
+    </customValue>
+    <customValue>
+        <fullName>Java</fullName>
+        <default>false</default>
+        <label>Java</label>
+    </customValue>
+    <customValue>
+        <fullName>Jawa Barat</fullName>
+        <default>false</default>
+        <label>Jawa Barat</label>
+    </customValue>
+    <customValue>
+        <fullName>Johor</fullName>
+        <default>false</default>
+        <label>Johor</label>
+    </customValue>
+    <customValue>
+        <fullName>Kent</fullName>
+        <default>false</default>
+        <label>Kent</label>
+    </customValue>
+    <customValue>
+        <fullName>Kuala Lumpur</fullName>
+        <default>false</default>
+        <label>Kuala Lumpur</label>
+    </customValue>
+    <customValue>
+        <fullName>La Union</fullName>
+        <default>false</default>
+        <label>La Union</label>
+    </customValue>
+    <customValue>
+        <fullName>Laguna</fullName>
+        <default>false</default>
+        <label>Laguna</label>
+    </customValue>
+    <customValue>
+        <fullName>Lancashire</fullName>
+        <default>false</default>
+        <label>Lancashire</label>
+    </customValue>
+    <customValue>
+        <fullName>Leicestershire</fullName>
+        <default>false</default>
+        <label>Leicestershire</label>
+    </customValue>
+    <customValue>
+        <fullName>Leyte</fullName>
+        <default>false</default>
+        <label>Leyte</label>
+    </customValue>
+    <customValue>
+        <fullName>Lincolnshire</fullName>
+        <default>false</default>
+        <label>Lincolnshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Linh</fullName>
+        <default>false</default>
+        <label>Linh</label>
+    </customValue>
+    <customValue>
+        <fullName>Llanelli</fullName>
+        <default>false</default>
+        <label>Llanelli</label>
+    </customValue>
+    <customValue>
+        <fullName>Manchester</fullName>
+        <default>false</default>
+        <label>Manchester</label>
+    </customValue>
+    <customValue>
+        <fullName>London</fullName>
+        <default>false</default>
+        <label>London</label>
+    </customValue>
+    <customValue>
+        <fullName>MIPPINES</fullName>
+        <default>false</default>
+        <label>MIPPINES</label>
+    </customValue>
+    <customValue>
+        <fullName>Monmouthshire</fullName>
+        <default>false</default>
+        <label>Monmouthshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Manila</fullName>
+        <default>false</default>
+        <label>Manila</label>
+    </customValue>
+    <customValue>
+        <fullName>Merseyside</fullName>
+        <default>false</default>
+        <label>Merseyside</label>
+    </customValue>
+    <customValue>
+        <fullName>Negros Occidental</fullName>
+        <default>false</default>
+        <label>Negros Occidental</label>
+    </customValue>
+    <customValue>
+        <fullName>Neath</fullName>
+        <default>false</default>
+        <label>Neath</label>
+    </customValue>
+    <customValue>
+        <fullName>Norfolk</fullName>
+        <default>false</default>
+        <label>Norfolk</label>
+    </customValue>
+    <customValue>
+        <fullName>Newport</fullName>
+        <default>false</default>
+        <label>Newport</label>
+    </customValue>
+    <customValue>
+        <fullName>Northamptonshire</fullName>
+        <default>false</default>
+        <label>Northamptonshire</label>
+    </customValue>
+    <customValue>
+        <fullName>North Yorkshire</fullName>
+        <default>false</default>
+        <label>North Yorkshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Norwich</fullName>
+        <default>false</default>
+        <label>Norwich</label>
+    </customValue>
+    <customValue>
+        <fullName>Nueva Ecija</fullName>
+        <default>false</default>
+        <label>Nueva Ecija</label>
+    </customValue>
+    <customValue>
+        <fullName>Nottinghamshire</fullName>
+        <default>false</default>
+        <label>Nottinghamshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Oriental Mindoro</fullName>
+        <default>false</default>
+        <label>Oriental Mindoro</label>
+    </customValue>
+    <customValue>
+        <fullName>Oxfordshire</fullName>
+        <default>false</default>
+        <label>Oxfordshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Pembrokeshire</fullName>
+        <default>false</default>
+        <label>Pembrokeshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Pangasinan</fullName>
+        <default>false</default>
+        <label>Pangasinan</label>
+    </customValue>
+    <customValue>
+        <fullName>Penang</fullName>
+        <default>false</default>
+        <label>Penang</label>
+    </customValue>
+    <customValue>
+        <fullName>Poole</fullName>
+        <default>false</default>
+        <label>Poole</label>
+    </customValue>
+    <customValue>
+        <fullName>Pen-y-groes</fullName>
+        <default>false</default>
+        <label>Pen-y-groes</label>
+    </customValue>
+    <customValue>
+        <fullName>Quezon</fullName>
+        <default>false</default>
+        <label>Quezon</label>
+    </customValue>
+    <customValue>
+        <fullName>Port Talbot</fullName>
+        <default>false</default>
+        <label>Port Talbot</label>
+    </customValue>
+    <customValue>
+        <fullName>Powys</fullName>
+        <default>false</default>
+        <label>Powys</label>
+    </customValue>
+    <customValue>
+        <fullName>Riau Islands</fullName>
+        <default>false</default>
+        <label>Riau Islands</label>
+    </customValue>
+    <customValue>
+        <fullName>Rizal</fullName>
+        <default>false</default>
+        <label>Rizal</label>
+    </customValue>
+    <customValue>
+        <fullName>Quyen</fullName>
+        <default>false</default>
+        <label>Quyen</label>
+    </customValue>
+    <customValue>
+        <fullName>Selangor</fullName>
+        <default>false</default>
+        <label>Selangor</label>
+    </customValue>
+    <customValue>
+        <fullName>Samut Prakan</fullName>
+        <default>false</default>
+        <label>Samut Prakan</label>
+    </customValue>
+    <customValue>
+        <fullName>Scotland</fullName>
+        <default>false</default>
+        <label>Scotland</label>
+    </customValue>
+    <customValue>
+        <fullName>Sindh</fullName>
+        <default>false</default>
+        <label>Sindh</label>
+    </customValue>
+    <customValue>
+        <fullName>Shropshire</fullName>
+        <default>false</default>
+        <label>Shropshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Sheffield</fullName>
+        <default>false</default>
+        <label>Sheffield</label>
+    </customValue>
+    <customValue>
+        <fullName>Somerset</fullName>
+        <default>false</default>
+        <label>Somerset</label>
+    </customValue>
+    <customValue>
+        <fullName>South Yorkshire</fullName>
+        <default>false</default>
+        <label>South Yorkshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Solihull</fullName>
+        <default>false</default>
+        <label>Solihull</label>
+    </customValue>
+    <customValue>
+        <fullName>Suffolk</fullName>
+        <default>false</default>
+        <label>Suffolk</label>
+    </customValue>
+    <customValue>
+        <fullName>Staffordshire</fullName>
+        <default>false</default>
+        <label>Staffordshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Sunderland</fullName>
+        <default>false</default>
+        <label>Sunderland</label>
+    </customValue>
+    <customValue>
+        <fullName>Surrey</fullName>
+        <default>false</default>
+        <label>Surrey</label>
+    </customValue>
+    <customValue>
+        <fullName>Taipei</fullName>
+        <default>false</default>
+        <label>Taipei</label>
+    </customValue>
+    <customValue>
+        <fullName>Sussex</fullName>
+        <default>false</default>
+        <label>Sussex</label>
+    </customValue>
+    <customValue>
+        <fullName>Tokyo</fullName>
+        <default>false</default>
+        <label>Tokyo</label>
+    </customValue>
+    <customValue>
+        <fullName>Tonbridge and Malling</fullName>
+        <default>false</default>
+        <label>Tonbridge and Malling</label>
+    </customValue>
+    <customValue>
+        <fullName>Tipton</fullName>
+        <default>false</default>
+        <label>Tipton</label>
+    </customValue>
+    <customValue>
+        <fullName>Uttarakad</fullName>
+        <default>false</default>
+        <label>Uttarakad</label>
+    </customValue>
+    <customValue>
+        <fullName>Tyne and Wear</fullName>
+        <default>false</default>
+        <label>Tyne and Wear</label>
+    </customValue>
+    <customValue>
+        <fullName>Torfaen</fullName>
+        <default>false</default>
+        <label>Torfaen</label>
+    </customValue>
+    <customValue>
+        <fullName>Wales</fullName>
+        <default>false</default>
+        <label>Wales</label>
+    </customValue>
+    <customValue>
+        <fullName>Warwickshire</fullName>
+        <default>false</default>
+        <label>Warwickshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Walsall</fullName>
+        <default>false</default>
+        <label>Walsall</label>
+    </customValue>
+    <customValue>
+        <fullName>West Midlands</fullName>
+        <default>false</default>
+        <label>West Midlands</label>
+    </customValue>
+    <customValue>
+        <fullName>West Sussex</fullName>
+        <default>false</default>
+        <label>West Sussex</label>
+    </customValue>
+    <customValue>
+        <fullName>West Lothian</fullName>
+        <default>false</default>
+        <label>West Lothian</label>
+    </customValue>
+    <customValue>
+        <fullName>West Yorkshire</fullName>
+        <default>false</default>
+        <label>West Yorkshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Wiltshire</fullName>
+        <default>false</default>
+        <label>Wiltshire</label>
+    </customValue>
+    <customValue>
+        <fullName>Worcestershire</fullName>
+        <default>false</default>
+        <label>Worcestershire</label>
+    </customValue>
+    <customValue>
+        <fullName>Zambales</fullName>
+        <default>false</default>
+        <label>Zambales</label>
+    </customValue>
+    <customValue>
+        <fullName>Zamboanga del Sur</fullName>
+        <default>false</default>
+        <label>Zamboanga del Sur</label>
+    </customValue>
+    <customValue>
+        <fullName>Wrexham</fullName>
+        <default>false</default>
+        <label>Wrexham</label>
+    </customValue>
+    <customValue>
+        <fullName>Yogyakarta</fullName>
+        <default>false</default>
+        <label>Yogyakarta</label>
+    </customValue>
+    <customValue>
+        <fullName>Indoneisa</fullName>
+        <default>false</default>
+        <label>Indoneisa</label>
+    </customValue>
+    <customValue>
+        <fullName>Davao Del Sur</fullName>
+        <default>false</default>
+        <label>Davao Del Sur</label>
+    </customValue>
+    <customValue>
+        <fullName>South Korea</fullName>
+        <default>false</default>
+        <label>South Korea</label>
+    </customValue>
+    <customValue>
+        <fullName>Copenhagen</fullName>
+        <default>false</default>
+        <label>Copenhagen</label>
+    </customValue>
+    <customValue>
+        <fullName>Hessan</fullName>
+        <default>false</default>
+        <label>Hessan</label>
+    </customValue>
+    <customValue>
+        <fullName>Saxony</fullName>
+        <default>false</default>
+        <label>Saxony</label>
+    </customValue>
+    <customValue>
+        <fullName>Morobe</fullName>
+        <default>false</default>
+        <label>Morobe</label>
+    </customValue>
+    <customValue>
+        <fullName>Port Moresby</fullName>
+        <default>false</default>
+        <label>Port Moresby</label>
+    </customValue>
+    <customValue>
+        <fullName>Madrid</fullName>
+        <default>false</default>
+        <label>Madrid</label>
+    </customValue>
+    <customValue>
+        <fullName>Nakhon Pathom</fullName>
+        <default>false</default>
+        <label>Nakhon Pathom</label>
+    </customValue>
+    <customValue>
+        <fullName>Bangkok</fullName>
+        <default>false</default>
+        <label>Bangkok</label>
+    </customValue>
+    <customValue>
+        <fullName>North Holland</fullName>
+        <default>false</default>
+        <label>North Holland</label>
+    </customValue>
+    <customValue>
+        <fullName>South Holland</fullName>
+        <default>false</default>
+        <label>South Holland</label>
+    </customValue>
+    <customValue>
+        <fullName>Kowloon</fullName>
+        <default>false</default>
+        <label>Kowloon</label>
+    </customValue>
+    <customValue>
+        <fullName>Dubai</fullName>
+        <default>false</default>
+        <label>Dubai</label>
+    </customValue>
+    <customValue>
+        <fullName>Riyadh</fullName>
+        <default>false</default>
+        <label>Riyadh</label>
     </customValue>
     <masterLabel>States</masterLabel>
     <sorted>false</sorted>

@@ -21,6 +21,11 @@
                 <default>false</default>
                 <label>Client billing approval not received</label>
             </value>
+            <value>
+                <fullName>Exceptional Approval Required</fullName>
+                <default>false</default>
+                <label>Exceptional Approval Required</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

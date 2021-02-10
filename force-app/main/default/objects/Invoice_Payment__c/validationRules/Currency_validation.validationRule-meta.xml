@@ -3,9 +3,6 @@
     <fullName>Currency_validation</fullName>
     <active>true</active>
     <description>Invoice Payment Currency should be same as Payment Currency and Invoice Currency</description>
-    <errorConditionFormula>OR(TEXT( CurrencyIsoCode )!= TEXT(Invoice__r.CurrencyIsoCode),
-TEXT(CurrencyIsoCode)!= TEXT(Payment__r.CurrencyIsoCode )
-)</errorConditionFormula>
-    <errorDisplayField>CurrencyIsoCode</errorDisplayField>
-    <errorMessage>Currency should be same as Payment Currency and Invoice Currency</errorMessage>
+    <errorConditionFormula>TEXT(Payment__r.CurrencyIsoCode ) != TEXT(Invoice__r.CurrencyIsoCode )</errorConditionFormula>
+    <errorMessage>Payment Currency should be same as Invoice Currency.</errorMessage>
 </ValidationRule>
