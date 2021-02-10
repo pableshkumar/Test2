@@ -92,6 +92,12 @@
         <rejectBehavior>
             <type>BackToPrevious</type>
         </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>Status_Validate_Invoice</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
     </approvalStep>
     <approvalStep>
         <allowDelegate>true</allowDelegate>
@@ -117,6 +123,12 @@
         <rejectBehavior>
             <type>BackToPrevious</type>
         </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>Status_Review_and_Update_Taxation</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
     </approvalStep>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>

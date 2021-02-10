@@ -25,6 +25,21 @@
                 <default>false</default>
                 <label>Opportunity</label>
             </value>
+            <value>
+                <fullName>Invoice__c</fullName>
+                <default>false</default>
+                <label>Invoice__c</label>
+            </value>
+            <value>
+                <fullName>Project__c</fullName>
+                <default>false</default>
+                <label>Project__c</label>
+            </value>
+            <value>
+                <fullName>Billing_Information__c</fullName>
+                <default>false</default>
+                <label>Billing_Information__c</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

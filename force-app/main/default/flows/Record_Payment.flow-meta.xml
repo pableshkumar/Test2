@@ -41,6 +41,12 @@
         </value>
     </processMetadataValues>
     <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
         <name>OriginBuilderType</name>
         <value>
             <stringValue>LightningFlowBuilder</stringValue>
@@ -52,9 +58,6 @@
         <label>Create Invoice Payment</label>
         <locationX>161</locationX>
         <locationY>345</locationY>
-        <connector>
-            <targetReference>Update_Invoice_Stage</targetReference>
-        </connector>
         <faultConnector>
             <targetReference>errro</targetReference>
         </faultConnector>
@@ -188,36 +191,6 @@
         <object>RecordType</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordUpdates>
-        <name>Update_Invoice_Stage</name>
-        <label>Update Invoice Stage</label>
-        <locationX>163</locationX>
-        <locationY>601</locationY>
-        <faultConnector>
-            <targetReference>errro</targetReference>
-        </faultConnector>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>recordId</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Outstanding_Amount__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <numberValue>0.0</numberValue>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Stage__c</field>
-            <value>
-                <stringValue>Paid</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Invoice__c</object>
-    </recordUpdates>
     <screens>
         <name>errro</name>
         <label>errro</label>

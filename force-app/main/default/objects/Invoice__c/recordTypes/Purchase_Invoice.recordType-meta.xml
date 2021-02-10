@@ -2,6 +2,7 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Purchase_Invoice</fullName>
     <active>true</active>
+    <compactLayoutAssignment>Invoice_Compact_Layout</compactLayoutAssignment>
     <label>Purchase Invoice</label>
     <picklistValues>
         <picklist>Billed_to_Client__c</picklist>
@@ -37,6 +38,29 @@
         </values>
         <values>
             <fullName>Dispute in client billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exceptional Approval Required</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Late_Submission__c</picklist>
+        <values>
+            <fullName>Client Approval Not Received on Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client PO Not Received on Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Billing Sheet received from SDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIG internal management exceptional approval is required</fullName>
             <default>false</default>
         </values>
     </picklistValues>
