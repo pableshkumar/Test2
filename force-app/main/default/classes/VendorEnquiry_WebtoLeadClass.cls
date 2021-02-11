@@ -1,4 +1,4 @@
-@RestResource(urlMapping='/VendorEnquiry/*')
+@RestResource(urlMapping='/Enquiry/*')
 global class VendorEnquiry_WebtoLeadClass {
 
     /*public VendorEnquiry_WebtoLeadClass() {

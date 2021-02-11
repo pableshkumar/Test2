@@ -9,9 +9,6 @@
 @RestResource(urlMapping='/VendorEnquiry/*')
 global class WebtoVendorEnquiry {
 
-    /*public VendorEnquiry_WebtoLeadClass() {
-
-    }*/
    @HttpPost
     global static responseWrapper VendorEnquiryCreation(){
         RestRequest req = RestContext.request; //the RestRequest for the Apex REST method

@@ -113,7 +113,6 @@
         <apexClass>WebtoVendorEnquiry</apexClass>
         <enabled>false</enabled>
     </classAccesses>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> VendorOnBoardingDevlopment
     <custom>true</custom>
     <fieldPermissions>
         <editable>true</editable>
@@ -807,8 +806,7 @@
         <editable>true</editable>
         <field>Case.AssetId</field>
         <readable>true</readable>
-    </fieldPermissions>
-    
+    </fieldPermissions> 
     <fieldPermissions>
         <editable>false</editable>
         <field>Case.BusinessHoursId</field>
@@ -3330,7 +3328,6 @@
         <field>Vendor_Partner_Presence__c.Name_of_Country_Directly_Supported__c</field>
         <readable>true</readable>
     </fieldPermissions>
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< feature/VendorOnboarding
     <fieldPermissions>
         <editable>false</editable>
         <field>Vendor_Enquiry__c.Contact_number__c</field>
@@ -3386,7 +3383,6 @@
         <field>Vendor_Enquiry__c.Status__c</field>
         <readable>false</readable>
     </fieldPermissions>
-========================================================================
     <fieldPermissions>
         <editable>false</editable>
         <field>Vendor_Partner_Presence__c.Printer_MFD_Support__c</field>
@@ -3417,7 +3413,6 @@
         <field>Vendor_Partner_Presence__c.WarehouseSpare_Management__c</field>
         <readable>false</readable>
     </fieldPermissions>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> VendorOnBoardingDevlopment
     <layoutAssignments>
         <layout>Account-Customer Layout</layout>
     </layoutAssignments>
@@ -3560,12 +3555,6 @@
     <layoutAssignments>
         <layout>TIG_Entity__c-TIG Entity Layout</layout>
     </layoutAssignments>
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< feature/VendorOnboarding
-    <layoutAssignments>
-        <layout>Vendor_Enquiry__c-Vendor Enquiry Layout</layout>
-    </layoutAssignments>
-    <objectPermissions>
-========================================================================
     <layoutAssignments>
         <layout>Vendor_Enquiry__c-Vendor Enquiry Layout</layout>
     </layoutAssignments>
@@ -3577,7 +3566,7 @@
         <recordType>Vendor_Partner_Presence__c.Partner</recordType>
     </layoutAssignments>
     <objectPermissions>
-        <allowCreate>false</allowCreate>
+        <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
@@ -3586,7 +3575,6 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> VendorOnBoardingDevlopment
         <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>true</allowEdit>

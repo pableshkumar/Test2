@@ -3200,7 +3200,6 @@
         <field>Task.WhoId</field>
         <readable>true</readable>
     </fieldPermissions>
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< feature/VendorOnboarding
     <fieldPermissions>
         <editable>false</editable>
         <field>Vendor_Enquiry__c.Contact_number__c</field>
@@ -3256,7 +3255,6 @@
         <field>Vendor_Enquiry__c.Status__c</field>
         <readable>false</readable>
     </fieldPermissions>
-========================================================================
     <fieldPermissions>
         <editable>false</editable>
         <field>Vendor_Enquiry__c.Account__c</field>
@@ -3417,7 +3415,6 @@
         <field>Vendor_Partner_Presence__c.WarehouseSpare_Management__c</field>
         <readable>true</readable>
     </fieldPermissions>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> VendorOnBoardingDevlopment
     <layoutAssignments>
         <layout>Account-Customer Layout</layout>
     </layoutAssignments>
@@ -3560,11 +3557,6 @@
     <layoutAssignments>
         <layout>TIG_Entity__c-TIG Entity Layout</layout>
     </layoutAssignments>
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< feature/VendorOnboarding
-    <layoutAssignments>
-        <layout>Vendor_Enquiry__c-Vendor Enquiry Layout</layout>
-    </layoutAssignments>
-========================================================================
     <layoutAssignments>
         <layout>Vendor_Enquiry__c-Vendor Enquiry Layout</layout>
     </layoutAssignments>
@@ -3575,7 +3567,6 @@
         <layout>Vendor_Partner_Presence__c-Vendor Partner Presence Layout</layout>
         <recordType>Vendor_Partner_Presence__c.Partner</recordType>
     </layoutAssignments>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> VendorOnBoardingDevlopment
     <loginIpRanges>
         <endAddress>255.255.255.255</endAddress>
         <startAddress>0.0.0.0</startAddress>
@@ -3742,17 +3733,6 @@
         <object>TIG_Entity__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< feature/VendorOnboarding
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Vendor_Enquiry__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-========================================================================
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
@@ -3771,7 +3751,6 @@
         <object>Vendor_Partner_Presence__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> VendorOnBoardingDevlopment
     <pageAccesses>
         <apexPage>InvoicePDF</apexPage>
         <enabled>true</enabled>
