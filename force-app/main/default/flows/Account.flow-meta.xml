@@ -105,9 +105,6 @@
         <label>myDecision7</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>myDecision9</targetReference>
-        </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_8</name>
@@ -180,64 +177,6 @@
             <label>Update DD Status</label>
         </rules>
     </decisions>
-    <decisions>
-        <processMetadataValues>
-            <name>index</name>
-            <value>
-                <numberValue>4.0</numberValue>
-            </value>
-        </processMetadataValues>
-        <name>myDecision9</name>
-        <label>myDecision9</label>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myRule_10</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Boolean</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideReferenceTo</name>
-                    <value>
-                        <stringValue>Vendor_Enquiry__c</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>ID</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Boolean</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.Vendor_Enquiry__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_10_A1</targetReference>
-            </connector>
-            <label>Update Enquiry</label>
-        </rules>
-    </decisions>
     <description>Updating Customer Code in Uppercase</description>
     <formulas>
         <processMetadataValues>
@@ -246,7 +185,7 @@
                 <stringValue>Upper([Account].Customer_Code__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_1390307096</name>
+        <name>formula_2_myRule_1_A1_2927075193</name>
         <dataType>String</dataType>
         <expression>Upper({!myVariable_current.Customer_Code__c} )</expression>
     </formulas>
@@ -317,7 +256,7 @@ ISPICKVAL(PRIORVALUE({!myVariable_current.Status__c} ), &apos;Due Diligence&apos
         <dataType>Boolean</dataType>
         <expression>{!myVariable_current.RecordType.Name} = &quot;Vendor&quot; &amp;&amp;  ISNEW()  &amp;&amp; {!myVariable_current.Captured_through_Vendor_Enquiry__c}  = true</expression>
     </formulas>
-    <interviewLabel>Account-16_InterviewLabel</interviewLabel>
+    <interviewLabel>Account-2_InterviewLabel</interviewLabel>
     <label>Account</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -344,123 +283,6 @@ ISPICKVAL(PRIORVALUE({!myVariable_current.Status__c} ), &apos;Due Diligence&apos
         </value>
     </processMetadataValues>
     <processType>Workflow</processType>
-    <recordUpdates>
-        <processMetadataValues>
-            <name>evaluationType</name>
-            <value>
-                <stringValue>always</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>extraTypeInfo</name>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>isChildRelationship</name>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>reference</name>
-            <value>
-                <stringValue>[Account].Vendor Enquiry</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>referenceTargetField</name>
-        </processMetadataValues>
-        <name>myRule_10_A1</name>
-        <label>Update On Enquiry</label>
-        <locationX>1000</locationX>
-        <locationY>200</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <processMetadataValues>
-                <name>implicit</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>myVariable_current.Vendor_Enquiry__c</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Account</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideReferenceTo</name>
-                <value>
-                    <stringValue>Account</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Reference</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>Account__c</field>
-            <value>
-                <elementReference>myVariable_current.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>Boolean</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Record Lock</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideReferenceTo</name>
-                <value>
-                    <stringValue/>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Boolean</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>Record_Lock__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <object>Vendor_Enquiry__c</object>
-    </recordUpdates>
     <recordUpdates>
         <processMetadataValues>
             <name>evaluationType</name>
@@ -540,7 +362,7 @@ ISPICKVAL(PRIORVALUE({!myVariable_current.Status__c} ), &apos;Due Diligence&apos
             </processMetadataValues>
             <field>Customer_Code__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_1390307096</elementReference>
+                <elementReference>formula_2_myRule_1_A1_2927075193</elementReference>
             </value>
         </inputAssignments>
         <object>Account</object>
@@ -742,9 +564,6 @@ ISPICKVAL(PRIORVALUE({!myVariable_current.Status__c} ), &apos;Due Diligence&apos
         <label>Update status</label>
         <locationX>800</locationX>
         <locationY>200</locationY>
-        <connector>
-            <targetReference>myDecision9</targetReference>
-        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
@@ -798,7 +617,7 @@ ISPICKVAL(PRIORVALUE({!myVariable_current.Status__c} ), &apos;Due Diligence&apos
         <object>Due_Diligence__c</object>
     </recordUpdates>
     <startElementReference>myDecision</startElementReference>
-    <status>Obsolete</status>
+    <status>Active</status>
     <variables>
         <name>myVariable_current</name>
         <dataType>SObject</dataType>
