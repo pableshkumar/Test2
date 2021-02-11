@@ -3340,7 +3340,6 @@
         <field>Vendor_Partner_Presence__c.Support_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< feature/VendorOnboarding
     <fieldPermissions>
         <editable>false</editable>
         <field>Vendor_Enquiry__c.Contact_number__c</field>
@@ -3396,7 +3395,6 @@
         <field>Vendor_Enquiry__c.Status__c</field>
         <readable>false</readable>
     </fieldPermissions>
-========================================================================
     <fieldPermissions>
         <editable>false</editable>
         <field>Vendor_Partner_Presence__c.Tape_Management_Support__c</field>
@@ -3417,7 +3415,6 @@
         <field>Vendor_Partner_Presence__c.WarehouseSpare_Management__c</field>
         <readable>false</readable>
     </fieldPermissions>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> VendorOnBoardingDevlopment
     <layoutAssignments>
         <layout>Account-Customer Layout</layout>
     </layoutAssignments>
@@ -3560,12 +3557,6 @@
     <layoutAssignments>
         <layout>TIG_Entity__c-TIG Entity Layout</layout>
     </layoutAssignments>
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< feature/VendorOnboarding
-    <layoutAssignments>
-        <layout>Vendor_Enquiry__c-Vendor Enquiry Layout</layout>
-    </layoutAssignments>
-    <objectPermissions>
-========================================================================
     <layoutAssignments>
         <layout>Vendor_Enquiry__c-Vendor Enquiry Layout</layout>
     </layoutAssignments>
@@ -3586,7 +3577,6 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> VendorOnBoardingDevlopment
         <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>true</allowEdit>

@@ -4,10 +4,7 @@
         <members>*</members>
         <name>Profile</name>
     </types>  -->
-   <types>
-         <members>Account.Approval_status_head__c</members>
-        <name>CustomField</name>
-    </types>  
+
      
 </types>
     <version>49.0</version>

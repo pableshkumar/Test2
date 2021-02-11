@@ -85,10 +85,6 @@
         <apexClass>Test_Data_Factory</apexClass>
         <enabled>false</enabled>
     </classAccesses>
-    <classAccesses>
-        <apexClass>VendorEnquiry_WebtoLeadClass</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
     <custom>true</custom>
     <fieldPermissions>
         <editable>true</editable>

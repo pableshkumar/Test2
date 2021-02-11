@@ -25,6 +25,11 @@
                 <default>false</default>
                 <label>Sent to Finance Head</label>
             </value>
-        </valueSetDefinition>
+            <value>
+                <fullName>Approved by Finance Head</fullName>
+                <default>false</default>
+                <label>Approved by Finance Head</label>
+            </value>
+                </valueSetDefinition>
     </valueSet>
 </CustomField>
