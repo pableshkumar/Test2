@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_DD_is_Active_validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ ISPICKVAL( Status__c ,&quot;Due Diligence&quot;),
+ ISPICKVAL(  MSA_Required__c , &quot;Yes&quot;),
+ ISBLANK( Due_Diligence__c ),
+ ISBLANK(ParentId),
+ One_Time_Vendor__c = false
+
+)</errorConditionFormula>
+    <errorDisplayField>MSA_Required__c</errorDisplayField>
+    <errorMessage>Before going to MSA stage, please create Due Diligence.</errorMessage>
+</ValidationRule>

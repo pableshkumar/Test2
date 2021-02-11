@@ -121,8 +121,10 @@ public class AccountHandler {
                 acc.adderror('Please upload MSA file');
             }else if(acc.Due_Diligence__c == null && acc.Status__c == 'Registration' && acc.MSA_Required__c == 'No' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
                 acc.adderror('Please create Due Diligence');
-            }else if(acc.Date_of_Signature_MSA__c == null && acc.Date_of_Expiry_MSA__c == null && oldMapAcc.get(acc.Id).Status__c == 'MSA' && acc.Status__c == 'Registration' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
-                acc.adderror('Please select MSA Date of Signature and  Expiry');
+            }else if(acc.Date_of_Signature_MSA__c == null && oldMapAcc.get(acc.Id).Status__c == 'MSA' && acc.Status__c == 'Registration' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Please select MSA Date of Signature.');
+            }else if(acc.Date_of_Expiry_MSA__c == null && oldMapAcc.get(acc.Id).Status__c == 'MSA' && acc.Status__c == 'Registration' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Please select MSA Date of Expiry.');
             }else if(acc.Status__c == 'Due Diligence' && !AccountHandler.listContains(fileType, 'Escalation Matrix')  && oldMapAcc.get(acc.Id).Status__c == 'VRF' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
                 acc.adderror('Please upload Escalation Matrix file then go to Due Diligence stage');
             }else if(acc.Status__c == 'Due Diligence' && !AccountHandler.listContains(fileType, 'Vendor Capability')  && oldMapAcc.get(acc.Id).Status__c == 'VRF' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
@@ -133,8 +135,8 @@ public class AccountHandler {
                 acc.adderror('Please upload Financial Information file then go to Due Diligence stage.');
             }else if(acc.Status__c == 'NDA' && !AccountHandler.listContains(fileType, 'MOM')  && oldMapAcc.get(acc.Id).Status__c == 'Initiation' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
                 acc.adderror('Before going to NDA stage, you need to upload MOM file.');
-            }else if(acc.Status__c == 'VRF' && !AccountHandler.listContains(fileType, 'NDA') && acc.Date_of_Signature_NDA__c == null && acc.Date_of_Expiry_NDA__c == null && oldMapAcc.get(acc.Id).Status__c == 'NDA' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
-                acc.adderror('Before going to VRF stage, you need to upload NDA file and NDA Date of Signature and  Expiry.');
+            }else if(acc.Status__c == 'VRF' && !AccountHandler.listContains(fileType, 'NDA') && oldMapAcc.get(acc.Id).Status__c == 'NDA' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+                acc.adderror('Before going to VRF stage, you need to upload NDA file.');
             }
         }
     }

@@ -140,7 +140,6 @@
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
-   
     <fieldUpdates>
         <fullName>Update_file_type</fullName>
         <field>File_Type__c</field>
@@ -191,7 +190,6 @@
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
-   
     <fieldUpdates>
         <fullName>update_description_test</fullName>
         <description>testing purpose</description>

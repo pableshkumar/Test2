@@ -83,6 +83,11 @@
                 <default>false</default>
                 <label>Purchase Order</label>
             </value>
+            <value>
+                <fullName>MSA</fullName>
+                <default>false</default>
+                <label>MSA</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>Account</controllingFieldValue>
@@ -115,6 +120,10 @@
         <valueSettings>
             <controllingFieldValue>Account</controllingFieldValue>
             <valueName>Escalation Matrix</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account</controllingFieldValue>
+            <valueName>MSA</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Invoice__c</controllingFieldValue>

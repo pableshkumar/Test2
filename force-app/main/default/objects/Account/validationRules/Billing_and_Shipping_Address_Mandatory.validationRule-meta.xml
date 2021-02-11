@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_and_Shipping_Address_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( RecordType.Name =&apos;Vendor&apos;,
+PRIORVALUE(Captured_through_Vendor_Enquiry__c) &lt;&gt; TRUE,
+Captured_through_Vendor_Enquiry__c =FALSE,
+OR( ISBLANK( BillingCity ) ,
+ISBLANK( BillingCountry),
+ISBLANK( BillingState ),
+ISBLANK( BillingPostalCode ),
+ISBLANK( BillingStreet ),
+ISBLANK( ShippingCity ) ,
+ISBLANK( ShippingCountry),
+ISBLANK( ShippingState ),
+ISBLANK( ShippingPostalCode),
+ISBLANK( ShippingStreet )
+
+)
+)</errorConditionFormula>
+    <errorMessage>Please check if Billing and Shipping addresses are captured correctly</errorMessage>
+</ValidationRule>

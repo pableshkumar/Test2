@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_NDA_Date_of_Expiry</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL( Status__c , &quot;VRF&quot;),
+ISPICKVAL(PRIORVALUE(Status__c ),&quot;NDA&quot;),
+ISNULL(Date_of_Expiry_NDA__c),
+ISBLANK(ParentId),
+One_Time_Vendor__c = false
+)</errorConditionFormula>
+    <errorDisplayField>Date_of_Expiry_NDA__c</errorDisplayField>
+    <errorMessage>Please enter Date of Expiry(NDA)</errorMessage>
+</ValidationRule>
