@@ -11,4 +11,6 @@
     <queueSobject>
         <sobjectType>Project__c</sobjectType>
     </queueSobject>
-</Queue>
+    <queueSobject>
+        <sobjectType>Vendor_Enquiry__c</sobjectType>
+    </queueSobject></Queue>
