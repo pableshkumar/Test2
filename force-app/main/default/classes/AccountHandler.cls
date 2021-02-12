@@ -102,9 +102,14 @@ public class AccountHandler {
     }
     
     public void checkFileType(List<Account> listAcc,Map<Id,Account> oldMapAcc){
+         // get the record types id of vendor Account
+        Id AccRecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Vendor').getRecordTypeId();
         Set<Id> accountId = new Set<Id>();
         for(Account acc: listAcc){
-            accountId.add(acc.Id); 
+            if(acc.RecordTypeId==AccRecordTypeId){
+              accountId.add(acc.Id);   
+            }
+            
         }
         List<String> fileType=new List<String>();
         for (Account a: [SELECT Name, (SELECT ContentDocumentId, ContentDocument.Title, ContentDocument.ContentSize,ContentDocument.LatestPublishedVersion.Document_Type__c FROM ContentDocumentLinks) FROM Account where Id IN:accountId]) {
@@ -115,7 +120,7 @@ public class AccountHandler {
             }
         }
         for(Account acc:listAcc){
-            if(acc.File_Type__c == 'Due Diligence' && acc.Approval_status_head__c == 'Sent to FSM Head' && acc.MSA_Required__c == null && acc.ParentId == null && acc.One_Time_Vendor__c == false ){
+            if(acc.File_Type__c == 'Due Diligence' && acc.Approval_status_head__c == 'Sent to FSM Head' && acc.MSA_Required__c == null && acc.ParentId == null && acc.One_Time_Vendor__c == false){
                 acc.adderror('Please select MSA Required.');
             }else if(!AccountHandler.listContains(fileType, 'MSA') && acc.Approval_status_head__c == 'Sent to FSM Head' && acc.MSA_Required__c == 'Yes' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
                 acc.adderror('Please upload MSA file');
@@ -148,26 +153,28 @@ public class AccountHandler {
     
     public static void VendorApproval(List<Account> accountNewVersionList,Map<Id,Account> oldMapAcc )
     {
-            List<Approval.ProcessSubmitRequest> requests = new List<Approval.ProcessSubmitRequest>();
-            User fsmHead=[Select Id ,UserName, UserRole.Name from user  where UserRole.Name='Field Service Management Head' AND IsActive = true LIMIT 1];
-         	User financehead=[Select Id ,UserName, UserRole.Name from user  where UserRole.Name='Finance Head' AND IsActive = true LIMIT 1];
-            for(Account acc:accountNewVersionList){
-                if(acc.Approval_status_head__c=='Sent to FSM Head' && oldMapAcc.get(acc.id).Approval_status_head__c!=acc.Approval_status_head__c){
-                    Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
-                    req1.setComments('Submitting request for approval');
-                    req1.setObjectId(acc.id);
-                    req1.setNextApproverIds(new Id[] {fsmHead.Id});
-                    requests.add(req1);
-                }else if(acc.Approval_status_head__c=='Sent to Finance Head' && oldMapAcc.get(acc.id).Approval_status_head__c!=acc.Approval_status_head__c ){
-                    Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
-                    req1.setComments('Submitting request for approval');
-                    req1.setObjectId(acc.id);
-                    req1.setNextApproverIds(new Id[] {financehead.Id});
-                    requests.add(req1);
-                }
+        // get the record type
+        Id AccRecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Vendor').getRecordTypeId();
+        List<Approval.ProcessSubmitRequest> requests = new List<Approval.ProcessSubmitRequest>();
+        User fsmHead=[Select Id ,UserName, UserRole.Name from user  where UserRole.Name='Field Service Management Head' AND IsActive = true LIMIT 1];
+        User financehead=[Select Id ,UserName, UserRole.Name from user  where UserRole.Name='Finance Head' AND IsActive = true LIMIT 1];
+        for(Account acc:accountNewVersionList){
+            if(acc.Approval_status_head__c=='Sent to FSM Head' && oldMapAcc.get(acc.id).Approval_status_head__c!=acc.Approval_status_head__c && acc.RecordTypeId==AccRecordTypeId){
+                Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
+                req1.setComments('Submitting request for approval');
+                req1.setObjectId(acc.id);
+                req1.setNextApproverIds(new Id[] {fsmHead.Id});
+                requests.add(req1);
+            }else if(acc.Approval_status_head__c=='Sent to Finance Head' && oldMapAcc.get(acc.id).Approval_status_head__c!=acc.Approval_status_head__c && acc.RecordTypeId==AccRecordTypeId){
+                Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
+                req1.setComments('Submitting request for approval');
+                req1.setObjectId(acc.id);
+                req1.setNextApproverIds(new Id[] {financehead.Id});
+                requests.add(req1);
             }
-            if(requests.size()>0){
-                Approval.process(requests); 
-            } 
+        }
+        if(requests.size()>0){
+            Approval.process(requests); 
+        } 
     }
 }
