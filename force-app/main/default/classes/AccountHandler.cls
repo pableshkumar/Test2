@@ -115,15 +115,15 @@ public class AccountHandler {
             }
         }
         for(Account acc:listAcc){
-          if(acc.File_Type__c == 'Due Diligence' && acc.Status__c == 'Registration' && acc.MSA_Required__c == null && acc.ParentId == null && acc.One_Time_Vendor__c == false ){
+            if(acc.File_Type__c == 'Due Diligence' && acc.Approval_status_head__c == 'Sent to FSM Head' && acc.MSA_Required__c == null && acc.ParentId == null && acc.One_Time_Vendor__c == false ){
                 acc.adderror('Please select MSA Required.');
-            }else if(!AccountHandler.listContains(fileType, 'MSA') && acc.Status__c == 'Registration' && acc.MSA_Required__c == 'Yes' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+            }else if(!AccountHandler.listContains(fileType, 'MSA') && acc.Approval_status_head__c == 'Sent to FSM Head' && acc.MSA_Required__c == 'Yes' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
                 acc.adderror('Please upload MSA file');
-            }else if(acc.Due_Diligence__c == null && acc.Status__c == 'Registration' && acc.MSA_Required__c == 'No' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+            }else if(acc.Due_Diligence__c == null && acc.Approval_status_head__c == 'Sent to FSM Head' && acc.MSA_Required__c == 'No' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
                 acc.adderror('Please create Due Diligence');
-            }else if(acc.Date_of_Signature_MSA__c == null && oldMapAcc.get(acc.Id).Status__c == 'MSA' && acc.Status__c == 'Registration' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+            }else if(acc.Date_of_Signature_MSA__c == null && oldMapAcc.get(acc.Id).Status__c == 'MSA' && acc.Approval_status_head__c == 'Sent to FSM Head' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
                 acc.adderror('Please select MSA Date of Signature.');
-            }else if(acc.Date_of_Expiry_MSA__c == null && oldMapAcc.get(acc.Id).Status__c == 'MSA' && acc.Status__c == 'Registration' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
+            }else if(acc.Date_of_Expiry_MSA__c == null && oldMapAcc.get(acc.Id).Status__c == 'MSA' && acc.Approval_status_head__c == 'Sent to FSM Head' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
                 acc.adderror('Please select MSA Date of Expiry.');
             }else if(acc.Status__c == 'Due Diligence' && !AccountHandler.listContains(fileType, 'Escalation Matrix')  && oldMapAcc.get(acc.Id).Status__c == 'VRF' && acc.ParentId == null && acc.One_Time_Vendor__c == false){
                 acc.adderror('Please upload Escalation Matrix file then go to Due Diligence stage');
@@ -143,5 +143,31 @@ public class AccountHandler {
     
     public static Boolean listContains(Object[] source, Object target) {
         return (new Set<Object>(source)).contains(target);
+    }
+    
+    
+    public static void VendorApproval(List<Account> accountNewVersionList,Map<Id,Account> oldMapAcc )
+    {
+            List<Approval.ProcessSubmitRequest> requests = new List<Approval.ProcessSubmitRequest>();
+            User fsmHead=[Select Id ,UserName, UserRole.Name from user  where UserRole.Name='Field Service Management Head' AND IsActive = true LIMIT 1];
+         	User financehead=[Select Id ,UserName, UserRole.Name from user  where UserRole.Name='Finance Head' AND IsActive = true LIMIT 1];
+            for(Account acc:accountNewVersionList){
+                if(acc.Approval_status_head__c=='Sent to FSM Head' && oldMapAcc.get(acc.id).Approval_status_head__c!=acc.Approval_status_head__c){
+                    Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
+                    req1.setComments('Submitting request for approval');
+                    req1.setObjectId(acc.id);
+                    req1.setNextApproverIds(new Id[] {fsmHead.Id});
+                    requests.add(req1);
+                }else if(acc.Approval_status_head__c=='Sent to Finance Head' && oldMapAcc.get(acc.id).Approval_status_head__c!=acc.Approval_status_head__c ){
+                    Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
+                    req1.setComments('Submitting request for approval');
+                    req1.setObjectId(acc.id);
+                    req1.setNextApproverIds(new Id[] {financehead.Id});
+                    requests.add(req1);
+                }
+            }
+            if(requests.size()>0){
+                Approval.process(requests); 
+            } 
     }
 }

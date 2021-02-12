@@ -2,8 +2,7 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>MSA_required_on_DD_validation</fullName>
     <active>true</active>
-    <errorConditionFormula>TEXT(Status__c )&lt;&gt; &quot;Due Diligence&quot; &amp;&amp;  ISCHANGED( MSA_Required__c ) &amp;&amp; ISBLANK(ParentId)&amp;&amp; One_Time_Vendor__c = false &amp;&amp;
-ISBLANK(ParentId)&amp;&amp; One_Time_Vendor__c = false</errorConditionFormula>
+    <errorConditionFormula>TEXT(Status__c )&lt;&gt; &quot;Due Diligence&quot; &amp;&amp;  ISCHANGED( MSA_Required__c ) &amp;&amp; ISBLANK(ParentId)&amp;&amp; One_Time_Vendor__c = false</errorConditionFormula>
     <errorDisplayField>MSA_Required__c</errorDisplayField>
     <errorMessage>MSA required selected only Due Diligence stage.</errorMessage>
 </ValidationRule>

@@ -17,7 +17,10 @@
                             </visibilityRule>
                         </valueListItems>
                         <valueListItems>
-                            <value>Submit</value>
+                            <value>Account.Create_Record_Update_Existing</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Account.Submit_to_FSM_Head</value>
                             <visibilityRule>
                                 <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
                                 <criteria>
@@ -40,9 +43,6 @@
                                     <operator>NE</operator>
                                 </criteria>
                             </visibilityRule>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>Account.Create_Record_Update_Existing</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>

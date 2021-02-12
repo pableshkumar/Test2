@@ -61,6 +61,16 @@
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Approval_Status_Send_to_Finance_Head</fullName>
+        <field>Approval_status_head__c</field>
+        <literalValue>Sent to Finance Head</literalValue>
+        <name>Approval Status Send to Finance Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Approved_By_FSM_Head</fullName>
         <field>Approval_status_head__c</field>
         <literalValue>Sent to FSM Head</literalValue>
@@ -95,6 +105,16 @@
         <field>Approval_status_head__c</field>
         <literalValue>Sent to Finance Head</literalValue>
         <name>Approved By Finance Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_status_Active</fullName>
+        <field>Status__c</field>
+        <literalValue>Active</literalValue>
+        <name>Approved status Active</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
