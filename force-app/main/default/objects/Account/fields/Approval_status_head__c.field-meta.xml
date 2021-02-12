@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Approval_status_head__c</fullName>
     <externalId>false</externalId>
-    <label>Approval status</label>
+    <label>Approval status by head</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <type>Picklist</type>
@@ -30,6 +30,6 @@
                 <default>false</default>
                 <label>Approved by Finance Head</label>
             </value>
-                </valueSetDefinition>
+        </valueSetDefinition>
     </valueSet>
 </CustomField>
