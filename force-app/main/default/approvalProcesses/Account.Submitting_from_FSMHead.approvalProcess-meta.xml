@@ -3,7 +3,11 @@
     <active>true</active>
     <allowRecall>false</allowRecall>
     <allowedSubmitters>
-        <submitter>Field_Service_Management_Head</submitter>
+        <submitter>Field_Service_Executive</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Field_Service_Sr_Executive</submitter>
         <type>role</type>
     </allowedSubmitters>
     <approvalPageFields>
@@ -20,24 +24,24 @@
                 <type>adhoc</type>
             </approver>
         </assignedApprover>
-        <label>Finance Head Approval</label>
-        <name>Finance_Head_Approval</name>
+        <label>FSM Head Approval</label>
+        <name>FSM_Head_Approval</name>
     </approvalStep>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
         <criteriaItems>
             <field>Account.Approval_status_head__c</field>
             <operation>equals</operation>
-            <value>Sent to Finance Head</value>
+            <value>Sent to FSM Head</value>
         </criteriaItems>
     </entryCriteria>
     <finalApprovalActions>
         <action>
-            <name>Approved_status_Active</name>
+            <name>Approval_Status_Approved2</name>
             <type>FieldUpdate</type>
         </action>
         <action>
-            <name>Update_DD_Status4</name>
+            <name>Approval_Status_Send_to_Finance_Head</name>
             <type>FieldUpdate</type>
         </action>
     </finalApprovalActions>
@@ -49,8 +53,14 @@
         </action>
     </finalRejectionActions>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
-    <label>Submitting from Finance Head</label>
-    <processOrder>1</processOrder>
+    <initialSubmissionActions>
+        <action>
+            <name>updating_to_Registration</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Submitting from FSMHead</label>
+    <processOrder>2</processOrder>
     <recordEditability>AdminOnly</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>
