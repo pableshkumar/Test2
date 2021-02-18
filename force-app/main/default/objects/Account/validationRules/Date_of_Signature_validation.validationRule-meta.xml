@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_Signature_validation</fullName>
+    <active>true</active>
+    <description>Date of Signature should be less than Date of Expiry</description>
+    <errorConditionFormula>OR(
+Date_of_Signature_MSA__c &gt; Date_of_Expiry_MSA__c ,
+ Date_of_Signature_NDA__c &gt; Date_of_Expiry_NDA__c 
+)</errorConditionFormula>
+    <errorMessage>Date of Signature must be less than Date of Expiry (Applicable for both: NDA and MSA).</errorMessage>
+</ValidationRule>
