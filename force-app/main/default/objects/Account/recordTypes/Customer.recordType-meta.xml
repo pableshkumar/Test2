@@ -26,6 +26,40 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Approval_status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Approval_status_head__c</picklist>
+        <values>
+            <fullName>Approved by Finance Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rework</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to FSM Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Finance Head</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Bank_Account_Country_Code__c</picklist>
         <values>
             <fullName>AD</fullName>
@@ -2008,6 +2042,21 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Certified_partner_for_OEMs__c</picklist>
+        <values>
+            <fullName>Dell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lenovo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Country_Headquartered__c</picklist>
         <values>
             <fullName>Afghanistan</fullName>
@@ -2987,6 +3036,17 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Due_Diligence_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Industry</picklist>
         <values>
             <fullName>Agriculture</fullName>
@@ -3122,6 +3182,17 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>List_of_Market_Sector__c</picklist>
+        <values>
+            <fullName>Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>MSA_Required__c</picklist>
         <values>
             <fullName>None</fullName>
@@ -3191,11 +3262,11 @@
     <picklistValues>
         <picklist>Tax_Information__c</picklist>
         <values>
-            <fullName>GST%2FVat</fullName>
+            <fullName>GST</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Service Tax</fullName>
+            <fullName>VAT</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -3246,6 +3317,29 @@
         </values>
         <values>
             <fullName>Service Provider</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Service_Agreements__c</picklist>
+        <values>
+            <fullName>Annual Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Time Engineer Annually</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Time Engineer Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Per Ticket Model</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time %26 Material</fullName>
             <default>false</default>
         </values>
     </picklistValues>

@@ -10,14 +10,34 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>GST/Vat</fullName>
+                <fullName>GST</fullName>
                 <default>false</default>
-                <label>GST/Vat</label>
+                <label>GST</label>
             </value>
             <value>
-                <fullName>Service Tax</fullName>
+                <fullName>VAT</fullName>
                 <default>false</default>
-                <label>Service Tax</label>
+                <label>VAT</label>
+            </value>
+            <value>
+                <fullName>SST</fullName>
+                <default>false</default>
+                <label>SST</label>
+            </value>
+            <value>
+                <fullName>SGST</fullName>
+                <default>false</default>
+                <label>SGST</label>
+            </value>
+            <value>
+                <fullName>CGST</fullName>
+                <default>false</default>
+                <label>CGST</label>
+            </value>
+            <value>
+                <fullName>IGST</fullName>
+                <default>false</default>
+                <label>IGST</label>
             </value>
         </valueSetDefinition>
     </valueSet>
