@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>RAG_Customer_Base_Feedback__c</fullName>
     <externalId>false</externalId>
-    <formula>IF(  Overall7__c  &lt;=5, R_del__c ,IF(Overall7__c  &lt;=8,A_del__c,G_del__c )  )</formula>
+    <formula>IF( Overall7__c  &lt;=5, IMAGE(&quot;/resource/1616506498000/Red&quot;, &apos;Red&apos;,30,30) ,IF(Overall7__c  &lt;=8,IMAGE(&quot;/resource/1616506522000/Amber&quot;, &apos;Amber&apos;,30,30),IMAGE(&quot;/resource/1616506472000/Green&quot;, &apos;Green&apos;,30,30)))</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>RAG(Customer Base / Feedback)</label>
     <required>false</required>

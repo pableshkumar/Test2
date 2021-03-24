@@ -156,24 +156,37 @@ public class AccountHandler {
         // get the record type
         Id AccRecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Vendor').getRecordTypeId();
         List<Approval.ProcessSubmitRequest> requests = new List<Approval.ProcessSubmitRequest>();
-        User fsmHead=[Select Id ,UserName, UserRole.Name from user  where UserRole.Name='Field Service Management Head' AND IsActive = true LIMIT 1];
-        User financehead=[Select Id ,UserName, UserRole.Name from user  where UserRole.Name='Finance Head' AND IsActive = true LIMIT 1];
+      //  User fsmHead=[Select Id ,UserName, UserRole.Name from user  where UserRole.Name='Field Service Management Head' AND IsActive = true LIMIT 1];
+      //  User financehead=[Select Id ,UserName, UserRole.Name from user  where UserRole.Name='Finance Head' AND IsActive = true LIMIT 1];
+        List<User> heads=[Select Id ,UserName, UserRole.Name from user  where UserRole.Name IN ('Finance Head','Field Service Management Head') AND IsActive = true ];
+       Map<String,ID> headMap=new Map<String,ID>();
+        if(heads.size()>0)
+        {
+        for(User u:heads)
+        {
+            headMap.put(u.UserRole.Name, u.Id);
+        }
+        }
         for(Account acc:accountNewVersionList){
+            if(!headMap.containsKey('Finance Head') || !headMap.containsKey('Field Service Management Head'))
+            {
+                    acc.addError('active Field Service Management Head / Finance Head is not available in the org, please contact System admin');
+            }
             if(acc.Approval_status_head__c=='Sent to FSM Head' && oldMapAcc.get(acc.id).Approval_status_head__c!=acc.Approval_status_head__c && acc.RecordTypeId==AccRecordTypeId){
                 Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
                 req1.setComments('Submitting request for approval');
                 req1.setObjectId(acc.id);
-                req1.setNextApproverIds(new Id[] {fsmHead.Id});
+                  req1.setNextApproverIds(new Id[] {headMap.get('Field Service Management Head')});
                 requests.add(req1);
             }else if(acc.Approval_status_head__c=='Sent to Finance Head' && oldMapAcc.get(acc.id).Approval_status_head__c!=acc.Approval_status_head__c && acc.RecordTypeId==AccRecordTypeId){
                 Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
                 req1.setComments('Submitting request for approval');
                 req1.setObjectId(acc.id);
-                req1.setNextApproverIds(new Id[] {financehead.Id});
+                  req1.setNextApproverIds(new Id[] {headMap.get('Finance Head')});           
                 requests.add(req1);
             }
         }
-        if(requests.size()>0){
+        if(requests.size()>0 ){
             Approval.process(requests); 
         } 
     }
