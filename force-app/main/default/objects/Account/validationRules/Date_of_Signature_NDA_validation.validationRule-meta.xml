@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_Signature_NDA_validation</fullName>
+    <active>true</active>
+    <description>Date of Signature (NDA) should not be a past date.</description>
+    <errorConditionFormula>AND(Date_of_Signature_NDA__c !=NULL,
+Date_of_Signature_NDA__c &lt; TODAY()
+)</errorConditionFormula>
+    <errorDisplayField>Date_of_Signature_NDA__c</errorDisplayField>
+    <errorMessage>Date of Signature (NDA) should not be a past date.</errorMessage>
+</ValidationRule>
