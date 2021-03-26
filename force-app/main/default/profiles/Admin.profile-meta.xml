@@ -248,7 +248,7 @@
         <field>Account.Certified_partner_for_OEMs__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Communication_Method__c</field>
@@ -351,12 +351,12 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Account.Due_Diligence_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Account.Due_Diligence__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -668,11 +668,6 @@
 
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.Year_of_Establishment__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Account.ZIP_Postal_Code_Bank__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -811,7 +806,11 @@
         <field>Case.AssetId</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.AssetWarrantyId</field>
+        <readable>false</readable>
+    </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Case.BusinessHoursId</field>
@@ -837,6 +836,7 @@
         <field>Case.Description</field>
         <readable>true</readable>
     </fieldPermissions>
+
     <fieldPermissions>
         <editable>false</editable>
         <field>Case.IsClosedOnCreate</field>
@@ -846,6 +846,21 @@
         <editable>false</editable>
         <field>Case.IsEscalated</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.IsStopped</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.MilestoneStatus</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.MilestoneStatusIcon</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -863,9 +878,34 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.ProductId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Case.Reason</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.ServiceContractId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.SlaExitDate</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.SlaStartDate</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.StopStartDate</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -922,7 +962,7 @@
         <field>Contact.Birthdate</field>
         <readable>true</readable>
     </fieldPermissions>
-    
+
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Contact_Type__c</field>
@@ -2141,6 +2181,96 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Due_Diligence__c.label9__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.AssetId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.AssetWarrantyId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.BusinessHoursId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.CasesPerEntitlement</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.ContractLineItemId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.EndDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.IsPerIncident</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.LocationId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.RemainingCases</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.RemainingWorkOrders</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.ServiceContractId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.SlaProcessId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.StartDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.Status</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.StatusIndicator</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.SvcApptBookingWindowsId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.Type</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.WorkOrdersPerEntitlement</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3584,6 +3714,15 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
+        <object>Entitlement</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
         <object>Invoice_Line_Item__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
@@ -3894,6 +4033,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-Entitlement</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-Opportunity</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -3914,8 +4057,8 @@
         <enabled>true</enabled>
         <name>AddDirectMessageMembers</name>
     </userPermissions>
-    
-    
+
+
     <userPermissions>
         <enabled>true</enabled>
         <name>ApexRestServices</name>
@@ -4028,7 +4171,6 @@
         <enabled>true</enabled>
         <name>CreateTopics</name>
     </userPermissions>
-    
     <userPermissions>
         <enabled>true</enabled>
         <name>CreateWorkspaces</name>
@@ -4077,7 +4219,6 @@
         <enabled>true</enabled>
         <name>EditHtmlTemplates</name>
     </userPermissions>
-    
     <userPermissions>
         <enabled>true</enabled>
         <name>EditMyDashboards</name>
@@ -4122,7 +4263,7 @@
         <enabled>true</enabled>
         <name>EmailSingle</name>
     </userPermissions>
-    
+
     <userPermissions>
         <enabled>true</enabled>
         <name>EnableNotifications</name>
@@ -4131,7 +4272,6 @@
         <enabled>true</enabled>
         <name>ExportReport</name>
     </userPermissions>
-    
     <userPermissions>
         <enabled>true</enabled>
         <name>GiveRecognitionBadge</name>
@@ -4268,7 +4408,6 @@
         <enabled>true</enabled>
         <name>ManageIpAddresses</name>
     </userPermissions>
-    
     <userPermissions>
         <enabled>true</enabled>
         <name>ManageLeads</name>
@@ -4325,7 +4464,6 @@
         <enabled>true</enabled>
         <name>ManageRoles</name>
     </userPermissions>
-    
     <userPermissions>
         <enabled>true</enabled>
         <name>ManageSharing</name>
@@ -4418,12 +4556,11 @@
         <enabled>true</enabled>
         <name>SendCustomNotifications</name>
     </userPermissions>
-    
+
     <userPermissions>
         <enabled>true</enabled>
         <name>SendSitRequests</name>
     </userPermissions>
-    
     <userPermissions>
         <enabled>true</enabled>
         <name>ShowCompanyNameAsUserBadge</name>
@@ -4508,7 +4645,6 @@
         <enabled>true</enabled>
         <name>ViewDataCategories</name>
     </userPermissions>
-    
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewEventLogFiles</name>
@@ -4529,7 +4665,6 @@
         <enabled>true</enabled>
         <name>ViewMyTeamsDashboards</name>
     </userPermissions>
-    
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewPublicDashboards</name>
@@ -4550,5 +4685,4 @@
         <enabled>true</enabled>
         <name>ViewUserPII</name>
     </userPermissions>
-    
 </Profile>
