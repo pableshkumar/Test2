@@ -3,7 +3,7 @@
     <fullName>Year_of_Establishment__c</fullName>
     <externalId>false</externalId>
     <label>Year of Establishment?</label>
-    <required>true</required>
+    <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <type>Picklist</type>
     <valueSet>
