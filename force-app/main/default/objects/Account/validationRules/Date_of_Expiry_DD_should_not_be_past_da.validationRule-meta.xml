@@ -3,9 +3,7 @@
     <fullName>Date_of_Expiry_DD_should_not_be_past_da</fullName>
     <active>true</active>
     <description>Date of Expiry (DD)</description>
-    <errorConditionFormula>AND(
-Date_of_Expiry_DD__c !=NULL,
-Date_of_Expiry_DD__c &lt; TODAY())</errorConditionFormula>
+    <errorConditionFormula>Date_of_Expiry_DD__c &lt; TODAY()</errorConditionFormula>
     <errorDisplayField>Date_of_Expiry_DD__c</errorDisplayField>
     <errorMessage>Date of Expiry (DD) should not be a past date.</errorMessage>
 </ValidationRule>

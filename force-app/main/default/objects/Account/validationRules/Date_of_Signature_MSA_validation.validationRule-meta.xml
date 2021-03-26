@@ -3,9 +3,7 @@
     <fullName>Date_of_Signature_MSA_validation</fullName>
     <active>true</active>
     <description>Date of Signature (MSA) should not be a past date</description>
-    <errorConditionFormula>AND(
-Date_of_Signature_MSA__c !=NULL,
-Date_of_Signature_MSA__c &lt; TODAY())</errorConditionFormula>
+    <errorConditionFormula>Date_of_Signature_MSA__c &lt; TODAY()</errorConditionFormula>
     <errorDisplayField>Date_of_Signature_MSA__c</errorDisplayField>
     <errorMessage>Date of Signature (MSA) should not be a past date.</errorMessage>
 </ValidationRule>
