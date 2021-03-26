@@ -75,7 +75,7 @@
                 <field>Company_Established_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Company_Established_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -91,7 +91,7 @@
                 <field>Employee_Strength_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Employee_Strength_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -117,7 +117,7 @@
                 <field>Quality_PC_SC_List_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Quality_PC_SC_List_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -133,7 +133,7 @@
                 <field>Health_Safety_Processes_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Health_Safety_Processes_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -166,7 +166,7 @@
                 <field>Revenue_Growth_for_last_3_year_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Revenue_Growth_for_last_3_years_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -182,7 +182,7 @@
                 <field>Assets_Vs_Liability_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Assets_Vs_Liability_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -208,7 +208,7 @@
                 <field>Net_Margin_Growth_for_last_3_year_Weigh__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Net_Margin_Growth_for_last_3_year_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -224,7 +224,7 @@
                 <field>Financial_stability_or_Credit_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Financial_stability_or_Credit_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -257,7 +257,7 @@
                 <field>No_of_Field_Engineers_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>No_of_Field_Engineers_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -273,7 +273,7 @@
                 <field>OEM_Product_support_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>OEM_Product_support_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -289,7 +289,7 @@
                 <field>Existing_Customer_Recommendation_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Existing_Customer_Recommendations_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -315,7 +315,7 @@
                 <field>Skilled_Employees_Certification_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Skilled_Employees_Certification_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -331,7 +331,7 @@
                 <field>Maintenance_or_break_fix_support_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Maintenance_or_break_fix_support_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -347,7 +347,7 @@
                 <field>Overall_delivery_capabilities_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Overall_delivery_capabilities_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -376,7 +376,7 @@
                 <field>label13__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>No_of_Countries_covered_direct_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -396,7 +396,7 @@
                 <field>Future_plan_enhance_the_presence_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Future_plan_enhance_the_presence_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -422,7 +422,7 @@
                 <field>Point_of_presence_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Point_of_presence_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -455,7 +455,7 @@
                 <field>X2_hours_Fix_Resolution_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>X2_hours_Fix_Resolution_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -471,7 +471,7 @@
                 <field>X8_hours_Fix_Resolution_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>X8_hours_Fix_Resolution_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -497,7 +497,7 @@
                 <field>X4_hours_Fix_Resolution_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>X4_hours_Fix_Resolution_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -513,7 +513,7 @@
                 <field>NBD_Resolution_or_Others_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>NBD_Resolution_or_Others_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -546,7 +546,7 @@
                 <field>OEM_Partnership_Certification_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>OEM_Partnership_Certification_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -562,7 +562,7 @@
                 <field>Technical_delivery_Matrix_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Technical_delivery_Matrix_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -588,7 +588,7 @@
                 <field>Skilled_Employees_Certification_WeightTC__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Skilled_Employees_Certification_RatingTC__c</field>
             </layoutItems>
             <layoutItems>
@@ -604,7 +604,7 @@
                 <field>Products_supported_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Products_supported_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -637,7 +637,7 @@
                 <field>Ticketing_tools_process_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Ticketing_tools_process_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -653,7 +653,7 @@
                 <field>X24x7_call_center_HelpDesk_support_Weigh__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>X24x7_call_center_HelpDesk_support_Ratin__c</field>
             </layoutItems>
             <layoutItems>
@@ -679,7 +679,7 @@
                 <field>E_bonding_capabilities_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>E_bonding_capabilities_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -728,7 +728,7 @@
                 <field>OEM_model_Spare_replacement_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>OEM_model_Spare_replacement_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -754,7 +754,7 @@
                 <field>Warehouse_Management_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Warehouse_Management_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -770,7 +770,7 @@
                 <field>Warranty_Out_of_warranty_support_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Warranty_Out_of_warranty_support_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -803,7 +803,7 @@
                 <field>Responsiveness_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Responsiveness_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -845,7 +845,7 @@
                 <field>Proactiveness_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Proactiveness_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -861,7 +861,7 @@
                 <field>Value_add_innovation_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Value_add_innovation_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -894,7 +894,7 @@
                 <field>Customer_Base_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Customer_Base_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -910,7 +910,7 @@
                 <field>Retention_of_the_customer_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Referral_Customer_feedback_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -936,7 +936,7 @@
                 <field>Referral_Customer_feedback_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Retention_of_the_customer_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -952,7 +952,7 @@
                 <field>No_of_High_value_customers_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>No_of_High_value_customers_Rating__c</field>
             </layoutItems>
             <layoutItems>
@@ -1019,7 +1019,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hN00000018yLV</masterLabel>
+        <masterLabel>00h0w000000zc5x</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

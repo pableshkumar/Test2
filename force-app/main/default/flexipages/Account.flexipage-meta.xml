@@ -51,8 +51,8 @@
                                 </criteria>
                                 <criteria>
                                     <leftValue>{!Record.Approval_status_head__c}</leftValue>
-                                    <operator>NE</operator>
-                                    <rightValue>Sent to FSM Head</rightValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Draft</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>

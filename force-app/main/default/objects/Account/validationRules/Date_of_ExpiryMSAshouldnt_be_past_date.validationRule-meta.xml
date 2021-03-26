@@ -3,9 +3,7 @@
     <fullName>Date_of_ExpiryMSAshouldnt_be_past_date</fullName>
     <active>true</active>
     <description>Date of Expiry (MSA) should not be a past date.</description>
-    <errorConditionFormula>AND(Date_of_Expiry_MSA__c !=NULL,
-Date_of_Expiry_MSA__c &lt; TODAY()
-)</errorConditionFormula>
+    <errorConditionFormula>Date_of_Expiry_MSA__c &lt; TODAY()</errorConditionFormula>
     <errorDisplayField>Date_of_Expiry_MSA__c</errorDisplayField>
     <errorMessage>Date of Expiry (MSA) should not be a past date.</errorMessage>
 </ValidationRule>

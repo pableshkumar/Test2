@@ -3,10 +3,7 @@
     <fullName>Date_of_ExpiryNDA_shouldnt_be_past_date</fullName>
     <active>true</active>
     <description>Date of Expiry (NDA) should not be a past date.</description>
-    <errorConditionFormula>AND(
-Date_of_Expiry_NDA__c !=NULL,
-Date_of_Expiry_NDA__c &lt; TODAY()
-)</errorConditionFormula>
+    <errorConditionFormula>Date_of_Expiry_NDA__c &lt; TODAY()</errorConditionFormula>
     <errorDisplayField>Date_of_Expiry_NDA__c</errorDisplayField>
     <errorMessage>Date of Expiry (NDA) should not be a past date.</errorMessage>
 </ValidationRule>
