@@ -102,7 +102,6 @@
         </action>
     </initialSubmissionActions>
     <label>Submitting MSA</label>
-    <processOrder>2</processOrder>
     <recordEditability>AdminOnly</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

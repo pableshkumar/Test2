@@ -112,7 +112,6 @@
         </action>
     </initialSubmissionActions>
     <label>Submitting from DD</label>
-    <processOrder>2</processOrder>
     <recordEditability>AdminOnly</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

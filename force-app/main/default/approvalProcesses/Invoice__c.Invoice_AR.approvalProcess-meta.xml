@@ -151,7 +151,6 @@
         </action>
     </initialSubmissionActions>
     <label>Invoice AR</label>
-    <processOrder>5</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>false</showApprovalHistory>
 </ApprovalProcess>
