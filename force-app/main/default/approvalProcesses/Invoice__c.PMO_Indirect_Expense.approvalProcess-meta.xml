@@ -208,7 +208,6 @@
         </action>
     </initialSubmissionActions>
     <label>PMO Indirect Expense</label>
-    <processOrder>6</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

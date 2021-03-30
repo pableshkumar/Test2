@@ -32,7 +32,7 @@
             </value>
             <value>
                 <fullName>Draft</fullName>
-                <default>false</default>
+                <default>true</default>
                 <label>Draft</label>
             </value>
         </valueSetDefinition>

@@ -73,7 +73,6 @@
         </action>
     </initialSubmissionActions>
     <label>Sent to AR Executive/ AR Sr. Executive</label>
-    <processOrder>4</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>
