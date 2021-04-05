@@ -15,8 +15,9 @@ IF(In_considered10__c == true ,    Customer_Base_Feedback_Overall_Weight__c , 0)
     <label>Overall Normalized Partnership Weight</label>
     <precision>18</precision>
     <required>false</required>
-    <scale>0</scale>
+    <scale>2</scale>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>Percent</type>
+    <type>Number</type>
+    <unique>false</unique>
 </CustomField>

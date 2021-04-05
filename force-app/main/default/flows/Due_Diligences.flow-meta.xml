@@ -159,7 +159,7 @@
                 <stringValue>[Due_Diligence__c].No_of_Field_Engineers_Score__c +[Due_Diligence__c].Skilled_Employees_Certification_Score__c +[Due_Diligence__c].OEM_Product_support_Score__c +[Due_Diligence__c].Maintenance_or_break_fix_support_Score__c +[Due_Diligence__c].Existing_Score__c +[Due_Diligence__c].Overall_delivery_capabilities_Score__c </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_6839838127</name>
+        <name>formula_2_myRule_1_A1_7168467852</name>
         <dataType>Number</dataType>
         <expression>{!myVariable_current.No_of_Field_Engineers_Score__c} +{!myVariable_current.Skilled_Employees_Certification_Score__c} +{!myVariable_current.OEM_Product_support_Score__c} +{!myVariable_current.Maintenance_or_break_fix_support_Score__c} +{!myVariable_current.Existing_Score__c} +{!myVariable_current.Overall_delivery_capabilities_Score__c}</expression>
         <scale>18</scale>
@@ -172,7 +172,7 @@
 ([Due_Diligence__c].Overall10__c +[Due_Diligence__c].Overall9__c+[Due_Diligence__c].Overall8__c+[Due_Diligence__c].Overall7__c+[Due_Diligence__c].Overall6__c+[Due_Diligence__c].Overall5__c+[Due_Diligence__c].Overall4__c+[Due_Diligence__c].Overall3__c+[Due_Diligence__c].Overall2__c+[Due_Diligence__c].Overall1__c) )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_5_myRule_4_A1_4265908155</name>
+        <name>formula_5_myRule_4_A1_3855047049</name>
         <dataType>Number</dataType>
         <expression>IF(VALUE(TEXT({!myVariable_current.Overall_Normalized_Partnership_Weight__c}) )  &lt; 100  , ({!myVariable_current.Overall10__c} +{!myVariable_current.Overall9__c}+{!myVariable_current.Overall8__c}+{!myVariable_current.Overall7__c}+{!myVariable_current.Overall6__c}+{!myVariable_current.Overall5__c}+{!myVariable_current.Overall4__c}+{!myVariable_current.Overall3__c}+{!myVariable_current.Overall2__c}+{!myVariable_current.Overall1__c}) / {!myVariable_current.Overall_Normalized_Partnership_Weight__c} , 
 ({!myVariable_current.Overall10__c} +{!myVariable_current.Overall9__c}+{!myVariable_current.Overall8__c}+{!myVariable_current.Overall7__c}+{!myVariable_current.Overall6__c}+{!myVariable_current.Overall5__c}+{!myVariable_current.Overall4__c}+{!myVariable_current.Overall3__c}+{!myVariable_current.Overall2__c}+{!myVariable_current.Overall1__c}) )</expression>
@@ -188,7 +188,7 @@
         <dataType>Boolean</dataType>
         <expression>true</expression>
     </formulas>
-    <interviewLabel>Due_Diligences-8_InterviewLabel</interviewLabel>
+    <interviewLabel>Due_Diligences-2_InterviewLabel</interviewLabel>
     <label>Due Diligences</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -294,7 +294,7 @@
             </processMetadataValues>
             <field>Overall_Score_Service_Delievery_Hidden__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_6839838127</elementReference>
+                <elementReference>formula_2_myRule_1_A1_7168467852</elementReference>
             </value>
         </inputAssignments>
         <object>Due_Diligence__c</object>
@@ -325,7 +325,7 @@
             <name>referenceTargetField</name>
         </processMetadataValues>
         <name>myRule_4_A1</name>
-        <label>update Data</label>
+        <label>Update Overall Normalized Partnership Score%</label>
         <locationX>400</locationX>
         <locationY>200</locationY>
         <connector>
@@ -378,7 +378,7 @@
             </processMetadataValues>
             <field>Overall_Normalized_Partnership_Score__c</field>
             <value>
-                <elementReference>formula_5_myRule_4_A1_4265908155</elementReference>
+                <elementReference>formula_5_myRule_4_A1_3855047049</elementReference>
             </value>
         </inputAssignments>
         <object>Due_Diligence__c</object>
