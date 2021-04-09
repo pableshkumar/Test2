@@ -1,2 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Workflow xmlns="http://soap.sforce.com/2006/04/metadata"/>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Approval_Stage_Controller_Delivery</fullName>
+        <field>Approval_Stage_Controller__c</field>
+        <literalValue>Delivery</literalValue>
+        <name>Approval Stage Controller : Delivery</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Stage_Controller_P_Management</fullName>
+        <field>Approval_Stage_Controller__c</field>
+        <literalValue>Project Management</literalValue>
+        <name>Approval Stage Controller : P Management</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PO_Status_Rejected</fullName>
+        <description>this will change the PO Status to &quot;Rejected&quot;</description>
+        <field>PO_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>PO Status : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_None</fullName>
+        <description>update stage to none</description>
+        <field>PO_Approval_Status__c</field>
+        <name>Stage : None</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Send_to_Project_Manager</fullName>
+        <description>Update Stage to &quot;Sent to Project Manager&quot;</description>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Sent to Project Manager</literalValue>
+        <name>Stage : Send to Project Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Sent_to_Area_Delivery_Manager</fullName>
+        <description>Update Stage to &quot;Sent to Area Delivery Manager&quot;</description>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Sent to Area Delivery Manager</literalValue>
+        <name>Stage : Sent to Area Delivery Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Sent_to_FI_Executive</fullName>
+        <description>Update Stage field &quot;Sent to Finance Executive&quot;</description>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Sent to Finance Executive</literalValue>
+        <name>Stage : Sent to FI Executive</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Sent_to_Finance_Head</fullName>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Sent To Finance Head</literalValue>
+        <name>Stage : Sent to Finance Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Sent_to_Finance_Manager</fullName>
+        <description>Update Approval stage to &apos;Sent to Finance Manager&apos;</description>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Sent to Finance Manager</literalValue>
+        <name>Stage : Sent to Finance Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Sent_to_Global_Delivery_Director</fullName>
+        <description>changing Stage &quot;Sent to Global Delivery Director&quot;</description>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Sent to Global Delivery Director</literalValue>
+        <name>Stage :Sent to Global Delivery Director</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Sent_to_Project_Management_Head</fullName>
+        <description>Update Stage to &quot;Project Management Head&quot;</description>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Sent to Project Management Head</literalValue>
+        <name>Stage : Sent to Project Management Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Sent_to_Regional_SD_Head</fullName>
+        <description>Update Stage to &quot;Sent to Regional Service Delivery Head&quot;</description>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Sent to Regional Service Delivery Head</literalValue>
+        <name>Stage : Sent to Regional SD Head</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Sent_to_SDM</fullName>
+        <description>Update Stage to &quot;Sent to SDM&quot;</description>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Sent to SDM</literalValue>
+        <name>Stage : Sent to SDM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_PO_Status_to_Approved</fullName>
+        <description>this will change the PO Status field value to &apos;Approved&apos;</description>
+        <field>PO_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update PO Status to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_PO_status_to_In_Approval</fullName>
+        <description>this will change the PO Status to &quot;In Approval&quot;</description>
+        <field>PO_Status__c</field>
+        <literalValue>In Approval</literalValue>
+        <name>Update PO status to In Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage_to_Approved</fullName>
+        <description>this will update the stage field to &quot;Approved&quot;</description>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Stage to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage_to_Draft</fullName>
+        <description>if rejected by Global Delivery Director, then Update Stage to &quot;Draft&quot;</description>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Draft</literalValue>
+        <name>Update Stage to Draft</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage_to_Rejected</fullName>
+        <description>updating the Stage field to &quot;Rejected&quot;</description>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Stage to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_to_Draft</fullName>
+        <description>if rejected by &quot;Global Delivery Director&quot; then change &apos;PO Status&apos; to Draft</description>
+        <field>PO_Status__c</field>
+        <literalValue>Draft</literalValue>
+        <name>Update Status to Draft</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

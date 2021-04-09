@@ -3,15 +3,21 @@
     <fullName>PO_Approval_Status__c</fullName>
     <description>User for Approval purpose</description>
     <externalId>false</externalId>
-    <label>PO Approval Status</label>
+    <label>Stage</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
+        <controllingField>Approval_Stage_Controller__c</controllingField>
         <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
+            <value>
+                <fullName>Draft</fullName>
+                <default>true</default>
+                <label>Draft</label>
+            </value>
             <value>
                 <fullName>Approved</fullName>
                 <default>false</default>
@@ -27,6 +33,101 @@
                 <default>false</default>
                 <label>Pending</label>
             </value>
+            <value>
+                <fullName>Sent to SDM</fullName>
+                <default>false</default>
+                <label>Sent to SDM</label>
+            </value>
+            <value>
+                <fullName>Sent to Area Delivery Manager</fullName>
+                <default>false</default>
+                <label>Sent to Area Delivery Manager</label>
+            </value>
+            <value>
+                <fullName>Sent to Regional Service Delivery Head</fullName>
+                <default>false</default>
+                <label>Sent to Regional Service Delivery Head</label>
+            </value>
+            <value>
+                <fullName>Sent to Project Manager</fullName>
+                <default>false</default>
+                <label>Sent to Project Manager</label>
+            </value>
+            <value>
+                <fullName>Sent to Project Management Head</fullName>
+                <default>false</default>
+                <label>Sent to Project Management Head</label>
+            </value>
+            <value>
+                <fullName>Sent to Global Delivery Director</fullName>
+                <default>false</default>
+                <label>Sent to Global Delivery Director</label>
+            </value>
+            <value>
+                <fullName>Sent to Finance Executive</fullName>
+                <default>false</default>
+                <label>Sent to Finance Executive</label>
+            </value>
+            <value>
+                <fullName>Sent to Finance Manager</fullName>
+                <default>false</default>
+                <label>Sent to Finance Manager</label>
+            </value>
+            <value>
+                <fullName>Sent To Finance Head</fullName>
+                <default>false</default>
+                <label>Sent To Finance Head</label>
+            </value>
         </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Draft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Pending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <valueName>Sent to SDM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <valueName>Sent to Area Delivery Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <valueName>Sent to Regional Service Delivery Head</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Sent to Global Delivery Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Sent To Finance Head</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Sent to Project Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Sent to Project Management Head</valueName>
+        </valueSettings>
     </valueSet>
 </CustomField>

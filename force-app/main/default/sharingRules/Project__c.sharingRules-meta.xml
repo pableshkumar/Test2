@@ -92,31 +92,17 @@
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>
-        <fullName>Share_projects_with_Finance_Head</fullName>
+        <fullName>Share_projects_with_Regional_Service_Delivery_Head</fullName>
         <accessLevel>Edit</accessLevel>
-        <description>Projects with record type Customer are being shared with Finance Head Role with Read/Write</description>
-        <label>Share projects with Finance Head</label>
+        <description>Projects with record type Vendor are being shared with Regional Service Delivery Head with Read/Write</description>
+        <label>Share projects with Regional Service Delivery Head</label>
         <sharedTo>
-            <role>Finance_Head</role>
+            <role>Regional_Service_Delivery_Head</role>
         </sharedTo>
         <criteriaItems>
             <field>RecordTypeId</field>
             <operation>equals</operation>
-            <value>Customer</value>
-        </criteriaItems>
-    </sharingCriteriaRules>
-    <sharingCriteriaRules>
-        <fullName>Share_projects_with_Finance_Manager</fullName>
-        <accessLevel>Edit</accessLevel>
-        <description>Projects with record type Customer are being shared with Finance Manager Role with Read/Write</description>
-        <label>Share projects with Finance Manager</label>
-        <sharedTo>
-            <role>Finance_Manager</role>
-        </sharedTo>
-        <criteriaItems>
-            <field>RecordTypeId</field>
-            <operation>equals</operation>
-            <value>Customer</value>
+            <value>Customer,Vendor</value>
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>
@@ -143,6 +129,19 @@
             <field>RecordTypeId</field>
             <operation>equals</operation>
             <value>Vendor</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_with_Service_Delivery_Manager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share_with_Service_Delivery_Manager</label>
+        <sharedTo>
+            <roleAndSubordinates>SDM</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
         </criteriaItems>
     </sharingCriteriaRules>
 </SharingRules>

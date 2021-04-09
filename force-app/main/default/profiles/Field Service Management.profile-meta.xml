@@ -299,7 +299,7 @@
         <field>Account.Customers_whom_TIG_may_contact_reference__c</field>
         <readable>true</readable>
     </fieldPermissions>
-
+    
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Date_of_Expiry_DD__c</field>
@@ -360,7 +360,7 @@
         <field>Account.Due_Diligence__c</field>
         <readable>true</readable>
     </fieldPermissions>
-
+    
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.English_speaking_Engineers_for_support__c</field>
@@ -451,8 +451,8 @@
         <field>Account.MSA_Required__c</field>
         <readable>true</readable>
     </fieldPermissions>
-
-
+    
+    
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.No_of_employees_on_your_Direct_payroll__c</field>
@@ -483,7 +483,7 @@
         <field>Account.One_Time_Vendor__c</field>
         <readable>true</readable>
     </fieldPermissions>
-
+    
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Other_service_which_company_can_provide__c</field>
@@ -620,6 +620,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Total_Amount_of_Vendor_Projects__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Account.Trade_Name__c</field>
         <readable>true</readable>
@@ -665,7 +670,7 @@
         <field>Account.Website</field>
         <readable>true</readable>
     </fieldPermissions>
-
+    
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Year_of_Establishment__c</field>
@@ -799,102 +804,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Billing_Information__c.Total_Amount__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Case.AccountId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Case.AssetId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Case.BusinessHoursId</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Case.ClosedDate</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Case.ClosedOnCreate</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Case.ContactId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Case.Description</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Case.IsClosedOnCreate</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Case.IsEscalated</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Case.Origin</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Case.ParentId</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Case.Priority</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Case.Reason</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Case.Subject</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Case.SuppliedCompany</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Case.SuppliedEmail</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Case.SuppliedName</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Case.SuppliedPhone</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Case.Type</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2144,36 +2053,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Event.Description</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Event.IsAllDayEvent</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Event.Location</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event.Type</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Event.WhatId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Event.WhoId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>Invoice_Line_Item__c.City__c</field>
         <readable>true</readable>
@@ -2424,63 +2303,8 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Opportunity.AccountId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Opportunity.Amount</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Opportunity.CampaignId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
-        <field>Opportunity.ContractId</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Opportunity.Description</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Opportunity.ExpectedRevenue</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Opportunity.IsPrivate</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Opportunity.LeadSource</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Opportunity.NextStep</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Opportunity.Probability</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Opportunity.TotalOpportunityQuantity</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Opportunity.Type</field>
+        <field>Order__c.Approval_Stage_Controller__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2499,6 +2323,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Order__c.CustomerProjectAmount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Order__c.Customer_Purchase_Order__c</field>
         <readable>true</readable>
@@ -2511,6 +2340,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Order__c.Delivery_Instructions__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order__c.GP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2541,6 +2375,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Order__c.Total_Billed_Value__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order__c.VendorAccountAmount__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3109,6 +2948,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Project__c.Total_Sum_of_Vendor_Projects__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Project__c.Type_of_Project__c</field>
         <readable>true</readable>
@@ -3181,31 +3025,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>TIG_Entity__c.Zip_Postal_Code__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Task.ActivityDate</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Task.Description</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.Type</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Task.WhatId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Task.WhoId</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3427,10 +3246,6 @@
         <recordType>Order__c.Indirect_Purchase_Order</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Order__c-Purchase Order</layout>
-        <recordType>Order__c.Purchase_Order</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Order__c-Sales Order</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -3593,7 +3408,7 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
-        <allowCreate>false</allowCreate>
+        <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>false</allowEdit>
         <allowRead>true</allowRead>
@@ -3829,7 +3644,7 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Order__c</tab>
-        <visibility>Hidden</visibility>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Payment__c</tab>
@@ -3864,15 +3679,7 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>standard-Case</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>standard-Contact</tab>
-        <visibility>Hidden</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-Opportunity</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <userLicense>Salesforce Platform</userLicense>
