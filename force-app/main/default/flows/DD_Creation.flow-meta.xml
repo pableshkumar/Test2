@@ -204,7 +204,7 @@
     <decisions>
         <name>Check_DD_is_Available_or_Not</name>
         <label>Check DD is Available or Not</label>
-        <locationX>336</locationX>
+        <locationX>534</locationX>
         <locationY>278</locationY>
         <defaultConnector>
             <targetReference>Create_DD_in_Completed</targetReference>
@@ -229,7 +229,7 @@
     <decisions>
         <name>Check_DD_Status</name>
         <label>Check DD Status</label>
-        <locationX>182</locationX>
+        <locationX>314</locationX>
         <locationY>518</locationY>
         <defaultConnector>
             <targetReference>Create_DD_in_Completed</targetReference>
@@ -1003,8 +1003,8 @@
     <recordCreates>
         <name>Create_DD_Data</name>
         <label>Create DD Data</label>
-        <locationX>336</locationX>
-        <locationY>1310</locationY>
+        <locationX>534</locationX>
+        <locationY>1454</locationY>
         <faultConnector>
             <targetReference>errormessage</targetReference>
         </faultConnector>
@@ -1030,6 +1030,12 @@
             <field>Customer_Base_Rating__c</field>
             <value>
                 <elementReference>Customer_Base_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Date_of_Expiry__c</field>
+            <value>
+                <elementReference>Date_of_ExpiryDD</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1284,7 +1290,7 @@
     <recordLookups>
         <name>Get_Account_Data</name>
         <label>Get Account Data</label>
-        <locationX>336</locationX>
+        <locationX>534</locationX>
         <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1305,7 +1311,7 @@
     <recordLookups>
         <name>Get_DD_Data</name>
         <label>Get DD Data</label>
-        <locationX>182</locationX>
+        <locationX>314</locationX>
         <locationY>398</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1335,6 +1341,9 @@
         <label>Update DD Data</label>
         <locationX>50</locationX>
         <locationY>758</locationY>
+        <faultConnector>
+            <targetReference>error</targetReference>
+        </faultConnector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -1365,6 +1374,12 @@
             <field>Customer_Base_Rating__c</field>
             <value>
                 <elementReference>CustomerBaseRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Date_of_Expiry__c</field>
+            <value>
+                <elementReference>Date_of_Expiry</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1612,8 +1627,8 @@
     <screens>
         <name>Create_DD_in_Completed</name>
         <label>Create DD in Completed</label>
-        <locationX>336</locationX>
-        <locationY>1190</locationY>
+        <locationX>534</locationX>
+        <locationY>1334</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1645,6 +1660,13 @@
             <fieldText>Prospective Project</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Date_of_ExpiryDD</name>
+            <dataType>Date</dataType>
+            <fieldText>Date of Expiry</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
         </fields>
         <fields>
             <name>Status_Data</name>
@@ -2308,10 +2330,26 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
+        <name>error</name>
+        <label>error</label>
+        <locationX>314</locationX>
+        <locationY>878</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>errormsg</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;color: rgb(228, 13, 13);&quot;&gt;{!$Flow.FaultMessage}&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <name>errormessage</name>
         <label>errormessage</label>
-        <locationX>666</locationX>
-        <locationY>1430</locationY>
+        <locationX>930</locationX>
+        <locationY>1574</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -2368,6 +2406,16 @@
             <fieldText>Prospective Project</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Date_of_Expiry</name>
+            <dataType>Date</dataType>
+            <defaultValue>
+                <elementReference>Get_DD_Data.Date_of_Expiry__c</elementReference>
+            </defaultValue>
+            <fieldText>Date of Expiry</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
         </fields>
         <fields>
             <name>Status2</name>
@@ -3026,7 +3074,7 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>210</locationX>
+        <locationX>408</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Account_Data</targetReference>
