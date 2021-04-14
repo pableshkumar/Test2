@@ -29,6 +29,7 @@ global class Automated_Billing_Batch implements  Schedulable,Database.Batchable<
                 bi.Billing_Start_Date__c=proj.Last_Billing_Date__c+1;
                 bi.Billing_End_Date__c=bi.Billing_Start_Date__c.addDays(6)>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.addDays(6);
                 bi.Project__c=proj.id;
+                bi.OwnerId=proj.OwnerId;
                 bilRecords.add(bi);
                 Project__c p=new Project__c();
                 p.id=proj.Id;
@@ -41,6 +42,7 @@ global class Automated_Billing_Batch implements  Schedulable,Database.Batchable<
                 bi.Billing_Start_Date__c=proj.Last_Billing_Date__c+1;
                 bi.Billing_End_Date__c=bi.Billing_Start_Date__c.addDays(13)>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.addDays(13);
                 bi.Project__c=proj.id;
+                bi.OwnerId=proj.OwnerId;
                 bilRecords.add(bi);       
                 Project__c p=new Project__c();
                 p.id=proj.Id;
@@ -53,6 +55,7 @@ global class Automated_Billing_Batch implements  Schedulable,Database.Batchable<
                 bi.Billing_Start_Date__c=proj.Last_Billing_Date__c+1;
                 bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofMonth().addDays(Date.daysInMonth(bi.Billing_Start_Date__c.year(), bi.Billing_Start_Date__c.month())-1)>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofMonth().addDays(Date.daysInMonth(bi.Billing_Start_Date__c.year(), bi.Billing_Start_Date__c.month())-1);
                 bi.Project__c=proj.id;
+                bi.OwnerId=proj.OwnerId;
                 bilRecords.add(bi); 
                 Project__c p=new Project__c();
                 p.id=proj.Id;
@@ -65,6 +68,7 @@ global class Automated_Billing_Batch implements  Schedulable,Database.Batchable<
                 bi.Billing_Start_Date__c=proj.Last_Billing_Date__c+1;
                 bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofMonth().addMonths(3)-1>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofMonth().addMonths(3)-1;
                 bi.Project__c=proj.id;
+                bi.OwnerId=proj.OwnerId;
                 bilRecords.add(bi);   
                 Project__c p=new Project__c();
                 p.id=proj.Id;
@@ -77,6 +81,7 @@ global class Automated_Billing_Batch implements  Schedulable,Database.Batchable<
                 bi.Billing_Start_Date__c=proj.Last_Billing_Date__c+1;
                 bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofMonth().addMonths(6)-1>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofMonth().addMonths(6)-1;
                 bi.Project__c=proj.id;
+                bi.OwnerId=proj.OwnerId;
                 bilRecords.add(bi); 
                 Project__c p=new Project__c();
                 p.id=proj.Id;
@@ -89,6 +94,7 @@ global class Automated_Billing_Batch implements  Schedulable,Database.Batchable<
                 bi.Billing_Start_Date__c=proj.Last_Billing_Date__c+1;
                 bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofMonth().addMonths(12)-1>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofMonth().addMonths(12)-1;
                 bi.Project__c=proj.id;
+                bi.OwnerId=proj.OwnerId;
                 bilRecords.add(bi); 
                 Project__c p=new Project__c();
                 p.id=proj.Id;

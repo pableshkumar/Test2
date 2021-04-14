@@ -7,13 +7,14 @@ public with sharing class ProjectTriggerHandler {
         RecordType rt = [SELECT Id FROM RecordType WHERE SObjectType = 'Project__c' AND Name = 'Customer'];
         
         for(Project__c proj:projList){
-            if(proj.RecordTypeId == rt.Id){
+            if(proj.RecordTypeId == rt.Id && proj.Project_End_Date__c>=Date.Today()){
                 if(Proj.Billing_Frequency__c=='One Time')
                 {
                     Billing_Information__c bi=new Billing_Information__c();
                     bi.Billing_Start_Date__c=proj.Project_Start_Date__c;
                     bi.Billing_End_Date__c=proj.Project_End_Date__c;
                     bi.Project__c=proj.id;
+                    bi.OwnerId=proj.OwnerId;
                     bilRecords.add(bi);
                     Project__c p=new Project__c();
                     p.id=proj.Id;
@@ -33,6 +34,7 @@ public with sharing class ProjectTriggerHandler {
                     }
                     bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofWeek().addDays(6)>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofWeek().addDays(6);
                     bi.Project__c=proj.id;
+                    bi.OwnerId=proj.OwnerId;
                     bilRecords.add(bi);
                     Project__c p=new Project__c();
                     p.id=proj.Id;
@@ -51,6 +53,7 @@ public with sharing class ProjectTriggerHandler {
                     }
                     bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofWeek().addDays(13)>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofWeek().addDays(13);
                     bi.Project__c=proj.id;
+                    bi.OwnerId=proj.OwnerId;
                     bilRecords.add(bi);       
                     Project__c p=new Project__c();
                     p.id=proj.Id;
@@ -68,6 +71,7 @@ public with sharing class ProjectTriggerHandler {
                     }          
                     bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofMonth().addDays(Date.daysInMonth(bi.Billing_Start_Date__c.year(), bi.Billing_Start_Date__c.month())-1)>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofMonth().addDays(Date.daysInMonth(bi.Billing_Start_Date__c.year(), bi.Billing_Start_Date__c.month())-1);
                     bi.Project__c=proj.id;
+                    bi.OwnerId=proj.OwnerId;
                     bilRecords.add(bi); 
                     Project__c p=new Project__c();
                     p.id=proj.Id;
@@ -85,6 +89,7 @@ public with sharing class ProjectTriggerHandler {
                     }  
                     bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofMonth().addMonths(3)-1>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofMonth().addMonths(3)-1;
                     bi.Project__c=proj.id;
+                    bi.OwnerId=proj.OwnerId;
                     bilRecords.add(bi);   
                     Project__c p=new Project__c();
                     p.id=proj.Id;
@@ -102,6 +107,7 @@ public with sharing class ProjectTriggerHandler {
                     }  
                     bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofMonth().addMonths(6)-1>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofMonth().addMonths(6)-1;
                     bi.Project__c=proj.id;
+                    bi.OwnerId=proj.OwnerId;
                     bilRecords.add(bi); 
                     Project__c p=new Project__c();
                     p.id=proj.Id;
@@ -119,6 +125,7 @@ public with sharing class ProjectTriggerHandler {
                     }  
                     bi.Billing_End_Date__c=bi.Billing_Start_Date__c.toStartofMonth().addMonths(12)-1>=proj.Project_End_Date__c?proj.Project_End_Date__c:bi.Billing_Start_Date__c.toStartofMonth().addMonths(12)-1;
                     bi.Project__c=proj.id;
+                    bi.OwnerId=proj.OwnerId;
                     bilRecords.add(bi); 
                     Project__c p=new Project__c();
                     p.id=proj.Id;
