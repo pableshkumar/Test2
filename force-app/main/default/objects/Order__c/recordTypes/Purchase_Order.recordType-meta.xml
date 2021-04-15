@@ -5,9 +5,24 @@
     <compactLayoutAssignment>Order_Compact_Layout</compactLayoutAssignment>
     <label>Purchase Order</label>
     <picklistValues>
+        <picklist>Approval_Stage_Controller__c</picklist>
+        <values>
+            <fullName>Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>PO_Approval_Status__c</picklist>
         <values>
             <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
             <default>false</default>
         </values>
         <values>
@@ -18,11 +33,51 @@
             <fullName>Rejected</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>Sent To Finance Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Area Delivery Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Global Delivery Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Project Management Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Project Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Regional Service Delivery Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to SDM</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>PO_Status__c</picklist>
         <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>In Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
             <default>false</default>
         </values>
         <values>

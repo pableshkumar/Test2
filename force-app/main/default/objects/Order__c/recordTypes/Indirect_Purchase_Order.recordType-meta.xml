@@ -4,6 +4,17 @@
     <active>true</active>
     <label>Indirect Purchase Order</label>
     <picklistValues>
+        <picklist>Approval_Stage_Controller__c</picklist>
+        <values>
+            <fullName>Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>PO_Approval_Status__c</picklist>
         <values>
             <fullName>Approved</fullName>

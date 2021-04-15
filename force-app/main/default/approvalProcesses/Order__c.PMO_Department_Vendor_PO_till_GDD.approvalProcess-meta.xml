@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <submitter>Sr_Project_Executive</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Billing_Frequency__c</field>
+        <field>Bill_to_Address__c</field>
+        <field>CreatedBy</field>
+        <field>CurrencyIsoCode</field>
+        <field>Current_PO_Balance__c</field>
+        <field>Customer__c</field>
+        <field>Customer_Purchase_Order__c</field>
+        <field>Delivery_Instructions__c</field>
+        <field>LastModifiedBy</field>
+        <field>Payment_Terms__c</field>
+        <field>PO_Amount__c</field>
+        <field>CustomerProjectAmount__c</field>
+        <field>PO_Amount_Utilised__c</field>
+        <field>PO_Balance__c</field>
+        <field>VendorAccountAmount__c</field>
+        <field>PO_End_Date__c</field>
+        <field>PO_Start_Date__c</field>
+        <field>PO_Status__c</field>
+        <field>Approval_Stage_Controller__c</field>
+        <field>Project__c</field>
+        <field>RecordType</field>
+        <field>Ship_to_Address__c</field>
+        <field>PO_Approval_Status__c</field>
+        <field>Tax_Included__c</field>
+        <field>Total_Billed_Value__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Stage_Sent_to_Project_Management_Head</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_PO_status_to_In_Approval</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Project_Manager</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>PO amount greater than 1000 or Customer Project amount greater than 5000 or Vendor Account amount is greater than 5000, approval will be assigned to Project Manager for further action</description>
+        <entryCriteria>
+            <booleanFilter>(1 AND 2 AND 3 AND 4) OR (2 AND 3 AND 5) OR (2 AND 3 AND 6)</booleanFilter>
+            <criteriaItems>
+                <field>Order__c.RecordType</field>
+                <operation>equals</operation>
+                <value>Purchase Order</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.Approval_Stage_Controller__c</field>
+                <operation>equals</operation>
+                <value>Project Management</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.PO_Approval_Status__c</field>
+                <operation>equals</operation>
+                <value>Sent to Project Manager</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.PO_Amount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 1,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.CustomerProjectAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 5,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.VendorAccountAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 5,000&quot;</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Project Manager</label>
+        <name>Project_Manager</name>
+        <rejectionActions>
+            <action>
+                <name>Update_Stage_to_Draft</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_Status_to_Draft</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Stage_Sent_to_Global_Delivery_Director</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_PO_status_to_In_Approval</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Project_Management_Head</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>PO amount greater than 1000 or Customer Project amount greater than 5000 or Vendor Account amount is greater than 5000, approval will be assigned to Project Management Head for further action</description>
+        <entryCriteria>
+            <booleanFilter>(1 AND 2 AND 3 AND 4) OR (2 AND 3 AND 5) OR (2 AND 3 AND 6)</booleanFilter>
+            <criteriaItems>
+                <field>Order__c.RecordType</field>
+                <operation>equals</operation>
+                <value>Purchase Order</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.Approval_Stage_Controller__c</field>
+                <operation>equals</operation>
+                <value>Project Management</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.PO_Approval_Status__c</field>
+                <operation>equals</operation>
+                <value>Sent to Project Management Head</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.PO_Amount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 1,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.CustomerProjectAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 5,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.VendorAccountAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 5,000&quot;</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Project Management Head</label>
+        <name>Project_Management_Head</name>
+        <rejectBehavior>
+            <type>BackToPrevious</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>Stage_Send_to_Project_Manager</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Update_PO_Status_to_Approved</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_Stage_to_Approved</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Global_Delivery_Director</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>PO amount greater than 1000 or Customer Project amount greater than 5000 or Vendor Account amount is greater than 5000, approval will be assigned to Global Delivery Director for further action</description>
+        <entryCriteria>
+            <booleanFilter>(1 AND 2 AND 3 AND 4) OR (2 AND 3 AND 5) OR (2 AND 3 AND 6)</booleanFilter>
+            <criteriaItems>
+                <field>Order__c.RecordType</field>
+                <operation>equals</operation>
+                <value>Purchase Order</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.Approval_Stage_Controller__c</field>
+                <operation>equals</operation>
+                <value>Project Management</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.PO_Approval_Status__c</field>
+                <operation>equals</operation>
+                <value>Sent to Global Delivery Director</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.PO_Amount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 1,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.CustomerProjectAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 5,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.VendorAccountAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 5,000&quot;</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>GDD</label>
+        <name>GDD</name>
+        <rejectBehavior>
+            <type>BackToPrevious</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>Stage_Sent_to_Project_Management_Head</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>approval cycle for PMO Department on Vendor PO where PO amount is greater than 1000 or Customer Project amount is greater than 5000 or Vendor Account amount is greater than 5000</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>(1 AND 2 AND 3) OR (1 AND 2 AND 4) OR (1 AND 2 AND 5)</booleanFilter>
+        <criteriaItems>
+            <field>Order__c.RecordType</field>
+            <operation>equals</operation>
+            <value>Purchase Order</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.PO_Status__c</field>
+            <operation>equals</operation>
+            <value>Draft</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.PO_Amount__c</field>
+            <operation>greaterThan</operation>
+            <value>&quot;USD 1,000&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.CustomerProjectAmount__c</field>
+            <operation>greaterThan</operation>
+            <value>&quot;USD 5,000&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.VendorAccountAmount__c</field>
+            <operation>greaterThan</operation>
+            <value>&quot;USD 5,000&quot;</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Approval_Stage_Controller_P_Management</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Stage_Send_to_Project_Manager</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_PO_status_to_In_Approval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>PMO Department Vendor PO till GDD</label>
+    <processOrder>2</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

@@ -8,6 +8,9 @@
         </roleAndSubordinates>
     </queueMembers>
     <queueSobject>
+        <sobjectType>Order</sobjectType>
+    </queueSobject>
+    <queueSobject>
         <sobjectType>Project__c</sobjectType>
     </queueSobject>
 </Queue>

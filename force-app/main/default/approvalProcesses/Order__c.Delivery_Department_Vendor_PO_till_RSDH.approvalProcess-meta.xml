@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <submitter>Service_Delivery_Executive</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>PO_Amount__c</field>
+        <field>PO_Status__c</field>
+        <field>CreatedBy</field>
+        <field>Payment_Terms__c</field>
+        <field>LastModifiedBy</field>
+        <field>Billing_Frequency__c</field>
+        <field>Bill_to_Address__c</field>
+        <field>CurrencyIsoCode</field>
+        <field>Current_PO_Balance__c</field>
+        <field>Customer__c</field>
+        <field>Approval_Stage_Controller__c</field>
+        <field>Customer_Purchase_Order__c</field>
+        <field>Delivery_Instructions__c</field>
+        <field>PO_Amount_Utilised__c</field>
+        <field>CustomerProjectAmount__c</field>
+        <field>PO_Approval_Status__c</field>
+        <field>VendorAccountAmount__c</field>
+        <field>PO_Balance__c</field>
+        <field>PO_End_Date__c</field>
+        <field>PO_Start_Date__c</field>
+        <field>Project__c</field>
+        <field>RecordType</field>
+        <field>Ship_to_Address__c</field>
+        <field>Tax_Included__c</field>
+        <field>Total_Billed_Value__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Stage_Sent_to_Area_Delivery_Manager</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_PO_status_to_In_Approval</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>SDM</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>Unanimous</whenMultipleApprovers>
+        </assignedApprover>
+        <description>PO amount up to 1000 or Customer Project amount up to 5000 or Vendor Account amount is up to 5000, approval will be assigned to SDM for further action</description>
+        <entryCriteria>
+            <booleanFilter>(1 AND 2 AND 3 AND 4) OR (2 AND 3 AND 5) OR (2 AND 3 AND 6)</booleanFilter>
+            <criteriaItems>
+                <field>Order__c.RecordType</field>
+                <operation>equals</operation>
+                <value>Purchase Order</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.Approval_Stage_Controller__c</field>
+                <operation>equals</operation>
+                <value>Delivery</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.PO_Approval_Status__c</field>
+                <operation>equals</operation>
+                <value>Sent to SDM</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.PO_Amount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 1,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.CustomerProjectAmount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 5,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.VendorAccountAmount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 5,000&quot;</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>SDM</label>
+        <name>SDManager</name>
+        <rejectionActions>
+            <action>
+                <name>Update_Stage_to_Draft</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_Status_to_Draft</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Stage_Sent_to_Regional_SD_Head</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_PO_status_to_In_Approval</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Area_Delivery_Manager</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>PO amount up to 1000 or Customer Project amount up to 5000 or Vendor Account amount is up to 5000, approval will be assigned to Area Delivery Manager for further action</description>
+        <entryCriteria>
+            <booleanFilter>(1 AND 2 AND 3 AND 4) OR (2 AND 3 AND 5) OR (2 AND 3 AND 6)</booleanFilter>
+            <criteriaItems>
+                <field>Order__c.RecordType</field>
+                <operation>equals</operation>
+                <value>Purchase Order</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.Approval_Stage_Controller__c</field>
+                <operation>equals</operation>
+                <value>Delivery</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.PO_Approval_Status__c</field>
+                <operation>equals</operation>
+                <value>Sent to Area Delivery Manager</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.PO_Amount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 1,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.CustomerProjectAmount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 5,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.VendorAccountAmount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 5,000&quot;</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>AreaDeliveryManager</label>
+        <name>AreaDeliveryManager</name>
+        <rejectBehavior>
+            <type>BackToPrevious</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>Stage_Sent_to_SDM</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Update_PO_Status_to_Approved</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_Stage_to_Approved</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Regional_Service_Delivery_Head</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>PO amount up to 1000 or Customer Project amount up to 5000 or Vendor Account amount is up to 5000, approval will be assigned to Regional Service Delivery Head for further action</description>
+        <entryCriteria>
+            <booleanFilter>(1 AND 2 AND 3 AND 4) OR (2 AND 3 AND 5) OR (2 AND 3 AND 6)</booleanFilter>
+            <criteriaItems>
+                <field>Order__c.RecordType</field>
+                <operation>equals</operation>
+                <value>Purchase Order</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.Approval_Stage_Controller__c</field>
+                <operation>equals</operation>
+                <value>Delivery</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.PO_Approval_Status__c</field>
+                <operation>equals</operation>
+                <value>Sent to Regional Service Delivery Head</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.PO_Amount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 1,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.CustomerProjectAmount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 5,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Order__c.VendorAccountAmount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 5,000&quot;</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>RegionalServiceDeliveryHead</label>
+        <name>RegionalServiceDeliveryHead</name>
+        <rejectBehavior>
+            <type>BackToPrevious</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>Stage_Sent_to_Area_Delivery_Manager</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>approval cycle for Delivery Department on Vendor PO where PO amount is up to 1000 or Customer Project amount is up to 5000 or Vendor Account amount is up to 5000</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>(1 AND 2 AND 3) OR (1 AND 2 AND 4) OR (1 AND 2 AND 5)</booleanFilter>
+        <criteriaItems>
+            <field>Order__c.RecordType</field>
+            <operation>equals</operation>
+            <value>Purchase Order</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.PO_Status__c</field>
+            <operation>equals</operation>
+            <value>Draft</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.PO_Amount__c</field>
+            <operation>lessOrEqual</operation>
+            <value>&quot;USD 1,000&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.CustomerProjectAmount__c</field>
+            <operation>lessOrEqual</operation>
+            <value>&quot;USD 5,000&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Order__c.VendorAccountAmount__c</field>
+            <operation>lessOrEqual</operation>
+            <value>&quot;USD 5,000&quot;</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Approval_Stage_Controller_Delivery</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Stage_Sent_to_SDM</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_PO_status_to_In_Approval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Delivery Department Vendor PO till RSDH</label>
+    <processOrder>9</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

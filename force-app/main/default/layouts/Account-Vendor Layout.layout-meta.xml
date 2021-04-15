@@ -28,6 +28,10 @@
                 <behavior>Edit</behavior>
                 <field>Company_Group__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_Amount_of_Vendor_Projects__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

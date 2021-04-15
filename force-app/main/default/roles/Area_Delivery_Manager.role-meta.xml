@@ -3,7 +3,7 @@
     <caseAccessLevel>Edit</caseAccessLevel>
     <contactAccessLevel>Edit</contactAccessLevel>
     <mayForecastManagerShare>false</mayForecastManagerShare>
-    <name>SDM</name>
+    <name>Area Delivery Manager</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
-    <parentRole>Area_Delivery_Manager</parentRole>
+    <parentRole>Regional_Service_Delivery_Head</parentRole>
 </Role>
