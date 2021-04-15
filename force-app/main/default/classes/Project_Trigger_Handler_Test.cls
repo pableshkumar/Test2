@@ -58,7 +58,7 @@ public class Project_Trigger_Handler_Test {
     
     public static TestMethod void testProjectTriggerHandler()
     {
-        ProjectTriggerHandler.createAutomatedBillingInfo([SELECT Name,Project_Start_Date__c,Project_End_Date__c,Payment_Term__c,Billing_Frequency__c,Project__c.RecordTypeId from Project__c]);
+        ProjectTriggerHandler.createAutomatedBillingInfo([SELECT Name,OwnerId,Project_Start_Date__c,Project_End_Date__c,Payment_Term__c,Billing_Frequency__c,Project__c.RecordTypeId from Project__c]);
     }
     
 }
