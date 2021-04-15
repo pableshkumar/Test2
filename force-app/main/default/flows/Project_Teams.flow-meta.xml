@@ -50,7 +50,7 @@
 
 Project Start Date: {!myVariable_current.Project__r.Project_Start_Date__c}
 Project End Date: {!myVariable_current.Project__r.Project_End_Date__c}
-TIG Entity: {!myVariable_current.Project__r.TIG_Entity_Name__c}</stringValue>
+Customer: {!myVariable_current.Project__r.Customer__r.Name}</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -154,7 +154,7 @@ TIG Entity: {!myVariable_current.Project__r.TIG_Entity_Name__c}</stringValue>
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_7580223478</name>
+        <name>formula_2_myRule_1_A1_9772840714</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -177,6 +177,14 @@ AND
 ISPICKVAL([Project_Team__c].Project_Role__c ,&apos;SDM&apos;),
 ISCHANGED([Project_Team__c].Primary__c),
 [Project_Team__c].Primary__c =TRUE
+),
+AND
+(
+!ISNEW(),
+[Project_Team__c].RecordType.Name =&apos;Internal&apos;,
+ISPICKVAL([Project_Team__c].Project_Role__c ,&apos;SDM&apos;),
+ISCHANGED([Project_Team__c].User__c ),
+[Project_Team__c].Primary__c =TRUE
 )
 )</stringValue>
             </value>
@@ -198,10 +206,18 @@ AND
 ISPICKVAL({!myVariable_current.Project_Role__c} ,&apos;SDM&apos;),
 ISCHANGED({!myVariable_current.Primary__c}),
 {!myVariable_current.Primary__c} =TRUE
+),
+AND
+(
+!ISNEW(),
+{!myVariable_current.RecordType.Name} =&apos;Internal&apos;,
+ISPICKVAL({!myVariable_current.Project_Role__c} ,&apos;SDM&apos;),
+ISCHANGED({!myVariable_current.User__c} ),
+{!myVariable_current.Primary__c} =TRUE
 )
 )</expression>
     </formulas>
-    <interviewLabel>Project_Teams-2_InterviewLabel</interviewLabel>
+    <interviewLabel>Project_Teams-3_InterviewLabel</interviewLabel>
     <label>Project Teams</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -265,6 +281,19 @@ ISCHANGED({!myVariable_current.Primary__c}),
             <processMetadataValues>
                 <name>implicit</name>
                 <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Project__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Project__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
                     <booleanValue>false</booleanValue>
                 </value>
             </processMetadataValues>
@@ -307,20 +336,7 @@ ISCHANGED({!myVariable_current.Primary__c}),
             <field>Billing_End_Date__c</field>
             <operator>GreaterThanOrEqualTo</operator>
             <value>
-                <elementReference>formula_2_myRule_1_A1_7580223478</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <processMetadataValues>
-                <name>implicit</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <field>Project__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>myVariable_current.Project__c</elementReference>
+                <elementReference>formula_2_myRule_1_A1_9772840714</elementReference>
             </value>
         </filters>
         <inputAssignments>

@@ -32,5 +32,6 @@
         <isOptional>false</isOptional>
     </lookupFilter>
     <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
     <type>Hierarchy</type>
 </CustomField>

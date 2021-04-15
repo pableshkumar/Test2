@@ -218,6 +218,7 @@
         <field>Account.Branch_Country__c</field>
         <readable>true</readable>
     </fieldPermissions>
+
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Call_Logging_Process__c</field>
@@ -294,6 +295,7 @@
         <field>Account.Customer_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
+
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Customers_whom_TIG_may_contact_reference__c</field>
@@ -330,6 +332,7 @@
         <field>Account.Description</field>
         <readable>true</readable>
     </fieldPermissions>
+
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Do_you_accept_bank_payments_in_EURO__c</field>
@@ -446,6 +449,8 @@
         <field>Account.MICR_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
+
+
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.MSA_Required__c</field>
@@ -478,6 +483,7 @@
         <field>Account.Onboarding_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
+
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.One_Time_Vendor__c</field>
@@ -1473,6 +1479,7 @@
         <field>Due_Diligence__c.Point_of_presence_Rating__c</field>
         <readable>true</readable>
     </fieldPermissions>
+
     <fieldPermissions>
         <editable>false</editable>
         <field>Due_Diligence__c.Point_of_presence_Score__c</field>
@@ -3931,7 +3938,7 @@
         <name>ViewRoles</name>
     </userPermissions>
     <userPermissions>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
         <name>ViewSetup</name>
     </userPermissions>
 </Profile>
