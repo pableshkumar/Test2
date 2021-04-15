@@ -127,4 +127,42 @@
             <value>Customer,Vendor</value>
         </criteriaItems>
     </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_with_Project_Management_Head</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>sharing with Project Management Head Role &amp; Subordinates</description>
+        <label>Share_with_Project Management Head</label>
+        <sharedTo>
+            <roleAndSubordinates>Project_Management_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Vendor</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_with_Regional_Service_Delivery_Head</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>sharing with Regional Service delivery Head &apos;Role &amp; Subordinates</description>
+        <label>Share with Regional Service Delivery Head</label>
+        <sharedTo>
+            <roleAndSubordinates>Regional_Service_Delivery_Head</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Vendor</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
 </SharingRules>

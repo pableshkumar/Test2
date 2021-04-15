@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Total_Amount_of_Vendor_Projects__c</fullName>
-    <description>total amount of vendor projects against a Vendor account associated with a customer project</description>
+    <description>fetch value automatically from the Apex and using it in the approval process; the Total Amount of All Vendor Projects against a Vendor Account Associated with Customer Projects</description>
     <externalId>false</externalId>
-    <label>Total Amount of Vendor Projects</label>
+    <inlineHelpText>Total Amount of All Vendor Projects associated with a Vendor Account</inlineHelpText>
+    <label>Total Amount of All Vendor Projects</label>
     <precision>18</precision>
     <required>false</required>
     <scale>2</scale>

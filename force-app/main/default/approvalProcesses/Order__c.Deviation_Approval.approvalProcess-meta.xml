@@ -22,7 +22,6 @@
         <field>CustomerProjectAmount__c</field>
         <field>Customer_Purchase_Order__c</field>
         <field>Delivery_Instructions__c</field>
-        <field>GP__c</field>
         <field>LastModifiedBy</field>
         <field>Payment_Terms__c</field>
         <field>PO_Amount__c</field>
@@ -39,6 +38,43 @@
         <field>Total_Billed_Value__c</field>
         <field>VendorAccountAmount__c</field>
     </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Stage_Sent_to_Global_Delivery_Director</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_PO_status_to_In_Approval</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>FI_Head</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>approval will be assigned to Finance Head for further action</description>
+        <entryCriteria>
+            <formula>AND(RecordType.DeveloperName == &quot;Purchase_Order&quot;, ISPICKVAL(Approval_Stage_Controller__c , &quot;Project Management&quot;), ISPICKVAL(PO_Approval_Status__c , &quot;Sent to Finance Head&quot;), (Customer_Purchase_Order__r.Project__r.Total_Sum_of_Vendor_Projects__c &gt; (Customer_Purchase_Order__r.Project__r.Total_Project_Value__c - (Customer_Purchase_Order__r.Project__r.Total_Project_Value__c * Customer_Purchase_Order__r.Project__r.GP__c))))</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Finance Head</label>
+        <name>Finance_Head</name>
+        <rejectionActions>
+            <action>
+                <name>Update_Stage_to_Draft</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_Status_to_Draft</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
     <approvalStep>
         <allowDelegate>false</allowDelegate>
         <approvalActions>
@@ -60,11 +96,13 @@
         </assignedApprover>
         <description>approval will be assigned to Global Delivery Director for further action</description>
         <entryCriteria>
-            <formula>AND(RecordType.DeveloperName == &quot;Purchase_Order&quot; , ISPICKVAL(Approval_Stage_Controller__c , &quot;Project Management&quot;) , ISPICKVAL( PO_Approval_Status__c , &quot;Sent to Global Delivery Director&quot;), (GP__c) &gt;= 0.20 &amp;&amp; (GP__c) &lt;= 0.30, (PO_Amount__c &gt; (Customer_Purchase_Order__r.Project__r.Total_Project_Value__c - (Customer_Purchase_Order__r.Project__r.Total_Project_Value__c * 100 * GP__c))))</formula>
+            <formula>AND(RecordType.DeveloperName == &quot;Purchase_Order&quot;, ISPICKVAL(Approval_Stage_Controller__c , &quot;Project Management&quot;), ISPICKVAL(PO_Approval_Status__c , &quot;Sent to Global Delivery Director&quot;), (Customer_Purchase_Order__r.Project__r.Total_Sum_of_Vendor_Projects__c &gt; (Customer_Purchase_Order__r.Project__r.Total_Project_Value__c - (Customer_Purchase_Order__r.Project__r.Total_Project_Value__c * Customer_Purchase_Order__r.Project__r.GP__c))))</formula>
         </entryCriteria>
-        <ifCriteriaNotMet>ApproveRecord</ifCriteriaNotMet>
         <label>GlobalDD</label>
         <name>GlobalDD</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
         <rejectionActions>
             <action>
                 <name>Update_Stage_to_Draft</name>
@@ -76,10 +114,10 @@
             </action>
         </rejectionActions>
     </approvalStep>
-    <description>it will run only when GP is greater or equal to 20% &amp;&amp; up to 30% and the Vendor PO amount is greater than Customer Project Value - GP% of Customer Total Project Value.</description>
+    <description>this will run when the Total Sum of Vendor Projects against a Customer Project is greater than (Total Project Value of Customer Project - GP% of Customer Total Project Value)</description>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
-        <formula>AND(RecordType.DeveloperName == &quot;Purchase_Order&quot; , ISPICKVAL(PO_Status__c , &quot;Draft&quot;), (GP__c) &gt;= 0.20 &amp;&amp; (GP__c) &lt;= 0.30 , (PO_Amount__c &gt; (Customer_Purchase_Order__r.Project__r.Total_Project_Value__c - (Customer_Purchase_Order__r.Project__r.Total_Project_Value__c * 100 * GP__c))))</formula>
+        <formula>AND(RecordType.DeveloperName == &quot;Purchase_Order&quot;, ISPICKVAL(PO_Status__c , &quot;Draft&quot;), (Customer_Purchase_Order__r.Project__r.Total_Sum_of_Vendor_Projects__c &gt; (Customer_Purchase_Order__r.Project__r.Total_Project_Value__c - (Customer_Purchase_Order__r.Project__r.Total_Project_Value__c * Customer_Purchase_Order__r.Project__r.GP__c))))</formula>
     </entryCriteria>
     <finalApprovalRecordLock>true</finalApprovalRecordLock>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
@@ -89,7 +127,7 @@
             <type>FieldUpdate</type>
         </action>
         <action>
-            <name>Stage_Sent_to_Global_Delivery_Director</name>
+            <name>Stage_Sent_to_Finance_Head</name>
             <type>FieldUpdate</type>
         </action>
         <action>
@@ -97,8 +135,8 @@
             <type>FieldUpdate</type>
         </action>
     </initialSubmissionActions>
-    <label>GP Approval 20%&lt;=GP &lt;= 30%</label>
-    <processOrder>5</processOrder>
+    <label>Deviation Approval</label>
+    <processOrder>1</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

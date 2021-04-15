@@ -279,7 +279,7 @@
         </action>
     </initialSubmissionActions>
     <label>PMO Department Vendor PO till GDD</label>
-    <processOrder>6</processOrder>
+    <processOrder>2</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

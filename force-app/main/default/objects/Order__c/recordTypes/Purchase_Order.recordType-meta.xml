@@ -23,7 +23,7 @@
         </values>
         <values>
             <fullName>Draft</fullName>
-            <default>true</default>
+            <default>false</default>
         </values>
         <values>
             <fullName>Pending</fullName>
@@ -39,14 +39,6 @@
         </values>
         <values>
             <fullName>Sent to Area Delivery Manager</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Sent to Finance Executive</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Sent to Finance Manager</fullName>
             <default>false</default>
         </values>
         <values>

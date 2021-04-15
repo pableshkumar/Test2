@@ -229,7 +229,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_14_myRule_13_A1_8499001391</elementReference>
+                <elementReference>formula_14_myRule_13_A1_9813865104</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -271,7 +271,7 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_15_myRule_13_A1_6781477310</elementReference>
+                <elementReference>formula_15_myRule_13_A1_5904017098</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -504,7 +504,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_18_myRule_17_A1_7091920586</elementReference>
+                <elementReference>formula_18_myRule_17_A1_3518776789</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -546,7 +546,7 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_19_myRule_17_A1_2754857067</elementReference>
+                <elementReference>formula_19_myRule_17_A1_4230453305</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -779,7 +779,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_22_myRule_21_A1_9166375572</elementReference>
+                <elementReference>formula_22_myRule_21_A1_7702964769</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -821,7 +821,7 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_23_myRule_21_A1_9006234488</elementReference>
+                <elementReference>formula_23_myRule_21_A1_8112837774</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -1054,7 +1054,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_26_myRule_25_A1_3735750190</elementReference>
+                <elementReference>formula_26_myRule_25_A1_6699545984</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -1096,7 +1096,7 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_27_myRule_25_A1_9073472679</elementReference>
+                <elementReference>formula_27_myRule_25_A1_8315025624</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -1114,7 +1114,7 @@
             </value>
         </processMetadataValues>
         <name>myRule_29_A1</name>
-        <label>Notify Finance Executive</label>
+        <label>Notify Finance Head</label>
         <locationX>2900</locationX>
         <locationY>200</locationY>
         <actionName>NotificationFlow</actionName>
@@ -1245,7 +1245,7 @@
             </processMetadataValues>
             <name>RecipientName</name>
             <value>
-                <stringValue>Finance_Executive</stringValue>
+                <stringValue>FI_Head</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -1329,7 +1329,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_30_myRule_29_A1_6398681614</elementReference>
+                <elementReference>formula_30_myRule_29_A1_0987015921</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -1371,7 +1371,109 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_31_myRule_29_A1_8141389806</elementReference>
+                <elementReference>formula_31_myRule_29_A1_1876216846</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>customNotifTypeName</name>
+            <value>
+                <stringValue>Order_Notifications</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>recipientCategory</name>
+            <value>
+                <stringValue>user</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>recipientType</name>
+            <value>
+                <stringValue>reference</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_33_A1</name>
+        <label>Notify Record Owner</label>
+        <locationX>3300</locationX>
+        <locationY>200</locationY>
+        <actionName>customNotificationAction</actionName>
+        <actionType>customNotificationAction</actionType>
+        <connector>
+            <targetReference>myDecision34</targetReference>
+        </connector>
+        <inputParameters>
+            <name>customNotifTypeId</name>
+            <value>
+                <stringValue>000000000000000</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>customNotifTypeName</name>
+            <value>
+                <stringValue>Order_Notifications</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>title</name>
+            <value>
+                <stringValue>{!myVariable_current.LastModifiedBy.FirstName} {!myVariable_current.LastModifiedBy.LastName} has approved your purchase order</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>body</name>
+            <value>
+                <stringValue>Purchase Order No: {!myVariable_current.Name}
+Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>targetId</name>
+            <value>
+                <stringValue>{!myVariable_current.Id}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>recipientIds</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>500.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>recipientIds</name>
+            <value>
+                <elementReference>myCollection_myRule_33_A1recipientIds</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -1388,15 +1490,12 @@
                 <stringValue>NotificationFlow</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_33_A1</name>
-        <label>Notify Finance Manager</label>
-        <locationX>3300</locationX>
+        <name>myRule_35_A1</name>
+        <label>Notify Sales Director</label>
+        <locationX>3500</locationX>
         <locationY>200</locationY>
         <actionName>NotificationFlow</actionName>
         <actionType>flow</actionType>
-        <connector>
-            <targetReference>myDecision36</targetReference>
-        </connector>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -1520,7 +1619,7 @@
             </processMetadataValues>
             <name>RecipientName</name>
             <value>
-                <stringValue>Finance_Manager</stringValue>
+                <stringValue>Sales_Director</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -1604,7 +1703,7 @@
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_34_myRule_33_A1_0704426408</elementReference>
+                <elementReference>formula_36_myRule_35_A1_7574331547</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -1646,208 +1745,7 @@
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_35_myRule_33_A1_4456773584</elementReference>
-            </value>
-        </inputParameters>
-    </actionCalls>
-    <actionCalls>
-        <processMetadataValues>
-            <name>customNotifTypeName</name>
-            <value>
-                <stringValue>Order_Notifications</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientCategory</name>
-            <value>
-                <stringValue>user</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientType</name>
-            <value>
-                <stringValue>reference</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myRule_37_A1</name>
-        <label>Notify Record Owner</label>
-        <locationX>3700</locationX>
-        <locationY>200</locationY>
-        <actionName>customNotificationAction</actionName>
-        <actionType>customNotificationAction</actionType>
-        <connector>
-            <targetReference>myDecision38</targetReference>
-        </connector>
-        <inputParameters>
-            <name>customNotifTypeId</name>
-            <value>
-                <stringValue>000000000000000</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>customNotifTypeName</name>
-            <value>
-                <stringValue>Order_Notifications</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>title</name>
-            <value>
-                <stringValue>{!myVariable_current.LastModifiedBy.FirstName} {!myVariable_current.LastModifiedBy.LastName} has approved your purchase order</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>body</name>
-            <value>
-                <stringValue>Purchase Order No: {!myVariable_current.Name}
-Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>targetId</name>
-            <value>
-                <stringValue>{!myVariable_current.Id}</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>recipientIds</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>maxOccurs</name>
-                <value>
-                    <numberValue>500.0</numberValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>objectType</name>
-                <value>
-                    <stringValue/>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <name>recipientIds</name>
-            <value>
-                <elementReference>myCollection_myRule_37_A1recipientIds</elementReference>
-            </value>
-        </inputParameters>
-    </actionCalls>
-    <actionCalls>
-        <processMetadataValues>
-            <name>customNotifTypeName</name>
-            <value>
-                <stringValue>Order_Notifications</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientCategory</name>
-            <value>
-                <stringValue>user</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>recipientType</name>
-            <value>
-                <stringValue>reference</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myRule_39_A1</name>
-        <label>Notify Record Owner</label>
-        <locationX>3900</locationX>
-        <locationY>200</locationY>
-        <actionName>customNotificationAction</actionName>
-        <actionType>customNotificationAction</actionType>
-        <inputParameters>
-            <name>customNotifTypeId</name>
-            <value>
-                <stringValue>000000000000000</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>customNotifTypeName</name>
-            <value>
-                <stringValue>Order_Notifications</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>title</name>
-            <value>
-                <stringValue>{!myVariable_current.LastModifiedBy.FirstName} {!myVariable_current.LastModifiedBy.LastName} has not approved your purchase order</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>body</name>
-            <value>
-                <stringValue>Purchase Order No: {!myVariable_current.Name}
-Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>targetId</name>
-            <value>
-                <stringValue>{!myVariable_current.Id}</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>recipientIds</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>maxOccurs</name>
-                <value>
-                    <numberValue>500.0</numberValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>objectType</name>
-                <value>
-                    <stringValue/>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <name>recipientIds</name>
-            <value>
-                <elementReference>myCollection_myRule_39_A1recipientIds</elementReference>
+                <elementReference>formula_37_myRule_35_A1_6385405516</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -2080,7 +1978,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_4_myRule_3_A1_3626906488</elementReference>
+                <elementReference>formula_4_myRule_3_A1_3103649598</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -2122,279 +2020,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_5_myRule_3_A1_6781047149</elementReference>
-            </value>
-        </inputParameters>
-    </actionCalls>
-    <actionCalls>
-        <processMetadataValues>
-            <name>ActionCallType</name>
-            <value>
-                <stringValue>flow</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>flowSelection</name>
-            <value>
-                <stringValue>NotificationFlow</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myRule_41_A1</name>
-        <label>Notify Finance Head</label>
-        <locationX>4100</locationX>
-        <locationY>200</locationY>
-        <actionName>NotificationFlow</actionName>
-        <actionType>flow</actionType>
-        <inputParameters>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>CustomNotificationType</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>maxOccurs</name>
-                <value>
-                    <numberValue>1.0</numberValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>objectType</name>
-                <value>
-                    <stringValue/>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <name>CustomNotificationType</name>
-            <value>
-                <stringValue>Order_Notifications</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>TargetId</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>maxOccurs</name>
-                <value>
-                    <numberValue>1.0</numberValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>objectType</name>
-                <value>
-                    <stringValue/>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Reference</stringValue>
-                </value>
-            </processMetadataValues>
-            <name>TargetId</name>
-            <value>
-                <elementReference>myVariable_current.Id</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>RecipientName</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>maxOccurs</name>
-                <value>
-                    <numberValue>1.0</numberValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>objectType</name>
-                <value>
-                    <stringValue/>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <name>RecipientName</name>
-            <value>
-                <stringValue>FI_Head</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>RecipientType</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>maxOccurs</name>
-                <value>
-                    <numberValue>1.0</numberValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>objectType</name>
-                <value>
-                    <stringValue/>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <name>RecipientType</name>
-            <value>
-                <stringValue>Queue</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>NotificationTitle</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>maxOccurs</name>
-                <value>
-                    <numberValue>1.0</numberValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>objectType</name>
-                <value>
-                    <stringValue/>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Formula</stringValue>
-                </value>
-            </processMetadataValues>
-            <name>NotificationTitle</name>
-            <value>
-                <elementReference>formula_42_myRule_41_A1_4218940454</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>NotificationBody</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>maxOccurs</name>
-                <value>
-                    <numberValue>1.0</numberValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>objectType</name>
-                <value>
-                    <stringValue/>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Formula</stringValue>
-                </value>
-            </processMetadataValues>
-            <name>NotificationBody</name>
-            <value>
-                <elementReference>formula_43_myRule_41_A1_6585030595</elementReference>
+                <elementReference>formula_5_myRule_3_A1_7841157413</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -2729,7 +2355,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
             </processMetadataValues>
             <name>NotificationTitle</name>
             <value>
-                <elementReference>formula_10_myRule_9_A1_1336897746</elementReference>
+                <elementReference>formula_10_myRule_9_A1_0335641817</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -2771,41 +2397,25 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
             </processMetadataValues>
             <name>NotificationBody</name>
             <value>
-                <elementReference>formula_11_myRule_9_A1_5717799512</elementReference>
+                <elementReference>formula_11_myRule_9_A1_6230964793</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
     <apiVersion>49.0</apiVersion>
     <assignments>
-        <name>myAssignment_myRule_37_A1</name>
-        <label>myAssignment_myRule_37_A1</label>
+        <name>myAssignment_myRule_33_A1</name>
+        <label>myAssignment_myRule_33_A1</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignmentItems>
-            <assignToReference>myCollection_myRule_37_A1recipientIds</assignToReference>
+            <assignToReference>myCollection_myRule_33_A1recipientIds</assignToReference>
             <operator>Add</operator>
             <value>
                 <elementReference>myVariable_current.CreatedBy.Id</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>myRule_37_A1</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>myAssignment_myRule_39_A1</name>
-        <label>myAssignment_myRule_39_A1</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>myCollection_myRule_39_A1recipientIds</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>myVariable_current.CreatedBy.Id</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>myRule_39_A1</targetReference>
+            <targetReference>myRule_33_A1</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -3176,13 +2786,13 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <leftValueReference>myVariable_current.PO_Approval_Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Sent to Finance Executive</stringValue>
+                    <stringValue>Sent To Finance Head</stringValue>
                 </rightValue>
             </conditions>
             <connector>
                 <targetReference>myRule_29_pmetdec</targetReference>
             </connector>
-            <label>If stage is Sent to Finance Executive</label>
+            <label>If Stage is Sent to Finance Head</label>
         </rules>
     </decisions>
     <decisions>
@@ -3197,7 +2807,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision36</targetReference>
+            <targetReference>myDecision34</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
@@ -3231,13 +2841,13 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <leftValueReference>myVariable_current.PO_Approval_Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Sent to Finance Manager</stringValue>
+                    <stringValue>Approved</stringValue>
                 </rightValue>
             </conditions>
             <connector>
                 <targetReference>myRule_33_pmetdec</targetReference>
             </connector>
-            <label>If stage is Sent to Finance Manager</label>
+            <label>If Stage is Approved</label>
         </rules>
     </decisions>
     <decisions>
@@ -3247,159 +2857,25 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <numberValue>10.0</numberValue>
             </value>
         </processMetadataValues>
-        <name>myDecision36</name>
-        <label>myDecision36</label>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>myDecision38</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myRule_37</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.PO_Approval_Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Approved</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_37_pmetdec</targetReference>
-            </connector>
-            <label>If Stage is Approved</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <processMetadataValues>
-            <name>index</name>
-            <value>
-                <numberValue>11.0</numberValue>
-            </value>
-        </processMetadataValues>
-        <name>myDecision38</name>
-        <label>myDecision38</label>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>myDecision40</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myRule_39</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.PO_Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Rejected</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_39_pmetdec</targetReference>
-            </connector>
-            <label>If PO Status is Rejected</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <processMetadataValues>
-            <name>index</name>
-            <value>
-                <numberValue>12.0</numberValue>
-            </value>
-        </processMetadataValues>
-        <name>myDecision40</name>
-        <label>myDecision40</label>
+        <name>myDecision34</name>
+        <label>myDecision34</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>myRule_41</name>
+            <name>myRule_35</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.PO_Approval_Status__c</leftValueReference>
+                <leftValueReference>formula_myRule_35</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Sent To Finance Head</stringValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_41_pmetdec</targetReference>
+                <targetReference>myRule_35_pmetdec</targetReference>
             </connector>
-            <label>If Stage is Sent to Finance Head</label>
+            <label>If there is a Deviation</label>
         </rules>
     </decisions>
     <decisions>
@@ -3839,7 +3315,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <leftValueReference>myVariable_old.PO_Approval_Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Sent to Finance Executive</stringValue>
+                    <stringValue>Sent To Finance Head</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -3854,7 +3330,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
         <locationX>3300</locationX>
         <locationY>100</locationY>
         <defaultConnector>
-            <targetReference>myRule_33_A1</targetReference>
+            <targetReference>myAssignment_myRule_33_A1</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
         <rules>
@@ -3868,7 +3344,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_33_A1</targetReference>
+                <targetReference>myAssignment_myRule_33_A1</targetReference>
             </connector>
             <label>Previously Met - Null</label>
         </rules>
@@ -3903,90 +3379,26 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <leftValueReference>myVariable_old.PO_Approval_Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Sent to Finance Manager</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myDecision36</targetReference>
-            </connector>
-            <label>Previously Met - Prev</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>myRule_37_pmetdec</name>
-        <label>Previously Met Decision</label>
-        <locationX>3700</locationX>
-        <locationY>100</locationY>
-        <defaultConnector>
-            <targetReference>myAssignment_myRule_37_A1</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
-        <rules>
-            <name>myRule_37_pmetnullrule</name>
-            <conditionLogic>or</conditionLogic>
-            <conditions>
-                <leftValueReference>myVariable_old</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myAssignment_myRule_37_A1</targetReference>
-            </connector>
-            <label>Previously Met - Null</label>
-        </rules>
-        <rules>
-            <name>myRule_37_pmetrule</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_old.PO_Approval_Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
                     <stringValue>Approved</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myDecision38</targetReference>
+                <targetReference>myDecision34</targetReference>
             </connector>
             <label>Previously Met - Prev</label>
         </rules>
     </decisions>
     <decisions>
-        <name>myRule_39_pmetdec</name>
+        <name>myRule_35_pmetdec</name>
         <label>Previously Met Decision</label>
-        <locationX>3900</locationX>
+        <locationX>3500</locationX>
         <locationY>100</locationY>
         <defaultConnector>
-            <targetReference>myAssignment_myRule_39_A1</targetReference>
+            <targetReference>myRule_35_A1</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
         <rules>
-            <name>myRule_39_pmetnullrule</name>
+            <name>myRule_35_pmetnullrule</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -3996,42 +3408,18 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myAssignment_myRule_39_A1</targetReference>
+                <targetReference>myRule_35_A1</targetReference>
             </connector>
             <label>Previously Met - Null</label>
         </rules>
         <rules>
-            <name>myRule_39_pmetrule</name>
+            <name>myRule_35_pmetrule</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_old.PO_Status__c</leftValueReference>
+                <leftValueReference>formula_myRule_35_pmetrule</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Rejected</stringValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <label>Previously Met - Prev</label>
@@ -4098,67 +3486,6 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
             <connector>
                 <targetReference>myDecision6</targetReference>
             </connector>
-            <label>Previously Met - Prev</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>myRule_41_pmetdec</name>
-        <label>Previously Met Decision</label>
-        <locationX>4100</locationX>
-        <locationY>100</locationY>
-        <defaultConnector>
-            <targetReference>myRule_41_A1</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
-        <rules>
-            <name>myRule_41_pmetnullrule</name>
-            <conditionLogic>or</conditionLogic>
-            <conditions>
-                <leftValueReference>myVariable_old</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_41_A1</targetReference>
-            </connector>
-            <label>Previously Met - Null</label>
-        </rules>
-        <rules>
-            <name>myRule_41_pmetrule</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Picklist</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_old.PO_Approval_Status__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Sent To Finance Head</stringValue>
-                </rightValue>
-            </conditions>
             <label>Previously Met - Prev</label>
         </rules>
     </decisions>
@@ -4273,7 +3600,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <stringValue>[Order__c].LastModifiedBy.FirstName + &quot; &quot; + [Order__c].LastModifiedBy.LastName + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_10_myRule_9_A1_1336897746</name>
+        <name>formula_10_myRule_9_A1_0335641817</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.LastModifiedBy.FirstName} + &quot; &quot; + {!myVariable_current.LastModifiedBy.LastName} + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</expression>
     </formulas>
@@ -4284,7 +3611,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <stringValue>&quot;Purchase Order: &quot; + [Order__c].Name + &quot;\n&quot; + &quot;Stage: &quot; + TEXT([Order__c].PO_Approval_Status__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_11_myRule_9_A1_5717799512</name>
+        <name>formula_11_myRule_9_A1_6230964793</name>
         <dataType>String</dataType>
         <expression>&quot;Purchase Order: &quot; + {!myVariable_current.Name} + &quot;\n&quot; + &quot;Stage: &quot; + TEXT({!myVariable_current.PO_Approval_Status__c} )</expression>
     </formulas>
@@ -4295,7 +3622,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <stringValue>[Order__c].LastModifiedBy.FirstName + &quot; &quot; + [Order__c].LastModifiedBy.LastName + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_14_myRule_13_A1_8499001391</name>
+        <name>formula_14_myRule_13_A1_9813865104</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.LastModifiedBy.FirstName} + &quot; &quot; + {!myVariable_current.LastModifiedBy.LastName} + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</expression>
     </formulas>
@@ -4306,7 +3633,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <stringValue>&quot;Purchase Order: &quot; + [Order__c].Name + &quot;\n&quot; + &quot;Stage: &quot; + TEXT([Order__c].PO_Approval_Status__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_15_myRule_13_A1_6781477310</name>
+        <name>formula_15_myRule_13_A1_5904017098</name>
         <dataType>String</dataType>
         <expression>&quot;Purchase Order: &quot; + {!myVariable_current.Name} + &quot;\n&quot; + &quot;Stage: &quot; + TEXT({!myVariable_current.PO_Approval_Status__c} )</expression>
     </formulas>
@@ -4317,7 +3644,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <stringValue>[Order__c].LastModifiedBy.FirstName + &quot; &quot; + [Order__c].LastModifiedBy.LastName + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_18_myRule_17_A1_7091920586</name>
+        <name>formula_18_myRule_17_A1_3518776789</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.LastModifiedBy.FirstName} + &quot; &quot; + {!myVariable_current.LastModifiedBy.LastName} + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</expression>
     </formulas>
@@ -4328,7 +3655,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <stringValue>&quot;Purchase Order: &quot; + [Order__c].Name + &quot;\n&quot; + &quot;Stage: &quot; + TEXT([Order__c].PO_Approval_Status__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_19_myRule_17_A1_2754857067</name>
+        <name>formula_19_myRule_17_A1_4230453305</name>
         <dataType>String</dataType>
         <expression>&quot;Purchase Order: &quot; + {!myVariable_current.Name} + &quot;\n&quot; + &quot;Stage: &quot; + TEXT({!myVariable_current.PO_Approval_Status__c} )</expression>
     </formulas>
@@ -4339,7 +3666,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <stringValue>[Order__c].LastModifiedBy.FirstName + &quot; &quot; + [Order__c].LastModifiedBy.LastName + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_22_myRule_21_A1_9166375572</name>
+        <name>formula_22_myRule_21_A1_7702964769</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.LastModifiedBy.FirstName} + &quot; &quot; + {!myVariable_current.LastModifiedBy.LastName} + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</expression>
     </formulas>
@@ -4350,7 +3677,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <stringValue>&quot;Purchase Order: &quot; + [Order__c].Name + &quot;\n&quot; + &quot;Stage: &quot; + TEXT([Order__c].PO_Approval_Status__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_23_myRule_21_A1_9006234488</name>
+        <name>formula_23_myRule_21_A1_8112837774</name>
         <dataType>String</dataType>
         <expression>&quot;Purchase Order: &quot; + {!myVariable_current.Name} + &quot;\n&quot; + &quot;Stage: &quot; + TEXT({!myVariable_current.PO_Approval_Status__c} )</expression>
     </formulas>
@@ -4361,7 +3688,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <stringValue>[Order__c].LastModifiedBy.FirstName + &quot; &quot; + [Order__c].LastModifiedBy.LastName + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_26_myRule_25_A1_3735750190</name>
+        <name>formula_26_myRule_25_A1_6699545984</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.LastModifiedBy.FirstName} + &quot; &quot; + {!myVariable_current.LastModifiedBy.LastName} + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</expression>
     </formulas>
@@ -4372,7 +3699,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <stringValue>&quot;Purchase Order: &quot; + [Order__c].Name + &quot;\n&quot; + &quot;Stage: &quot; + TEXT([Order__c].PO_Approval_Status__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_27_myRule_25_A1_9073472679</name>
+        <name>formula_27_myRule_25_A1_8315025624</name>
         <dataType>String</dataType>
         <expression>&quot;Purchase Order: &quot; + {!myVariable_current.Name} + &quot;\n&quot; + &quot;Stage: &quot; + TEXT({!myVariable_current.PO_Approval_Status__c} )</expression>
     </formulas>
@@ -4383,7 +3710,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <stringValue>[Order__c].LastModifiedBy.FirstName + &quot; &quot; + [Order__c].LastModifiedBy.LastName + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_30_myRule_29_A1_6398681614</name>
+        <name>formula_30_myRule_29_A1_0987015921</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.LastModifiedBy.FirstName} + &quot; &quot; + {!myVariable_current.LastModifiedBy.LastName} + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</expression>
     </formulas>
@@ -4394,9 +3721,31 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <stringValue>&quot;Purchase Order: &quot; + [Order__c].Name + &quot;\n&quot; + &quot;Stage: &quot; + TEXT([Order__c].PO_Approval_Status__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_31_myRule_29_A1_8141389806</name>
+        <name>formula_31_myRule_29_A1_1876216846</name>
         <dataType>String</dataType>
         <expression>&quot;Purchase Order: &quot; + {!myVariable_current.Name} + &quot;\n&quot; + &quot;Stage: &quot; + TEXT({!myVariable_current.PO_Approval_Status__c} )</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Order__c].LastModifiedBy.FirstName + &quot; &quot; + [Order__c].LastModifiedBy.LastName + &quot; &quot; + &quot;has created a record with deviation&quot;</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_36_myRule_35_A1_7574331547</name>
+        <dataType>String</dataType>
+        <expression>{!myVariable_current.LastModifiedBy.FirstName} + &quot; &quot; + {!myVariable_current.LastModifiedBy.LastName} + &quot; &quot; + &quot;has created a record with deviation&quot;</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&quot;Purchase Order: &quot; + [Order__c].Name + &quot;\n&quot; + &quot;GP: &quot; + TEXT([Order__c].Customer_Purchase_Order__r.Project__r.GP__c ) </stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_37_myRule_35_A1_6385405516</name>
+        <dataType>String</dataType>
+        <expression>&quot;Purchase Order: &quot; + {!myVariable_current.Name} + &quot;\n&quot; + &quot;GP: &quot; + TEXT({!myVariable_current.Customer_Purchase_Order__r.Project__r.GP__c} )</expression>
     </formulas>
     <formulas>
         <processMetadataValues>
@@ -4405,7 +3754,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <stringValue>[Order__c].LastModifiedBy.FirstName + &quot; &quot; + [Order__c].LastModifiedBy.LastName + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_34_myRule_33_A1_0704426408</name>
+        <name>formula_4_myRule_3_A1_3103649598</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.LastModifiedBy.FirstName} + &quot; &quot; + {!myVariable_current.LastModifiedBy.LastName} + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</expression>
     </formulas>
@@ -4416,51 +3765,7 @@ Stage: {!myVariable_current.PO_Approval_Status__c}</stringValue>
                 <stringValue>&quot;Purchase Order: &quot; + [Order__c].Name + &quot;\n&quot; + &quot;Stage: &quot; + TEXT([Order__c].PO_Approval_Status__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_35_myRule_33_A1_4456773584</name>
-        <dataType>String</dataType>
-        <expression>&quot;Purchase Order: &quot; + {!myVariable_current.Name} + &quot;\n&quot; + &quot;Stage: &quot; + TEXT({!myVariable_current.PO_Approval_Status__c} )</expression>
-    </formulas>
-    <formulas>
-        <processMetadataValues>
-            <name>originalFormula</name>
-            <value>
-                <stringValue>[Order__c].LastModifiedBy.FirstName + &quot; &quot; + [Order__c].LastModifiedBy.LastName + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>formula_42_myRule_41_A1_4218940454</name>
-        <dataType>String</dataType>
-        <expression>{!myVariable_current.LastModifiedBy.FirstName} + &quot; &quot; + {!myVariable_current.LastModifiedBy.LastName} + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</expression>
-    </formulas>
-    <formulas>
-        <processMetadataValues>
-            <name>originalFormula</name>
-            <value>
-                <stringValue>&quot;Purchase Order: &quot; + [Order__c].Name + &quot;\n&quot; + &quot;Stage: &quot; + TEXT([Order__c].PO_Approval_Status__c )</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>formula_43_myRule_41_A1_6585030595</name>
-        <dataType>String</dataType>
-        <expression>&quot;Purchase Order: &quot; + {!myVariable_current.Name} + &quot;\n&quot; + &quot;Stage: &quot; + TEXT({!myVariable_current.PO_Approval_Status__c} )</expression>
-    </formulas>
-    <formulas>
-        <processMetadataValues>
-            <name>originalFormula</name>
-            <value>
-                <stringValue>[Order__c].LastModifiedBy.FirstName + &quot; &quot; + [Order__c].LastModifiedBy.LastName + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>formula_4_myRule_3_A1_3626906488</name>
-        <dataType>String</dataType>
-        <expression>{!myVariable_current.LastModifiedBy.FirstName} + &quot; &quot; + {!myVariable_current.LastModifiedBy.LastName} + &quot; &quot; + &quot;is requesting approval for purchase order&quot;</expression>
-    </formulas>
-    <formulas>
-        <processMetadataValues>
-            <name>originalFormula</name>
-            <value>
-                <stringValue>&quot;Purchase Order: &quot; + [Order__c].Name + &quot;\n&quot; + &quot;Stage: &quot; + TEXT([Order__c].PO_Approval_Status__c )</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>formula_5_myRule_3_A1_6781047149</name>
+        <name>formula_5_myRule_3_A1_7841157413</name>
         <dataType>String</dataType>
         <expression>&quot;Purchase Order: &quot; + {!myVariable_current.Name} + &quot;\n&quot; + &quot;Stage: &quot; + TEXT({!myVariable_current.PO_Approval_Status__c} )</expression>
     </formulas>
@@ -4487,38 +3792,62 @@ ISBLANK({!myVariable_current.Current_PO_Balance__c} )
             <value>
                 <stringValue>AND (
 ISNEW(),
-ISBLANK([Order__c].Current_PO_Balance__c ))</stringValue>
+ISBLANK([Order__c].Current_PO_Balance__c )
+)</stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_1_pmetrule</name>
         <dataType>Boolean</dataType>
         <expression>AND (
 ISNEW(),
-ISBLANK({!myVariable_old.Current_PO_Balance__c} ))</expression>
+ISBLANK({!myVariable_old.Current_PO_Balance__c} )
+)</expression>
     </formulas>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>ISCHANGED([Order__c].PO_Approval_Status__c )   &amp;&amp;  ISPICKVAL([Order__c].PO_Approval_Status__c , &quot;Draft&quot;) </stringValue>
+                <stringValue>[Order__c].Customer_Purchase_Order__r.Project__r.Total_Sum_of_Vendor_Projects__c  &gt; ([Order__c].Customer_Purchase_Order__r.Project__r.Total_Project_Value__c - ([Order__c].Customer_Purchase_Order__r.Project__r.Total_Project_Value__c * [Order__c].Customer_Purchase_Order__r.Project__r.GP__c ))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_35</name>
+        <dataType>Boolean</dataType>
+        <expression>{!myVariable_current.Customer_Purchase_Order__r.Project__r.Total_Sum_of_Vendor_Projects__c}  &gt; ({!myVariable_current.Customer_Purchase_Order__r.Project__r.Total_Project_Value__c} - ({!myVariable_current.Customer_Purchase_Order__r.Project__r.Total_Project_Value__c} * {!myVariable_current.Customer_Purchase_Order__r.Project__r.GP__c} ))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Order__c].Customer_Purchase_Order__r.Project__r.Total_Sum_of_Vendor_Projects__c  &gt; ([Order__c].Customer_Purchase_Order__r.Project__r.Total_Project_Value__c - ([Order__c].Customer_Purchase_Order__r.Project__r.Total_Project_Value__c * [Order__c].Customer_Purchase_Order__r.Project__r.GP__c ))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_35_pmetrule</name>
+        <dataType>Boolean</dataType>
+        <expression>{!myVariable_old.Customer_Purchase_Order__r.Project__r.Total_Sum_of_Vendor_Projects__c}  &gt; ({!myVariable_old.Customer_Purchase_Order__r.Project__r.Total_Project_Value__c} - ({!myVariable_old.Customer_Purchase_Order__r.Project__r.Total_Project_Value__c} * {!myVariable_old.Customer_Purchase_Order__r.Project__r.GP__c} ))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>ISPICKVAL([Order__c].PO_Approval_Status__c , &quot;Draft&quot;) </stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_7</name>
         <dataType>Boolean</dataType>
-        <expression>ISCHANGED({!myVariable_current.PO_Approval_Status__c} )   &amp;&amp;  ISPICKVAL({!myVariable_current.PO_Approval_Status__c} , &quot;Draft&quot;)</expression>
+        <expression>ISPICKVAL({!myVariable_current.PO_Approval_Status__c} , &quot;Draft&quot;)</expression>
     </formulas>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>ISCHANGED([Order__c].PO_Approval_Status__c )   &amp;&amp;  ISPICKVAL([Order__c].PO_Approval_Status__c , &quot;Draft&quot;) </stringValue>
+                <stringValue>ISPICKVAL([Order__c].PO_Approval_Status__c , &quot;Draft&quot;) </stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_7_pmetrule</name>
         <dataType>Boolean</dataType>
-        <expression>ISCHANGED({!myVariable_old.PO_Approval_Status__c} )   &amp;&amp;  ISPICKVAL({!myVariable_old.PO_Approval_Status__c} , &quot;Draft&quot;)</expression>
+        <expression>ISPICKVAL({!myVariable_old.PO_Approval_Status__c} , &quot;Draft&quot;)</expression>
     </formulas>
-    <interviewLabel>Order-9_InterviewLabel</interviewLabel>
+    <interviewLabel>Order-10_InterviewLabel</interviewLabel>
     <label>Order</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -4632,14 +3961,7 @@ ISBLANK({!myVariable_old.Current_PO_Balance__c} ))</expression>
     <startElementReference>myDecision</startElementReference>
     <status>Active</status>
     <variables>
-        <name>myCollection_myRule_37_A1recipientIds</name>
-        <dataType>String</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>myCollection_myRule_39_A1recipientIds</name>
+        <name>myCollection_myRule_33_A1recipientIds</name>
         <dataType>String</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>

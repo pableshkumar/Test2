@@ -21,27 +21,6 @@
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
-        <fullName>PO_Status_Rejected</fullName>
-        <description>this will change the PO Status to &quot;Rejected&quot;</description>
-        <field>PO_Status__c</field>
-        <literalValue>Rejected</literalValue>
-        <name>PO Status : Rejected</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>true</reevaluateOnChange>
-    </fieldUpdates>
-    <fieldUpdates>
-        <fullName>Stage_None</fullName>
-        <description>update stage to none</description>
-        <field>PO_Approval_Status__c</field>
-        <name>Stage : None</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>true</reevaluateOnChange>
-    </fieldUpdates>
-    <fieldUpdates>
         <fullName>Stage_Send_to_Project_Manager</fullName>
         <description>Update Stage to &quot;Sent to Project Manager&quot;</description>
         <field>PO_Approval_Status__c</field>
@@ -140,6 +119,17 @@
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Update_PO_Status_Rejected</fullName>
+        <description>updating PO Status to Rejected</description>
+        <field>PO_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update PO Status : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Update_PO_Status_to_Approved</fullName>
         <description>this will change the PO Status field value to &apos;Approved&apos;</description>
         <field>PO_Status__c</field>
@@ -162,6 +152,17 @@
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Update_Stage_Rejected</fullName>
+        <description>update stage to &quot;Rejected&quot;</description>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Stage : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Update_Stage_to_Approved</fullName>
         <description>this will update the stage field to &quot;Approved&quot;</description>
         <field>PO_Approval_Status__c</field>
@@ -178,17 +179,6 @@
         <field>PO_Approval_Status__c</field>
         <literalValue>Draft</literalValue>
         <name>Update Stage to Draft</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>true</reevaluateOnChange>
-    </fieldUpdates>
-    <fieldUpdates>
-        <fullName>Update_Stage_to_Rejected</fullName>
-        <description>updating the Stage field to &quot;Rejected&quot;</description>
-        <field>PO_Approval_Status__c</field>
-        <literalValue>Rejected</literalValue>
-        <name>Update Stage to Rejected</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
