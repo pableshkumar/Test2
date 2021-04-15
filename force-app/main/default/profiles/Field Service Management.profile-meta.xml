@@ -248,9 +248,7 @@
         <field>Account.Certified_partner_for_OEMs__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
-        
-    </fieldPermissions>
+    
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Communication_Method__c</field>
