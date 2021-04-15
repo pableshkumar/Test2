@@ -42,17 +42,7 @@
         <protected>false</protected>
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
-    <fieldUpdates>
-        <fullName>Stage_Sent_to_FI_Executive</fullName>
-        <description>Update Stage field &quot;Sent to Finance Executive&quot;</description>
-        <field>PO_Approval_Status__c</field>
-        <literalValue>Sent to Finance Executive</literalValue>
-        <name>Stage : Sent to FI Executive</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>true</reevaluateOnChange>
-    </fieldUpdates>
+    
     <fieldUpdates>
         <fullName>Stage_Sent_to_Finance_Head</fullName>
         <field>PO_Approval_Status__c</field>
@@ -63,17 +53,7 @@
         <protected>false</protected>
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
-    <fieldUpdates>
-        <fullName>Stage_Sent_to_Finance_Manager</fullName>
-        <description>Update Approval stage to &apos;Sent to Finance Manager&apos;</description>
-        <field>PO_Approval_Status__c</field>
-        <literalValue>Sent to Finance Manager</literalValue>
-        <name>Stage : Sent to Finance Manager</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>true</reevaluateOnChange>
-    </fieldUpdates>
+    
     <fieldUpdates>
         <fullName>Stage_Sent_to_Global_Delivery_Director</fullName>
         <description>changing Stage &quot;Sent to Global Delivery Director&quot;</description>
