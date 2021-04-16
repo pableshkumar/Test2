@@ -806,7 +806,6 @@
         <field>Billing_Information__c.Total_Amount__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
     <fieldPermissions>
         <editable>true</editable>
         <readable>true</readable>
