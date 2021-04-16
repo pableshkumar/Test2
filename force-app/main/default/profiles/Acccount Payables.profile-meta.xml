@@ -249,7 +249,6 @@
         <field>Account.Certified_partner_for_OEMs__c</field>
         <readable>true</readable>
     </fieldPermissions>
-
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Communication_Method__c</field>
@@ -807,6 +806,7 @@
         <field>Billing_Information__c.Total_Amount__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    
     <fieldPermissions>
         <editable>true</editable>
         <readable>true</readable>
@@ -2055,6 +2055,36 @@
     </fieldPermissions>
 
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.Description</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.IsAllDayEvent</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.Location</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event.Type</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.WhatId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.WhoId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Invoice_Line_Item__c.City__c</field>
         <readable>true</readable>
@@ -2304,6 +2334,7 @@
         <field>Invoice__c.Total_Tax__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    
     <fieldPermissions>
         <editable>false</editable>
         <field>Order__c.Approval_Stage_Controller__c</field>
@@ -3030,6 +3061,31 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.ActivityDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.Description</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Task.Type</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.WhatId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.WhoId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Vendor_Enquiry__c.Account__c</field>
         <readable>true</readable>
@@ -3246,6 +3302,10 @@
     <layoutAssignments>
         <layout>Order__c-Indirect Purchase Order</layout>
         <recordType>Order__c.Indirect_Purchase_Order</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Order__c-Purchase Order</layout>
+        <recordType>Order__c.Purchase_Order</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Order__c-Sales Order</layout>
@@ -3684,11 +3744,11 @@
         <tab>standard-Account</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
+    
     <tabVisibilities>
         <tab>standard-Contact</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
-
     <userLicense>Salesforce Platform</userLicense>
     <userPermissions>
         <enabled>true</enabled>
@@ -3698,6 +3758,7 @@
         <enabled>true</enabled>
         <name>AddDirectMessageMembers</name>
     </userPermissions>
+
     <userPermissions>
         <enabled>true</enabled>
         <name>ApexRestServices</name>
@@ -3839,4 +3900,5 @@
         <enabled>false</enabled>
         <name>ViewSetup</name>
     </userPermissions>
+    
 </Profile>
