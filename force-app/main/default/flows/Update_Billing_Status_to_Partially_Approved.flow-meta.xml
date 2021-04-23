@@ -47,7 +47,7 @@
         </inputAssignments>
         <object>Billing_Information__c</object>
     </recordUpdates>
-    <runInMode>SystemModeWithoutSharing</runInMode>
+    <runInMode>DefaultMode</runInMode>
     <screens>
         <name>error</name>
         <label>error</label>
@@ -81,13 +81,13 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>51</locationX>
-        <locationY>31</locationY>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
         <connector>
             <targetReference>Update_status_as_Partially_Approved</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>
