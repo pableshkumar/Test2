@@ -33,6 +33,10 @@
     </entryCriteria>
     <finalApprovalActions>
         <action>
+            <name>Approval_Status_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
             <name>Approved_status_Active</name>
             <type>FieldUpdate</type>
         </action>
@@ -41,14 +45,28 @@
             <type>FieldUpdate</type>
         </action>
     </finalApprovalActions>
-    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
     <finalRejectionActions>
+        <action>
+            <name>Approval_Status_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
         <action>
             <name>updating_to_Rejected</name>
             <type>FieldUpdate</type>
         </action>
     </finalRejectionActions>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Approval_Status_Pending</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Approval_Status_Send_to_Finance_Head</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
     <label>Submitting from Finance Head</label>
     <processOrder>1</processOrder>
     <recordEditability>AdminOnly</recordEditability>
