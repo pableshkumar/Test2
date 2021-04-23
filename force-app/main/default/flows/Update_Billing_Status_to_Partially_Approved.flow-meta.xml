@@ -9,6 +9,12 @@
         </value>
     </processMetadataValues>
     <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
         <name>OriginBuilderType</name>
         <value>
             <stringValue>LightningFlowBuilder</stringValue>
@@ -23,6 +29,9 @@
         <connector>
             <targetReference>Update_Billing_Info</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>error</targetReference>
+        </faultConnector>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
@@ -38,6 +47,23 @@
         </inputAssignments>
         <object>Billing_Information__c</object>
     </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <screens>
+        <name>error</name>
+        <label>error</label>
+        <locationX>81</locationX>
+        <locationY>272</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>faulterror</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;{!$Flow.FaultMessage}&lt;b&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
     <screens>
         <name>Update_Billing_Info</name>
         <label>Update Billing Info</label>
@@ -55,13 +81,13 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>50</locationX>
-        <locationY>50</locationY>
+        <locationX>51</locationX>
+        <locationY>31</locationY>
         <connector>
             <targetReference>Update_status_as_Partially_Approved</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>
