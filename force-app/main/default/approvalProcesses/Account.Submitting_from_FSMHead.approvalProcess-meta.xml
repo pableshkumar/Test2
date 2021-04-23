@@ -45,7 +45,7 @@
             <type>FieldUpdate</type>
         </action>
     </finalApprovalActions>
-    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
     <finalRejectionActions>
         <action>
             <name>Approval_Status_Rejected</name>
@@ -60,6 +60,10 @@
     <initialSubmissionActions>
         <action>
             <name>Update_Approval_Status_Pending</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Approval_Status_Pending</name>
             <type>FieldUpdate</type>
         </action>
         <action>

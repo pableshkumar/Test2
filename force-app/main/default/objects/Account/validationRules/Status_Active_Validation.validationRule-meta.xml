@@ -5,6 +5,9 @@
     <errorConditionFormula>AND(
 ISPICKVAL(Status__c , &quot;Active&quot;),
 TEXT(Approval_status__c)&lt;&gt; &apos;Pending&apos;
+    <active>false</active>
+    <errorConditionFormula>AND(ISPICKVAL(Status__c, &quot;Active&quot;),
+TEXT(Approval_status__c)&lt;&gt;&apos;Pending&apos;
 )</errorConditionFormula>
     <errorDisplayField>Status__c</errorDisplayField>
     <errorMessage>You can&apos;t go to this stage manually.</errorMessage>
