@@ -55,7 +55,7 @@ public class Automated_Billing_Batch_Test {
         Automated_Billing_Batch ABB = New Automated_Billing_Batch();
         
         Database.QueryLocator ql = ABB.start(null);
-        ABB.execute(null,[select Billing_Frequency__c, Project_Start_Date__c, Project_End_Date__c,Last_Billing_Date__c from Project__c]);
+        ABB.execute(null,[select OwnerId,Billing_Frequency__c, Project_Start_Date__c, Project_End_Date__c,Last_Billing_Date__c from Project__c]);
         ABB.Finish(null);
         
         ABB.execute(null);
