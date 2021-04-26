@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Approval_Stage_Controller__c</fullName>
+    <description>this field is being updated from the approval process, this field contains the following values: &apos;Delivery&apos;, &apos;Project Management,  this is being used at the backend based on which different values are shown in the &quot;Stage&quot; field and based on the approval requester role (Vendor PO Approval), the field value will be updated. e.g; if the requester is from Delivery role(e.g; Service Delivery Executive, SDM, ADM, etc.), the value will be updated as Delivery and if the requester is from Project Management role(e.g; Sr. Project Executive, Project Manager, etc.).
+
+Remarks:- This field is not used in page layout.</description>
     <externalId>false</externalId>
     <label>Approval Stage Controller</label>
     <required>false</required>
