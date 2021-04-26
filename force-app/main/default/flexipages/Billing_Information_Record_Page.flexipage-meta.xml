@@ -89,22 +89,6 @@
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
-                        <valueListItems>
-                            <value>Billing_Information__c.Mark_as_Approved</value>
-                            <visibilityRule>
-                                <booleanFilter>1 OR 2</booleanFilter>
-                                <criteria>
-                                    <leftValue>{!Record.Billing_Approval_Status__c}</leftValue>
-                                    <operator>EQUAL</operator>
-                                    <rightValue>Partially Approved</rightValue>
-                                </criteria>
-                                <criteria>
-                                    <leftValue>{!Record.Billing_Approval_Status__c}</leftValue>
-                                    <operator>EQUAL</operator>
-                                    <rightValue>Sent to Client SDM</rightValue>
-                                </criteria>
-                            </visibilityRule>
-                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>

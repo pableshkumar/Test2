@@ -32,7 +32,13 @@
             <value>Sent to Client SDM</value>
         </criteriaItems>
     </entryCriteria>
-    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalApprovalActions>
+        <action>
+            <name>Update_status_to_Billing_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
     <finalRejectionActions>
         <action>
             <name>Billing_Status_Rework</name>
@@ -41,6 +47,7 @@
     </finalRejectionActions>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <label>Client SDM</label>
-    <recordEditability>AdminOnly</recordEditability>
+    <processOrder>3</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>
