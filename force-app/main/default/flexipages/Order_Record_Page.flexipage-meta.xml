@@ -11,6 +11,13 @@
                         </valueListItems>
                         <valueListItems>
                             <value>Order__c.Generate_PO_PDF</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.PO_Approval_Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Approved</rightValue>
+                                </criteria>
+                            </visibilityRule>
                         </valueListItems>
                         <valueListItems>
                             <value>Submit</value>

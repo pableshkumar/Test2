@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
     <active>true</active>
-    <allowRecall>true</allowRecall>
+    <allowRecall>false</allowRecall>
     <allowedSubmitters>
         <submitter>Sr_Project_Executive</submitter>
         <type>role</type>
@@ -213,7 +213,7 @@
         </action>
     </initialSubmissionActions>
     <label>PMO Department Vendor PO till PM Head</label>
-    <processOrder>8</processOrder>
+    <processOrder>5</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>
