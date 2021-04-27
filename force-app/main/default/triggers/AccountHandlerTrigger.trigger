@@ -6,6 +6,6 @@ trigger AccountHandlerTrigger on Account (before update, after update) {
         ah.requireRejectionComment(Trigger.new,Trigger.oldMap);
         ah.checkFileType(Trigger.new,Trigger.oldMap);
     } else if(Trigger.isAfter && Trigger.isUpdate){
-     //   AccountHandler.VendorApproval(Trigger.new,Trigger.oldMap);
+        AccountHandler.VendorApproval(Trigger.new,Trigger.oldMap);
     }
 }
