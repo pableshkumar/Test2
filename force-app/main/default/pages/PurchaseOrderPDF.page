@@ -58,7 +58,7 @@
             <tr style="text-align: center;vertical-align: top;">
 
                 <td  style="text-align: right;font-weight:bolder;">Total PO Amount:</td>
-                <td  style="text-align: center;font-weight:bolder;"><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                <td  style="text-align: center;font-weight:bolder;">{!poDetails.CurrencyIsoCode}<apex:outputText value="{0, number, ###,###,###,##0.00}">
                     <apex:param value="{!poDetails.PO_Amount__c}"/> </apex:outputText> </td>
                 
             </tr>
