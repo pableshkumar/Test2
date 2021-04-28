@@ -9,21 +9,26 @@ public static void sendPdf(List<Id> orderIds){
      try{
         body = pdf.getContent();
      }catch(VisualforceException e){
-            body=Blob.valueOf('Some text');
+            body=Blob.valueOf(e.getMessage());
      }            
+    try{
       Messaging.EmailFileAttachment attach = new Messaging.EmailFileAttachment();
       attach.setContentType('application/pdf');
-      attach.setFileName('Indirect Expense PO PDF.pdf');
+      attach.setFileName('PO PDF.pdf');
       attach.setInline(false);
       attach.Body = body;
       Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
       mail.setUseSignature(false);
       mail.setToAddresses(new String[] { ord.Vendor_Contact__r.email });
-      mail.setSubject('Indirect Expense PO PDF');
+      mail.setSubject('PO PDF');
       mail.setHtmlBody('Please ignore this email, this is just for testing, please once recieved!');
       mail.setFileAttachments(new Messaging.EmailFileAttachment[] { attach }); 
       // Send the email    
       Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
      // ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO, 'Email with PDF sent to '+email));
+    }catch(Exception e)
+    {
+        System.debug(e.getMessage());
     }
+}
 }

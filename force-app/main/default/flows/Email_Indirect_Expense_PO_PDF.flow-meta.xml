@@ -21,9 +21,9 @@
         </inputParameters>
     </actionCalls>
     <apiVersion>51.0</apiVersion>
-    <description>Called through the indirect expense po Action</description>
+    <description>used in order Action. will call apex and apex will send po pdf to vendor contact.</description>
     <interviewLabel>Email Indirect Expense PO PDF {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Email Indirect Expense PO PDF</label>
+    <label>Send PO PDF</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
