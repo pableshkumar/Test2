@@ -452,11 +452,7 @@
         <readable>true</readable>
     </fieldPermissions>
 
-    <fieldPermissions>
-        <editable>false</editable>
-        <field></field>
-        <readable>true</readable>
-    </fieldPermissions>
+
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.No_of_employees_on_your_Direct_payroll__c</field>
