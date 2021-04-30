@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consider_Service_Delivery__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR(
+!ISPICKVAL(No_of_Field_Engineers_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(Skilled_Employees_Certification_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(OEM_Product_support_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(Maintenance_or_break_fix_support_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(Existing_Customer_Recommendations_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(Overall_delivery_capabilities_Rating__c,&apos;NA&apos;)
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Consider Service Delivery</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consider_Technical_Capability__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR(
+!ISPICKVAL(OEM_Partnership_Certification_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(Skilled_Employees_Certification_RatingTC__c,&apos;NA&apos;),
+!ISPICKVAL(Technical_delivery_Matrix_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(Products_supported_Rating__c,&apos;NA&apos;)
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Consider Technical Capability</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

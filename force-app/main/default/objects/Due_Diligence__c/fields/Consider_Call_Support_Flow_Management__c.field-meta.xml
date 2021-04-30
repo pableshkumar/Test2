@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consider_Call_Support_Flow_Management__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR(
+!ISPICKVAL(Ticketing_tools_process_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(E_bonding_capabilities_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(X24x7_call_center_HelpDesk_support_Ratin__c,&apos;NA&apos;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Consider Call Support Flow / Management</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
