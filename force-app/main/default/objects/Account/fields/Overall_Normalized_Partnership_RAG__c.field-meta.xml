@@ -3,7 +3,7 @@
     <fullName>Overall_Normalized_Partnership_RAG__c</fullName>
     <externalId>false</externalId>
     <formula>IF( ISNULL( Overall_Normalized_Partnership_Score__c) ,&quot;&quot;,
-IF( (Overall_Normalized_Partnership_Score__c*100) &lt;=50, IMAGE(&quot;/resource/1616506498000/Red&quot;, &apos;Red&apos;,30,30) ,IF((Overall_Normalized_Partnership_Score__c*100) &lt;80,IMAGE(&quot;/resource/1616506522000/Amber&quot;, &apos;Amber&apos;,30,30),IMAGE(&quot;/resource/1616506472000/Green&quot;, &apos;Green&apos;,30,30)) ))</formula>
+IF( (Overall_Normalized_Partnership_Score__c) &lt;=50, IMAGE(&quot;/resource/1616506498000/Red&quot;, &apos;Red&apos;,30,30) ,IF((Overall_Normalized_Partnership_Score__c) &lt;80,IMAGE(&quot;/resource/1616506522000/Amber&quot;, &apos;Amber&apos;,30,30),IMAGE(&quot;/resource/1616506472000/Green&quot;, &apos;Green&apos;,30,30)) ))</formula>
     <label>Overall Normalized Partnership RAG</label>
     <required>false</required>
     <type>Text</type>

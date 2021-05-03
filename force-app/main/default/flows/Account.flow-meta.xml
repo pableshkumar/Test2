@@ -423,37 +423,6 @@
                 <processMetadataValues>
                     <name>inputDataType</name>
                     <value>
-                        <stringValue>Boolean</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Number</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>Number</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Boolean</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.Overall_Normalized_Partnership_Score__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
                         <stringValue>Picklist</stringValue>
                     </value>
                 </processMetadataValues>
@@ -479,6 +448,37 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Number</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>Number</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Overall_Normalized_Partnership_Score__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -610,7 +610,7 @@
                 <stringValue>Upper([Account].Customer_Code__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_5033844860</name>
+        <name>formula_2_myRule_1_A1_3451912387</name>
         <dataType>String</dataType>
         <expression>Upper({!myVariable_current.Customer_Code__c} )</expression>
     </formulas>
@@ -703,7 +703,7 @@ ISPICKVAL(PRIORVALUE({!myVariable_current.Status__c} ), &apos;Due Diligence&apos
         <dataType>Boolean</dataType>
         <expression>{!myVariable_current.RecordType.Name} = &quot;Vendor&quot; &amp;&amp;  ISNEW()  &amp;&amp; {!myVariable_current.Captured_through_Vendor_Enquiry__c}  = true</expression>
     </formulas>
-    <interviewLabel>Account-6_InterviewLabel</interviewLabel>
+    <interviewLabel>Account-4_InterviewLabel</interviewLabel>
     <label>Account</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -809,7 +809,7 @@ ISPICKVAL(PRIORVALUE({!myVariable_current.Status__c} ), &apos;Due Diligence&apos
             </processMetadataValues>
             <field>Customer_Code__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_5033844860</elementReference>
+                <elementReference>formula_2_myRule_1_A1_3451912387</elementReference>
             </value>
         </inputAssignments>
         <object>Account</object>
@@ -1142,13 +1142,13 @@ ISPICKVAL(PRIORVALUE({!myVariable_current.Status__c} ), &apos;Due Diligence&apos
             <inputParameters>
                 <name>TimeOffsetUnit</name>
                 <value>
-                    <stringValue>Hours</stringValue>
+                    <stringValue>Days</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
                 <name>TimeOffset</name>
                 <value>
-                    <numberValue>0.0</numberValue>
+                    <numberValue>-60.0</numberValue>
                 </value>
             </inputParameters>
             <inputParameters>

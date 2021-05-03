@@ -105,6 +105,10 @@
                 <field>Overall9__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Overall_Score_Company_Overview__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Company_Overview_RAG_del__c</field>
             </layoutItems>
@@ -159,10 +163,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>In_considered2__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>label3__c</field>
             </layoutItems>
             <layoutItems>
@@ -198,6 +198,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Overall6__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Overall_Score_Financial_Credibility__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -254,10 +258,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>In_considered3__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>label7__c</field>
             </layoutItems>
             <layoutItems>
@@ -309,6 +309,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Overall4__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Overall_Score_Service_Delivery__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -381,10 +385,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>In_considered4__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>label13__c</field>
             </layoutItems>
             <layoutItems>
@@ -420,6 +420,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Overall8__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Overall_Score_Coverage_Point_Presence__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -460,10 +464,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>In_considered5__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>label16__c</field>
             </layoutItems>
             <layoutItems>
@@ -499,6 +499,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Overall3__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Overall_Score_SLA__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -555,10 +559,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>In_considered6__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>label20__c</field>
             </layoutItems>
             <layoutItems>
@@ -594,6 +594,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Overall1__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Overall_Score_Technical_capabilities__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -650,10 +654,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>In_considered7__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>label24__c</field>
             </layoutItems>
             <layoutItems>
@@ -689,6 +689,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Overall10__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Overall_Score_Call_Support_Management__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -729,10 +733,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>In_considered8__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>label27__c</field>
             </layoutItems>
             <layoutItems>
@@ -768,6 +768,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Overall2__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Overall_Score_Spare_Management__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -824,10 +828,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>In_considered9__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>label31__c</field>
             </layoutItems>
             <layoutItems>
@@ -863,6 +863,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Overall5__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Overall_Score_Responses_Quality_of_Doc__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -919,10 +923,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>In_considered10__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>label34__c</field>
             </layoutItems>
             <layoutItems>
@@ -958,6 +958,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Overall7__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Overall_Score_Customer_Base_Feedback__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -1059,7 +1063,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h6D000001Eac6</masterLabel>
+        <masterLabel>00h1y000001BZhz</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
