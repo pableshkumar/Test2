@@ -23,7 +23,7 @@
                             <value>Submit</value>
                             <visibilityRule>
                                 <criteria>
-                                    <leftValue>{!Record.PO_Approval_Status__c}</leftValue>
+                                    <leftValue>{!Record.PO_Status__c}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>Draft</rightValue>
                                 </criteria>
