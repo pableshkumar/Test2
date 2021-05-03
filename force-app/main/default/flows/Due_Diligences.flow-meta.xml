@@ -60,7 +60,7 @@
             <connector>
                 <targetReference>myRule_12_A1</targetReference>
             </connector>
-            <label>Update Overall Score%: Financial Credibility</label>
+            <label>Overall Score: Coverage Point Presence</label>
         </rules>
     </decisions>
     <decisions>
@@ -91,7 +91,7 @@
             <connector>
                 <targetReference>myRule_15_A1</targetReference>
             </connector>
-            <label>Overall Score: Coverage Point Presence</label>
+            <label>Update Overall Score: SLA</label>
         </rules>
     </decisions>
     <decisions>
@@ -122,7 +122,7 @@
             <connector>
                 <targetReference>myRule_18_A1</targetReference>
             </connector>
-            <label>Update Overall Score: SLA</label>
+            <label>Update Overall Score: Technical capabilities</label>
         </rules>
     </decisions>
     <decisions>
@@ -153,7 +153,7 @@
             <connector>
                 <targetReference>myRule_21_A1</targetReference>
             </connector>
-            <label>Update Overall Score: Technical capabilities</label>
+            <label>Update Overall Score: Call Support/Management</label>
         </rules>
     </decisions>
     <decisions>
@@ -184,7 +184,7 @@
             <connector>
                 <targetReference>myRule_24_A1</targetReference>
             </connector>
-            <label>Update Overall Score: Call Support/Management</label>
+            <label>Update Overall Score: Spare Management</label>
         </rules>
     </decisions>
     <decisions>
@@ -215,7 +215,7 @@
             <connector>
                 <targetReference>myRule_27_A1</targetReference>
             </connector>
-            <label>Update Overall Score: Spare Management</label>
+            <label>Update Overall Score: Responses/Quality of Doc</label>
         </rules>
     </decisions>
     <decisions>
@@ -246,7 +246,7 @@
             <connector>
                 <targetReference>myRule_30_A1</targetReference>
             </connector>
-            <label>Update Overall Score: Responses/Quality of Doc</label>
+            <label>Update Overall Score: Customer Base / Feedback</label>
         </rules>
     </decisions>
     <decisions>
@@ -261,70 +261,11 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision6</targetReference>
+            <targetReference>myDecision5</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_4</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>formula_myRule_4</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_4_A1</targetReference>
-            </connector>
-            <label>Update Overall Normalized Partnership Score</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <processMetadataValues>
-            <name>index</name>
-            <value>
-                <numberValue>11.0</numberValue>
-            </value>
-        </processMetadataValues>
-        <name>myDecision32</name>
-        <label>myDecision32</label>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myRule_33</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>formula_myRule_33</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_33_A1</targetReference>
-            </connector>
-            <label>Update Overall Score: Customer Base / Feedback</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <processMetadataValues>
-            <name>index</name>
-            <value>
-                <numberValue>2.0</numberValue>
-            </value>
-        </processMetadataValues>
-        <name>myDecision6</name>
-        <label>myDecision6</label>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>myDecision8</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myRule_7</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -395,9 +336,68 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_7_A1</targetReference>
+                <targetReference>myRule_4_A1</targetReference>
             </connector>
             <label>Update score on account</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>11.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision32</name>
+        <label>myDecision32</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_33</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_33</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_33_A1</targetReference>
+            </connector>
+            <label>Update Overall Normalized Partnership Score</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>2.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision5</name>
+        <label>myDecision5</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision8</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_6</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_6</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_6_A1</targetReference>
+            </connector>
+            <label>Update Overall Score%:Company Overview</label>
         </rules>
     </decisions>
     <decisions>
@@ -428,27 +428,9 @@
             <connector>
                 <targetReference>myRule_9_A1</targetReference>
             </connector>
-            <label>Update Overall Score%:Company Overview</label>
+            <label>Update Overall Score%: Financial Credibility</label>
         </rules>
     </decisions>
-    <formulas>
-        <processMetadataValues>
-            <name>originalFormula</name>
-            <value>
-                <stringValue>[Due_Diligence__c].Company_Established_Score__c +
-[Due_Diligence__c].Employee_Strength_Score__c +
-[Due_Diligence__c].Health_Safety_Processes_Score__c +
-[Due_Diligence__c].Quality_PC_SC_List_Score__c </stringValue>
-            </value>
-        </processMetadataValues>
-        <name>formula_10_myRule_9_A1_5223209711</name>
-        <dataType>Number</dataType>
-        <expression>{!myVariable_current.Company_Established_Score__c} +
-{!myVariable_current.Employee_Strength_Score__c} +
-{!myVariable_current.Health_Safety_Processes_Score__c} +
-{!myVariable_current.Quality_PC_SC_List_Score__c}</expression>
-        <scale>18</scale>
-    </formulas>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
@@ -461,7 +443,7 @@
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_13_myRule_12_A1_9350300713</name>
+        <name>formula_10_myRule_9_A1_8203558041</name>
         <dataType>Number</dataType>
         <expression>{!myVariable_current.Revenue_Growth_for_last_3_year_Score__c} +{!myVariable_current.Net_Margin_Growth_for_last_3_year_Score__c} +
 {!myVariable_current.Assets_Vs_Liability_Score__c} +
@@ -479,7 +461,7 @@
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_16_myRule_15_A1_3605615721</name>
+        <name>formula_13_myRule_12_A1_1399968725</name>
         <dataType>Number</dataType>
         <expression>{!myVariable_current.No_of_Countries_covered_direct_Score__c} +
 {!myVariable_current.Point_of_presence_Score__c} +
@@ -497,7 +479,7 @@
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_19_myRule_18_A1_9790452052</name>
+        <name>formula_16_myRule_15_A1_8877218686</name>
         <dataType>Number</dataType>
         <expression>{!myVariable_current.X2_hours_Fix_Resolution_Score__c} +
 {!myVariable_current.X4_hours_Fix_Resolution_Score__c} +
@@ -516,7 +498,7 @@
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_22_myRule_21_A1_3978673574</name>
+        <name>formula_19_myRule_18_A1_1711169629</name>
         <dataType>Number</dataType>
         <expression>{!myVariable_current.OEM_Partnership_Certification_Score__c} +{!myVariable_current.Skilled_Employees_Certification_ScoreTC__c} +
 {!myVariable_current.Technical_delivery_Matrix_Score__c} +
@@ -533,7 +515,7 @@
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_25_myRule_24_A1_6646065838</name>
+        <name>formula_22_myRule_21_A1_2177336502</name>
         <dataType>Number</dataType>
         <expression>{!myVariable_current.Ticketing_tools_process_Score__c} +
 {!myVariable_current.E_bonding_capabilities_Score__c} +
@@ -552,24 +534,12 @@
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_28_myRule_27_A1_2557468022</name>
+        <name>formula_25_myRule_24_A1_5749294142</name>
         <dataType>Number</dataType>
         <expression> {!myVariable_current.Current_spare_in_stock_Management_Score__c} +
  {!myVariable_current.Warehouse_Management_Score__c} +
  {!myVariable_current.OEM_model_Spare_Score__c} +
  {!myVariable_current.Warranty_Out_of_Warranty_support_Score__c}</expression>
-        <scale>18</scale>
-    </formulas>
-    <formulas>
-        <processMetadataValues>
-            <name>originalFormula</name>
-            <value>
-                <stringValue>[Due_Diligence__c].No_of_Field_Engineers_Score__c +[Due_Diligence__c].Skilled_Employees_Certification_Score__c +[Due_Diligence__c].OEM_Product_support_Score__c +[Due_Diligence__c].Maintenance_or_break_fix_support_Score__c +[Due_Diligence__c].Existing_Score__c +[Due_Diligence__c].Overall_delivery_capabilities_Score__c </stringValue>
-            </value>
-        </processMetadataValues>
-        <name>formula_2_myRule_1_A1_8735811372</name>
-        <dataType>Number</dataType>
-        <expression>{!myVariable_current.No_of_Field_Engineers_Score__c} +{!myVariable_current.Skilled_Employees_Certification_Score__c} +{!myVariable_current.OEM_Product_support_Score__c} +{!myVariable_current.Maintenance_or_break_fix_support_Score__c} +{!myVariable_current.Existing_Score__c} +{!myVariable_current.Overall_delivery_capabilities_Score__c}</expression>
         <scale>18</scale>
     </formulas>
     <formulas>
@@ -584,12 +554,24 @@
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_31_myRule_30_A1_3736205994</name>
+        <name>formula_28_myRule_27_A1_1154780189</name>
         <dataType>Number</dataType>
         <expression>{!myVariable_current.Responsiveness_Score__c} +
 {!myVariable_current.Proactiveness_Score__c} +
 {!myVariable_current.Quality_of_Communication_Document_submit__c} +
 {!myVariable_current.Value_add_innovation_Score__c}</expression>
+        <scale>18</scale>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Due_Diligence__c].No_of_Field_Engineers_Score__c +[Due_Diligence__c].Skilled_Employees_Certification_Score__c +[Due_Diligence__c].OEM_Product_support_Score__c +[Due_Diligence__c].Maintenance_or_break_fix_support_Score__c +[Due_Diligence__c].Existing_Score__c +[Due_Diligence__c].Overall_delivery_capabilities_Score__c </stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_2_myRule_1_A1_6337531625</name>
+        <dataType>Number</dataType>
+        <expression>{!myVariable_current.No_of_Field_Engineers_Score__c} +{!myVariable_current.Skilled_Employees_Certification_Score__c} +{!myVariable_current.OEM_Product_support_Score__c} +{!myVariable_current.Maintenance_or_break_fix_support_Score__c} +{!myVariable_current.Existing_Score__c} +{!myVariable_current.Overall_delivery_capabilities_Score__c}</expression>
         <scale>18</scale>
     </formulas>
     <formulas>
@@ -605,7 +587,7 @@
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_34_myRule_33_A1_2734397692</name>
+        <name>formula_31_myRule_30_A1_3977186834</name>
         <dataType>Number</dataType>
         <expression>{!myVariable_current.Customer_Base_Score__c} +
 {!myVariable_current.Referral_Customer_feedback_Score__c} +
@@ -617,14 +599,30 @@
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>IF(VALUE(TEXT([Due_Diligence__c].Overall_Normalized_Partnership_Weight__c) )  &lt; 100  , (([Due_Diligence__c].Overall_Score_Call_Support_Management__c +[Due_Diligence__c].Overall_Score_Company_Overview__c+[Due_Diligence__c].Overall_Score_Coverage_Point_Presence__c+[Due_Diligence__c].Overall_Score_Customer_Base_Feedback__c+[Due_Diligence__c].Overall_Score_Financial_Credibility__c+[Due_Diligence__c].Overall_Score_Responses_Quality_of_Doc__c+[Due_Diligence__c].Overall_Score_Service_Delivery__c+[Due_Diligence__c].Overall_Score_SLA__c+[Due_Diligence__c].Overall_Score_Spare_Management__c+[Due_Diligence__c].Overall_Score_Technical_capabilities__c) / [Due_Diligence__c].Overall_Normalized_Partnership_Weight__c)*100 , 
-([Due_Diligence__c].Overall_Score_Call_Support_Management__c +[Due_Diligence__c].Overall_Score_Company_Overview__c+[Due_Diligence__c].Overall_Score_Coverage_Point_Presence__c+[Due_Diligence__c].Overall_Score_Customer_Base_Feedback__c+[Due_Diligence__c].Overall_Score_Financial_Credibility__c+[Due_Diligence__c].Overall_Score_Responses_Quality_of_Doc__c+[Due_Diligence__c].Overall_Score_Service_Delivery__c+[Due_Diligence__c].Overall_Score_SLA__c+[Due_Diligence__c].Overall_Score_Spare_Management__c+[Due_Diligence__c].Overall_Score_Technical_capabilities__c) *100)</stringValue>
+                <stringValue>IF(VALUE(TEXT([Due_Diligence__c].Overall_Normalized_Partnership_Weight__c) )  &lt;100  , (([Due_Diligence__c].Overall10__c +[Due_Diligence__c].Overall9__c+[Due_Diligence__c].Overall8__c+[Due_Diligence__c].Overall7__c+[Due_Diligence__c].Overall6__c+[Due_Diligence__c].Overall5__c+[Due_Diligence__c].Overall4__c+[Due_Diligence__c].Overall3__c+[Due_Diligence__c].Overall2__c+[Due_Diligence__c].Overall1__c) / [Due_Diligence__c].Overall_Normalized_Partnership_Weight__c )*100, ([Due_Diligence__c].Overall10__c +[Due_Diligence__c].Overall9__c+[Due_Diligence__c].Overall8__c+[Due_Diligence__c].Overall7__c+[Due_Diligence__c].Overall6__c+[Due_Diligence__c].Overall5__c+[Due_Diligence__c].Overall4__c+[Due_Diligence__c].Overall3__c+[Due_Diligence__c].Overall2__c+[Due_Diligence__c].Overall1__c) *100)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_5_myRule_4_A1_6975318213</name>
+        <name>formula_34_myRule_33_A1_0390831272</name>
         <dataType>Number</dataType>
-        <expression>IF(VALUE(TEXT({!myVariable_current.Overall_Normalized_Partnership_Weight__c}) )  &lt; 100  , (({!myVariable_current.Overall_Score_Call_Support_Management__c} +{!myVariable_current.Overall_Score_Company_Overview__c}+{!myVariable_current.Overall_Score_Coverage_Point_Presence__c}+{!myVariable_current.Overall_Score_Customer_Base_Feedback__c}+{!myVariable_current.Overall_Score_Financial_Credibility__c}+{!myVariable_current.Overall_Score_Responses_Quality_of_Doc__c}+{!myVariable_current.Overall_Score_Service_Delivery__c}+{!myVariable_current.Overall_Score_SLA__c}+{!myVariable_current.Overall_Score_Spare_Management__c}+{!myVariable_current.Overall_Score_Technical_capabilities__c}) / {!myVariable_current.Overall_Normalized_Partnership_Weight__c})*100 , 
-({!myVariable_current.Overall_Score_Call_Support_Management__c} +{!myVariable_current.Overall_Score_Company_Overview__c}+{!myVariable_current.Overall_Score_Coverage_Point_Presence__c}+{!myVariable_current.Overall_Score_Customer_Base_Feedback__c}+{!myVariable_current.Overall_Score_Financial_Credibility__c}+{!myVariable_current.Overall_Score_Responses_Quality_of_Doc__c}+{!myVariable_current.Overall_Score_Service_Delivery__c}+{!myVariable_current.Overall_Score_SLA__c}+{!myVariable_current.Overall_Score_Spare_Management__c}+{!myVariable_current.Overall_Score_Technical_capabilities__c}) *100)</expression>
+        <expression>IF(VALUE(TEXT({!myVariable_current.Overall_Normalized_Partnership_Weight__c}) )  &lt;100  , (({!myVariable_current.Overall10__c} +{!myVariable_current.Overall9__c}+{!myVariable_current.Overall8__c}+{!myVariable_current.Overall7__c}+{!myVariable_current.Overall6__c}+{!myVariable_current.Overall5__c}+{!myVariable_current.Overall4__c}+{!myVariable_current.Overall3__c}+{!myVariable_current.Overall2__c}+{!myVariable_current.Overall1__c}) / {!myVariable_current.Overall_Normalized_Partnership_Weight__c} )*100, ({!myVariable_current.Overall10__c} +{!myVariable_current.Overall9__c}+{!myVariable_current.Overall8__c}+{!myVariable_current.Overall7__c}+{!myVariable_current.Overall6__c}+{!myVariable_current.Overall5__c}+{!myVariable_current.Overall4__c}+{!myVariable_current.Overall3__c}+{!myVariable_current.Overall2__c}+{!myVariable_current.Overall1__c}) *100)</expression>
+        <scale>18</scale>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Due_Diligence__c].Company_Established_Score__c +
+[Due_Diligence__c].Employee_Strength_Score__c +
+[Due_Diligence__c].Health_Safety_Processes_Score__c +
+[Due_Diligence__c].Quality_PC_SC_List_Score__c </stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_7_myRule_6_A1_9890498009</name>
+        <dataType>Number</dataType>
+        <expression>{!myVariable_current.Company_Established_Score__c} +
+{!myVariable_current.Employee_Strength_Score__c} +
+{!myVariable_current.Health_Safety_Processes_Score__c} +
+{!myVariable_current.Quality_PC_SC_List_Score__c}</expression>
         <scale>18</scale>
     </formulas>
     <formulas>
@@ -673,7 +671,7 @@
         <expression>true</expression>
     </formulas>
     <formulas>
-        <name>formula_myRule_4</name>
+        <name>formula_myRule_6</name>
         <dataType>Boolean</dataType>
         <expression>true</expression>
     </formulas>
@@ -682,7 +680,7 @@
         <dataType>Boolean</dataType>
         <expression>true</expression>
     </formulas>
-    <interviewLabel>Due_Diligences-9_InterviewLabel</interviewLabel>
+    <interviewLabel>Due_Diligences-12_InterviewLabel</interviewLabel>
     <label>Due Diligences</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -735,95 +733,11 @@
             <name>referenceTargetField</name>
         </processMetadataValues>
         <name>myRule_12_A1</name>
-        <label>Update Overall Score%: Financial Credibility</label>
+        <label>Overall Score: Coverage Point Presence</label>
         <locationX>1200</locationX>
         <locationY>200</locationY>
         <connector>
             <targetReference>myDecision14</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <processMetadataValues>
-                <name>implicit</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>myVariable_current.Id</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>Number</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Overall Score%: Financial Credibility</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideReferenceTo</name>
-                <value>
-                    <stringValue/>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Formula</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>Overall_Score_Financial_Credibility__c</field>
-            <value>
-                <elementReference>formula_13_myRule_12_A1_9350300713</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Due_Diligence__c</object>
-    </recordUpdates>
-    <recordUpdates>
-        <processMetadataValues>
-            <name>evaluationType</name>
-            <value>
-                <stringValue>always</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>extraTypeInfo</name>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>isChildRelationship</name>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>reference</name>
-            <value>
-                <stringValue>[Due_Diligence__c]</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>referenceTargetField</name>
-        </processMetadataValues>
-        <name>myRule_15_A1</name>
-        <label>Overall Score: Coverage Point Presence</label>
-        <locationX>1500</locationX>
-        <locationY>200</locationY>
-        <connector>
-            <targetReference>myDecision17</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -872,7 +786,7 @@
             </processMetadataValues>
             <field>Overall_Score_Coverage_Point_Presence__c</field>
             <value>
-                <elementReference>formula_16_myRule_15_A1_3605615721</elementReference>
+                <elementReference>formula_13_myRule_12_A1_1399968725</elementReference>
             </value>
         </inputAssignments>
         <object>Due_Diligence__c</object>
@@ -902,12 +816,12 @@
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
-        <name>myRule_18_A1</name>
+        <name>myRule_15_A1</name>
         <label>Update Overall Score: SLA</label>
-        <locationX>1800</locationX>
+        <locationX>1500</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myDecision20</targetReference>
+            <targetReference>myDecision17</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -956,7 +870,91 @@
             </processMetadataValues>
             <field>Overall_Score_SLA__c</field>
             <value>
-                <elementReference>formula_19_myRule_18_A1_9790452052</elementReference>
+                <elementReference>formula_16_myRule_15_A1_8877218686</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Due_Diligence__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Due_Diligence__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_18_A1</name>
+        <label>Update Overall Score: Technical capabilities</label>
+        <locationX>1800</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myDecision20</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Number</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Overall Score: Technical capabilities</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Overall_Score_Technical_capabilities__c</field>
+            <value>
+                <elementReference>formula_19_myRule_18_A1_1711169629</elementReference>
             </value>
         </inputAssignments>
         <object>Due_Diligence__c</object>
@@ -1040,7 +1038,7 @@
             </processMetadataValues>
             <field>Overall_Score_Service_Delivery__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_8735811372</elementReference>
+                <elementReference>formula_2_myRule_1_A1_6337531625</elementReference>
             </value>
         </inputAssignments>
         <object>Due_Diligence__c</object>
@@ -1071,95 +1069,11 @@
             <name>referenceTargetField</name>
         </processMetadataValues>
         <name>myRule_21_A1</name>
-        <label>Update Overall Score: Technical capabilities</label>
+        <label>Update Overall Score: Call Support/Management</label>
         <locationX>2100</locationX>
         <locationY>200</locationY>
         <connector>
             <targetReference>myDecision23</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <processMetadataValues>
-                <name>implicit</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>myVariable_current.Id</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>Number</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Overall Score: Technical capabilities</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideReferenceTo</name>
-                <value>
-                    <stringValue/>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Formula</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>Overall_Score_Technical_capabilities__c</field>
-            <value>
-                <elementReference>formula_22_myRule_21_A1_3978673574</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Due_Diligence__c</object>
-    </recordUpdates>
-    <recordUpdates>
-        <processMetadataValues>
-            <name>evaluationType</name>
-            <value>
-                <stringValue>always</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>extraTypeInfo</name>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>isChildRelationship</name>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>reference</name>
-            <value>
-                <stringValue>[Due_Diligence__c]</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>referenceTargetField</name>
-        </processMetadataValues>
-        <name>myRule_24_A1</name>
-        <label>Update Overall Score: Call Support/Management</label>
-        <locationX>2400</locationX>
-        <locationY>200</locationY>
-        <connector>
-            <targetReference>myDecision26</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -1208,7 +1122,7 @@
             </processMetadataValues>
             <field>Overall_Score_Call_Support_Management__c</field>
             <value>
-                <elementReference>formula_25_myRule_24_A1_6646065838</elementReference>
+                <elementReference>formula_22_myRule_21_A1_2177336502</elementReference>
             </value>
         </inputAssignments>
         <object>Due_Diligence__c</object>
@@ -1238,12 +1152,12 @@
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
-        <name>myRule_27_A1</name>
+        <name>myRule_24_A1</name>
         <label>Update Overall Score: Spare Management</label>
-        <locationX>2700</locationX>
+        <locationX>2400</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myDecision29</targetReference>
+            <targetReference>myDecision26</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -1292,7 +1206,7 @@
             </processMetadataValues>
             <field>Overall_Score_Spare_Management__c</field>
             <value>
-                <elementReference>formula_28_myRule_27_A1_2557468022</elementReference>
+                <elementReference>formula_25_myRule_24_A1_5749294142</elementReference>
             </value>
         </inputAssignments>
         <object>Due_Diligence__c</object>
@@ -1322,12 +1236,12 @@
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
-        <name>myRule_30_A1</name>
+        <name>myRule_27_A1</name>
         <label>Update Overall Score: Responses/Quality of Doc</label>
-        <locationX>3000</locationX>
+        <locationX>2700</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myDecision32</targetReference>
+            <targetReference>myDecision29</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -1376,7 +1290,7 @@
             </processMetadataValues>
             <field>Overall_Score_Responses_Quality_of_Doc__c</field>
             <value>
-                <elementReference>formula_31_myRule_30_A1_3736205994</elementReference>
+                <elementReference>formula_28_myRule_27_A1_1154780189</elementReference>
             </value>
         </inputAssignments>
         <object>Due_Diligence__c</object>
@@ -1406,10 +1320,13 @@
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
-        <name>myRule_33_A1</name>
+        <name>myRule_30_A1</name>
         <label>Update Overall Score: Customer Base / Feedback</label>
-        <locationX>3300</locationX>
+        <locationX>3000</locationX>
         <locationY>200</locationY>
+        <connector>
+            <targetReference>myDecision32</targetReference>
+        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
@@ -1457,7 +1374,7 @@
             </processMetadataValues>
             <field>Overall_Score_Customer_Base_Feedback__c</field>
             <value>
-                <elementReference>formula_34_myRule_33_A1_2734397692</elementReference>
+                <elementReference>formula_31_myRule_30_A1_3977186834</elementReference>
             </value>
         </inputAssignments>
         <object>Due_Diligence__c</object>
@@ -1487,13 +1404,10 @@
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
-        <name>myRule_4_A1</name>
-        <label>update Data</label>
-        <locationX>400</locationX>
+        <name>myRule_33_A1</name>
+        <label>Update Overall Normalized Partnership Score</label>
+        <locationX>3300</locationX>
         <locationY>200</locationY>
-        <connector>
-            <targetReference>myDecision6</targetReference>
-        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
@@ -1541,7 +1455,7 @@
             </processMetadataValues>
             <field>Overall_Normalized_Partnership_Score__c</field>
             <value>
-                <elementReference>formula_5_myRule_4_A1_6975318213</elementReference>
+                <elementReference>formula_34_myRule_33_A1_0390831272</elementReference>
             </value>
         </inputAssignments>
         <object>Due_Diligence__c</object>
@@ -1571,12 +1485,12 @@
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
-        <name>myRule_7_A1</name>
+        <name>myRule_4_A1</name>
         <label>update on account</label>
-        <locationX>700</locationX>
+        <locationX>400</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myDecision8</targetReference>
+            <targetReference>myDecision5</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -1691,12 +1605,12 @@
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
-        <name>myRule_9_A1</name>
+        <name>myRule_6_A1</name>
         <label>Update Overall Score%:Company Overview</label>
-        <locationX>900</locationX>
+        <locationX>600</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myDecision11</targetReference>
+            <targetReference>myDecision8</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -1745,7 +1659,91 @@
             </processMetadataValues>
             <field>Overall_Score_Company_Overview__c</field>
             <value>
-                <elementReference>formula_10_myRule_9_A1_5223209711</elementReference>
+                <elementReference>formula_7_myRule_6_A1_9890498009</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Due_Diligence__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Due_Diligence__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_9_A1</name>
+        <label>Update Overall Score%: Financial Credibility</label>
+        <locationX>900</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myDecision11</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Number</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Overall Score%: Financial Credibility</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Overall_Score_Financial_Credibility__c</field>
+            <value>
+                <elementReference>formula_10_myRule_9_A1_8203558041</elementReference>
             </value>
         </inputAssignments>
         <object>Due_Diligence__c</object>

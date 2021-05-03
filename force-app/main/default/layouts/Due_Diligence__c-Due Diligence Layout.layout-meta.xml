@@ -63,8 +63,8 @@
                 <field>Company_Overall_Weight__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>In_considered1__c</field>
+                <behavior>Readonly</behavior>
+                <field>Consider_Company_Overview__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -100,10 +100,6 @@
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Overall9__c</field>
-            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Overall_Score_Company_Overview__c</field>
@@ -144,10 +140,6 @@
                 <behavior>Readonly</behavior>
                 <field>Health_Safety_Processes_Score__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Consider_Company_Overview__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -160,6 +152,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Financial_Credibility_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Consider_Financial_Credibility__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -195,10 +191,6 @@
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Overall6__c</field>
-            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Overall_Score_Financial_Credibility__c</field>
@@ -239,10 +231,6 @@
                 <behavior>Readonly</behavior>
                 <field>Financial_stability_or_Credit_Score__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Consider_Financial_Credibility__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -255,6 +243,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Service_Delivery_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Consider_Service_Delivery__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -306,10 +298,6 @@
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Overall4__c</field>
-            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Overall_Score_Service_Delivery__c</field>
@@ -366,10 +354,6 @@
                 <behavior>Readonly</behavior>
                 <field>Overall_delivery_capabilities_Score__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Consider_Service_Delivery__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -382,6 +366,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Coverage_Point_Presence_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Consider_Coverage_Point_of_Presence__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -418,10 +406,6 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Overall8__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Overall_Score_Coverage_Point_Presence__c</field>
             </layoutItems>
@@ -445,10 +429,6 @@
                 <behavior>Readonly</behavior>
                 <field>Point_of_presence_Score__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Consider_Coverage_Point_of_Presence__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -461,6 +441,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>SLA_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Consider_SLA__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -496,10 +480,6 @@
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Overall3__c</field>
-            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Overall_Score_SLA__c</field>
@@ -540,10 +520,6 @@
                 <behavior>Readonly</behavior>
                 <field>NBD_Resolution_or_Others_Score__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Consider_SLA__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -556,6 +532,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Technical_capabilities_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Consider_Technical_Capability__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -592,10 +572,6 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Overall1__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Overall_Score_Technical_capabilities__c</field>
             </layoutItems>
@@ -625,6 +601,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
+                <field>Overall10__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>Products_supported_Weight__c</field>
             </layoutItems>
             <layoutItems>
@@ -634,10 +614,6 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Products_supported_Score__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Consider_Technical_Capability__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -651,6 +627,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Call_Support_Management_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Consider_Call_Support_Flow_Management__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -687,10 +667,6 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Overall10__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Overall_Score_Call_Support_Management__c</field>
             </layoutItems>
@@ -714,10 +690,6 @@
                 <behavior>Readonly</behavior>
                 <field>E_bonding_capabilities_Score__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Consider_Call_Support_Flow_Management__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -730,6 +702,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Spare_Management_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Consider_Spare_Management__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -765,10 +741,6 @@
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Overall2__c</field>
-            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Overall_Score_Spare_Management__c</field>
@@ -809,10 +781,6 @@
                 <behavior>Readonly</behavior>
                 <field>Warranty_Out_of_Warranty_support_Score__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Consider_Spare_Management__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -825,6 +793,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Responses_Quality_of_Doc_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Consider_Responses_Quality_of_Documents__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -860,10 +832,6 @@
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Overall5__c</field>
-            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Overall_Score_Responses_Quality_of_Doc__c</field>
@@ -904,10 +872,6 @@
                 <behavior>Readonly</behavior>
                 <field>Value_add_innovation_Score__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Consider_Responses_Quality_of_Documents__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -920,6 +884,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Customer_Base_Feedback_Overall_Weight__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Consider_Customer_Base__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -955,10 +923,6 @@
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Overall7__c</field>
-            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Overall_Score_Customer_Base_Feedback__c</field>
@@ -998,10 +962,6 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>No_of_High_value_customers_Score__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Consider_Customer_Base__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

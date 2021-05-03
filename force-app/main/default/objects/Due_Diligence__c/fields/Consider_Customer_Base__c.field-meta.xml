@@ -6,7 +6,7 @@
 !ISPICKVAL(Customer_Base_Rating__c,&apos;NA&apos;),
 !ISPICKVAL(Retention_of_the_customer_Rating__c,&apos;NA&apos;),
 !ISPICKVAL(Referral_Customer_feedback_Rating__c,&apos;NA&apos;),
-!ISPICKVAL(Referral_Customer_feedback_Rating__c,&apos;NA&apos;)
+!ISPICKVAL(No_of_High_value_customers_Rating__c,&apos;NA&apos;)
 
 )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
