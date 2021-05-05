@@ -13,7 +13,7 @@ trigger DueDiligence on Due_Diligence__c (before insert,after insert,after updat
        if(DueDiligenceTriggerHandler.isFirstTime==true)
        {
            DueDiligenceTriggerHandler.isFirstTime=false;
-      DueDiligenceTriggerHandler.updateRAGCount(Trigger.NewMap);     
+     // DueDiligenceTriggerHandler.updateRAGCount(Trigger.NewMap);     
        }
     }
     
