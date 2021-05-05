@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consider_Company_Overview__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR(
+!ISPICKVAL(Company_Established_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(Quality_PC_SC_List_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(Employee_Strength_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(Health_Safety_Processes_Rating__c,&apos;NA&apos;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Consider Company Overview</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -8,11 +8,6 @@
         <isRequired>false</isRequired>
     </displayedFields>
     <displayedFields>
-        <field>AccountId</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
-    <displayedFields>
         <field>Job_title_Designation__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consider_Customer_Base__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR(
+!ISPICKVAL(Customer_Base_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(Retention_of_the_customer_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(Referral_Customer_feedback_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(No_of_High_value_customers_Rating__c,&apos;NA&apos;)
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Consider Customer Base/Feedback</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

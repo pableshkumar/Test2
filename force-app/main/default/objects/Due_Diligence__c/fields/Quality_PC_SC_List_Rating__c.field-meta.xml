@@ -13,6 +13,11 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
+                <fullName>NA</fullName>
+                <default>false</default>
+                <label>NA</label>
+            </value>
+            <value>
                 <fullName>Exceed Expectations</fullName>
                 <default>false</default>
                 <label>Exceed Expectations</label>
@@ -36,11 +41,6 @@
                 <fullName>Not Ready for Partnership</fullName>
                 <default>false</default>
                 <label>Not Ready for Partnership</label>
-            </value>
-            <value>
-                <fullName>NA</fullName>
-                <default>false</default>
-                <label>NA</label>
             </value>
         </valueSetDefinition>
     </valueSet>

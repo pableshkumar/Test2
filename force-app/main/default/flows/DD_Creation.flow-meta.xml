@@ -57,6 +57,11 @@
         <dataType>String</dataType>
     </choices>
     <choices>
+        <name>NA</name>
+        <choiceText>&lt;span style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;NA&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
         <name>NBDResolutionorOthersRatingDefault</name>
         <choiceText>{!NBDResolutionorOthersRatingcheck}</choiceText>
         <dataType>String</dataType>
@@ -64,11 +69,6 @@
     <choices>
         <name>NetMarginGrowthforlast3yearRatingDeafult</name>
         <choiceText>{!NetMarginGrowthforlast3yearRatingcheck}</choiceText>
-        <dataType>String</dataType>
-    </choices>
-    <choices>
-        <name>none</name>
-        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;-- None --&lt;/span&gt;</choiceText>
         <dataType>String</dataType>
     </choices>
     <choices>
@@ -204,7 +204,7 @@
     <decisions>
         <name>Check_DD_is_Available_or_Not</name>
         <label>Check DD is Available or Not</label>
-        <locationX>336</locationX>
+        <locationX>534</locationX>
         <locationY>278</locationY>
         <defaultConnector>
             <targetReference>Create_DD_in_Completed</targetReference>
@@ -229,7 +229,7 @@
     <decisions>
         <name>Check_DD_Status</name>
         <label>Check DD Status</label>
-        <locationX>182</locationX>
+        <locationX>314</locationX>
         <locationY>518</locationY>
         <defaultConnector>
             <targetReference>Create_DD_in_Completed</targetReference>
@@ -1003,8 +1003,8 @@
     <recordCreates>
         <name>Create_DD_Data</name>
         <label>Create DD Data</label>
-        <locationX>336</locationX>
-        <locationY>1310</locationY>
+        <locationX>534</locationX>
+        <locationY>1454</locationY>
         <faultConnector>
             <targetReference>errormessage</targetReference>
         </faultConnector>
@@ -1030,6 +1030,12 @@
             <field>Customer_Base_Rating__c</field>
             <value>
                 <elementReference>Customer_Base_Rating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Date_of_Expiry__c</field>
+            <value>
+                <elementReference>Date_of_ExpiryDD</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1219,12 +1225,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Status__c</field>
-            <value>
-                <elementReference>Status_Data</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Technical_delivery_Matrix_Rating__c</field>
             <value>
                 <elementReference>Technical_delivery_Matrix_Rating</elementReference>
@@ -1284,7 +1284,7 @@
     <recordLookups>
         <name>Get_Account_Data</name>
         <label>Get Account Data</label>
-        <locationX>336</locationX>
+        <locationX>534</locationX>
         <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1305,7 +1305,7 @@
     <recordLookups>
         <name>Get_DD_Data</name>
         <label>Get DD Data</label>
-        <locationX>182</locationX>
+        <locationX>314</locationX>
         <locationY>398</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1335,6 +1335,9 @@
         <label>Update DD Data</label>
         <locationX>50</locationX>
         <locationY>758</locationY>
+        <faultConnector>
+            <targetReference>error</targetReference>
+        </faultConnector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -1365,6 +1368,12 @@
             <field>Customer_Base_Rating__c</field>
             <value>
                 <elementReference>CustomerBaseRatingFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Date_of_Expiry__c</field>
+            <value>
+                <elementReference>Date_of_Expiry</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1548,12 +1557,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Status__c</field>
-            <value>
-                <elementReference>Status2</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Technical_delivery_Matrix_Rating__c</field>
             <value>
                 <elementReference>TechnicaldeliveryMatrixRatingFormula</elementReference>
@@ -1612,8 +1615,8 @@
     <screens>
         <name>Create_DD_in_Completed</name>
         <label>Create DD in Completed</label>
-        <locationX>336</locationX>
-        <locationY>1190</locationY>
+        <locationX>534</locationX>
+        <locationY>1334</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1647,11 +1650,10 @@
             <isRequired>false</isRequired>
         </fields>
         <fields>
-            <name>Status_Data</name>
-            <choiceReferences>Status</choiceReferences>
-            <dataType>String</dataType>
-            <fieldText>Status</fieldText>
-            <fieldType>DropdownBox</fieldType>
+            <name>Date_of_ExpiryDD</name>
+            <dataType>Date</dataType>
+            <fieldText>Date of Expiry</fieldText>
+            <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
@@ -1660,61 +1662,33 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>h1</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----------Company Established----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Company_Established_Rating</name>
-            <choiceReferences>none</choiceReferences>
             <choiceReferences>CompanyEstablishedRatingPicklist</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Company Established Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h2</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;color: rgb(62, 62, 60); font-size: 12px; background-color: rgb(255, 255, 255);&quot;&gt;Employee Strength&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Employee_Strength_Rating</name>
             <choiceReferences>EmployeeStrengthRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Employee Strength Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h3</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Quality/PC/SC List&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Quality_PC_SC_List_Rating</name>
             <choiceReferences>QualityPCSCListRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Quality/PC/SC List Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h4</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Health &amp;amp; Safety Processes&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Health_Safety_Processes_Rating</name>
             <choiceReferences>HealthSafetyProcessesRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Health &amp; Safety Processes Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
@@ -1725,61 +1699,33 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>h5</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Revenue Growth for last 3 year&lt;/b&gt;&lt;b&gt;---------&lt;/b&gt;-&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Revenue_Growth_for_last_3_year_Rating</name>
             <choiceReferences>RevenueGrowthforlast3yearRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Revenue Growth for last 3 year Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h6</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Net Margin Growth for last 3year&amp;nbsp;&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Net_Margin_Growth_for_last_3_year_Rating</name>
             <choiceReferences>NetMarginGrowthforlast3yearRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Net Margin Growth for last 3 year Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h7</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Assets Vs Liability&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Assets_Vs_Liability_Rating</name>
             <choiceReferences>AssetsVsLiabilityWeightPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Assets Vs Liability Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h8</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Financial stability or Credit&lt;/b&gt;&lt;b&gt;----------&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Financial_stability_or_Credit_Rating</name>
             <choiceReferences>FinancialstabilityorCreditPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Financial stability or Credit Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
@@ -1790,91 +1736,49 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>h9</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;color: rgb(62, 62, 60); font-size: 12px; background-color: rgb(255, 255, 255);&quot;&gt;No of Field Engineers&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>No_of_Field_Engineers_Rating</name>
             <choiceReferences>NoofFieldEngineersRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>No of Field Engineers Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h10</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Skilled Employees/Certification&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Skilled_Employees_Certification_Rating</name>
             <choiceReferences>SkilledEmployeesCertificationRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Skilled Employees/Certification Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h11</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;OEM Product support&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>OEM_Product_support_Rating</name>
             <choiceReferences>OEMProductsupportRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>OEM Product support Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h12</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Maintenance or break fix support&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Maintenance_or_break_fix_support_Rating</name>
             <choiceReferences>MaintenanceorbreakfixsupportRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Maintenance or break fix support Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h13</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;color: rgb(62, 62, 60); font-size: 12px; background-color: rgb(255, 255, 255);&quot;&gt;Existing Customer Recommendation&lt;/b&gt;&lt;b&gt;--------&lt;/b&gt;--&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Existing_Customer_Recommendations_Rating</name>
             <choiceReferences>ExistingCustomerRecommendationsRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Existing Customer Recommendations Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h14</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Overall delivery capabilities&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Overall_delivery_capabilities_Rating</name>
             <choiceReferences>OveralldeliverycapabilitiesRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Overall delivery capabilities Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
@@ -1885,46 +1789,25 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>h16</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;No. of Countries covered direct&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>No_of_Countries_covered_direct_Rating</name>
             <choiceReferences>NoOfCountriescovereddirectRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>No. of Countries covered direct Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h17</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Point of presence&amp;nbsp;&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Point_of_presence_Rating</name>
             <choiceReferences>PointofpresenceRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Point of presence Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h18</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------&lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;Future plan enhance the presence&lt;/b&gt;&lt;b&gt;----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Future_plan_enhance_the_presence_Rating</name>
             <choiceReferences>FutureplanenhancethepresenceRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Future plan enhance the presence Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
@@ -1935,61 +1818,33 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>h20</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----2 hours Fix Resolution-----&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>X2_hours_Fix_Resolution_Rating</name>
             <choiceReferences>X2hoursFixResolutionRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>2 hours Fix Resolution Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h21</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----4 hours Fix Resolution ----&lt;/b&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-&lt;/span&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>X4_hours_Fix_Resolution_Rating</name>
             <choiceReferences>X4hoursFixResolutionRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>4 hours Fix Resolution Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h22</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----8 hours Fix Resolution-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>X8_hours_Fix_Resolution_Rating</name>
             <choiceReferences>X8hoursFixResolutionRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>8 hours Fix Resolution Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h23</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;-----NBD Resolution or Others-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>NBD_Resolution_or_Others_Rating</name>
             <choiceReferences>NBDResolutionorOthersRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>NBD Resolution or Others Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
@@ -2000,61 +1855,33 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>h25</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----OEM Partnership/Certification-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>OEM_Partnership_Certification_Rating</name>
             <choiceReferences>OEMPartnershipCertificationRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>OEM Partnership / Certification Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h26</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Skilled Employees-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Skilled_Employees_Certification_RatingTC</name>
             <choiceReferences>SkilledEmployeesCertificationRatingPicklistTC</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Skilled Employees/Certification Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h27</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Technical delivery Matrix-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Technical_delivery_Matrix_Rating</name>
             <choiceReferences>TechnicaldeliveryMatrixRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Technical delivery Matrix Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h28</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Products supported-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Products_supported_Rating</name>
             <choiceReferences>ProductssupportedRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Products supported Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
@@ -2065,46 +1892,25 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>h30</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Ticketing tools &amp;amp; process-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Ticketing_tools_process_Rating</name>
             <choiceReferences>TicketingtoolsprocessRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Ticketing tools &amp; process Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h31</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----E-bonding capabilities-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>E_bonding_capabilities_Rating</name>
             <choiceReferences>EbondingcapabilitiesRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>E-bonding capabilities Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h32</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----24x7 call center/HelpDesk-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>X24x7_call_center_HelpDesk_support_Rating</name>
             <choiceReferences>X24x7callcenterHelpDesksupportRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>24x7 call center/HelpDesk support Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
@@ -2115,61 +1921,33 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>h34</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Current spare in stock-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Current_spares_in_stock_Management</name>
             <choiceReferences>CurrentsparesinstockManagementPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Current spares in stock &amp; Management</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h36</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Warehouse Management-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Warehouse_Management_Rating</name>
             <choiceReferences>WarehouseManagementRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Warehouse Management Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h37</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----OEM model/Spare-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>OEM_model_Spare_replacement_Rating</name>
             <choiceReferences>OEMmodelSparereplacementRatingpicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>OEM model/Spare replacement Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h38</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Warranty /Out of warranty-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Warranty_Out_of_warranty_support_Rating</name>
             <choiceReferences>WarrantyOutofwarrantysupportRatingpicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Warranty /Out of warranty support Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
@@ -2180,61 +1958,33 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>h40</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Responsiveness-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Responsiveness_Rating</name>
             <choiceReferences>ResponsivenessRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Responsiveness Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h41</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Proactiveness-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Proactiveness_Rating</name>
             <choiceReferences>ProactivenessRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Proactiveness Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h42</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Quality of Communication----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Quality_of_Communication_Document_submit</name>
             <choiceReferences>QualityofCommunicationDocumentsubmitpicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Quality of Communication/Document submit</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h43</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Value add &amp;amp; innovation-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Value_add_innovation_Rating</name>
             <choiceReferences>ValueaddinnovationRatingpicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Value add &amp; innovation Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
@@ -2245,61 +1995,33 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>h45</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Customer Base-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Customer_Base_Rating</name>
             <choiceReferences>CustomerBaseRatingpicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Customer Base Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h46</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Referral Customer feedback-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Retention_of_the_customer_Rating</name>
             <choiceReferences>RetentionofthecustomerRatingpicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Retention of the customer Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h47</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;-----Retention of the customer-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Referral_Customer_feedback_Rating</name>
             <choiceReferences>ReferralCustomerfeedbackRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>Referral Customer feedback Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>h48</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----No. of High value customers-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>No_of_High_value_customers_Rating</name>
             <choiceReferences>NoOfHighvaluecustomersRatingPicklist</choiceReferences>
-            <choiceReferences>none</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>none</defaultSelectedChoiceReference>
             <fieldText>No. of High value customers Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
@@ -2308,10 +2030,26 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
+        <name>error</name>
+        <label>error</label>
+        <locationX>314</locationX>
+        <locationY>878</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>errormsg</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;color: rgb(228, 13, 13);&quot;&gt;{!$Flow.FaultMessage}&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <name>errormessage</name>
         <label>errormessage</label>
-        <locationX>666</locationX>
-        <locationY>1430</locationY>
+        <locationX>930</locationX>
+        <locationY>1574</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -2370,21 +2108,18 @@
             <isRequired>false</isRequired>
         </fields>
         <fields>
-            <name>Status2</name>
-            <choiceReferences>Status</choiceReferences>
-            <dataType>String</dataType>
-            <fieldText>Status</fieldText>
-            <fieldType>DropdownBox</fieldType>
+            <name>Date_of_Expiry</name>
+            <dataType>Date</dataType>
+            <defaultValue>
+                <elementReference>Get_DD_Data.Date_of_Expiry__c</elementReference>
+            </defaultValue>
+            <fieldText>Date of Expiry</fieldText>
+            <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
         </fields>
         <fields>
             <name>Company_Overview1</name>
             <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Company Overview&lt;/b&gt;&lt;i&gt;﻿&lt;/i&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
-            <name>hh1</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 12px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;----------Company Established----------&lt;/b&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -2398,11 +2133,6 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>hh2</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;--------Quality/PC/SC List--------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Quality_PC_SC_List_Rating2</name>
             <choiceReferences>QualityPCSCListRatingPicklist</choiceReferences>
             <choiceReferences>QualityPCSCListRatingDefault</choiceReferences>
@@ -2413,11 +2143,6 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>hh3</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;----------Employee Strength----------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Employee_Strength_Rating2</name>
             <choiceReferences>EmployeeStrengthRatingPicklist</choiceReferences>
             <choiceReferences>EmployeeStrengthRatingDefault</choiceReferences>
@@ -2426,11 +2151,6 @@
             <fieldText>Employee Strength Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh4</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255); font-size: 12px;&quot;&gt;--------Health &amp;amp; Safety Processes-------&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Health_Safety_Processes_Rating2</name>
@@ -2448,11 +2168,6 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>hh5</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60); font-size: 12px;&quot;&gt;-----Revenue Growth for last 3 year-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Revenue_Growth_for_last_3_year_Rating2</name>
             <choiceReferences>RevenueGrowthforlast3yearRatingPicklist</choiceReferences>
             <choiceReferences>RevenueGrowthforlast3yearRatingDeafult</choiceReferences>
@@ -2461,11 +2176,6 @@
             <fieldText>Revenue Growth for last 3 year Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh6</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60); font-size: 12px;&quot;&gt;-----Net Margin Growth ----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Net_Margin_Growth_for_last_3_year_Rating2</name>
@@ -2478,11 +2188,6 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>hh7</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60); font-size: 12px;&quot;&gt;-----Assets Vs Liability-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Assets_Vs_Liability_Rating2</name>
             <choiceReferences>AssetsVsLiabilityWeightPicklist</choiceReferences>
             <choiceReferences>AssetsVsLiabilityRatingDefault</choiceReferences>
@@ -2491,11 +2196,6 @@
             <fieldText>Assets Vs Liability Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh8</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255); font-size: 12px;&quot;&gt;-----Financial stability or Credit -----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Financial_stability_or_Credit_Rating2</name>
@@ -2513,11 +2213,6 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>hh9</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----No of Field Engineers-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>No_of_Field_Engineers_Rating2</name>
             <choiceReferences>NoofFieldEngineersRatingPicklist</choiceReferences>
             <choiceReferences>NoofFieldEngineersRatingDefault</choiceReferences>
@@ -2526,11 +2221,6 @@
             <fieldText>No of Field Engineers Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh10</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255); font-size: 12px;&quot;&gt;-----Skilled Employees-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Skilled_Employees_Certification_Rating2</name>
@@ -2543,11 +2233,6 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>hh11</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----OEM Product support-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>OEM_Product_support_Rating2</name>
             <choiceReferences>OEMProductsupportRatingPicklist</choiceReferences>
             <choiceReferences>OEMProductsupportRatingDefault</choiceReferences>
@@ -2556,11 +2241,6 @@
             <fieldText>OEM Product support Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh12</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Maintenance fix suppor&lt;/b&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;t-----&lt;/span&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Maintenance_or_break_fix_support_Rating2</name>
@@ -2573,11 +2253,6 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>hh13</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Existing Customer----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Existing_Customer_Recommendations_Rating2</name>
             <choiceReferences>ExistingCustomerRecommendationsRatingPicklist</choiceReferences>
             <choiceReferences>ExistingCustomerRecommendationsRatingDefault</choiceReferences>
@@ -2586,11 +2261,6 @@
             <fieldText>Existing Customer Recommendations Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh14</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Overall delivery capabilities-&lt;/b&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;----&lt;/span&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Overall_delivery_capabilities_Rating2</name>
@@ -2608,11 +2278,6 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>hh16</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-&lt;/span&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;----No. of Countries covered-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>No_of_Countries_covered_direct_Rating2</name>
             <choiceReferences>NoOfCountriescovereddirectRatingPicklist</choiceReferences>
             <choiceReferences>NoOfCountriescovereddirectRatingDefault</choiceReferences>
@@ -2623,11 +2288,6 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>hh18</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Point of presence Weight-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Point_of_presence_Rating2</name>
             <choiceReferences>PointofpresenceRatingPicklist</choiceReferences>
             <choiceReferences>PointofpresenceRatingDefault</choiceReferences>
@@ -2636,11 +2296,6 @@
             <fieldText>Point of presence Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh19</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Future plan enhance-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Future_plan_enhance_the_presence_Rating2</name>
@@ -2658,11 +2313,6 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>hh21</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----2 hours Fix Resolution-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>X2_hours_Fix_Resolution_Rating2</name>
             <choiceReferences>X2hoursFixResolutionRatingPicklist</choiceReferences>
             <choiceReferences>X2hoursFixResolutionRatingDefault</choiceReferences>
@@ -2671,11 +2321,6 @@
             <fieldText>2 hours Fix Resolution Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh22</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;-----4 hours Fix Resolution -----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>X4_hours_Fix_Resolution_Rating2</name>
@@ -2688,11 +2333,6 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>hh25</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----8 hours Fix Resolution-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>X8_hours_Fix_Resolution_Rating2</name>
             <choiceReferences>X8hoursFixResolutionRatingPicklist</choiceReferences>
             <choiceReferences>X8hoursFixResolutionRatingdefault</choiceReferences>
@@ -2701,11 +2341,6 @@
             <fieldText>8 hours Fix Resolution Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh26</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----NBD Resolution or Others-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>NBD_Resolution_or_Others_Rating2</name>
@@ -2723,11 +2358,6 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>hh28</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----OEM Partnership/Certification-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>OEM_Partnership_Certification_Rating2</name>
             <choiceReferences>OEMPartnershipCertificationRatingPicklist</choiceReferences>
             <choiceReferences>OEMPartnershipCertificationRatingDefault</choiceReferences>
@@ -2736,11 +2366,6 @@
             <fieldText>OEM Partnership / Certification Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh52</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Products supported-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Products_supported_Rating2</name>
@@ -2753,11 +2378,6 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>hh29</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Skilled Employees-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Skilled_Employees_Certification_RatingTC2</name>
             <choiceReferences>SkilledEmployeesCertificationRatingPicklistTC</choiceReferences>
             <choiceReferences>SkilledEmployeesCertificationRatingDefault</choiceReferences>
@@ -2766,11 +2386,6 @@
             <fieldText>Skilled Employees/Certification Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh30</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Technical delivery Matrix-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Technical_delivery_Matrix_Rating2</name>
@@ -2783,8 +2398,8 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>hh31</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Ticketing tools &amp;amp; process-----&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <name>Call_Support_Management</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(62, 62, 60);&quot;&gt;Call Support/Management&lt;/b&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -2798,11 +2413,6 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>hh32</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----E-bonding capabilities-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>E_bonding_capabilities_Rating2</name>
             <choiceReferences>EbondingcapabilitiesRatingPicklist</choiceReferences>
             <choiceReferences>EbondingcapabilitiesRatingDefault</choiceReferences>
@@ -2811,11 +2421,6 @@
             <fieldText>E-bonding capabilities Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh33</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----24x7 call center/HelpDesk-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>X24x7_call_center_HelpDesk_support_Rating2</name>
@@ -2833,11 +2438,6 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>hh36</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Current spare in stock-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Current_spares_in_stock_Management2</name>
             <choiceReferences>CurrentsparesinstockManagementPicklist</choiceReferences>
             <choiceReferences>CurrentsparesinstockManagementDefault</choiceReferences>
@@ -2846,11 +2446,6 @@
             <fieldText>Current spares in stock &amp; Management</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh37</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Warehouse Management-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Warehouse_Management_Rating2</name>
@@ -2863,11 +2458,6 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>hh38</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----OEM model/Spare-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>OEM_model_Spare_replacement_Rating2</name>
             <choiceReferences>OEMmodelSparereplacementRatingpicklist</choiceReferences>
             <choiceReferences>OEMmodelSparereplacementRatingDefault</choiceReferences>
@@ -2876,11 +2466,6 @@
             <fieldText>OEM model/Spare replacement Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh39</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Warranty /Out of warranty-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Warranty_Out_of_warranty_support_Rating2</name>
@@ -2898,11 +2483,6 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>hh41</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Responsiveness-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Responsiveness_Rating2</name>
             <choiceReferences>ResponsivenessRatingPicklist</choiceReferences>
             <choiceReferences>ResponsivenessRatingDefault</choiceReferences>
@@ -2911,11 +2491,6 @@
             <fieldText>Responsiveness Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh42</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Proactiveness-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Proactiveness_Rating2</name>
@@ -2928,11 +2503,6 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>hh45</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Quality of Communication-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Quality_of_Communication_Document_submit2</name>
             <choiceReferences>QualityofCommunicationDocumentsubmitpicklist</choiceReferences>
             <choiceReferences>QualityofCommunicationDocumentsubmitDefault</choiceReferences>
@@ -2941,11 +2511,6 @@
             <fieldText>Quality of Communication/Document submit</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh46</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Value add &amp;amp; innovation-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Value_add_innovation_Rating2</name>
@@ -2963,11 +2528,6 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>hh48</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Customer Base-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Customer_Base_Rating2</name>
             <choiceReferences>CustomerBaseRatingpicklist</choiceReferences>
             <choiceReferences>CustomerBaseRatingDefault</choiceReferences>
@@ -2976,11 +2536,6 @@
             <fieldText>Customer Base Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh49</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Referral Customer feedback-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Retention_of_the_customer_Rating2</name>
@@ -2993,11 +2548,6 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>hh50</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----Retention of the customer-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
             <name>Referral_Customer_feedback_Rating2</name>
             <choiceReferences>ReferralCustomerfeedbackRatingPicklist</choiceReferences>
             <choiceReferences>ReferralCustomerfeedbackRatingDefault</choiceReferences>
@@ -3006,11 +2556,6 @@
             <fieldText>Referral Customer feedback Rating</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>hh51</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; color: rgb(62, 62, 60);&quot;&gt;-----No. of High value customers-----&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>No_of_High_value_customers_Rating2</name>
@@ -3026,7 +2571,7 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>210</locationX>
+        <locationX>408</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Account_Data</targetReference>

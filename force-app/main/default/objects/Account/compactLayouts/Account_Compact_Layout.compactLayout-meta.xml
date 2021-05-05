@@ -3,9 +3,13 @@
     <fullName>Account_Compact_Layout</fullName>
     <fields>Name</fields>
     <fields>Phone</fields>
-    <fields>BillingAddress</fields>
     <fields>Website</fields>
-    <fields>OwnerId</fields>
     <fields>RecordTypeId</fields>
+    <fields>Status__c</fields>
+    <fields>OwnerId</fields>
+    <fields>One_Time_Vendor__c</fields>
+    <fields>Type_of_Partner__c</fields>
+    <fields>Type</fields>
+    <fields>Onboarding_Date__c</fields>
     <label>Account Compact Layout</label>
 </CompactLayout>

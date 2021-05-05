@@ -2,21 +2,22 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Overall_Normalized_Partnership_Weight__c</fullName>
     <externalId>false</externalId>
-    <formula>IF(In_considered1__c == true , Company_Overall_Weight__c , 0)+
-IF(In_considered2__c == true ,  Financial_Credibility_Overall_Weight__c , 0)+  
-IF(In_considered3__c == true ,  Service_Delivery_Overall_Weight__c , 0)+ 
-IF(In_considered4__c == true ,  Coverage_Point_Presence_Overall_Weight__c , 0) +
-IF(In_considered5__c == true ,  SLA_Overall_Weight__c , 0) +
-IF(In_considered6__c == true ,   Technical_capabilities_Overall_Weight__c , 0) +
-IF(In_considered7__c == true ,   Call_Support_Management_Overall_Weight__c , 0) +
-IF(In_considered8__c == true ,   Spare_Management_Overall_Weight__c , 0) +
-IF(In_considered9__c == true ,   Responses_Quality_of_Doc_Overall_Weight__c , 0) +
-IF(In_considered10__c == true ,    Customer_Base_Feedback_Overall_Weight__c , 0)</formula>
-    <label>Overall Normalized Partnership Weight</label>
+    <formula>IF( Consider_Company_Overview__c  == true , Company_Overall_Weight__c , 0)+
+IF( Consider_Financial_Credibility__c  == true ,  Financial_Credibility_Overall_Weight__c , 0)+  
+IF( Consider_Service_Delivery__c  == true ,  Service_Delivery_Overall_Weight__c , 0)+ 
+IF( Consider_Coverage_Point_of_Presence__c  == true ,  Coverage_Point_Presence_Overall_Weight__c , 0) +
+IF( Consider_SLA__c  == true ,  SLA_Overall_Weight__c , 0) +
+IF( Consider_Technical_Capability__c  == true ,   Technical_capabilities_Overall_Weight__c , 0) +
+IF( Consider_Call_Support_Flow_Management__c  == true ,   Call_Support_Management_Overall_Weight__c , 0) +
+IF( Consider_Spare_Management__c  == true ,   Spare_Management_Overall_Weight__c , 0) +
+IF( Consider_Responses_Quality_of_Documents__c == true ,   Responses_Quality_of_Doc_Overall_Weight__c , 0) +
+IF( Consider_Customer_Base__c  == true ,    Customer_Base_Feedback_Overall_Weight__c , 0)</formula>
+    <label>Overall Normalized Partnership Weight %</label>
     <precision>18</precision>
     <required>false</required>
     <scale>0</scale>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>Percent</type>
+    <type>Number</type>
+    <unique>false</unique>
 </CustomField>

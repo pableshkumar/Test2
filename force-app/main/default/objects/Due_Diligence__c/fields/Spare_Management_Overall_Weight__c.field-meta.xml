@@ -2,12 +2,13 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Spare_Management_Overall_Weight__c</fullName>
     <externalId>false</externalId>
-    <formula>(  Current_spare_in_stock_Management_Weight__c + Warehouse_Management_Weight__c + OEM_model_Spare_replacement_Weight__c +  Warranty_Out_of_warranty_support_Weight__c )/ 100</formula>
+    <formula>Current_spare_in_stock_Management_Weight__c + Warehouse_Management_Weight__c + OEM_model_Spare_replacement_Weight__c +  Warranty_Out_of_warranty_support_Weight__c</formula>
     <label>Spare Management Overall Weight</label>
     <precision>18</precision>
     <required>false</required>
-    <scale>0</scale>
+    <scale>2</scale>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>Percent</type>
+    <type>Number</type>
+    <unique>false</unique>
 </CustomField>

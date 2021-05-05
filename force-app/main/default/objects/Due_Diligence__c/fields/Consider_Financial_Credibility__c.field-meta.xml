@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consider_Financial_Credibility__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR(
+!ISPICKVAL(Revenue_Growth_for_last_3_years_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(Net_Margin_Growth_for_last_3_year_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(Assets_Vs_Liability_Rating__c,&apos;NA&apos;),
+!ISPICKVAL(Financial_stability_or_Credit_Rating__c,&apos;NA&apos;)  
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Consider Financial Credibility</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
