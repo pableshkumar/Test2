@@ -68,7 +68,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
-        <reevaluateOnChange>false</reevaluateOnChange>
+        <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Approved_By_FSM_Head</fullName>

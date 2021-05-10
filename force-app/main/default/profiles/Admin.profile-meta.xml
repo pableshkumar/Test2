@@ -2122,22 +2122,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Event.Description</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Event.IsAllDayEvent</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Event.Location</field>
-        <readable>true</readable>
-    </fieldPermissions>
-   
-    <fieldPermissions>
         <editable>false</editable>
         <field>Invoice_Line_Item__c.City__c</field>
         <readable>true</readable>
@@ -2387,12 +2371,6 @@
         <field>Invoice__c.Total_Tax__c</field>
         <readable>true</readable>
     </fieldPermissions>
-
-
-   
-  
-  
-
     <fieldPermissions>
         <editable>false</editable>
         <field>Order__c.Approval_Stage_Controller__c</field>
@@ -4159,7 +4137,6 @@
         <enabled>true</enabled>
         <name>ManageIpAddresses</name>
     </userPermissions>
-
     <userPermissions>
         <enabled>true</enabled>
         <name>ManageLeads</name>
@@ -4216,7 +4193,6 @@
         <enabled>true</enabled>
         <name>ManageRoles</name>
     </userPermissions>
-
     <userPermissions>
         <enabled>true</enabled>
         <name>ManageSharing</name>
@@ -4314,7 +4290,6 @@
         <enabled>true</enabled>
         <name>SendSitRequests</name>
     </userPermissions>
-
     <userPermissions>
         <enabled>true</enabled>
         <name>ShowCompanyNameAsUserBadge</name>
@@ -4439,4 +4414,5 @@
         <enabled>true</enabled>
         <name>ViewUserPII</name>
     </userPermissions>
+
 </Profile>
