@@ -295,7 +295,7 @@
         <actionName>NotificationFlow</actionName>
         <actionType>flow</actionType>
         <connector>
-            <targetReference>myWaitEvent_myWait_myRule_12_event_0_postWaitExecutionAssignment</targetReference>
+            <targetReference>myWaitEvent_myWait_myRule_12_event_0_SA2</targetReference>
         </connector>
         <inputParameters>
             <processMetadataValues>
@@ -552,6 +552,29 @@
     </actionCalls>
     <actionCalls>
         <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Vendor_Escalation_Alert</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myWaitEvent_myWait_myRule_12_event_0_SA2</name>
+        <label>Escalation email to CEO</label>
+        <locationX>1200</locationX>
+        <locationY>300</locationY>
+        <actionName>Account.Vendor_Escalation_Alert</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>myWaitEvent_myWait_myRule_12_event_0_postWaitExecutionAssignment</targetReference>
+        </connector>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
             <name>ActionCallType</name>
             <value>
                 <stringValue>flow</stringValue>
@@ -570,7 +593,7 @@
         <actionName>NotificationFlow</actionName>
         <actionType>flow</actionType>
         <connector>
-            <targetReference>myWaitEvent_myWait_myRule_14_event_0_postWaitExecutionAssignment</targetReference>
+            <targetReference>myWaitEvent_myWait_myRule_14_event_0_SA2</targetReference>
         </connector>
         <inputParameters>
             <processMetadataValues>
@@ -822,6 +845,29 @@
             <name>NotificationTitle</name>
             <value>
                 <stringValue>Finance Head has not taken any action</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Vendor_Escalation_Alert</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myWaitEvent_myWait_myRule_14_event_0_SA2</name>
+        <label>Escalation email to CEO</label>
+        <locationX>1400</locationX>
+        <locationY>300</locationY>
+        <actionName>Account.Vendor_Escalation_Alert</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>myWaitEvent_myWait_myRule_14_event_0_postWaitExecutionAssignment</targetReference>
+        </connector>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -1604,7 +1650,7 @@
                 <stringValue>Upper([Account].Customer_Code__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_7037525264</name>
+        <name>formula_2_myRule_1_A1_3873299728</name>
         <dataType>String</dataType>
         <expression>Upper({!myVariable_current.Customer_Code__c} )</expression>
     </formulas>
@@ -1705,7 +1751,7 @@ ISPICKVAL(PRIORVALUE({!myVariable_current.Status__c} ), &apos;Due Diligence&apos
         <dataType>Boolean</dataType>
         <expression>{!myVariable_current.RecordType.Name} = &quot;Vendor&quot; &amp;&amp;  ISNEW()  &amp;&amp; {!myVariable_current.Captured_through_Vendor_Enquiry__c}  = true</expression>
     </formulas>
-    <interviewLabel>Account-19_InterviewLabel</interviewLabel>
+    <interviewLabel>Account-20_InterviewLabel</interviewLabel>
     <label>Account</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -1811,7 +1857,7 @@ ISPICKVAL(PRIORVALUE({!myVariable_current.Status__c} ), &apos;Due Diligence&apos
             </processMetadataValues>
             <field>Customer_Code__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_7037525264</elementReference>
+                <elementReference>formula_2_myRule_1_A1_3873299728</elementReference>
             </value>
         </inputAssignments>
         <object>Account</object>
