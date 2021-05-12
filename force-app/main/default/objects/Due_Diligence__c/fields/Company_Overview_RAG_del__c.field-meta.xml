@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Company_Overview_RAG_del__c</fullName>
     <externalId>false</externalId>
-    <formula>IF( Overall9__c &lt;=5, R_del__c ,IF(Overall9__c &lt;=8,A_del__c,G_del__c )  )</formula>
+    <formula>IF(Overall_Score_Company_Overview__c=0 || ISNULL(Overall_Score_Company_Overview__c),&apos;&apos;,If((Overall_Score_Company_Overview__c/Company_Overall_Weight__c)*100 &lt;=55, IMAGE(&quot;/resource/1616506498000/Red&quot;, &apos;Red&apos;,30,30) ,IF((Overall_Score_Company_Overview__c/Company_Overall_Weight__c)*100&lt;80,IMAGE(&quot;/resource/1616506522000/Amber&quot;,&apos;Amber&apos;,30,30),If((Overall_Score_Company_Overview__c/Company_Overall_Weight__c)*100&gt;=80,IMAGE(&quot;/resource/1616506472000/Green&quot;, &apos;Green&apos;,30,30),&apos;&apos;))))</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>RAG(Company Overview)</label>
     <required>false</required>
