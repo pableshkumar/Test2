@@ -28,10 +28,6 @@
                 <behavior>Edit</behavior>
                 <field>Company_Group__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Total_Amount_of_Vendor_Projects__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -669,8 +665,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-
-        <masterLabel>00h0w000000vddm</masterLabel>
+        <masterLabel>00hN00000021XnE</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

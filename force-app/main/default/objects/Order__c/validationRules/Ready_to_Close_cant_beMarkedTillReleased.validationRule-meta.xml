@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ready_to_Close_cant_beMarkedTillReleased</fullName>
+    <active>true</active>
+    <description>Ready to close cannot be marked as true till PO is in released Status</description>
+    <errorConditionFormula>AND(RecordType.DeveloperName == &apos;Purchase_Order&apos;, Ready_to_Close__c = True, OR(ISPICKVAL(PO_Status__c, &apos;Draft&apos;), ISPICKVAL(PO_Status__c, &apos;In Approval&apos;), ISPICKVAL(PO_Status__c, &apos;Approved&apos;)))</errorConditionFormula>
+    <errorMessage>Ready to Close cannot be Marked as True till PO Status is Released</errorMessage>
+</ValidationRule>

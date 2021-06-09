@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send remainder email when Approval for Order is received and not responded.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>first level remainder email template</name>
+    <style>none</style>
+    <subject>Remainder Regarding Order {!Order__c.Name}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

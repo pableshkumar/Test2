@@ -1,5 +1,638 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Notify_AP_Executive_for_Order_Utilisation</fullName>
+        <description>Notify AP Executive for Order Utilisation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AP_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Utilisation_Regarding_Order</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Area_Delivery_Manager_for_first_remainder</fullName>
+        <description>Notify Area Delivery Manager for first remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Area_Delivery_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/First_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Area_Delivery_Manager_for_second_remainder</fullName>
+        <description>Notify Area Delivery Manager for second remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Area_Delivery_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Second_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Area_Delivery_Manager_when_Order_is_not_approved</fullName>
+        <description>Notify Area Delivery Manager when Order is not approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Area_Delivery_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Rejected_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Assistant_Finance_Manager_for_Order_Escalation</fullName>
+        <description>Notify Assistant Finance Manager for Order Escalation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Assistant_Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Escalation_Regarding_Order</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Assistant_Finance_Manager_for_Order_Under_Utilisation</fullName>
+        <description>Notify Assistant Finance Manager for Order Under Utilisation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Assistant_Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Under_Utilised_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Assistant_Finance_Manager_for_approved_under_urtilised_Order</fullName>
+        <description>Notify Assistant Finance Manager for approved under urtilised Order</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Assistant_Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Approved_Under_Utilised_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Assistant_Finance_Manager_for_first_remainder</fullName>
+        <description>Notify Assistant Finance Manager for first remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Assistant_Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/First_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Assistant_Finance_Manager_for_second_remainder</fullName>
+        <description>Notify Assistant Finance Manager for second remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Assistant_Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Second_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Assistant_Finance_Manager_once_PO_is_Closed_by_Finance_Team</fullName>
+        <description>Notify Assistant Finance Manager once PO is Closed by Finance Team</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Assistant_Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/PO_is_Closed_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Assistant_Finance_Manager_when_Order_is_not_approved</fullName>
+        <description>Notify Assistant Finance Manager when Order is not approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Assistant_Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Rejected_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_CEO_for_Order_Escalation</fullName>
+        <description>Notify CEO for Order Escalation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CEO</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Escalation_Regarding_Order</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_CFO_for_Order_Escalation</fullName>
+        <description>Notify CFO for Order Escalation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CFO</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Escalation_Regarding_Order</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_CFO_for_first_remainder</fullName>
+        <description>Notify CFO for first remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CFO</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/First_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_CFO_for_second_remainder</fullName>
+        <description>Notify CFO for second remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CFO</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Second_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_COO_for_Order_Escalation</fullName>
+        <description>Notify COO for Order Escalation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>COO</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Escalation_Regarding_Order</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_COO_for_first_remainder</fullName>
+        <description>Notify COO for first remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>COO</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/First_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_COO_for_second_remainder</fullName>
+        <description>Notify COO for second remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>COO</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Second_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_COO_when_Order_is_not_approved</fullName>
+        <description>Notify COO when Order is not approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>COO</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Rejected_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Executive_for_Order_Under_Utilisation</fullName>
+        <description>Notify Finance Executive for Order Under Utilisation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Under_Utilised_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Executive_for_approved_under_urtilised_Order</fullName>
+        <description>Notify Finance Executive for approved under urtilised Order</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Approved_Under_Utilised_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Executive_for_first_remainder</fullName>
+        <description>Notify Finance Executive for first remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/First_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Executive_for_second_remainder</fullName>
+        <description>Notify Finance Executive for second remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Second_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Executive_once_PO_is_Closed_by_Finance_Team</fullName>
+        <description>Notify Finance Executive once PO is Closed by Finance Team</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/PO_is_Closed_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Executive_when_Order_is_not_Approved</fullName>
+        <description>Notify Finance Executive when Order is not Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Executive</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Rejected_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Head_for_Order_Escalation</fullName>
+        <description>Notify Finance Head for Order Escalation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Escalation_Regarding_Order</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Head_for_Order_Under_Utilisation</fullName>
+        <description>Notify Finance Head for Order Under Utilisation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Under_Utilised_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Head_for_approved_under_urtilised_Order</fullName>
+        <description>Notify Finance Head for approved under urtilised Order</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Approved_Under_Utilised_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Head_for_first_remainder</fullName>
+        <description>Notify Finance Head for first remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/First_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Head_for_second_remainder</fullName>
+        <description>Notify Finance Head for second remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Second_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Head_once_PO_is_Closed_by_Finance_Team</fullName>
+        <description>Notify Finance Head once PO is Closed by Finance Team</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/PO_is_Closed_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Head_when_Order_is_not_approved</fullName>
+        <description>Notify Finance Head when Order is not approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Rejected_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Manager_for_Order_Escalation</fullName>
+        <description>Notify Finance Manager for Order Escalation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Escalation_Regarding_Order</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Manager_for_Order_Under_Utilisation</fullName>
+        <description>Notify Finance Manager for Order Under Utilisation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Under_Utilised_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Manager_for_approved_under_urtilised_Order</fullName>
+        <description>Notify Finance Manager for approved under urtilised Order</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Approved_Under_Utilised_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Manager_for_first_remainder</fullName>
+        <description>Notify Finance Manager for first remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/First_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Manager_for_second_remainder</fullName>
+        <description>Notify Finance Manager for second remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Second_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Finance_Manager_once_PO_is_Closed_by_Finance_Team</fullName>
+        <description>Notify Finance Manager once PO is Closed by Finance Team</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Finance_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/PO_is_Closed_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Global_Delivery_Director_for_Order_Escalation</fullName>
+        <description>Notify Global Delivery Director for Order Escalation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Global_Delivery_Director</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Escalation_Regarding_Order</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Global_Delivery_Director_for_first_remainder</fullName>
+        <description>Notify Global Delivery Director for first remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Global_Delivery_Director</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/First_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Global_Delivery_Director_for_second_remainder</fullName>
+        <description>Notify Global Delivery Director for second remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Global_Delivery_Director</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Second_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Global_Delivery_Director_when_Order_is_not_approved</fullName>
+        <description>Notify Global Delivery Director when Order is not approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Global_Delivery_Director</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Rejected_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Project_Management_Head_for_first_remainder</fullName>
+        <description>Notify Project Management Head for first remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Project_Management_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/First_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Project_Management_Head_for_second_remainder</fullName>
+        <description>Notify Project Management Head for second remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Project_Management_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Second_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Project_Management_Head_when_Order_is_not_approved</fullName>
+        <description>Notify Project Management Head when Order is not approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Project_Management_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Rejected_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Project_Manager_when_Order_is_not_approved</fullName>
+        <description>Notify Project Manager when Order is not approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Project_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Rejected_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Project_Owner_for_Order_Utilisation</fullName>
+        <description>Notify Project Owner for Order Utilisation</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Utilisation_Regarding_Order</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Project_Owner_once_PO_is_Closed_by_Finance_Team</fullName>
+        <description>Notify Project Owner once PO is Closed by Finance Team</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/PO_is_Closed_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Project_Owner_when_a_Task_related_to_Under_utilised_Order_is_assigned</fullName>
+        <description>Notify Project Owner when a Task related to Under-utilised Order is assigned</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Task_is_Assigned_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Record_Owner_when_Order_is_approved</fullName>
+        <description>Notify Record Owner when Order is approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Approved_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Record_Owner_when_Order_is_not_approved</fullName>
+        <description>Notify Record Owner when Order is not approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Rejected_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Regional_Service_Delivery_Head_for_Order_Escalation</fullName>
+        <description>Notify Regional Service Delivery Head for Order Escalation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Regional_Service_Delivery_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Escalation_Regarding_Order</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Regional_Service_Delivery_Head_for_first_remainder</fullName>
+        <description>Notify Regional Service Delivery Head for first remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Regional_Service_Delivery_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/First_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Regional_Service_Delivery_Head_for_second_remainder</fullName>
+        <description>Notify Regional Service Delivery Head for second remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Regional_Service_Delivery_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Second_level_remainder_email_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Regional_Service_Delivery_Head_when_Order_is_not_approved</fullName>
+        <description>Notify Regional Service Delivery Head when Order is not approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Regional_Service_Delivery_Head</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Rejected_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_SDM_for_Order_Under_Utilisation</fullName>
+        <description>Notify SDM for Order Under Utilisation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>SDM</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Under_Utilised_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_SDM_when_Order_is_not_approved</fullName>
+        <description>Notify SDM when Order is not approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>SDM</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Rejected_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Vendor_for_Order_Utilisation</fullName>
+        <description>Notify Vendor for Order Utilisation</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Vendor_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Order_Approval_Templates/Utilisation_Regarding_Order</template>
+    </alerts>
     <fieldUpdates>
         <fullName>Approval_Stage_Controller_Delivery</fullName>
         <field>Approval_Stage_Controller__c</field>
@@ -42,7 +675,27 @@
         <protected>false</protected>
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
-    
+    <fieldUpdates>
+        <fullName>Stage_Sent_to_Assistant_Finance_Manager</fullName>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Sent to Assistant Finance Manager</literalValue>
+        <name>Stage: Sent to Assistant Finance Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stage_Sent_to_COO</fullName>
+        <description>Update Stage to &quot;Sent to COO&quot;</description>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Sent to COO</literalValue>
+        <name>Stage : Sent to COO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
     <fieldUpdates>
         <fullName>Stage_Sent_to_Finance_Head</fullName>
         <field>PO_Approval_Status__c</field>
@@ -53,7 +706,6 @@
         <protected>false</protected>
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
-    
     <fieldUpdates>
         <fullName>Stage_Sent_to_Global_Delivery_Director</fullName>
         <description>changing Stage &quot;Sent to Global Delivery Director&quot;</description>
@@ -137,6 +789,26 @@
         <field>PO_Approval_Status__c</field>
         <literalValue>Rejected</literalValue>
         <name>Update Stage : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage_Sent_to_Finance_Executive</fullName>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Sent to Finance Executive</literalValue>
+        <name>Update Stage : Sent to Finance Executive</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage_Sent_to_Finance_Manager</fullName>
+        <field>PO_Approval_Status__c</field>
+        <literalValue>Sent to Finance Manager</literalValue>
+        <name>Update Stage : Sent to Finance Manager</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>

@@ -1,0 +1,13 @@
+Hi Team,
+
+This is to notify you that this Order is under-utilised.
+
+Please find the record details below.
+PO Number: {!Order__c.Name}
+PO Amount: {!Order__c.PO_Amount__c}
+PO Balance: {!Order__c.PO_Balance__c}
+Last Modified By: {!Order__c.LastModifiedBy}
+
+
+Record link is given below.
+{!Order__c.Link}

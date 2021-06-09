@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Vendor_Projects_Amount__c</fullName>
+    <description>This will update the Total Vendor Projects amount on Customer Project Layout in a given Fiscal Year and we&apos;re updating it by Apex</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Total Vendor Projects Amount  associated with a Customer Project in current Fiscal Year</inlineHelpText>
+    <label>Total Vendor Projects Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

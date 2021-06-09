@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Total_Amount_of_Vendor_Projects__c</fullName>
-    <description>fetch value automatically from the Apex and using it in the approval process; the Total Amount of All Vendor Projects against a Vendor Account Associated with Customer Projects</description>
+    <description>fetch value automatically from the Apex and using it in the approval process; the Total Amount of All Vendor Projects against a Vendor Account Associated with Customer Projects
+
+Remarks:- 19-May-2021 not updating this field and also not using this field in the approval process of Order object</description>
     <externalId>false</externalId>
     <inlineHelpText>Total Amount of All Vendor Projects associated with a Vendor Account</inlineHelpText>
     <label>Total Amount of All Vendor Projects</label>
@@ -9,5 +11,6 @@
     <required>false</required>
     <scale>2</scale>
     <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
     <type>Currency</type>
 </CustomField>

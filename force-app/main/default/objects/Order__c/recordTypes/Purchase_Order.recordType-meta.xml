@@ -42,6 +42,22 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Sent to Assistant Finance Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to COO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Finance Executive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Finance Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Sent to Global Delivery Director</fullName>
             <default>false</default>
         </values>
@@ -66,6 +82,10 @@
         <picklist>PO_Status__c</picklist>
         <values>
             <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
             <default>false</default>
         </values>
         <values>

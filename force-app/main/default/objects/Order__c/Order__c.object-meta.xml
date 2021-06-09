@@ -160,7 +160,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
-    <label>Order</label>
+    <label>TIG Order</label>
     <nameField>
         <label>PO Number</label>
         <trackHistory>false</trackHistory>

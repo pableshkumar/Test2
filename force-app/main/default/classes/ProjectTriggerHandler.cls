@@ -164,6 +164,8 @@ public with sharing class ProjectTriggerHandler {
         update customerList;
     }
     //Method to update Sum of Total_Project_Value__c of Vendor Projects on Total_Amount_Of_Vendor_Project__c of Vendor Account record page
+  /******************* Last Updated 19-May-2021; 
+   * Not updating Vendor Project Amount on Vendor Account
     public static void UpdateTotalAmountOfVendorProjects (List<Project__c> PaccList){
         Set<Id>VendorId = New Set<Id>() ;
         for(Project__c Pacc : PaccList){
@@ -183,5 +185,25 @@ public with sharing class ProjectTriggerHandler {
             ven.Total_Amount_of_Vendor_Projects__c = amount;
         }
         update VendorsList;
+    } *****/
+    
+    // Method to Update Amount of only those Vendor Projects on Customer Project whose Start & End date is in current Fiscal Year
+    public static void updateCurrentFiscalYearVendorProjectsAmountOnCustomerProject(Set<Id> ProjId){
+        list<project__c> prolist = new list<project__c>();
+        Id venRt = Schema.SObjectType.Project__c.getRecordTypeInfosByName().get('Vendor').getRecordTypeId();
+        Id cusRt = Schema.SObjectType.Project__c.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
+    list<project__c> custList = [select id, Total_Vendor_Projects_Amount__c from project__c where recordtypeid =: cusRt AND id IN: projId];    
+    list<project__c> venList = [select id, Customer_Project__c, Total_PO_Amount__c from project__c where recordtypeid =: venRt and Total_PO_Amount__c != null];
+        for(project__c cus : custList){
+            decimal val = 0;
+            for(project__c ven : venList){
+                if(ven.Customer_Project__c == cus.Id){
+                val += ven.Total_PO_Amount__c;
+                }
+            }
+            cus.Total_Vendor_Projects_Amount__c = val;
+            prolist.add(cus);
+        }
+        update prolist;
     }
 }

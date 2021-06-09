@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_GP_Amount__c</fullName>
+    <externalId>false</externalId>
+    <formula>(Total_Project_Value__c - Total_Sum_of_Vendor_Projects__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Total  Amount of a Customer Project - Total Amount of All Vendor Projects associated with a Customer Project</inlineHelpText>
+    <label>Total GP Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>
