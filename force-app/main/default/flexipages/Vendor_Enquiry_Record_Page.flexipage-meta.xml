@@ -124,16 +124,9 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>required</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Rejection_Reason__c</fieldItem>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.Status__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Rejected</rightValue>
-                    </criteria>
-                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <name>Facet-7b1379d2-65f1-455b-88b8-d16fbe513c6d</name>
