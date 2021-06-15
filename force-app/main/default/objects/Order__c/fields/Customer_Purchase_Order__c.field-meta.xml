@@ -11,6 +11,11 @@
             <operation>equals</operation>
             <value>Sales Order</value>
         </filterItems>
+        <filterItems>
+            <field>$Source.Project__c</field>
+            <operation>startsWith</operation>
+            <valueField>Order__c.Customer_Purchase_Order__r.Project__c</valueField>
+        </filterItems>
         <isOptional>false</isOptional>
     </lookupFilter>
     <referenceTo>Order__c</referenceTo>

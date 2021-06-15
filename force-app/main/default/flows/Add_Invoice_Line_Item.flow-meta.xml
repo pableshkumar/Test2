@@ -10,7 +10,7 @@
         <name>Services</name>
         <dataType>String</dataType>
         <displayField>Name</displayField>
-        <filterLogic>and</filterLogic>
+        <filterLogic>or</filterLogic>
         <filters>
             <field>Vendor_Purchase_Order__c</field>
             <operator>EqualTo</operator>

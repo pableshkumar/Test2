@@ -54,11 +54,15 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
+                <field>GP__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>Total_Sum_of_Vendor_Projects__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>GP__c</field>
+                <behavior>Readonly</behavior>
+                <field>Total_GP_Amount__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -286,9 +290,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-
-
-        <masterLabel>00h1y0000016pAe</masterLabel>
+        <masterLabel>00hN000000221ps</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

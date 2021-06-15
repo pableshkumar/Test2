@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PO_is_Closed_Validation</fullName>
+    <active>true</active>
+    <description>You can&apos;t create an invoice on Purchase Order which is closed</description>
+    <errorConditionFormula>AND(Purchase_Order__r.RecordType.DeveloperName == &apos;Purchase_Order&apos;, ISPICKVAL(Purchase_Order__r.PO_Status__c , &apos;Closed&apos;))</errorConditionFormula>
+    <errorMessage>Invoice cannot be created on Purchase Order where PO Status is Closed, Please select another Purchase Order</errorMessage>
+</ValidationRule>

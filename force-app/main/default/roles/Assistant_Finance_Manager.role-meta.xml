@@ -2,9 +2,8 @@
 <Role xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseAccessLevel>Edit</caseAccessLevel>
     <contactAccessLevel>Edit</contactAccessLevel>
-    <description>CFO</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
-    <name>CFO</name>
+    <name>Assistant Finance Manager</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
-    <parentRole>CEO</parentRole>
+    <parentRole>Finance_Manager</parentRole>
 </Role>

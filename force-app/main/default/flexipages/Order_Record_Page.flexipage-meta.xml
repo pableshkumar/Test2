@@ -4,10 +4,56 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>hideUpdateButton</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>variant</name>
+                    <value>non-linear</value>
+                </componentInstanceProperties>
+                <componentName>runtime_sales_pathassistant:pathAssistant</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>actionNames</name>
                     <valueList>
                         <valueListItems>
                             <value>Edit</value>
+                            <visibilityRule>
+                                <booleanFilter>(1 AND 2) OR (1 AND 3) OR (1 AND 4) OR (1 AND 5) OR (1 AND 6)</booleanFilter>
+                                <criteria>
+                                    <leftValue>{!Record.RecordType.Name}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Purchase Order</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.PO_Approval_Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Draft</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.PO_Approval_Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Sent to Project Manager</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.PO_Approval_Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Sent to SDM</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.PO_Approval_Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Approved</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.PO_Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Released</rightValue>
+                                </criteria>
+                            </visibilityRule>
                         </valueListItems>
                         <valueListItems>
                             <value>Order__c.Generate_PO_PDF</value>
@@ -16,16 +62,6 @@
                                     <leftValue>{!Record.PO_Approval_Status__c}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>Approved</rightValue>
-                                </criteria>
-                            </visibilityRule>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>Submit</value>
-                            <visibilityRule>
-                                <criteria>
-                                    <leftValue>{!Record.PO_Status__c}</leftValue>
-                                    <operator>EQUAL</operator>
-                                    <rightValue>Draft</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
@@ -42,6 +78,58 @@
                                     <leftValue>{!Record.PO_Status__c}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>Approved</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Order__c.Close_the_PO</value>
+                            <visibilityRule>
+                                <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+                                <criteria>
+                                    <leftValue>{!Record.RecordType.Name}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Purchase Order</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Ready_to_Close__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>true</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.PO_Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Released</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!$User.Profile.Name}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Finance</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Submit</value>
+                            <visibilityRule>
+                                <booleanFilter>(1 AND 2 AND 3) OR (1 AND 2 AND 4)</booleanFilter>
+                                <criteria>
+                                    <leftValue>{!Record.PO_Status__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Draft</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.RecordType.DeveloperName}</leftValue>
+                                    <operator>NE</operator>
+                                    <rightValue>Sales_Order</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!$User.UserRole.DeveloperName}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Project_Manager</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!$User.UserRole.DeveloperName}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>SDM</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>

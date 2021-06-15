@@ -68,6 +68,26 @@
                 <default>false</default>
                 <label>Sent To Finance Head</label>
             </value>
+            <value>
+                <fullName>Sent to COO</fullName>
+                <default>false</default>
+                <label>Sent to COO</label>
+            </value>
+            <value>
+                <fullName>Sent to Finance Executive</fullName>
+                <default>false</default>
+                <label>Sent to Finance Executive</label>
+            </value>
+            <value>
+                <fullName>Sent to Assistant Finance Manager</fullName>
+                <default>false</default>
+                <label>Sent to Assistant Finance Manager</label>
+            </value>
+            <value>
+                <fullName>Sent to Finance Manager</fullName>
+                <default>false</default>
+                <label>Sent to Finance Manager</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>Delivery</controllingFieldValue>
@@ -107,16 +127,37 @@
             <valueName>Sent to Global Delivery Director</valueName>
         </valueSettings>
         <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Sent To Finance Head</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Sent to COO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Sent to Finance Executive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Sent to Assistant Finance Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <controllingFieldValue>Project Management</controllingFieldValue>
+            <valueName>Sent to Finance Manager</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Project Management</controllingFieldValue>
             <valueName>Sent to Project Manager</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Project Management</controllingFieldValue>
             <valueName>Sent to Project Management Head</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Project Management</controllingFieldValue>
-            <valueName>Sent To Finance Head</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

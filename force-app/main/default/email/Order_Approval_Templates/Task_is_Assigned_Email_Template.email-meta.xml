@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send Email when Task is related to Under-Utilised order is assigned.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Task is Assigned Email Template</name>
+    <style>none</style>
+    <subject>Task related to Under-Utilised Order</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
