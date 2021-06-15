@@ -2,6 +2,7 @@ public class VendorEnquiryHandler {
     public void createAccCon(List<Vendor_Enquiry__c> lstNewVE){
         //Account and Contact Insertion 
         Boolean isAccountCreate=false;
+        List<Account> TaskOnAccount = New List<Account>();
         list<sobject> sObjList = new list<sObject>();
         Id vendorRecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Vendor').getRecordTypeId();
         system.debug('recordType Id --> ' + vendorRecordTypeId);
@@ -16,6 +17,7 @@ public class VendorEnquiryHandler {
                 acc.Vendor_Enquiry__c=vendorRec.Id;
                 acc.One_Time_Vendor__c=vendorRec.One_Time_Vendor__c;
                 sObjList.add(acc);
+                TaskOnAccount.add(acc);
             }
             if(!sObjList.isEmpty()){
                 insert sObjList;
@@ -101,29 +103,32 @@ update sObjListRole;
             //Tasks
             List<Task> ts_List = new List<Task>();
             List<Task> ts_List1 = new List<Task>();
-            List<Task> taskList = [SELECT Id, whatId, Subject, ActivityDate FROM Task where whatId =: VendorRecIds LIMIT 1];
-            for(Task taskRecIntro: taskList){
-                Task newTaskRec = new Task();
-                //newTaskRec.Id = taskRecIntro.Id;
-                newTaskRec.whatId = accList.Id;
-                newTaskRec.Subject = 'Introduction call';
-                newTaskRec.ActivityDate = system.Today()+7;
-                //newTaskRec.ActivityDate = system.Today()+7;
-                ts_List.add(newTaskRec);
-            }
-            insert ts_List;
-            List<Task> taskList1 = [SELECT Id, whatId, Subject, ActivityDate FROM Task where whatId =: VendorRecIds];
-            for(Task taskRec: taskList1){
-                Task newTaskRec = new Task();
-                newTaskRec.Id = taskRec.Id;
-                newTaskRec.whatId = accList.Id;
-                newTaskRec.Subject = taskRec.subject;
-                newTaskRec.ActivityDate = taskRec.ActivityDate;
-                //newTaskRec.ActivityDate = system.Today()+7;
-                ts_List1.add(newTaskRec);
-            }
-            upsert ts_List1;
+            //  List<Task> taskList = [SELECT Id, whatId, Subject, ActivityDate FROM Task where whatId =: VendorRecIds LIMIT 1];
+            //  system.debug('taskList' +taskList);
+            // for(Task taskRecIntro: taskList){
+            //for(Account taskRecIntro : TaskOnAccount) is added by Sahil
+            for(Account taskRecIntro : TaskOnAccount){
+            Task newTaskRec = new Task();
+            //newTaskRec.Id = taskRecIntro.Id;
+            newTaskRec.whatId = accList.Id;
+            newTaskRec.Subject = 'Introduction call';
+            newTaskRec.ActivityDate = system.Today()+7;
+            //newTaskRec.ActivityDate = system.Today()+7;
+            ts_List.add(newTaskRec);
         }
-        
+        insert ts_List;
+        List<Task> taskList1 = [SELECT Id, whatId, Subject, ActivityDate FROM Task where whatId =: VendorRecIds];
+        for(Task taskRec: taskList1){
+            Task newTaskRec = new Task();
+            newTaskRec.Id = taskRec.Id;
+            newTaskRec.whatId = accList.Id;
+            newTaskRec.Subject = taskRec.subject;
+            newTaskRec.ActivityDate = taskRec.ActivityDate;
+            //newTaskRec.ActivityDate = system.Today()+7;
+            ts_List1.add(newTaskRec);
+        }
+        upsert ts_List1;
     }
+    
+}
 }
